@@ -1,0 +1,13 @@
+driftmapR PCA/classical-MDS deterministic simulation
+Package version: 0.0.3.9000
+Seed: 260912
+99 observations per period; 111 unique entities; 3 periods; 3 supplied clusters; 8 features.
+Known truth: one moving cluster, four individual movers, stable anchors, exits and entrants.
+The feature matrix has exactly rank two after centering and uses an isometric loading.
+Known raw-space rotations, reflection and translations are retained in generating-truth.rds.
+Checks passed: 19
+Maximum absolute numerical discrepancy: 1.4648214e-14
+Tolerance: 1e-8 in the small, well-conditioned units used in this simulation.
+This validates geometry and data flow, not robustness to noise or inferential coverage.
+Multiplicity checks verify algebra only; no bootstrap engine or uncertainty intervals are implemented. 
+Outputs: /workspace/scratch/837e4400dd1d/embedding-simulation-output 

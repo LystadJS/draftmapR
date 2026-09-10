@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>PCA and classical-MDS adapters</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">PCA and classical-MDS adapters</h1>
+
+
+
+<p><code>embed_snapshots()</code> independently fits a two-dimensional
+embedding at each period and returns an <strong>unaligned</strong>
+<code>driftmap</code>. PCA uses the singular value decomposition.
+Classical multidimensional scaling (classical MDS, <code>&quot;cmds&quot;</code>)
+uses the eigenvectors of the centered squared-distance matrix. Both
+retain the original input, fitting metadata and diagnostics for later
+inspection. Alignment remains an explicit subsequent operation.</p>
+<div id="start-from-repeated-feature-measurements" class="section level2">
+<h2>Start from repeated feature measurements</h2>
+<p>Select the feature columns explicitly. Metadata such as cluster
+labels should not accidentally become measured dimensions. Entity
+identities and period ordering follow the same rules as
+<code>drift_data()</code>. Features must be finite numeric columns
+observed in every row; no imputation is performed.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(driftmapR)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>first <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">entity =</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>], <span class="at">time =</span> <span class="dv">1</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>                    <span class="at">u =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>                    <span class="at">v =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="sc">-</span><span class="dv">2</span>))</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>second <span class="ot">&lt;-</span> <span class="fu">transform</span>(first, <span class="at">time =</span> <span class="dv">2</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>second<span class="sc">$</span>u[second<span class="sc">$</span>entity <span class="sc">==</span> <span class="st">&quot;h&quot;</span>] <span class="ot">&lt;-</span> second<span class="sc">$</span>u[second<span class="sc">$</span>entity <span class="sc">==</span> <span class="st">&quot;h&quot;</span>] <span class="sc">+</span> <span class="fl">0.6</span></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>second<span class="sc">$</span>v[second<span class="sc">$</span>entity <span class="sc">==</span> <span class="st">&quot;h&quot;</span>] <span class="ot">&lt;-</span> second<span class="sc">$</span>v[second<span class="sc">$</span>entity <span class="sc">==</span> <span class="st">&quot;h&quot;</span>] <span class="sc">-</span> <span class="fl">0.8</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>panel <span class="ot">&lt;-</span> <span class="fu">rbind</span>(first, second)</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="co"># An isometric loading into four dimensions makes the movement truth exact.</span></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>panel<span class="sc">$</span>f1 <span class="ot">&lt;-</span> panel<span class="sc">$</span>u <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">2</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>panel<span class="sc">$</span>f2 <span class="ot">&lt;-</span> panel<span class="sc">$</span>v <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">2</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>panel<span class="sc">$</span>f3 <span class="ot">&lt;-</span> panel<span class="sc">$</span>u <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">2</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>panel<span class="sc">$</span>f4 <span class="ot">&lt;-</span> panel<span class="sc">$</span>v <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">2</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>features <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;f&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>input <span class="ot">&lt;-</span> panel[<span class="fu">c</span>(<span class="st">&quot;entity&quot;</span>, <span class="st">&quot;time&quot;</span>, features)]</span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>raw <span class="ot">&lt;-</span> <span class="fu">embed_snapshots</span>(input, <span class="at">features =</span> features, <span class="at">method =</span> <span class="st">&quot;pca&quot;</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a>raw<span class="sc">$</span>diagnostics<span class="sc">$</span>embedding</span>
+<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a><span class="co">#&gt;   time period_index method n_entities n_features n_positive n_negative</span></span>
+<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a><span class="co">#&gt; 1    1            1    pca          8          4          2          0</span></span>
+<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a><span class="co">#&gt; 2    2            2    pca          8          4          2          0</span></span>
+<span id="cb1-21"><a href="#cb1-21" tabindex="-1"></a><span class="co">#&gt;   negative_inertia_fraction positive_inertia_2d_fraction</span></span>
+<span id="cb1-22"><a href="#cb1-22" tabindex="-1"></a><span class="co">#&gt; 1                         0                            1</span></span>
+<span id="cb1-23"><a href="#cb1-23" tabindex="-1"></a><span class="co">#&gt; 2                         0                            1</span></span>
+<span id="cb1-24"><a href="#cb1-24" tabindex="-1"></a><span class="co">#&gt;   absolute_inertia_2d_fraction eigengap_23 boundary_tie distance_rmse</span></span>
+<span id="cb1-25"><a href="#cb1-25" tabindex="-1"></a><span class="co">#&gt; 1                            1   0.4294682        FALSE            NA</span></span>
+<span id="cb1-26"><a href="#cb1-26" tabindex="-1"></a><span class="co">#&gt; 2                            1   0.4931418        FALSE            NA</span></span></code></pre></div>
+<p>The embedding axes may change sign or rotate between independent
+fits. Changes in the retained subspace can also occur when a
+higher-dimensional geometry is truncated to two dimensions. Procrustes
+alignment removes rigid coordinate indeterminacy; it cannot restore
+geometry discarded by the embedding.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># These seven entities are known to be stable in this constructed example.</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">align_snapshots</span>(raw, <span class="at">anchors =</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>], <span class="at">scale =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>movement <span class="ot">&lt;-</span> <span class="fu">measure_drift</span>(fit)</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>movement[<span class="fu">c</span>(<span class="st">&quot;entity&quot;</span>, <span class="st">&quot;time_from&quot;</span>, <span class="st">&quot;time_to&quot;</span>, <span class="st">&quot;distance&quot;</span>)]</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="co">#&gt;   entity time_from time_to     distance</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="co">#&gt; 1      a         1       2 1.110223e-15</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co">#&gt; 2      b         1       2 6.753223e-16</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="co">#&gt; 3      c         1       2 9.420555e-16</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="co">#&gt; 4      d         1       2 4.965068e-16</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co">#&gt; 5      e         1       2 1.132210e-15</span></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="co">#&gt; 6      f         1       2 8.005932e-16</span></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="co">#&gt; 7      g         1       2 6.280370e-16</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="co">#&gt; 8      h         1       2 1.000000e+00</span></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a><span class="fu">stopifnot</span>(<span class="fu">max</span>(movement<span class="sc">$</span>distance[movement<span class="sc">$</span>entity <span class="sc">!=</span> <span class="st">&quot;h&quot;</span>]) <span class="sc">&lt;</span> <span class="fl">1e-8</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>          <span class="fu">abs</span>(movement<span class="sc">$</span>distance[movement<span class="sc">$</span>entity <span class="sc">==</span> <span class="st">&quot;h&quot;</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">&lt;</span> <span class="fl">1e-8</span>)</span></code></pre></div>
+<p>Entity <code>h</code> moves by <span class="math inline">\((0.6,-0.8)\)</span>, a Euclidean distance of one.
+All other entities remain stable. Anchors encode that known stability;
+using moving entities in the alignment fit can absorb part of their
+movement. Centering and alignment also remove shared translation, so a
+global feature-level shift is not an identifiable entity drift effect in
+this workflow.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">plot_drift_map</span>(fit)</span></code></pre></div>
+<p><img src="data:image/png;base64,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bFOnTv3kk0+USqWjo+Pu3budnJz4b7jROKtet+VXYXhvWlyN1bK7y6+xfImBFX366adRUVHh4eFjxoy5ceNGYmKi6as2PX6zttSyapk3b15CQkLnzp379evn4OBw9erVDz/8cNq0adVSyRwDzdJ01RgPlIf7wIxzcXEJCwsr02uDExoayt1AI5fLJ0+e3KpVK6lU2rlz57Vr13bv3l1/ysDAQHd393feeScwMJAvlEqlY8aMGTRokFKpdHJyCgsLW716dUBAADfWy8tLfyF2dnZhYWH8nSgSiSQsLMzZ2dmshVAUxc3VqFGj8ePHKxQKiqK8vb3L3wdGCGnSpAl3H9jrr7/u6empUCj8/PzmzJnz4YcfVlZXZVZnODZ++Z06derfv/+zZ88kEsnHH3/cv39/T09PbjkVxsnPaHHd6iu/CqN708C8Burc9JAIITY2NmFhYfwZUVtbW27vl19j+RIDK1IqlZMnT7a2ts7Ozg4JCVm4cKFSqQwLC7O3t6/i3tQP2Kw2aVkDlslk48eP79mzp1Qq9fT0fOONN0aOHMk9XsDiSi6zLgPNsvzEln09oYrwRmYAABAlXAMDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgIDAABRQgKD+uPevXsxMTExMTF//fVXSkqKVqu1YCETJ06MiIgwd649e/bIZDILVlennI0cIHQIAGYQ/VcOgLdu3bq1a9e6urqyLJudne3m5rZ+/fqRI0eatZB33nmntLS0hiKsCXl5eT/99FNCQkJeXt6pU6eECuOvv/7at2/f/fv3vby8ZsyY0bZtW6EigYYDR2BQr3h4eDx9+vTZs2e5ubkdO3acMGFCVlYWNyo7O/v8+fOpqaksy/LT37p1KykpiRCSnJx88uRJhmFcXFzc3Nz0l5mamhofH5+enl5+dbdu3bp06ZJGo6lKzDMWr+H+LJv92bNn165d8/f3j42NrUoY3OGXxQdh3377rZOT05QpU+zt7UNCQu7evVuVYABMQel/mQFEbdasWfv378/IyOA+xsbGhoWFnThxolevXh988MHOnTubNGmS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" /><!-- --></p>
+</div>
+<div id="preprocessing-defines-the-distance" class="section level2">
+<h2>Preprocessing defines the distance</h2>
+<p>Every snapshot is centered. <code>standardize</code> chooses the
+feature standard deviations used to divide the data before fitting:</p>
+<ul>
+<li><code>&quot;none&quot;</code> preserves supplied feature units and is the
+default.</li>
+<li><code>&quot;first&quot;</code> uses the first period’s feature standard
+deviations in every period.</li>
+<li><code>&quot;pooled&quot;</code> uses standard deviations across all
+entity-time rows; entities with more observations contribute more
+rows.</li>
+<li><code>&quot;period&quot;</code> estimates standard deviations separately in
+each period. This changes the metric across periods and can absorb real
+scale changes.</li>
+</ul>
+<p>These are substantive metric choices, not uncertainty adjustments.
+When standardization is requested, an active feature with zero standard
+deviation is rejected. Models must retain at least two positive,
+numerically identifiable dimensions. The stored preprocessing records
+contain the centers and scales.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>standardized <span class="ot">&lt;-</span> <span class="fu">embed_snapshots</span>(input, features, <span class="at">standardize =</span> <span class="st">&quot;first&quot;</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>standardized<span class="sc">$</span>embedding_metadata<span class="sc">$</span>preprocessing<span class="sc">$</span>scales[[<span class="dv">1</span>]]</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co">#&gt;       f1       f2       f3       f4 </span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="co">#&gt; 1.191488 1.133893 1.191488 1.133893</span></span></code></pre></div>
+<p><code>feature_weights</code> supplies the same nonnegative weights in
+every period. A weight <span class="math inline">\(w_j\)</span>
+multiplies the preprocessed feature by <span class="math inline">\(\sqrt{w_j}\)</span>; weights are not normalized.
+Integer weights therefore reproduce repeated feature columns. A zero
+weight removes that feature’s geometric contribution.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>weighted <span class="ot">&lt;-</span> <span class="fu">embed_snapshots</span>(input, features, <span class="at">feature_weights =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>))</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>weighted<span class="sc">$</span>embedding_metadata<span class="sc">$</span>feature_weights</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">#&gt; f1 f2 f3 f4 </span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">#&gt;  2  1  0  1</span></span></code></pre></div>
+<p>Weights provide a building block for a future resampling engine.
+Setting them does not run a bootstrap and does not produce standard
+errors or intervals. Named variables are not automatically exchangeable
+sampling units.</p>
+</div>
+<div id="classical-mds-from-features-or-distances" class="section level2">
+<h2>Classical MDS from features or distances</h2>
+<p>For Euclidean feature distances, PCA and classical MDS yield
+equivalent retained geometry up to an orthogonal transformation, apart
+from numerical roundoff and nonidentifiable boundary eigenspaces. In the
+exact rank-2 example, they preserve the known movement equally well.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>mds_fit <span class="ot">&lt;-</span> <span class="fu">embed_snapshots</span>(input, features, <span class="at">method =</span> <span class="st">&quot;cmds&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>  <span class="fu">align_snapshots</span>(<span class="at">anchors =</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>])</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="fu">stopifnot</span>(<span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">measure_drift</span>(mds_fit)<span class="sc">$</span>distance <span class="sc">-</span> movement<span class="sc">$</span>distance)) <span class="sc">&lt;</span> <span class="fl">1e-8</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>mds_fit<span class="sc">$</span>diagnostics<span class="sc">$</span>embedding</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="co">#&gt;   time period_index method n_entities n_features n_positive n_negative</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="co">#&gt; 1    1            1   cmds          8          4          2          0</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="co">#&gt; 2    2            2   cmds          8          4          2          0</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="co">#&gt;   negative_inertia_fraction positive_inertia_2d_fraction</span></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="co">#&gt; 1              1.702489e-16                            1</span></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="co">#&gt; 2              1.184676e-16                            1</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="co">#&gt;   absolute_inertia_2d_fraction eigengap_23 boundary_tie distance_rmse</span></span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="co">#&gt; 1                            1   0.4294682        FALSE  1.698809e-15</span></span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="co">#&gt; 2                            1   0.4931418        FALSE  4.532922e-15</span></span></code></pre></div>
+<p>Alternatively, pass one labeled <code>dist</code> object or distance
+matrix per period. Matrix row and column names identify entities and
+must agree in the same order. Different periods may contain different
+entities. Use an explicit ordered period vector, or supply a fully named
+list whose names give the ordered period labels.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>distances <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="cf">function</span>(period) {</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  rows <span class="ot">&lt;-</span> input[input<span class="sc">$</span>time <span class="sc">==</span> period, ]</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(rows[features])</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  <span class="fu">rownames</span>(x) <span class="ot">&lt;-</span> rows<span class="sc">$</span>entity</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  stats<span class="sc">::</span><span class="fu">dist</span>(x)</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>})</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>mds_from_distances <span class="ot">&lt;-</span> <span class="fu">embed_snapshots</span>(distances, <span class="at">method =</span> <span class="st">&quot;cmds&quot;</span>, <span class="at">periods =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>mds_from_distances<span class="sc">$</span>diagnostics<span class="sc">$</span>embedding</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="co">#&gt;   time period_index method n_entities n_features n_positive n_negative</span></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="co">#&gt; 1    1            1   cmds          8         NA          2          0</span></span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a><span class="co">#&gt; 2    2            2   cmds          8         NA          2          0</span></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="co">#&gt;   negative_inertia_fraction positive_inertia_2d_fraction</span></span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="co">#&gt; 1              1.702489e-16                            1</span></span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a><span class="co">#&gt; 2              1.184676e-16                            1</span></span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="co">#&gt;   absolute_inertia_2d_fraction eigengap_23 boundary_tie distance_rmse</span></span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a><span class="co">#&gt; 1                            1   0.4294682        FALSE  1.698809e-15</span></span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a><span class="co">#&gt; 2                            1   0.4931418        FALSE  4.532922e-15</span></span></code></pre></div>
+<p>Classical MDS forms <span class="math inline">\(B=-\tfrac12 J
+D^{\circ 2}J\)</span>, where <span class="math inline">\(J=I-\mathbf{1}\mathbf{1}^{T}/n\)</span>. The
+two-dimensional coordinates are <span class="math inline">\(V_2\Lambda_2^{1/2}\)</span> from the two largest
+positive eigenvalues. Significant negative eigenvalues indicate that the
+supplied distances are not Euclidean at the configured tolerance. The
+default <code>negative_eigen = &quot;error&quot;</code> rejects that geometry.
+Explicit <code>&quot;truncate&quot;</code> permits an approximation with a
+warning; negative eigenvalues are diagnosed and discarded, and no
+additive distance correction is applied. This approximation may alter
+even the supplied pairwise distances substantially.</p>
+<p>Diagnostics report positive and negative inertia, retained inertia
+fractions, the relative gap between eigenvalues two and three, and
+classical-MDS distance reconstruction error. A tie at the
+retained/discarded boundary is warned about because the selected
+two-dimensional subspace is not unique. A tie wholly inside the retained
+two-dimensional space only changes its orientation.</p>
+</div>
+<div id="reproduce-the-larger-synthetic-example" class="section level2">
+<h2>Reproduce the larger synthetic example</h2>
+<p>From an installed source checkout, run:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">Rscript</span> data-raw/simulate-embeddings.R ../embedding-simulation-output</span></code></pre></div>
+<p>The script creates three clusters, 99 observations per period, 111
+unique entities, three periods and eight measured features. One cluster
+and four other entities have known movement; some entities disappear and
+others enter. Known global rotations, reflection and translation are
+applied within a fixed rank-2 feature plane. It saves raw and aligned
+figures, movement-versus-truth figures, original measurements,
+generating transformations, fitted objects and numerical check results.
+Separate controls verify zero drift under pure isometries, PCA/MDS
+equivalence, distance-input equivalence and integer-weight
+column-duplication equivalence.</p>
+<p>This idealized example verifies geometry and data flow. It does not
+establish robustness under noisy dimension reduction, a correct sampling
+design, or confidence-interval coverage. The bootstrap specification is
+included in <code>inst/validation/bootstrap-specification.md</code> in
+the source package. A bootstrap engine, uncertainty intervals, cluster
+refitting and UMAP adapters are not implemented.</p>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+
+R version 4.5.3 (2026-03-11) -- "Reassured Reassurer"
+Copyright (C) 2026 The R Foundation for Statistical Computing
+Platform: x86_64-conda-linux-gnu
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "driftmapR"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> library('driftmapR')
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("align_snapshots")
+> ### * align_snapshots
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: align_snapshots
+> ### Title: Align coordinate snapshots by orthogonal Procrustes fitting
+> ### Aliases: align_snapshots
+> 
+> ### ** Examples
+> 
+> p <- data.frame(entity = letters[1:4], time = 1, x = c(0, 2, 0, 1),
++                 y = c(0, 0, 2, 1))
+> q <- transform(p, time = 2, x = -y + 5, y = x - 3)
+> fit <- drift_data(rbind(p, q)) |> align_snapshots()
+> fit$transformations[c("time", "reference_time", "n_matched", "rss")]
+  time reference_time n_matched         rss
+1    1              1         0 0.00000e+00
+2    2              1         4 1.26341e-31
+> measure_drift(fit)
+  entity time_from time_to x_from y_from         x_to          y_to
+1      a         1       2      0      0 0.000000e+00  1.110223e-16
+2      b         1       2      2      0 2.000000e+00 -2.220446e-16
+3      c         1       2      0      2 1.110223e-16  2.000000e+00
+4      d         1       2      1      1 1.000000e+00  1.000000e+00
+            dx            dy     distance
+1 0.000000e+00  1.110223e-16 1.110223e-16
+2 0.000000e+00 -2.220446e-16 2.220446e-16
+3 1.110223e-16  0.000000e+00 1.110223e-16
+4 0.000000e+00  0.000000e+00 0.000000e+00
+> 
+> 
+> 
+> cleanEx()
+> nameEx("distance_to_anchor")
+> ### * distance_to_anchor
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: distance_to_anchor
+> ### Title: Measure aligned distance to an entity or fixed coordinate anchor
+> ### Aliases: distance_to_anchor
+> 
+> ### ** Examples
+> 
+> d <- data.frame(entity = rep(letters[1:4], 2), time = rep(1:2, each = 4),
++                 x = rep(c(0, 2, 0, 1), 2), y = rep(c(0, 0, 2, 1), 2))
+> fit <- drift_data(d) |> align_snapshots()
+> distance_to_anchor(fit, "a")
+  entity time x            y anchor_x anchor_y distance
+1      a    1 0 0.000000e+00        0        0 0.000000
+2      b    1 2 0.000000e+00        0        0 2.000000
+3      c    1 0 2.000000e+00        0        0 2.000000
+4      d    1 1 1.000000e+00        0        0 1.414214
+5      a    2 0 0.000000e+00        0        0 0.000000
+6      b    2 2 2.220446e-16        0        0 2.000000
+7      c    2 0 2.000000e+00        0        0 2.000000
+8      d    2 1 1.000000e+00        0        0 1.414214
+> 
+> 
+> 
+> cleanEx()
+> nameEx("drift_data")
+> ### * drift_data
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: drift_data
+> ### Title: Construct a longitudinal coordinate-map object
+> ### Aliases: drift_data
+> 
+> ### ** Examples
+> 
+> d <- data.frame(entity = rep(letters[1:4], 2), time = rep(1:2, each = 4),
++                 x = rep(c(0, 2, 0, 1), 2), y = rep(c(0, 0, 2, 1), 2))
+> object <- drift_data(d)
+> print(object)
+<driftmap> 4 entities; 2 periods; 2 dimensions
+Status: unaligned
+> 
+> 
+> 
+> cleanEx()
+> nameEx("embed_snapshots")
+> ### * embed_snapshots
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: embed_snapshots
+> ### Title: Embed repeated feature data or dissimilarities in two dimensions
+> ### Aliases: embed_snapshots
+> 
+> ### ** Examples
+> 
+> first <- data.frame(entity = letters[1:5], time = 1,
++                     a = c(0, 3, 0, 2, 1), b = c(0, 0, 3, 2, 1))
+> second <- first
+> second$time <- 2
+> second$a[5] <- second$a[5] + 0.8
+> second$b[5] <- second$b[5] + 0.6
+> fit <- embed_snapshots(rbind(first, second), features = c("a", "b")) |>
++   align_snapshots(anchors = letters[1:4])
+> measure_drift(fit)
+  entity time_from time_to        x_from     y_from          x_to       y_to
+1      a         1       2  3.904829e-16 -1.6970563  2.072462e-16 -1.6970563
+2      b         1       2  2.121320e+00  0.4242641  2.121320e+00  0.4242641
+3      c         1       2 -2.121320e+00  0.4242641 -2.121320e+00  0.4242641
+4      d         1       2 -2.756509e-16  1.1313708 -1.782478e-16  1.1313708
+5      e         1       2  5.741599e-17 -0.2828427  1.414214e-01  0.7071068
+             dx            dy     distance
+1 -1.832367e-16  0.000000e+00 1.832367e-16
+2  8.881784e-16 -3.330669e-16 9.485750e-16
+3 -4.440892e-16  2.220446e-16 4.965068e-16
+4  9.740314e-17  0.000000e+00 9.740314e-17
+5  1.414214e-01  9.899495e-01 1.000000e+00
+> fit$diagnostics$embedding
+  time period_index method n_entities n_features n_positive n_negative
+1    1            1    pca          5          2          2          0
+2    2            2    pca          5          2          2          0
+  negative_inertia_fraction positive_inertia_2d_fraction
+1                         0                            1
+2                         0                            1
+  absolute_inertia_2d_fraction eigengap_23 boundary_tie distance_rmse
+1                            1   0.5111111        FALSE            NA
+2                            1   0.5348383        FALSE            NA
+> 
+> 
+> 
+> cleanEx()
+> nameEx("match_clusters")
+> ### * match_clusters
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: match_clusters
+> ### Title: Match cluster identities across adjacent snapshots
+> ### Aliases: match_clusters
+> 
+> ### ** Examples
+> 
+> first <- data.frame(entity = letters[1:6], time = 1,
++                     x = c(0, 1, 0, 4, 5, 4), y = c(0, 0, 1, 0, 0, 1),
++                     cluster = rep(c("A", "B"), each = 3))
+> second <- first
+> second$time <- 2
+> second$cluster <- rep(c("renamed_2", "renamed_1"), each = 3)
+> fit <- drift_data(rbind(first, second)) |> match_clusters()
+> fit$clusters
+   entity time period_index cluster_original cluster_id cluster_status
+1       a    1            1                A      C0001        initial
+2       b    1            1                A      C0001        initial
+3       c    1            1                A      C0001        initial
+4       d    1            1                B      C0002        initial
+5       e    1            1                B      C0002        initial
+6       f    1            1                B      C0002        initial
+7       a    2            2        renamed_2      C0001        matched
+8       b    2            2        renamed_2      C0001        matched
+9       c    2            2        renamed_2      C0001        matched
+10      d    2            2        renamed_1      C0002        matched
+11      e    2            2        renamed_1      C0002        matched
+12      f    2            2        renamed_1      C0002        matched
+> fit$diagnostics$cluster_matching$assignments
+  time_from time_to cluster_from cluster_to id_from id_to n_overlap jaccard
+1         1       2            A  renamed_2   C0001 C0001         3       1
+2         1       2            B  renamed_1   C0002 C0002         3       1
+  from_total to_total from_shared to_shared  status      reason edge_margin
+1          3        3           3         3 matched max_overlap           3
+2          3        3           3         3 matched max_overlap           3
+  ambiguous
+1     FALSE
+2     FALSE
+> fit$diagnostics$cluster_matching$overlap_matrices[[1]]
+  renamed_1 renamed_2
+A         0         3
+B         3         0
+> 
+> 
+> 
+> cleanEx()
+> nameEx("measure_drift")
+> ### * measure_drift
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: measure_drift
+> ### Title: Measure movement between adjacent aligned snapshots
+> ### Aliases: measure_drift
+> 
+> ### ** Examples
+> 
+> d <- data.frame(entity = rep(letters[1:4], 2), time = rep(1:2, each = 4),
++                 x = rep(c(0, 2, 0, 1), 2), y = rep(c(0, 0, 2, 1), 2))
+> fit <- drift_data(d) |> align_snapshots()
+> measure_drift(fit)
+  entity time_from time_to x_from y_from x_to         y_to dx            dy
+1      a         1       2      0      0    0 0.000000e+00  0  0.000000e+00
+2      b         1       2      2      0    2 2.220446e-16  0  2.220446e-16
+3      c         1       2      0      2    0 2.000000e+00  0 -2.220446e-16
+4      d         1       2      1      1    1 1.000000e+00  0  0.000000e+00
+      distance
+1 0.000000e+00
+2 2.220446e-16
+3 2.220446e-16
+4 0.000000e+00
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot_drift_map")
+> ### * plot_drift_map
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot_drift_map
+> ### Title: Plot repeated positions and adjacent-period trajectories
+> ### Aliases: plot_drift_map plot.driftmap
+> 
+> ### ** Examples
+> 
+> first <- data.frame(entity = letters[1:4], time = 1,
++                     x = c(0, 2, 0, 2), y = c(0, 0, 1, 1))
+> second <- transform(first, time = 2, x = -y + 3, y = x - 2)
+> map <- drift_data(rbind(first, second))
+> map <- align_snapshots(map)
+> plot_drift_map(map)
+> plot_drift_map(map, aligned = FALSE, trajectories = FALSE)
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> cleanEx()
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  1.161 0.04 1.202 0 0 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

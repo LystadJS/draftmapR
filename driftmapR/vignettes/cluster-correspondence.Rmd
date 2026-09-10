@@ -1,0 +1,170 @@
+---
+title: "Cluster correspondence across repeated maps"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Cluster correspondence across repeated maps}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+Cluster labels are arbitrary identifiers. A cluster called `A` at one period
+may be called `Y` in the next even if its membership has not changed.
+`match_clusters()` assigns persistent bookkeeping identifiers using shared
+entity membership in adjacent periods. It accepts already supplied labels;
+it does not fit a clustering algorithm or infer that a cluster is a stable
+population. Coordinate alignment and cluster correspondence solve different
+problems, and matching does not require an aligned object.
+
+## Match supplied labels
+
+```{r example}
+library(driftmapR)
+
+first <- data.frame(
+  entity = letters[1:8], time = 1,
+  x = c(0, 1, 0, 1, 4, 5, 4, 5), y = rep(c(0, 0, 1, 1), 2),
+  cluster = rep(c("A", "B"), each = 4)
+)
+second <- transform(first, time = 2, cluster = rep(c("Y", "X"), each = 4))
+fit <- drift_data(rbind(first, second)) |> match_clusters()
+fit$clusters
+fit$diagnostics$cluster_matching$assignments
+fit$diagnostics$cluster_matching$periods
+
+# Labels change, but all eight entities retain their persistent identifiers.
+members <- fit$clusters
+before <- members[members$period_index == 1, ]
+after <- members[members$period_index == 2, ]
+stopifnot(identical(before$cluster_id,
+                    after$cluster_id[match(before$entity, after$entity)]))
+```
+
+`cluster_original` preserves the supplied label, while `cluster_id` is the
+persistent identifier. `cluster_status` distinguishes the first period,
+inherited identifiers, newly allocated identifiers, and unassigned rows.
+Use the original labels for provenance and the persistent identifiers for
+descriptive longitudinal comparisons.
+
+## The matching objective and denominator
+
+At an adjacent boundary, let $S$ be entities observed and assigned a nonmissing,
+non-noise label in **both** periods. For predecessor cluster $a$ and current
+cluster $b$, define
+
+$$
+n_{ab}=\#\{i\in S:c_{i,t-1}=a,\ c_{it}=b\},
+\qquad
+J_{ab}=\frac{n_{ab}}{n_{a\cdot}+n_{\cdot b}-n_{ab}}.
+$$
+
+The two marginal counts use the same jointly labeled shared cohort $S$.
+Entrants, exits, and an entity unassigned at either endpoint do not contribute
+to these overlap scores. Therefore this Jaccard score describes agreement in
+the available overlap cohort, rather than full-population membership stability.
+The period diagnostics expose the available denominator.
+
+After removing zero-overlap edges and edges below `min_overlap` or
+`min_jaccard`, the assignment maximizes
+
+$$
+\sum_{a,b} n_{ab}m_{ab},\qquad
+m_{ab}\in\{0,1\},\quad
+\sum_b m_{ab}\leq 1,\quad \sum_a m_{ab}\leq 1.
+$$
+
+Clusters may remain unmatched. Jaccard is an eligibility threshold; the
+optimization objective is the **total shared-entity count**, not the sum of
+Jaccard scores. This is a global one-to-one optimization, so the largest
+individual overlap need not be selected if competing edges yield a larger
+total. Thresholds are applied before optimization.
+
+```{r stricter}
+strict <- drift_data(rbind(first, second)) |>
+  match_clusters(min_overlap = 3L, min_jaccard = 0.75)
+strict$diagnostics$cluster_matching$transitions
+```
+
+## Ambiguity and diagnostics
+
+The diagnostics retain assignments, all positive membership flows, the cluster
+registry, period summaries, and overlap/score matrices. A chosen edge is a
+bookkeeping decision. It is not a significance test or a probability that two
+clusters are the same.
+
+When equal-scoring assignments exist, the exact tie rule chooses the
+lexicographically earliest sequence of current original labels in predecessor
+persistent-ID order, with unmatched choices last. This rule is reproducible but
+the spelling of tied labels can change which equally good correspondence is
+chosen. An assignment margin of zero indicates that another optimum exists
+without the chosen edge; it is not a confidence measure. Disabling tie
+diagnostics avoids the extra diagnostic solves, but does not change the
+objective or deterministic tie rule.
+
+```{r ambiguity}
+tie_first <- first[1:4, ]
+tie_first$cluster <- c("A", "A", "B", "B")
+tie_second <- transform(tie_first, time = 2, cluster = c("X", "Y", "X", "Y"))
+tied <- drift_data(rbind(tie_first, tie_second)) |> match_clusters()
+tied$diagnostics$cluster_matching$assignments
+tied$diagnostics$cluster_matching$periods
+```
+
+## Splits, merges, missing labels, and turnover
+
+One-to-one assignment cannot transmit one predecessor identifier to both
+children of a split, or combine two identifiers into one. One child can inherit
+the old identifier; unmatched children receive new ones. At a merge, one
+predecessor can retain its identifier. Inspect the full transition table to
+avoid mistaking the selected correspondence for a complete account of change.
+
+Multiple positive outgoing overlaps flag a `split_candidate`; multiple positive
+incoming overlaps flag a `merge_candidate`. These flags describe observed
+overlap structure, including edges excluded by thresholds. Entities switching
+between otherwise continuing clusters can create both flags. Neither flag
+establishes a generating split or merge process.
+
+```{r split}
+split_first <- transform(first, cluster = "A")
+split_second <- transform(first, time = 2, cluster = c(rep("X", 6), rep("Y", 2)))
+split_fit <- drift_data(rbind(split_first, split_second)) |> match_clusters()
+split_fit$diagnostics$cluster_matching$transitions
+```
+
+Missing labels are unassigned. A supplied noise label is treated as unassigned
+only when explicitly included in `noise`, for example `noise = "-1"`.
+Unassigned rows retain no persistent identifier and do not count toward the
+matching denominator. By default, any valid nonmissing label, including `"0"`,
+is an ordinary cluster label.
+
+An unmatched current cluster receives a fresh identifier even if its original
+label appeared earlier. Matching uses only adjacent periods: a lost identifier
+is not resurrected after a gap. The same raw label in two periods does not
+override missing or inadequate shared membership. A `new` status means unmatched
+under the current rules; it does not prove that a new underlying population
+has formed.
+
+## Reproduce the synthetic validation
+
+The source checkout includes `data-raw/simulate-clusters.R`. After installing
+the package, run from the checkout:
+
+```{bash, eval=FALSE}
+Rscript data-raw/simulate-clusters.R ../cluster-simulation-output
+```
+
+Eight small fixtures cover permutations, member switching, a split, a merge,
+entrants/exits, exact ties, disjoint entity sets, and a conflict where a greedy
+match fails. A five-period panel adds sequential combinations, with 96
+observations per period and 136 unique entities. Independently specified parent
+correspondences check identifier preservation. Exhaustive enumeration on these
+small overlap matrices checks the maximum objective and whether alternative
+optimal assignments exist. The script stops if any check disagrees and saves
+inspectable inputs, truth, outputs, diagnostics, matrices, and figures.
+
+These are controlled descriptive checks, not a bootstrap stability study.
+Cluster fitting, probabilistic split/merge inference, bootstrap cluster
+stability, and movement uncertainty remain separate development targets.

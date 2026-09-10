@@ -1,0 +1,5 @@
+{
+  "compared_source_files": 45,
+  "mismatches": [],
+  "DESCRIPTION": "R CMD build normalizes DCF formatting and adds generated package metadata"
+}

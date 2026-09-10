@@ -1,0 +1,34 @@
+Package: driftmapR
+Title: Align Repeated Coordinate Maps and Measure Relative Movement
+Version: 0.0.3.9000
+Authors@R: person("Prototype", "Maintainer", email = "maintainer@example.org",
+    role = c("aut", "cre"))
+Description: A development prototype for ingesting repeated two-dimensional
+    coordinate maps, aligning them using orthogonal Procrustes transformations,
+    and measuring reference-relative entity movement. Supports changing entity
+    sets, optional alignment anchors, translation, reflection, rotation, and
+    optional isotropic scaling. Provides explicit transformation diagnostics
+    and descriptive trajectory plots. Matches supplied cluster identities by
+    maximum shared-entity overlap, with explicit assignment and ambiguity
+    diagnostics. Includes centered PCA and classical multidimensional scaling
+    adapters with retained inputs, preprocessing, and spectral diagnostics.
+    No inferential uncertainty is estimated.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+Imports:
+    ggplot2 (>= 3.4.0),
+    clue (>= 0.3-65),
+    grid,
+    grDevices,
+    stats,
+    utils
+Suggests:
+    testthat (>= 3.0.0),
+    roxygen2 (>= 7.3.0),
+    knitr,
+    rmarkdown
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.1.0

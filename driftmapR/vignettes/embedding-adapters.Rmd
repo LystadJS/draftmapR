@@ -1,0 +1,178 @@
+---
+title: "PCA and classical-MDS adapters"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{PCA and classical-MDS adapters}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+`embed_snapshots()` independently fits a two-dimensional embedding at each
+period and returns an **unaligned** `driftmap`. PCA uses the singular value
+decomposition. Classical multidimensional scaling (classical MDS, `"cmds"`)
+uses the eigenvectors of the centered squared-distance matrix. Both retain the
+original input, fitting metadata and diagnostics for later inspection.
+Alignment remains an explicit subsequent operation.
+
+## Start from repeated feature measurements
+
+Select the feature columns explicitly. Metadata such as cluster labels should
+not accidentally become measured dimensions. Entity identities and period
+ordering follow the same rules as `drift_data()`. Features must be finite
+numeric columns observed in every row; no imputation is performed.
+
+```{r feature-data}
+library(driftmapR)
+first <- data.frame(entity = letters[1:8], time = 1,
+                    u = c(-2, -1, 0, 1, 2, 3, 1, -1),
+                    v = c(0, 1, -1, 2, 0, 1, 3, -2))
+second <- transform(first, time = 2)
+second$u[second$entity == "h"] <- second$u[second$entity == "h"] + 0.6
+second$v[second$entity == "h"] <- second$v[second$entity == "h"] - 0.8
+panel <- rbind(first, second)
+# An isometric loading into four dimensions makes the movement truth exact.
+panel$f1 <- panel$u / sqrt(2)
+panel$f2 <- panel$v / sqrt(2)
+panel$f3 <- panel$u / sqrt(2)
+panel$f4 <- panel$v / sqrt(2)
+features <- paste0("f", 1:4)
+input <- panel[c("entity", "time", features)]
+raw <- embed_snapshots(input, features = features, method = "pca")
+raw$diagnostics$embedding
+```
+
+The embedding axes may change sign or rotate between independent fits. Changes
+in the retained subspace can also occur when a higher-dimensional geometry is
+truncated to two dimensions. Procrustes alignment removes rigid coordinate
+indeterminacy; it cannot restore geometry discarded by the embedding.
+
+```{r align}
+# These seven entities are known to be stable in this constructed example.
+fit <- align_snapshots(raw, anchors = letters[1:7], scale = FALSE)
+movement <- measure_drift(fit)
+movement[c("entity", "time_from", "time_to", "distance")]
+stopifnot(max(movement$distance[movement$entity != "h"]) < 1e-8,
+          abs(movement$distance[movement$entity == "h"] - 1) < 1e-8)
+```
+
+Entity `h` moves by $(0.6,-0.8)$, a Euclidean distance of one. All other entities
+remain stable. Anchors encode that known stability; using moving entities in
+the alignment fit can absorb part of their movement. Centering and alignment
+also remove shared translation, so a global feature-level shift is not an
+identifiable entity drift effect in this workflow.
+
+```{r plot, fig.width=6, fig.height=4}
+plot_drift_map(fit)
+```
+
+## Preprocessing defines the distance
+
+Every snapshot is centered. `standardize` chooses the feature standard
+deviations used to divide the data before fitting:
+
+- `"none"` preserves supplied feature units and is the default.
+- `"first"` uses the first period's feature standard deviations in every period.
+- `"pooled"` uses standard deviations across all entity-time rows; entities with
+  more observations contribute more rows.
+- `"period"` estimates standard deviations separately in each period. This
+  changes the metric across periods and can absorb real scale changes.
+
+These are substantive metric choices, not uncertainty adjustments. When
+standardization is requested, an active feature with zero standard deviation
+is rejected. Models must retain at least two positive, numerically identifiable
+dimensions. The stored preprocessing records contain the centers and scales.
+
+```{r preprocessing}
+standardized <- embed_snapshots(input, features, standardize = "first")
+standardized$embedding_metadata$preprocessing$scales[[1]]
+```
+
+`feature_weights` supplies the same nonnegative weights in every period. A
+weight $w_j$ multiplies the preprocessed feature by $\sqrt{w_j}$; weights are
+not normalized. Integer weights therefore reproduce repeated feature columns.
+A zero weight removes that feature's geometric contribution.
+
+```{r weights}
+weighted <- embed_snapshots(input, features, feature_weights = c(2, 1, 0, 1))
+weighted$embedding_metadata$feature_weights
+```
+
+Weights provide a building block for a future resampling engine. Setting them
+does not run a bootstrap and does not produce standard errors or intervals.
+Named variables are not automatically exchangeable sampling units.
+
+## Classical MDS from features or distances
+
+For Euclidean feature distances, PCA and classical MDS yield equivalent
+retained geometry up to an orthogonal transformation, apart from numerical
+roundoff and nonidentifiable boundary eigenspaces. In the exact rank-2 example,
+they preserve the known movement equally well.
+
+```{r cmds-features}
+mds_fit <- embed_snapshots(input, features, method = "cmds") |>
+  align_snapshots(anchors = letters[1:7])
+stopifnot(max(abs(measure_drift(mds_fit)$distance - movement$distance)) < 1e-8)
+mds_fit$diagnostics$embedding
+```
+
+Alternatively, pass one labeled `dist` object or distance matrix per period.
+Matrix row and column names identify entities and must agree in the same
+order. Different periods may contain different entities. Use an explicit
+ordered period vector, or supply a fully named list whose names give the
+ordered period labels.
+
+```{r cmds-distances}
+distances <- lapply(1:2, function(period) {
+  rows <- input[input$time == period, ]
+  x <- as.matrix(rows[features])
+  rownames(x) <- rows$entity
+  stats::dist(x)
+})
+mds_from_distances <- embed_snapshots(distances, method = "cmds", periods = 1:2)
+mds_from_distances$diagnostics$embedding
+```
+
+Classical MDS forms $B=-\tfrac12 J D^{\circ 2}J$, where
+$J=I-\mathbf{1}\mathbf{1}^{T}/n$. The two-dimensional coordinates are
+$V_2\Lambda_2^{1/2}$ from the two largest positive eigenvalues. Significant
+negative eigenvalues indicate that the supplied distances are not Euclidean
+at the configured tolerance. The default `negative_eigen = "error"` rejects
+that geometry. Explicit `"truncate"` permits an approximation with a warning;
+negative eigenvalues are diagnosed and discarded, and no additive distance
+correction is applied. This approximation may alter even the supplied pairwise
+distances substantially.
+
+Diagnostics report positive and negative inertia, retained inertia fractions,
+the relative gap between eigenvalues two and three, and classical-MDS distance
+reconstruction error. A tie at the retained/discarded boundary is warned about
+because the selected two-dimensional subspace is not unique. A tie wholly
+inside the retained two-dimensional space only changes its orientation.
+
+## Reproduce the larger synthetic example
+
+From an installed source checkout, run:
+
+```{bash, eval=FALSE}
+Rscript data-raw/simulate-embeddings.R ../embedding-simulation-output
+```
+
+The script creates three clusters, 99 observations per period, 111 unique
+entities, three periods and eight measured features. One cluster and four
+other entities have known movement; some entities disappear and others enter.
+Known global rotations, reflection and translation are applied within a fixed
+rank-2 feature plane. It saves raw and aligned figures, movement-versus-truth
+figures, original measurements, generating transformations, fitted objects and
+numerical check results. Separate controls verify zero drift under pure
+isometries, PCA/MDS equivalence, distance-input equivalence and integer-weight
+column-duplication equivalence.
+
+This idealized example verifies geometry and data flow. It does not establish
+robustness under noisy dimension reduction, a correct sampling design, or
+confidence-interval coverage. The bootstrap specification is included in
+`inst/validation/bootstrap-specification.md` in the source package. A bootstrap
+engine, uncertainty intervals, cluster refitting and UMAP adapters are not
+implemented.

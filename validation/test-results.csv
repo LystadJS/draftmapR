@@ -1,0 +1,112 @@
+"file","context","test","nb","failed","skipped","error","warning","user","system","real","passed"
+"test-alignment.R","alignment","identical maps align to identity with approximately zero drift",9,0,FALSE,FALSE,0,0.188,0.00800000000000001,0.196,9
+"test-alignment.R","alignment","translation is removed and its inverse is recovered",7,0,FALSE,FALSE,0,0.509,0.004,0.513,7
+"test-alignment.R","alignment","a 90-degree rotation is removed using the row-coordinate convention",6,0,FALSE,FALSE,0,0.107,0.012,0.119,6
+"test-alignment.R","alignment","reflections are allowed and do not create apparent drift",7,0,FALSE,FALSE,0,0.0430000000000001,0,0.0419999999999998,7
+"test-alignment.R","alignment","rotation and translation are jointly removed",7,0,FALSE,FALSE,0,0.128,0.012,0.14,7
+"test-alignment.R","alignment","uniform scale is removed only when requested",8,0,FALSE,FALSE,0,0.036,0,0.036,8
+"test-alignment.R","alignment","known entity motion is preserved when stable anchors identify the frame",11,0,FALSE,FALSE,0,0.0330000000000004,0,0.0329999999999999,11
+"test-alignment.R","alignment","fitting on moving entities exposes the expected frame-estimation attenuation",3,0,FALSE,FALSE,0,0.0129999999999999,0,0.012,3
+"test-alignment.R","alignment","disappearing and new entities use the common-entity transformation",11,0,FALSE,FALSE,0,0.0290000000000004,0,0.0299999999999998,11
+"test-alignment.R","alignment","sequential alignment targets already aligned previous coordinates",8,0,FALSE,FALSE,0,0.0369999999999999,0.014,0.052,8
+"test-alignment.R","alignment","previous references support overlap chains without first-period overlap",2,0,FALSE,FALSE,0,0.02,0,0.02,2
+"test-alignment.R","alignment","degenerate geometry and insufficient shared entities are rejected",4,0,FALSE,FALSE,0,0.024,0.002,0.0259999999999998,4
+"test-alignment.R","alignment","full-rank maps still require an identifiable cross-covariance",3,0,FALSE,FALSE,0,0.0110000000000001,0.004,0.0149999999999997,3
+"test-alignment.R","alignment","scale, reflection, and translation can be removed together",7,0,FALSE,FALSE,0,0.0229999999999997,0,0.0229999999999997,7
+"test-alignment.R","alignment","alignment controls reject invalid or ambiguous values",7,0,FALSE,FALSE,0,0.0309999999999997,0,0.0309999999999997,7
+"test-alignment.R","alignment","alignment diagnostics expose each fitted transformation",4,0,FALSE,FALSE,0,0.016,0,0.0169999999999999,4
+"test-cluster-matching.R","cluster-matching","pure label permutations preserve identities without alignment",11,0,FALSE,FALSE,0,0.0819999999999999,0,0.0819999999999999,11
+"test-cluster-matching.R","cluster-matching","an entity switch is retained in observed transitions",8,0,FALSE,FALSE,0,0.182,0,0.182,8
+"test-cluster-matching.R","cluster-matching","split candidates retain one identity and allocate the other",7,0,FALSE,FALSE,0,0.0409999999999999,0,0.0409999999999999,7
+"test-cluster-matching.R","cluster-matching","merge candidates retain one predecessor without inventing two matches",6,0,FALSE,FALSE,0,0.0190000000000001,0,0.0189999999999997,6
+"test-cluster-matching.R","cluster-matching","births and deaths do not continue zero-overlap clusters",9,0,FALSE,FALSE,0,0.0290000000000004,0,0.0290000000000004,9
+"test-cluster-matching.R","cluster-matching","completely disjoint entity sets allocate all new identities",7,0,FALSE,FALSE,0,0.0189999999999997,0,0.0190000000000001,7
+"test-cluster-matching.R","cluster-matching","adjacent matching never resurrects a discontinued identity",3,0,FALSE,FALSE,0,0.0190000000000001,0,0.0190000000000001,3
+"test-cluster-matching.R","cluster-matching","missing and explicitly excluded noise labels remain unassigned",8,0,FALSE,FALSE,0,0.0259999999999998,0,0.0260000000000002,8
+"test-cluster-matching.R","cluster-matching","Jaccard uses the jointly labeled shared cohort",9,0,FALSE,FALSE,0,0.0279999999999996,0,0.0289999999999999,9
+"test-cluster-matching.R","cluster-matching","entirely unassigned periods preserve typed empty outputs",8,0,FALSE,FALSE,0,0.0219999999999998,0,0.0220000000000002,8
+"test-cluster-matching.R","cluster-matching","an assigned period can border a fully unassigned period",5,0,FALSE,FALSE,0,0.0179999999999998,0,0.0179999999999998,5
+"test-cluster-matching.R","cluster-matching","global assignment resolves a case where greedy matching fails",4,0,FALSE,FALSE,0,0.0129999999999999,0,0.0129999999999999,4
+"test-cluster-matching.R","cluster-matching","minimum overlap filters edges before optimization",6,0,FALSE,FALSE,0,0.032,0.004,0.0350000000000001,6
+"test-cluster-matching.R","cluster-matching","Jaccard threshold boundaries are inclusive",3,0,FALSE,FALSE,0,0.0260000000000002,0,0.0250000000000004,3
+"test-cluster-matching.R","cluster-matching","exact assignment ties are deterministic and reported",6,0,FALSE,FALSE,0,0.0229999999999997,0,0.0230000000000001,6
+"test-cluster-matching.R","cluster-matching","tie order prioritizes prior identity, then current label, with unmatched last",4,0,FALSE,FALSE,0,0.02,0.004,0.024,4
+"test-cluster-matching.R","cluster-matching","disabled tie diagnostics retain the same assignment with unknown margins",4,0,FALSE,FALSE,0,0.0140000000000002,0.004,0.0180000000000002,4
+"test-cluster-matching.R","cluster-matching","small random assignments agree with exhaustive partial-assignment optima",96,0,FALSE,FALSE,0,0.352,0.02,0.373,96
+"test-cluster-matching.R","cluster-matching","factor and numeric labels canonicalize without unused phantom clusters",6,0,FALSE,FALSE,0,0.0229999999999997,0.003,0.0259999999999998,6
+"test-cluster-matching.R","cluster-matching","Date and explicit character schedules survive matching",7,0,FALSE,FALSE,0,0.0350000000000001,0,0.0350000000000001,7
+"test-cluster-matching.R","cluster-matching","matching composes with alignment and preserves existing numerical results",9,0,FALSE,FALSE,0,0.0389999999999997,0.004,0.0429999999999997,9
+"test-cluster-matching.R","cluster-matching","settings document matching choices and custom label columns",6,0,FALSE,FALSE,0,0.0170000000000003,0,0.0180000000000002,6
+"test-cluster-matching.R","cluster-matching","invalid cluster columns and scalar controls fail informatively",32,0,FALSE,FALSE,0,0.132,0,0.132,32
+"test-cluster-matching.R","cluster-matching","numeric NaN labels are unassigned just like numeric NA",6,0,FALSE,FALSE,0,0.0179999999999998,0,0.0180000000000002,6
+"test-cluster-matching.R","cluster-matching","an all-NA logical label column is accepted without admitting logical labels",7,0,FALSE,FALSE,0,0.0279999999999996,0.004,0.032,7
+"test-cluster-matching.R","cluster-matching","numeric clusters can start after a wholly unassigned dated first period",9,0,FALSE,FALSE,0,0.0209999999999999,0.00700000000000001,0.028,9
+"test-cluster-solver.R","cluster-solver","integer assignment defeats rowwise greedy matching",11,0,FALSE,FALSE,0,0.04,0,0.04,11
+"test-cluster-solver.R","cluster-solver","equal optima use rowwise lexicographic order with unmatched last",31,0,FALSE,FALSE,0,0.0710000000000006,0,0.0709999999999997,31
+"test-cluster-solver.R","cluster-solver","margins use the original optimum before lexicographic decisions",10,0,FALSE,FALSE,0,0.0249999999999995,0,0.0249999999999995,10
+"test-cluster-solver.R","cluster-solver","zero-score links remain unmatched across rectangular problems",30,0,FALSE,FALSE,0,0.0609999999999999,0,0.0609999999999999,30
+"test-cluster-solver.R","cluster-solver","empty dimensions return typed empty or unmatched diagnostics",27,0,FALSE,FALSE,0,0.0390000000000006,0,0.0389999999999997,27
+"test-cluster-solver.R","cluster-solver","disconnected components preserve global canonical row and column order",15,0,FALSE,FALSE,0,0.0310000000000006,0.004,0.0360000000000005,15
+"test-cluster-solver.R","cluster-solver","singleton groups avoid large dense assignment calls",4,0,FALSE,FALSE,0,0.0790000000000006,0.00800000000000001,0.0859999999999994,4
+"test-cluster-solver.R","cluster-solver","disabling diagnostics retains the exact canonical assignment",4,0,FALSE,FALSE,0,0.00900000000000034,0,0.00999999999999979,4
+"test-cluster-solver.R","cluster-solver","random small integer problems agree exactly with exhaustive search",734,0,FALSE,FALSE,0,1.598,0.088,1.69,734
+"test-cluster-solver.R","cluster-solver","invalid score matrices and diagnostic switches fail informatively",14,0,FALSE,FALSE,0,0.0449999999999999,0,0.0460000000000003,14
+"test-cmds-kernel.R","cmds-kernel","classical MDS agrees with independent cmdscale geometry and inertia",16,0,FALSE,FALSE,0,0.0599999999999996,0.000999999999999945,0.0609999999999999,16
+"test-cmds-kernel.R","cmds-kernel","higher-dimensional Euclidean inputs expose actual truncation error",6,0,FALSE,FALSE,0,0.0590000000000002,0.004,0.0620000000000003,6
+"test-cmds-kernel.R","cmds-kernel","non-Euclidean distances require explicit warned truncation",10,0,FALSE,FALSE,0,0.0269999999999992,0,0.0270000000000001,10
+"test-cmds-kernel.R","cmds-kernel","rank-deficient and nearly rank-deficient maps are rejected",3,0,FALSE,FALSE,0,0.0140000000000002,0,0.0129999999999999,3
+"test-cmds-kernel.R","cmds-kernel","spectral roundoff is retained without materially negative warnings",4,0,FALSE,FALSE,0,0.00699999999999967,0.001,0.00900000000000034,4
+"test-cmds-kernel.R","cmds-kernel","normalization supports large and small finite distance units",22,0,FALSE,FALSE,0,0.0509999999999993,0.00800000000000001,0.0579999999999998,22
+"test-cmds-kernel.R","cmds-kernel","only eigenspace ties crossing the retained boundary warn",7,0,FALSE,FALSE,0,0.0170000000000003,0,0.016,7
+"test-cmds-kernel.R","cmds-kernel","invalid matrix shape and dissimilarity values fail contextually",12,0,FALSE,FALSE,0,0.0440000000000005,0.004,0.048,12
+"test-cmds-kernel.R","cmds-kernel","tiny symmetry roundoff is reconciled without modifying input",2,0,FALSE,FALSE,0,0.00600000000000023,0,0.00599999999999934,2
+"test-cmds-kernel.R","cmds-kernel","kernel spectral and negative-eigenvalue controls are validated",11,0,FALSE,FALSE,0,0.0369999999999999,0,0.0369999999999999,11
+"test-data.R","data","coordinate inputs construct an extensible canonical object",9,0,FALSE,FALSE,0,0.0180000000000007,0,0.0179999999999998,9
+"test-data.R","data","numeric periods are chronologically ordered even if input is shuffled",2,0,FALSE,FALSE,0,0.00600000000000023,0,0.00599999999999934,2
+"test-data.R","data","dates retain their type and are ordered chronologically",3,0,FALSE,FALSE,0,0.00699999999999967,0.003,0.00999999999999979,3
+"test-data.R","data","categorical times require an unambiguous schedule",4,0,FALSE,FALSE,0,0.0170000000000003,0,0.0169999999999995,4
+"test-data.R","data","explicit schedules reject missing, duplicate, or unobserved periods",6,0,FALSE,FALSE,0,0.0209999999999999,0,0.0199999999999996,6
+"test-data.R","data","entity and time keys cannot be missing, blank, or duplicated",5,0,FALSE,FALSE,0,0.0190000000000001,0,0.0190000000000001,5
+"test-data.R","data","distinct numeric entity IDs cannot collapse into the same label",3,0,FALSE,FALSE,0,0.00800000000000001,0,0.00800000000000001,3
+"test-data.R","data","entity IDs must be a vector rather than a matrix column",1,0,FALSE,FALSE,0,0.00499999999999989,0,0.00499999999999989,1
+"test-data.R","data","coordinates must be finite numeric values in exactly two dimensions",9,0,FALSE,FALSE,0,0.032,0,0.032,9
+"test-data.R","data","custom coordinate columns are canonicalized",2,0,FALSE,FALSE,0,0.0110000000000001,0,0.0110000000000001,2
+"test-data.R","data","overlap validation is optional at ingestion and enforced before fitting",3,0,FALSE,FALSE,0,0.0119999999999996,0,0.0119999999999996,3
+"test-data.R","data","validation detects inconsistent dimensions or corrupted period indices",3,0,FALSE,FALSE,0,0.0129999999999999,0,0.0129999999999999,3
+"test-embedding.R","embedding","PCA adapters reproduce base R geometry and retain an auditable fit",20,0,FALSE,FALSE,0,0.0590000000000002,0,0.0599999999999996,20
+"test-embedding.R","embedding","PCA and Euclidean classical MDS retain the same two-dimensional geometry",5,0,FALSE,FALSE,0,0.0969999999999995,0,0.0970000000000004,5
+"test-embedding.R","embedding","stored PCA preprocessing and loadings reconstruct scores from original data",2,0,FALSE,FALSE,0,0.016,0,0.0150000000000006,2
+"test-embedding.R","embedding","standardization policies use the documented sample SD reference",28,0,FALSE,FALSE,0,0.069,0.004,0.0739999999999998,28
+"test-embedding.R","embedding","integer feature weights reproduce literal feature duplication",6,0,FALSE,FALSE,0,0.0350000000000001,0.003,0.0379999999999994,6
+"test-embedding.R","embedding","weights preserve absolute geometry instead of being normalized",2,0,FALSE,FALSE,0,0.0200000000000005,0,0.0199999999999996,2
+"test-embedding.R","embedding","centering and global orthogonal changes do not create drift",2,0,FALSE,FALSE,0,0.0209999999999999,0,0.0200000000000005,2
+"test-embedding.R","embedding","rank-two true movement survives full embedding and anchor alignment",4,0,FALSE,FALSE,0,0.0250000000000004,0,0.0249999999999995,4
+"test-embedding.R","embedding","changing entity availability does not create or impute rows",4,0,FALSE,FALSE,0,0.0149999999999997,0,0.0140000000000002,4
+"test-embedding.R","embedding","row order cannot detach scores or supplied cluster metadata from entities",6,0,FALSE,FALSE,0,0.0429999999999993,0,0.0430000000000001,6
+"test-embedding.R","embedding","Date and explicit character schedules survive the adapter",5,0,FALSE,FALSE,0,0.0200000000000005,0,0.0190000000000001,5
+"test-embedding.R","embedding","feature columns called x and y are accepted as original measurements",3,0,FALSE,FALSE,0,0.0110000000000001,0,0.0110000000000001,3
+"test-embedding.R","embedding","labeled distances reproduce the feature-input classical MDS fit",7,0,FALSE,FALSE,0,0.0529999999999999,0.004,0.0570000000000004,7
+"test-embedding.R","embedding","distance-list identity and schedule errors are rejected",9,0,FALSE,FALSE,0,0.032,0,0.032,9
+"test-embedding.R","embedding","malformed packed dist objects cannot silently recycle dissimilarities",14,0,FALSE,FALSE,0,0.0519999999999996,0,0.0510000000000002,14
+"test-embedding.R","embedding","feature schemas are explicit finite and unambiguous",13,0,FALSE,FALSE,0,0.0439999999999996,0,0.0449999999999999,13
+"test-embedding.R","embedding","core entity-time validation also guards feature adapters",6,0,FALSE,FALSE,0,0.0229999999999997,0,0.0229999999999997,6
+"test-embedding.R","embedding","invalid feature weight vectors fail before fitting",9,0,FALSE,FALSE,0,0.0350000000000001,0,0.0350000000000001,9
+"test-embedding.R","embedding","insufficient rank is rejected and unscaled constants are retained safely",10,0,FALSE,FALSE,0,0.0520000000000005,0,0.0520000000000005,10
+"test-embedding.R","embedding","omitted constant features do not block declared standardization",12,0,FALSE,FALSE,0,0.0459999999999994,0.004,0.0489999999999995,12
+"test-embedding.R","embedding","diagnostics report omitted inertia and the chosen two-dimensional boundary",10,0,FALSE,FALSE,0,0.024,0,0.0249999999999995,10
+"test-embedding.R","embedding","equal eigenvalues at the retained boundary are flagged",12,0,FALSE,FALSE,0,0.0280000000000005,0.004,0.032,12
+"test-embedding.R","embedding","public classical MDS requires explicit truncation of negative inertia",7,0,FALSE,FALSE,0,0.0229999999999997,0.003,0.0259999999999998,7
+"test-embedding.R","embedding","invalid eigen tolerance and adapter choices are rejected",10,0,FALSE,FALSE,0,0.0350000000000001,0,0.0340000000000007,10
+"test-movement.R","movement","movement requires an explicitly fitted coordinate system",1,0,FALSE,FALSE,0,0.00700000000000056,0,0.00800000000000001,1
+"test-movement.R","movement","missing aligned columns produce an informative validation error",5,0,FALSE,FALSE,0,0.0229999999999997,0,0.0229999999999997,5
+"test-movement.R","movement","movement returns tidy endpoints, displacement, and Euclidean distance",8,0,FALSE,FALSE,0,0.0240000000000009,0,0.024,8
+"test-movement.R","movement","movement never bridges a period in which an entity was absent",3,0,FALSE,FALSE,0,0.0140000000000011,0,0.0140000000000002,3
+"test-movement.R","movement","movement preserves Date period values",2,0,FALSE,FALSE,0,0.00900000000000034,0,0.00899999999999945,2
+"test-movement.R","movement","distance to a fixed anchor is computed in aligned coordinates",4,0,FALSE,FALSE,0,0.0139999999999993,0,0.0129999999999999,4
+"test-movement.R","movement","an entity anchor uses its contemporaneous aligned position",5,0,FALSE,FALSE,0,0.0249999999999986,0.004,0.0289999999999999,5
+"test-movement.R","movement","anchors must be defined and available in every period",4,0,FALSE,FALSE,0,0.0199999999999996,0,0.0199999999999996,4
+"test-plot.R","plot","aligned plots and plot methods return buildable ggplots",5,0,FALSE,FALSE,0,0.271000000000001,0.005,0.275000000000001,5
+"test-plot.R","plot","trajectories never bridge an unobserved intermediate period",3,0,FALSE,FALSE,0,0.115,0,0.115,3
+"test-plot.R","plot","raw plots and position-only plots build without fitted transformations",5,0,FALSE,FALSE,0,0.161999999999999,0.004,0.165000000000001,5
+"test-plot.R","plot","plotting rejects missing alignment, invalid flags, and malformed objects",6,0,FALSE,FALSE,0,0.027000000000001,0,0.0280000000000005,6
+"test-plot.R","plot","precise distinct times with identical printed labels remain distinct",5,0,FALSE,FALSE,0,0.102,0,0.101000000000001,5

@@ -1,0 +1,54 @@
+# driftmapR: essential landscape verification
+
+Review date: 2026-09-10. Purpose: bound the first executable prototype while the full Phase 0 review remains incomplete.
+
+## Decision
+
+Proceed with a small **integration and validation contribution**: an explicit longitudinal data object that aligns already-computed coordinates on entity overlap, records every transformation, returns consecutive-period movement, and subsequently connects cluster correspondence and a defined resampling procedure. This review does **not** establish methodological novelty or R Journal suitability. The first prototype is useful engineering, but pairwise Procrustes alignment, point residuals, and arrow plots already exist in mature R software.
+
+No inspected interface was verified to integrate all seven targets: repeated embeddings, temporal reference management, changing entity sets, cluster correspondence, entity movement, bootstrap uncertainty for that movement, and longitudinal visualization. This is a bounded finding about the documentation reviewed, not proof that no other implementation exists.
+
+## Verified alternatives and overlap
+
+“Not documented” below refers to the reviewed interface; it is not a claim that an expert cannot compose the functionality from that package.
+
+| Package / software | Relationship | Verified capabilities | Boundary relevant to driftmapR |
+|---|---|---|---|
+| **vegan** | Closest baseline for the current alignment/movement prototype | `procrustes()` fits ordinations by least squares, with optional scale; exposes rotation, translation, scale, fitted coordinates, and point residuals. `predict()` transforms new coordinates. Plot methods draw point shifts/arrows. `protest()` performs permutation testing of configuration concordance. | Temporal entity-key joins, period ordering, consecutive movement tables, cluster identity tracking, and bootstrap movement intervals are not documented in this interface. A concordance permutation p-value is not an entity movement confidence interval. [Official documentation](https://vegandevs.github.io/vegan/reference/procrustes.html) |
+| **shapes** | Direct overlap in alignment and shape inference | Statistical landmark-shape analysis, Procrustes methods, graphics, PCA, and bootstrap/permutation tests; multiple-configuration GPA and extraction of transformations are documented. `shapes3d()` explicitly supports looping through time-series configurations. | Shape inference and sequential shape visualization are substantial prior art. Its landmark/configuration representation is not the proposed tidy changing-entity temporal workflow; do not claim uncertainty after alignment or time-indexed plotting is itself new. [CRAN overview](https://cran.r-project.org/web/packages/shapes/index.html), [manual](https://cran.r-project.org/web/packages/shapes/refman/shapes.html) |
+| **Morpho** | Direct overlap in GPA, partial registration, and transformation handling | `procSym()` supports 2-D/3-D configuration arrays, scaling/reflection options, registration on a landmark subset, weights, aligned coordinates, and a mean shape. `align2procSym()` aligns new configurations to an existing registration. | Its standard array retains a shared landmark dimension. Subset registration already exists; it is not a novel anchor method. The inspected functions do not implement tidy temporal entity churn, consecutive movement summaries, and temporal cluster correspondence as one analysis object. [CRAN manual](https://cran.r-project.org/web/packages/Morpho/refman/Morpho.html) |
+| **clue** | Natural adjacent cluster-assignment dependency | Cluster ensembles and partition comparison; `solve_LSAP()` uses the Hungarian method for an optimal one-to-one row/column assignment. | Provides an optimization primitive, not a temporal correspondence policy. driftmapR must specify overlap scores, unmatched clusters, ties, births/deaths, and split/merge limitations. It should not claim a new assignment algorithm. [CRAN manual](https://cran.r-project.org/web/packages/clue/refman/clue.html) |
+| **clustree** | Adjacent correspondence visualization | Visualizes how samples move between clusters at different clustering resolutions. | Resolution is the documented organizing axis, not longitudinal coordinate alignment. Its transition visualization is prior art; a temporal plot alone is not a sufficient software gap. [Maintainer documentation](https://lazappi.github.io/clustree/) |
+| **latrend** | Adjacent longitudinal cluster framework | Standardizes clustering of longitudinal univariate trajectories, with repeated fitting, validation, assessment, bootstrapping, and trajectory plots. | Clusters trajectories rather than resolving coordinate-system indeterminacy between independently produced multivariate snapshots. A broad “longitudinal clustering” novelty claim would be inaccurate. [CRAN R-universe mirror](https://cran.r-universe.dev/latrend), [authors’ paper](https://arxiv.org/abs/2402.14621) |
+| **spinifex / tourr** | Adjacent projection exploration | Tours inspect sequences of linear projections; spinifex adds manual control of a variable’s projection coefficient and a layered visualization API. | A tour’s frames change the viewing basis and need not represent measurement periods. These tools explain projection sensitivity; they do not by themselves establish longitudinal entity drift. [Maintainer documentation](https://nspyrison.github.io/spinifex/), [R Journal article](https://journal.r-project.org/articles/RJ-2020-027/) |
+| **bootSVD** | Adjacent bootstrap embedding uncertainty | Fast exact bootstrap PCA/SVD, including methods for large matrices and bootstrap principal-component uncertainty. | Its documented target is PCA uncertainty, not the whole entity-time alignment/cluster/movement workflow. It is a methodological baseline for future resampling design, not evidence that driftmapR has implemented uncertainty. [CRAN](https://cran.r-project.org/web/packages/bootSVD/index.html), [authors’ methodological paper](https://arxiv.org/abs/1405.0922) |
+| **AlignedUMAP (Python)** | Important cross-language competitor for repeated embedding alignment | Generates related embeddings using consecutive-dataset relation dictionaries, including partial overlap, online updates, and visual comparisons. Alignment strength trades off temporal agreement and individual embedding structure. | This already covers repeated embeddings plus changing entity correspondence. It jointly regularizes nonlinear embeddings rather than merely applying recorded post-hoc orthogonal transforms. Its reviewed tutorial does not provide the proposed cluster-label/bootstrapped movement analysis. Keep UMAP adapters deferred. [Official tutorial](https://umap-learn.readthedocs.io/en/latest/aligned_umap_basic_usage.html) |
+
+## Narrow contribution and prototype API boundary
+
+Freeze only the **prototype contract**, not the complete v0.1 API:
+
+1. A `driftmap` object with explicit entity/time keys, raw coordinates, aligned coordinates, transformations, diagnostics, settings, and reserved later-result slots.
+2. `drift_data()` and validation for two-dimensional user-supplied coordinates; explicit chronological ordering and intended-period checks.
+3. `align_snapshots()` with previous-period reference as the minimum implemented strategy. Any first-period strategy must be independently documented and tested; consensus/GPA remains a separate milestone.
+4. `measure_drift()` returning consecutive-pair coordinate differences and Euclidean magnitudes, with no implicit bridging across missing entity periods.
+5. A descriptive plot that consumes saved alignment results; it must never silently fit a transform.
+
+Cluster matching, bootstrap uncertainty, and embedding adapters can occupy later result slots without exported placeholder functions that suggest they work. Full v0.1 remains PCA/classical MDS/user coordinates, alignment/reference strategies, cluster correspondence, drift, uncertainty/stability, tidy results, and static plots, subject to validated statistical specifications.
+
+## Statistical requirements derived for this prototype
+
+These are mathematical implications and implementation recommendations, not empirical findings from the package review.
+
+- For row-vector coordinates, center shared source and target coordinates as `Xc` and `Yc`; with `svd(t(Xc) %*% Yc) = U D V'`, use `R = U V'`. Reflection is allowed unless a distinct constrained problem is specified. Optional isotropic scale is `sum(D) / sum(Xc^2)`; translation is `mean(Y) - s * mean(X) %*% R`.
+- Apply the same fitted transform to **all** source-period entities, including entrants. Fit only on genuine matched entities and any declared registration subset.
+- With reflection allowed, require enough non-collinear common points in 2-D to identify the transform; reject insufficient or rank-deficient registration geometry instead of accepting arbitrary orientation.
+- Movement is relative to the selected coordinate reference and registration entities. Fitting all common entities can absorb part of real whole-cluster movement and distribute apparent residual movement among otherwise stationary entities. Exact recovery tests should use known stable registration entities or a known-truth configuration designed to preserve the registration frame. Report an all-common-entities sensitivity comparison.
+- A translation/rotation of the **entire** underlying configuration is intrinsically indistinguishable from coordinate-system change under this model. Do not promise absolute physical motion recovery. `scale = FALSE` preserves common scale changes; `scale = TRUE` deliberately removes isotropic size differences.
+- Separate exact transformation invariance from noisy movement estimation. This prototype can verify numerical recovery and descriptive magnitude; statistical detection requires a later, declared resampling unit and dependence structure.
+
+## Review limits and next literature gate
+
+CRAN metadata/manuals, maintainer GitHub Pages documentation, an R-universe package mirror, the R Journal spinifex article, and an original bootstrap PCA manuscript were inspected. Broad search results were incomplete and some package/DOI endpoints could not be opened. `dynClust` was not verified from a current authoritative interface and is therefore not characterized here. No systematic source-code audit, exhaustive CRAN/GitHub inventory, head-to-head benchmark, or complete methodological review has been completed.
+
+Before publication-oriented scope claims: finish the systematic comparison; inspect temporal cluster tracking and dynamic network competitors; audit shape/ordination bootstrap estimands; identify PCA/MDS resampling units and entity persistence rules; compare numerical results against vegan; and demonstrate that workflow integration reduces meaningful user work. The executable prototype should proceed without waiting for a novelty claim.

@@ -1,0 +1,164 @@
+---
+title: "Getting started with longitudinal coordinate alignment"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started with longitudinal coordinate alignment}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>", fig.width = 7, fig.height = 5)
+```
+
+Independently calculated embeddings do not necessarily share an orientation or
+origin. A map can rotate, reflect, or translate without changing any pairwise
+distance. Subtracting such raw coordinates mixes coordinate artifacts with
+movement. `driftmapR` fits an explicit common frame before calculating changes.
+
+This prototype accepts supplied two-dimensional coordinates. It estimates
+orthogonal Procrustes transformations, measures adjacent-period displacement,
+and draws trajectories. It also matches supplied cluster labels with
+`match_clusters()`; see the cluster-correspondence vignette. It does not yet fit
+PCA or MDS embeddings, quantify bootstrap uncertainty, or support UMAP.
+
+## Construct an analysis
+
+An entity-time pair must identify one row. Supply the ordered period schedule
+explicitly when the order or spacing cannot be inferred reliably.
+
+```{r input}
+library(driftmapR)
+
+first <- data.frame(
+  entity = letters[1:6], time = 1,
+  x = c(0, 3, 0, 3, 1, 2), y = c(0, 0, 2, 2, 1, 1)
+)
+true_second <- transform(first, time = 2)
+true_second$x[true_second$entity == "e"] <- 1.4
+true_second$y[true_second$entity == "f"] <- 1.2
+
+# Rotate by 90 degrees and translate the second coordinate system.
+second <- transform(true_second, x = -y + 7, y = x - 4)
+object <- drift_data(rbind(first, second), periods = 1:2)
+object
+plot_drift_map(object, aligned = FALSE, trajectories = FALSE)
+```
+
+The constructor retains row-level metadata such as supplied cluster labels.
+Entities may enter or leave the panel. Missing entity identifiers, missing time
+values, duplicate entity-time pairs, and invalid coordinates are errors.
+A scheduled period with no observations is an error. Omitted periods cannot be
+diagnosed from arbitrary labels without a declared schedule; provide `periods`
+when that distinction matters.
+
+## Fit the reference frame
+
+For matched entities, let $X$ contain current coordinates and $Y$ contain
+reference coordinates. Center both using only the matched fit entities,
+$X_c = X - \bar X$ and $Y_c = Y - \bar Y$. Write
+
+$$
+X_c^\mathsf{T}Y_c = U \Sigma V^\mathsf{T}.
+$$
+
+The orthogonal minimizer is $R = UV^\mathsf{T}$. Reflections are allowed because
+independent coordinate systems can differ by a reflection. With `scale = FALSE`,
+$s = 1$. With scaling enabled, the least-squares scalar is
+
+$$
+s = \frac{\operatorname{tr}(\Sigma)}{\|X_c\|_F^2}.
+$$
+
+Using row-vector coordinates, the transformation for every current entity is
+
+$$
+X^* = sXR+b, \qquad b=\bar Y-s\bar XR.
+$$
+
+New entities receive the same transformation even though they did not help fit
+it. The overlap used for fitting must span the coordinate space; insufficient or
+degenerate overlap is rejected. Rotation matrices, translations, scale factors,
+fit counts, discrepancy, and references are retained in the analysis object.
+
+The default `reference = "previous"` fits each current map to the already
+aligned preceding map. This creates one sequential frame. Reference-frame error
+can accumulate over a long sequence.
+
+```{r alignment}
+# In this synthetic example a:d are known stationary, non-collinear anchors.
+aligned <- align_snapshots(object, reference = "previous",
+                            scale = FALSE, anchors = letters[1:4])
+aligned
+aligned$transformations
+plot_drift_map(aligned, labels = TRUE)
+```
+
+### The reference frame defines what movement means
+
+When `anchors = NULL`, every shared entity contributes to the fitted frame.
+That is a least-squares compromise. If many entities move together, the fitted
+translation and rotation can absorb part of their genuine movement and induce
+apparent movement among otherwise stationary entities. Known stable anchors
+preserve movement relative to those anchors, but their stability is an
+assumption supplied by the analyst, not established by this function.
+
+Without an external reference, whole-system rigid motion and arbitrary
+coordinate changes cannot be distinguished. Optional scale removal similarly
+removes whole-system expansion or contraction. Keep `scale = FALSE` when such
+changes are meaningful, and examine fit diagnostics before interpreting drift.
+
+## Measure movement programmatically
+
+For shared entities in adjacent scheduled periods,
+
+$$
+\Delta_{it}=Z^*_{it}-Z^*_{i,t-1}, \qquad D_{it}=\|\Delta_{it}\|_2.
+$$
+
+```{r movement}
+movement <- measure_drift(aligned)
+movement
+stopifnot(max(abs(movement$distance[movement$entity %in% letters[1:4]])) < 1e-9)
+stopifnot(abs(movement$distance[movement$entity == "e"] - 0.4) < 1e-9)
+stopifnot(abs(movement$distance[movement$entity == "f"] - 0.2) < 1e-9)
+```
+
+The output contains entity, source/destination periods, source/destination
+coordinates, `dx`, `dy`, and `distance`. A disappearing or entering entity has
+no transition at that boundary. A reappearing entity is not connected across an
+unobserved intermediate period. The basic plot uses this same adjacency rule.
+These quantities are descriptive geometric changes. No inferential detection
+threshold or confidence interval is supplied by this prototype.
+
+## Reproduce the larger synthetic example
+
+The source checkout includes `data-raw/simulate-prototype.R`. After installing
+the package, run from the checkout:
+
+```{bash, eval=FALSE}
+Rscript data-raw/simulate-prototype.R ../simulation-output
+```
+
+The script generates three clusters, 104 unique entities, 96 observations in
+each of three periods, known coordinate transformations, individual movement,
+a moving cluster, and entrants/exits. It compares all-shared alignment against
+known-stable-anchor alignment, with and without small coordinate noise. It saves
+raw/aligned maps, truth and estimated movement, transformation records, model
+objects, numerical summaries, and PNG/PDF figures.
+
+The noiseless anchor case must recover each displacement within an absolute
+tolerance of $10^{-9}$ coordinate units. That tolerance is much larger than
+machine precision for this small example while far below its imposed movements.
+The simulation is one seeded realization at each of two noise levels. It does
+not establish interval coverage, false-positive rates, or performance across a
+simulation design; those remain later validation work.
+
+## Current limits and next milestones
+
+Cluster-label correspondence is implemented for supplied hard labels. The next
+milestone is a defined resampling design for bootstrap movement uncertainty and
+cluster stability, supported by original-data adapters. Consensus alignment,
+additional plotting functions, a broader simulation study, and applied
+vignettes remain separate development work. This prototype is not a CRAN or
+R Journal submission.

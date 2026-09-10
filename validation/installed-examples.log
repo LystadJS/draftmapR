@@ -1,0 +1,31 @@
+Running basic-workflow.R 
+Running cluster-correspondence.R 
+Running embedding-adapters.R 
+  entity time_from time_to     x_from     y_from       x_to       y_to
+1      a         1       2 -2.1113869  1.1969420 -2.1113869  1.1969420
+2      b         1       2 -0.6999062  1.2848176 -0.6999062  1.2848176
+3      c         1       2 -1.2738332 -0.8763413 -1.2738332 -0.8763413
+4      d         1       2  1.4612527  0.7108907  1.4612527  0.7108907
+5      e         1       2  0.8873258 -1.4502683  0.8873258 -1.4502683
+6      f         1       2  2.2988065 -1.3623926  2.2988065 -1.3623926
+7      g         1       2  2.1230553  1.4605688  2.1230553  1.4605688
+8      h         1       2 -2.6853139 -0.9642169 -2.7649490 -1.9610410
+             dx            dy     distance
+1  8.881784e-16  6.661338e-16 1.110223e-15
+2  1.110223e-16  6.661338e-16 6.753223e-16
+3  6.661338e-16 -6.661338e-16 9.420555e-16
+4 -4.440892e-16  2.220446e-16 4.965068e-16
+5 -2.220446e-16 -1.110223e-15 1.132210e-15
+6 -4.440892e-16 -6.661338e-16 8.005932e-16
+7 -4.440892e-16  4.440892e-16 6.280370e-16
+8 -7.963515e-02 -9.968241e-01 1.000000e+00
+  time period_index method n_entities n_features n_positive n_negative
+1    1            1    pca          8          4          2          0
+2    2            2    pca          8          4          2          0
+  negative_inertia_fraction positive_inertia_2d_fraction
+1                         0                            1
+2                         0                            1
+  absolute_inertia_2d_fraction eigengap_23 boundary_tie distance_rmse
+1                            1   0.4294682        FALSE            NA
+2                            1   0.4931418        FALSE            NA
+All three installed examples passed

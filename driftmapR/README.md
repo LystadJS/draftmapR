@@ -162,8 +162,6 @@ remotes::install_github(
 library(driftmapR)
 ```
 
-Because the repository is currently private, GitHub authentication is required for installation from GitHub.
-
 ## Minimal workflow
 
 This example creates a genuine one-unit movement for entity `e`, then applies a 90-degree rotation and arbitrary translation to the second raw map. Four known-stable entities define the fitting frame.

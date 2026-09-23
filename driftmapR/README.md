@@ -12,7 +12,7 @@
 ![License](https://img.shields.io/badge/license-MIT-8D1732)
 ![Status](https://img.shields.io/badge/status-active%20development-555555)
 
-\`driftmapR\` aligns repeated low-dimensional maps through time, preserves cluster identity across periods, and measures entity-level movement after removing arbitrary coordinate-frame changes.
+`driftmapR` aligns repeated low-dimensional maps through time, preserves cluster identity across periods, and measures entity-level movement after removing arbitrary coordinate-frame changes.
 
 </div>
 
@@ -21,7 +21,7 @@
 > [!IMPORTANT]
 > **Development status:** this repository currently contains the executable **0.0.3.9000 prototype**. Alignment, movement measurement, PCA/classical-MDS adapters, supplied-label cluster correspondence, diagnostics, and descriptive plotting are implemented. Bootstrap uncertainty, inferential movement detection, cluster stability, and consensus/generalized alignment are development targets, not current package capabilities.
 
-## Why \`driftmapR\`?
+## Why `driftmapR`?
 
 A PCA map, classical MDS configuration, latent-space representation, or other low-dimensional map is not a fixed coordinate system.
 
@@ -31,7 +31,7 @@ That creates the package's central problem:
 
 > **Observed coordinate movement is not automatically substantive movement.**
 
-\`driftmapR\` first establishes a defensible common coordinate frame and only then measures longitudinal change.
+`driftmapR` first establishes a defensible common coordinate frame and only then measures longitudinal change.
 
 | Question | Current component |
 |---|---|
@@ -43,7 +43,7 @@ That creates the package's central problem:
 
 ## Where it fits
 
-\`\`\`mermaid
+```mermaid
 flowchart LR
     A[Repeated feature data] --> B[PCA or classical MDS]
     B --> C[Temporal alignment]
@@ -52,9 +52,9 @@ flowchart LR
     D --> E[Entity movement]
     E --> F[Diagnostics and interpretation]
     F -. future .-> G[Resampling and uncertainty]
-\`\`\`
+```
 
-\`driftmapR\` sits between **representation generation** and **longitudinal interpretation**. It is not intended to become a general dimensionality-reduction framework.
+`driftmapR` sits between **representation generation** and **longitudinal interpretation**. It is not intended to become a general dimensionality-reduction framework.
 
 ## Core statistical problem
 
@@ -99,15 +99,15 @@ The core invariant is:
 
 | Function | Purpose |
 |---|---|
-| \`drift_data()\` | Construct and validate repeated 2-D coordinate data |
-| \`validate_drift_data()\` | Check object structure and optional alignment geometry |
-| \`embed_snapshots()\` | Generate independent PCA or classical-MDS maps |
-| \`align_snapshots()\` | Align maps to the previous or first period |
-| \`match_clusters()\` | Match supplied hard-cluster labels across adjacent periods |
-| \`measure_drift()\` | Compute adjacent-period displacement and movement magnitude |
-| \`distance_to_anchor()\` | Measure aligned distance to an entity or fixed coordinate |
-| \`plot_drift_map()\` | Plot aligned positions and adjacent movement |
-| \`print()\`, \`summary()\`, \`plot()\` | S3 methods for \`<driftmap>\` objects |
+| `drift_data()` | Construct and validate repeated 2-D coordinate data |
+| `validate_drift_data()` | Check object structure and optional alignment geometry |
+| `embed_snapshots()` | Generate independent PCA or classical-MDS maps |
+| `align_snapshots()` | Align maps to the previous or first period |
+| `match_clusters()` | Match supplied hard-cluster labels across adjacent periods |
+| `measure_drift()` | Compute adjacent-period displacement and movement magnitude |
+| `distance_to_anchor()` | Measure aligned distance to an entity or fixed coordinate |
+| `plot_drift_map()` | Plot aligned positions and adjacent movement |
+| `print()`, `summary()`, `plot()` | S3 methods for `<driftmap>` objects |
 
 ### Alignment
 
@@ -116,7 +116,7 @@ The current engine supports:
 - rotation and reflection;
 - translation;
 - optional isotropic scaling;
-- \`reference = "previous"\` or \`"first"\`;
+- `reference = "previous"` or `"first"`;
 - changing entity sets;
 - optional analyst-supplied stable anchors;
 - rejection of insufficient, collinear, or numerically unstable overlap;
@@ -135,7 +135,7 @@ Current adapters support:
 
 ### Cluster correspondence
 
-\`match_clusters()\` treats period-specific labels as arbitrary identifiers and solves a one-to-one assignment problem using shared-entity overlap.
+`match_clusters()` treats period-specific labels as arbitrary identifiers and solves a one-to-one assignment problem using shared-entity overlap.
 
 It retains:
 
@@ -150,9 +150,9 @@ These are descriptive correspondence diagnostics, not probabilities that two lat
 
 ## Installation
 
-The package is not on CRAN. In the current repository layout, the R package is stored in the \`driftmapR/\` subdirectory.
+The package is not on CRAN. In the current repository layout, the R package is stored in the `driftmapR/` subdirectory.
 
-\`\`\`r
+```r
 install.packages("remotes")
 remotes::install_github(
   "LystadJS/draftmapR",
@@ -160,15 +160,15 @@ remotes::install_github(
 )
 
 library(driftmapR)
-\`\`\`
+```
 
 Because the repository is currently private, GitHub authentication is required for installation from GitHub.
 
 ## Minimal workflow
 
-This example creates a genuine one-unit movement for entity \`e\`, then applies a 90-degree rotation and arbitrary translation to the second raw map. Four known-stable entities define the fitting frame.
+This example creates a genuine one-unit movement for entity `e`, then applies a 90-degree rotation and arbitrary translation to the second raw map. Four known-stable entities define the fitting frame.
 
-\`\`\`r
+```r
 library(driftmapR)
 
 first <- data.frame(
@@ -218,11 +218,11 @@ fit$transformations[
 
 distance_to_anchor(fit, "a")
 plot_drift_map(fit, labels = TRUE)
-\`\`\`
+```
 
 ## Cluster correspondence example
 
-\`\`\`r
+```r
 library(driftmapR)
 
 first <- data.frame(
@@ -246,7 +246,7 @@ matched <- drift_data(
 
 matched$clusters
 matched$diagnostics$cluster_matching$assignments
-\`\`\`
+```
 
 Matching uses shared entity membership, not coordinate proximity, so cluster correspondence can be performed independently of Procrustes alignment.
 
@@ -254,7 +254,7 @@ Matching uses shared entity membership, not coordinate proximity, so cluster cor
 
 Alignment solves a geometric comparability problem. It does **not** create substantive comparability when the underlying data, preprocessing, entities, or measurement process are not comparable.
 
-\`\`\`text
+```text
 Observed coordinate change
         |
         +-- coordinate-system artifact
@@ -265,14 +265,14 @@ Observed coordinate change
         |
         +-- relative structural movement
                change remaining after the chosen alignment
-\`\`\`
+```
 
 Important consequences:
 
 - movement is relative to the chosen fitting frame;
 - an entirely coherent global translation or rotation cannot be separated from coordinate artifact without external constraints;
 - using moving entities to fit the transformation can absorb some genuine shared movement;
-- \`scale = TRUE\` can absorb genuine expansion or contraction;
+- `scale = TRUE` can absorb genuine expansion or contraction;
 - previous-period alignment can accumulate reference-frame error;
 - missing periods are not bridged and coordinates are not imputed;
 - a nonzero displacement is not a significance test;
@@ -308,20 +308,20 @@ The bootstrap specification deliberately rejects interpreting a positive lower p
 
 | Location | Contents |
 |---|---|
-| [\`DESCRIPTION\`](DESCRIPTION) | Package metadata and dependency contract |
-| [\`R/\`](R/) | Package implementation |
-| [\`tests/testthat/\`](tests/testthat/) | Unit and regression tests |
-| [\`vignettes/getting-started.Rmd\`](vignettes/getting-started.Rmd) | End-to-end introduction |
-| [\`vignettes/embedding-adapters.Rmd\`](vignettes/embedding-adapters.Rmd) | PCA and classical-MDS workflows |
-| [\`vignettes/cluster-correspondence.Rmd\`](vignettes/cluster-correspondence.Rmd) | Cluster-label matching |
-| [\`inst/validation/methodology.md\`](inst/validation/methodology.md) | Mathematical methodology |
-| [\`inst/validation/bootstrap-specification.md\`](inst/validation/bootstrap-specification.md) | Planned resampling contract |
-| [\`inst/validation/landscape-review.md\`](inst/validation/landscape-review.md) | Related methods and software |
-| [\`inst/validation/roadmap.md\`](inst/validation/roadmap.md) | Development roadmap |
-| [\`data-raw/simulate-prototype.R\`](data-raw/simulate-prototype.R) | Alignment/movement simulation |
-| [\`data-raw/simulate-clusters.R\`](data-raw/simulate-clusters.R) | Cluster-correspondence simulation |
-| [\`data-raw/simulate-embeddings.R\`](data-raw/simulate-embeddings.R) | Embedding simulation |
-| [\`NEWS.md\`](NEWS.md) | Development history |
+| [`DESCRIPTION`](DESCRIPTION) | Package metadata and dependency contract |
+| [`R/`](R/) | Package implementation |
+| [`tests/testthat/`](tests/testthat/) | Unit and regression tests |
+| [`vignettes/getting-started.Rmd`](vignettes/getting-started.Rmd) | End-to-end introduction |
+| [`vignettes/embedding-adapters.Rmd`](vignettes/embedding-adapters.Rmd) | PCA and classical-MDS workflows |
+| [`vignettes/cluster-correspondence.Rmd`](vignettes/cluster-correspondence.Rmd) | Cluster-label matching |
+| [`inst/validation/methodology.md`](inst/validation/methodology.md) | Mathematical methodology |
+| [`inst/validation/bootstrap-specification.md`](inst/validation/bootstrap-specification.md) | Planned resampling contract |
+| [`inst/validation/landscape-review.md`](inst/validation/landscape-review.md) | Related methods and software |
+| [`inst/validation/roadmap.md`](inst/validation/roadmap.md) | Development roadmap |
+| [`data-raw/simulate-prototype.R`](data-raw/simulate-prototype.R) | Alignment/movement simulation |
+| [`data-raw/simulate-clusters.R`](data-raw/simulate-clusters.R) | Cluster-correspondence simulation |
+| [`data-raw/simulate-embeddings.R`](data-raw/simulate-embeddings.R) | Embedding simulation |
+| [`NEWS.md`](NEWS.md) | Development history |
 
 ## Scope
 

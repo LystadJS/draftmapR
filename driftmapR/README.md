@@ -1,246 +1,389 @@
+<div align="center">
+
 # driftmapR
 
-**Executable development prototype, version 0.0.3.9000.** Embed repeated feature
-data with PCA or classical MDS, align 2-D maps, inspect transformations, measure
-relative entity movement, and match supplied cluster identities through time. The API is a
-prototype contract, not yet a stable v0.1 release.
+### Longitudinal alignment, correspondence, and movement for repeated low-dimensional representations
 
-## Why align repeated maps?
+**When a map moves, did the system change?**
 
-Independently computed low-dimensional coordinates can rotate, reflect, or
-translate even when the underlying configuration is unchanged. Comparing their
-raw coordinates would attribute that arbitrary frame change to the entities.
-`driftmapR` fits an explicit Procrustes transformation before measuring movement.
+![R >= 4.1](https://img.shields.io/badge/R-%3E%3D%204.1-276DC3?logo=r&logoColor=white)
+![Version](https://img.shields.io/badge/version-0.0.3.9000-65457E)
+![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange)
+![License](https://img.shields.io/badge/license-MIT-8D1732)
+![Status](https://img.shields.io/badge/status-active%20development-555555)
 
-This does not recover absolute movement. If every entity really translates
-together, that change is mathematically indistinguishable from a translated
-coordinate system. Estimates are relative to the entities used for alignment.
-Known stable alignment anchors can define an external reference; assuming their
-stability is the analyst's responsibility.
+\`driftmapR\` aligns repeated low-dimensional maps through time, preserves cluster identity across periods, and measures entity-level movement after removing arbitrary coordinate-frame changes.
 
-## Install
+</div>
 
-R 4.1 or newer is required. This package is not on CRAN. From the parent of the
-unpacked `driftmapR` source directory:
+---
 
-```r
-install.packages(c("ggplot2", "clue"))
-install.packages("driftmapR", repos = NULL, type = "source")
+> [!IMPORTANT]
+> **Development status:** this repository currently contains the executable **0.0.3.9000 prototype**. Alignment, movement measurement, PCA/classical-MDS adapters, supplied-label cluster correspondence, diagnostics, and descriptive plotting are implemented. Bootstrap uncertainty, inferential movement detection, cluster stability, and consensus/generalized alignment are development targets, not current package capabilities.
+
+## Why \`driftmapR\`?
+
+A PCA map, classical MDS configuration, latent-space representation, or other low-dimensional map is not a fixed coordinate system.
+
+If the same underlying structure is estimated again later, the new coordinates may rotate, reflect, translate, or change isotropic scale even when the entities themselves have not meaningfully moved.
+
+That creates the package's central problem:
+
+> **Observed coordinate movement is not automatically substantive movement.**
+
+\`driftmapR\` first establishes a defensible common coordinate frame and only then measures longitudinal change.
+
+| Question | Current component |
+|---|---|
+| Did the coordinate frame move? | Orthogonal Procrustes alignment |
+| Which entities moved after alignment? | Displacement and Euclidean movement |
+| Did cluster labels merely change names? | Assignment-based correspondence |
+| How trustworthy is the geometry? | Explicit fit, overlap, spectral, and ambiguity diagnostics |
+| How uncertain is the estimated movement? | **Not yet implemented; resampling design is specified** |
+
+## Where it fits
+
+\`\`\`mermaid
+flowchart LR
+    A[Repeated feature data] --> B[PCA or classical MDS]
+    B --> C[Temporal alignment]
+    H[User-supplied coordinates] --> C
+    C --> D[Cluster correspondence]
+    D --> E[Entity movement]
+    E --> F[Diagnostics and interpretation]
+    F -. future .-> G[Resampling and uncertainty]
+\`\`\`
+
+\`driftmapR\` sits between **representation generation** and **longitudinal interpretation**. It is not intended to become a general dimensionality-reduction framework.
+
+## Core statistical problem
+
+For repeated coordinate matrices
+
+\[
+Z_t \in \mathbb{R}^{n_t \times 2},
+\]
+
+independently estimated coordinate systems are not directly comparable. For row-vector coordinates, orthogonal Procrustes alignment estimates
+
+\[
+R_t^*
+=
+\arg\min_R
+\left\|
+Z_{\mathrm{ref}} - Z_tR
+\right\|_F^2,
+\qquad
+R^\top R = I.
+\]
+
+With translation and optional isotropic scaling,
+
+\[
+Z_t^* = s_t Z_tR_t^* + b_t.
+\]
+
+For entity \(i\), adjacent-period displacement and magnitude are
+
+\[
+\Delta_{it}=Z^*_{it}-Z^*_{i,t-1},
+\qquad
+D_{it}=\|\Delta_{it}\|_2.
+\]
+
+The core invariant is:
+
+> **A pure coordinate transformation should not appear as entity drift after alignment.**
+
+## Current capabilities
+
+| Function | Purpose |
+|---|---|
+| \`drift_data()\` | Construct and validate repeated 2-D coordinate data |
+| \`validate_drift_data()\` | Check object structure and optional alignment geometry |
+| \`embed_snapshots()\` | Generate independent PCA or classical-MDS maps |
+| \`align_snapshots()\` | Align maps to the previous or first period |
+| \`match_clusters()\` | Match supplied hard-cluster labels across adjacent periods |
+| \`measure_drift()\` | Compute adjacent-period displacement and movement magnitude |
+| \`distance_to_anchor()\` | Measure aligned distance to an entity or fixed coordinate |
+| \`plot_drift_map()\` | Plot aligned positions and adjacent movement |
+| \`print()\`, \`summary()\`, \`plot()\` | S3 methods for \`<driftmap>\` objects |
+
+### Alignment
+
+The current engine supports:
+
+- rotation and reflection;
+- translation;
+- optional isotropic scaling;
+- \`reference = "previous"\` or \`"first"\`;
+- changing entity sets;
+- optional analyst-supplied stable anchors;
+- rejection of insufficient, collinear, or numerically unstable overlap;
+- retained transformations and fit diagnostics.
+
+### Embedding adapters
+
+Current adapters support:
+
+- centered PCA;
+- classical multidimensional scaling from features;
+- classical MDS from labeled distance objects or dissimilarity matrices;
+- explicit feature selection and weighting;
+- several standardization conventions;
+- retained preprocessing and spectral diagnostics.
+
+### Cluster correspondence
+
+\`match_clusters()\` treats period-specific labels as arbitrary identifiers and solves a one-to-one assignment problem using shared-entity overlap.
+
+It retains:
+
+- original labels;
+- persistent bookkeeping IDs;
+- assignments and unmatched states;
+- overlap and Jaccard diagnostics;
+- deterministic tie handling;
+- candidate split/merge diagnostics.
+
+These are descriptive correspondence diagnostics, not probabilities that two latent clusters are the same.
+
+## Installation
+
+The package is not on CRAN. In the current repository layout, the R package is stored in the \`driftmapR/\` subdirectory.
+
+\`\`\`r
+install.packages("remotes")
+remotes::install_github(
+  "LystadJS/draftmapR",
+  subdir = "driftmapR"
+)
+
 library(driftmapR)
-```
+\`\`\`
 
-Alternatively install the supplied `driftmapR_0.0.3.9000.tar.gz` using
-`install.packages("driftmapR_0.0.3.9000.tar.gz", repos = NULL, type = "source")`.
-driftmapR contains no compiled code. Its nonstandard runtime dependencies are
-ggplot2 and clue; clue includes compiled code and depends on the recommended
-cluster package. Other imports ship with R.
+Because the repository is currently private, GitHub authentication is required for installation from GitHub.
 
-## Runnable example
+## Minimal workflow
 
-```r
+This example creates a genuine one-unit movement for entity \`e\`, then applies a 90-degree rotation and arbitrary translation to the second raw map. Four known-stable entities define the fitting frame.
+
+\`\`\`r
 library(driftmapR)
 
 first <- data.frame(
-  entity = letters[1:5], time = 1,
-  x = c(0, 3, 0, 2, 1), y = c(0, 0, 3, 2, 1)
+  entity = letters[1:5],
+  time = 1,
+  x = c(0, 3, 0, 2, 1),
+  y = c(0, 0, 3, 2, 1)
 )
+
 truth_second <- first
 truth_second$time <- 2
 truth_second$x[5] <- truth_second$x[5] + 0.8
 truth_second$y[5] <- truth_second$y[5] + 0.6
 
-# A 90-degree row-vector rotation plus arbitrary translation.
-rotation <- matrix(c(0, 1, -1, 0), nrow = 2, byrow = TRUE)
+rotation <- matrix(
+  c(0, 1, -1, 0),
+  nrow = 2,
+  byrow = TRUE
+)
+
 raw_second <- truth_second
 xy <- as.matrix(truth_second[c("x", "y")]) %*% rotation
 xy <- sweep(xy, 2, c(7, -4), "+")
 raw_second[c("x", "y")] <- xy
 
-map <- drift_data(rbind(first, raw_second), periods = 1:2)
-fit <- align_snapshots(map, reference = "previous", anchors = letters[1:4])
+map <- drift_data(
+  rbind(first, raw_second),
+  periods = 1:2
+)
+
+fit <- align_snapshots(
+  map,
+  reference = "previous",
+  anchors = letters[1:4]
+)
+
 movement <- measure_drift(fit)
-movement                          # entity e moves 1 unit; anchors ~0
-stopifnot(abs(movement$distance[movement$entity == "e"] - 1) < 1e-10)
-fit$transformations[c("time", "reference_time", "n_matched", "rss")]
-fit$transformations$rotation[[2]]  # explicit raw-to-aligned rotation
+
+movement
+stopifnot(
+  abs(movement$distance[movement$entity == "e"] - 1) < 1e-10
+)
+
+fit$transformations[
+  c("time", "reference_time", "n_matched", "rss")
+]
+
 distance_to_anchor(fit, "a")
 plot_drift_map(fit, labels = TRUE)
-```
+\`\`\`
 
-## Implemented contract
+## Cluster correspondence example
 
-| Function / result | Behavior |
-|---|---|
-| `drift_data()` | Validates keys, schedule, finite coordinates, and exactly two dimensions; retains extra columns and optional original-data metadata. |
-| `embed_snapshots()` | PCA/classical-MDS adapters; explicit feature schema, scaling and weights; retained original inputs, models, spectra and diagnostics. |
-| `validate_drift_data()` | Validates object structure; optionally tests overlap and identifiable alignment geometry. |
-| `align_snapshots()` | Previous or first reference; translation, rotation, reflection; optional isotropic scaling; optional fitting anchors. |
-| `object$aligned` | All transformed points, including entrants. |
-| `object$transformations` | Time/reference, counts, RSS, radial RMSE, normalized discrepancy, scale, determinant, conditioning, and list columns for rotations/translations/fitting IDs. |
-| `measure_drift()` | Adjacent-period displacement components and Euclidean distance as a tidy data frame. |
-| `distance_to_anchor()` | Distance to an observed entity or fixed aligned-coordinate pair. |
-| `match_clusters()` | Maximum-overlap one-to-one correspondence, stable IDs, eligibility thresholds, exact deterministic ties, and assignment diagnostics. |
-| `object$clusters` | Supplied labels plus stable identities; unassigned observations retain missing IDs. |
-| `object$diagnostics$cluster_matching` | Registry, links/unmatched reasons, positive flows, pair denominators, overlap and eligible-score matrices. |
-| `plot_drift_map()` / `plot()` | Descriptive positions, adjacent arrows, period colors/shapes, and optional latest-position labels. |
-| `print()` / `summary()` | Compact object and fit summaries. |
-
-`measure_drift()` returns a table; it does not change its input. Assign
-`fit$movement <- measure_drift(fit)` if the table should travel with the object.
-Original coordinates are never overwritten. Re-aligning starts from the raw
-coordinates and clears any stored movement/bootstrap output.
-
-## Rules that affect interpretation
-
-- Only adjacent **scheduled** periods are compared. No trajectory bridges an
-  entity's missing observation. No coordinates are imputed.
-- Numeric and date times sort automatically. Character times require an explicit
-  `periods` order. To detect an entirely absent period, supply the expected
-  schedule: observations at times 1 and 3 with `periods = 1:3` raise an error.
-  Without that schedule, 1 and 3 are consecutive observed snapshots.
-- Each comparison needs at least three noncollinear fitting entities and
-  nonsingular cross-covariance. Sparse maps can be ingested but cannot be aligned
-  unless they satisfy that condition. Shared anchors may differ by pair.
-- `scale = FALSE` preserves common units. `scale = TRUE` removes isotropic size
-  differences and can therefore absorb real expansion/contraction.
-- Previous reference uses the **already aligned** previous map and may accumulate
-  reference drift. First reference requires enough overlap with the first map.
-- Movement is displacement per interval, not speed. A nonzero value is not a
-  significance test. All-shared fitting can redistribute real cluster movement
-  into the rest of the map; the simulation quantifies this limitation.
-- Keeping a `cluster` column alone does not match identities; call `match_clusters()`.
-
-## Cluster correspondence
-
-```r
+\`\`\`r
 library(driftmapR)
-labels <- data.frame(
-  entity = rep(letters[1:6], 2), time = rep(1:2, each = 6),
-  x = rep(c(0, 1, 0, 4, 5, 4), 2), y = rep(c(0, 0, 1, 0, 0, 1), 2),
-  cluster = rep(c("A", "B", "renamed_2", "renamed_1"), each = 3)
+
+first <- data.frame(
+  entity = letters[1:8],
+  time = 1,
+  x = c(0, 1, 0, 1, 4, 5, 4, 5),
+  y = rep(c(0, 0, 1, 1), 2),
+  cluster = rep(c("A", "B"), each = 4)
 )
-matched <- drift_data(labels) |> match_clusters()
+
+second <- transform(
+  first,
+  time = 2,
+  cluster = rep(c("Y", "X"), each = 4)
+)
+
+matched <- drift_data(
+  rbind(first, second)
+) |>
+  match_clusters()
+
 matched$clusters
 matched$diagnostics$cluster_matching$assignments
-stopifnot(identical(matched$clusters$cluster_id[1:6],
-                    matched$clusters$cluster_id[7:12]))
-```
+\`\`\`
 
-Matching uses entity membership, so coordinate alignment is optional. It
-maximizes total overlap counts over one-to-one links between adjacent periods.
-`min_overlap` and `min_jaccard` filter candidate links before optimization;
-Jaccard denominators use shared entities assigned in both periods. Original
-labels remain intact. Missing labels and explicitly supplied `noise` labels do
-not contribute to matching. Label zero is a valid cluster unless excluded.
+Matching uses shared entity membership, not coordinate proximity, so cluster correspondence can be performed independently of Procrustes alignment.
 
-New/unmatched clusters receive fresh IDs; identities never revive across gaps.
-Deterministic lexicographic tie resolution makes row-shuffled input reproducible.
-An `edge_margin` of zero means an equally optimal correspondence omits that link;
-positive margins are objective contrasts, not confidence measures. Optional
-`diagnose_ties = FALSE` leaves these diagnostics explicitly missing.
+## Interpretation guardrails
 
-Positive flows with multiple destinations/sources receive split/merge candidate
-flags. Ordinary entity switching can create the same pattern. These flags do
-not identify latent split/merge events, and the one-to-one model does not
-propagate an identity to several descendants. See the correspondence vignette
-and `inst/validation/cluster-correspondence.md` for the exact contract.
+Alignment solves a geometric comparability problem. It does **not** create substantive comparability when the underlying data, preprocessing, entities, or measurement process are not comparable.
 
-## PCA and classical-MDS adapters
+\`\`\`text
+Observed coordinate change
+        |
+        +-- coordinate-system artifact
+        |      rotation / reflection / translation / arbitrary scale
+        |
+        +-- representation instability
+        |      noise / preprocessing / truncation / weak dimensions
+        |
+        +-- relative structural movement
+               change remaining after the chosen alignment
+\`\`\`
 
-```r
-measurements <- rbind(first, truth_second)
-names(measurements)[3:4] <- c("measurement_a", "measurement_b")
-feature_map <- embed_snapshots(
-  measurements, features = c("measurement_a", "measurement_b"), method = "pca"
-)
-feature_fit <- align_snapshots(feature_map, anchors = letters[1:4])
-measure_drift(feature_fit)
-feature_fit$diagnostics$embedding
+Important consequences:
 
-# The same Euclidean geometry has equivalent PCA and classical-MDS maps,
-# up to arbitrary axis orientation, when the retained plane is identified.
-mds_map <- embed_snapshots(
-  measurements, features = c("measurement_a", "measurement_b"), method = "cmds"
-)
-```
+- movement is relative to the chosen fitting frame;
+- an entirely coherent global translation or rotation cannot be separated from coordinate artifact without external constraints;
+- using moving entities to fit the transformation can absorb some genuine shared movement;
+- \`scale = TRUE\` can absorb genuine expansion or contraction;
+- previous-period alignment can accumulate reference-frame error;
+- missing periods are not bridged and coordinates are not imputed;
+- a nonzero displacement is not a significance test;
+- cluster assignment margins are objective contrasts, not confidence measures.
 
-Every snapshot is centered. `standardize = "none"` preserves common feature
-units; `"first"` uses first-period sample SDs, `"pooled"` uses all entity-time
-rows, and `"period"` recalibrates each period. The last option can absorb real
-dispersion changes. Features must be explicitly selected, numeric, finite, and
-observed throughout the common schema. No missing values are imputed. Cluster
-labels supplied as extra metadata remain available to `match_clusters()`.
+## Validation and research status
 
-`method = "cmds"` also accepts a list of labeled `dist` objects or symmetric,
-zero-diagonal dissimilarity matrices. Provide `periods`, or use list names as
-the ordered schedule. Materially negative Gram eigenvalues raise an error by
-default. `negative_eigen = "truncate"` explicitly accepts an approximate map
-with a warning and negative-inertia diagnostics; no additive correction is
-implemented. Both adapters reject insufficient rank and warn when the second
-and third eigenvalues tie at the 2-D truncation boundary. Such ambiguity cannot
-be removed by rotating a fitted map.
+The current source includes deterministic tests and synthetic validation scripts for geometry, embeddings, and cluster correspondence. The package remains a development prototype.
 
-`feature_weights` applies square-root weights without normalization, so integer
-weights reproduce feature-column multiplicities. Original input, feature order,
-raw centers, scale vectors, per-period fits, and spectra are retained. The
-stored PCA model acts on scaled/weighted features, so predicting from raw data
-requires that preprocessing first. See the embedding vignette for runnable
-distance-list and multiplicity examples.
+| Area | Current repository status |
+|---|---|
+| Repeated 2-D coordinate ingestion | Implemented |
+| PCA adapter | Implemented |
+| Classical-MDS adapter | Implemented |
+| Previous-period alignment | Implemented |
+| First-period alignment | Implemented |
+| Changing entity sets | Supported |
+| Stable-anchor fitting | Supported |
+| Movement measurement | Implemented |
+| Anchor distance | Implemented |
+| Supplied-label cluster matching | Implemented |
+| Descriptive plotting | Implemented |
+| Bootstrap design specification | Documented |
+| Bootstrap engine / intervals | **Not implemented** |
+| Cluster stability under resampling | **Not implemented** |
+| Consensus/generalized alignment | **Not implemented** |
+| Automatic inferential movement detection | **Not implemented** |
+| CRAN release | Not submitted |
 
-## Bootstrap design status
+The bootstrap specification deliberately rejects interpreting a positive lower percentile of a displacement norm as automatic evidence of movement. Any later inferential workflow must first define a defensible sampling design and demonstrate calibration.
 
-`inst/validation/bootstrap-specification.md` defines a **future**, fixed-entity
-resampling workflow. Its first built-in design will draw exchangeable
-measurement units or equal-width blocks with the same multiplicities across
-periods, refit embeddings, establish a common baseline frame without scaling,
-and repeat temporal alignment. A scientifically justified sampling design must
-be supplied; ordinary fixed covariates are not automatically exchangeable.
-Coordinate-only input does not supply a bootstrap model.
+## Repository guide
 
-The specification also covers preprocessing conditioning, cluster refitting,
-failed draws, reproducible RNG, and simulation calibration. It explicitly
-rejects interpreting a positive lower percentile of displacement norms as
-evidence of movement. `bootstrap_drift()` is **not implemented**; the adapters
-and feature weights do not produce intervals or uncertainty estimates.
+| Location | Contents |
+|---|---|
+| [\`DESCRIPTION\`](DESCRIPTION) | Package metadata and dependency contract |
+| [\`R/\`](R/) | Package implementation |
+| [\`tests/testthat/\`](tests/testthat/) | Unit and regression tests |
+| [\`vignettes/getting-started.Rmd\`](vignettes/getting-started.Rmd) | End-to-end introduction |
+| [\`vignettes/embedding-adapters.Rmd\`](vignettes/embedding-adapters.Rmd) | PCA and classical-MDS workflows |
+| [\`vignettes/cluster-correspondence.Rmd\`](vignettes/cluster-correspondence.Rmd) | Cluster-label matching |
+| [\`inst/validation/methodology.md\`](inst/validation/methodology.md) | Mathematical methodology |
+| [\`inst/validation/bootstrap-specification.md\`](inst/validation/bootstrap-specification.md) | Planned resampling contract |
+| [\`inst/validation/landscape-review.md\`](inst/validation/landscape-review.md) | Related methods and software |
+| [\`inst/validation/roadmap.md\`](inst/validation/roadmap.md) | Development roadmap |
+| [\`data-raw/simulate-prototype.R\`](data-raw/simulate-prototype.R) | Alignment/movement simulation |
+| [\`data-raw/simulate-clusters.R\`](data-raw/simulate-clusters.R) | Cluster-correspondence simulation |
+| [\`data-raw/simulate-embeddings.R\`](data-raw/simulate-embeddings.R) | Embedding simulation |
+| [\`NEWS.md\`](NEWS.md) | Development history |
 
-## Development and checks
+## Scope
 
-From the parent of the source directory:
+### Current prototype
 
-```r
-install.packages(c("testthat", "roxygen2", "knitr", "rmarkdown"))
-roxygen2::roxygenise("driftmapR")
-testthat::test_local("driftmapR")
-```
+- repeated two-dimensional representations;
+- PCA, classical MDS, or supplied coordinates;
+- orthogonal Procrustes alignment;
+- changing entity sets;
+- analyst-supplied alignment anchors;
+- cluster-label correspondence;
+- displacement, movement magnitude, and anchor distance;
+- descriptive plotting and diagnostics.
 
-```sh
-R CMD build driftmapR
-R CMD check --no-manual driftmapR_0.0.3.9000.tar.gz
-R CMD INSTALL driftmapR_0.0.3.9000.tar.gz
-Rscript driftmapR/data-raw/simulate-prototype.R simulation-output
-Rscript driftmapR/data-raw/simulate-clusters.R cluster-simulation-output
-Rscript driftmapR/data-raw/simulate-embeddings.R embedding-simulation-output
-```
+### Planned for later development
 
-HTML vignette building requires Pandoc. The packaged manual pages do not.
-The `.github/workflows` check configuration targets Linux, Windows, and macOS
-using [r-lib's standard actions](https://github.com/r-lib/actions/tree/v2/examples).
-Remote CI has not run; no remote repository has been created or published.
-`DESCRIPTION` deliberately uses a marked prototype maintainer placeholder;
-replace it with verified author/maintainer details before public release.
+- bootstrap movement uncertainty and cluster stability;
+- consensus/generalized alignment where statistically defensible;
+- broader simulation calibration and failure accounting;
+- richer trajectory, transition, and ranking plots;
+- applied case studies;
+- CRAN hardening.
 
-## Not implemented
+### Deliberately deferred
 
-Consensus/generalized alignment; cluster fitting/stability;
-bootstrap resampling and intervals; inferential detection; direction
-uncertainty; anchor-distance change convenience output; higher dimensions;
-specialized transition/ranking plots; applications; large simulation sweeps.
-UMAP, graph-layout, and Bayesian adapters remain deferred.
+- UMAP-specific adapters;
+- graph-layout adapters;
+- nonlinear manifold alignment;
+- Bayesian posterior adapters;
+- probabilistic split/merge models;
+- GPU or distributed computation.
 
-The package is **not CRAN-ready or R Journal-ready**. The essential landscape
-review in `inst/validation/landscape-review.md` documents existing alternatives;
-`vegan` already covers much pairwise Procrustes functionality. This prototype
-claims an integration workflow, not a new alignment method.
+## Example applications
 
-See `inst/validation/methodology.md`, `inst/validation/roadmap.md`, and the
-getting-started vignette for implementation details and next milestones.
+The package is domain-general. Potential uses include repeated maps of:
+
+- organizations or institutions;
+- countries or voting behavior;
+- customers, brands, or products;
+- ecological communities;
+- survey or perceptual spaces;
+- network latent positions;
+- other repeatedly estimated low-dimensional systems.
+
+UN voting is a possible flagship application, not a package assumption.
+
+## Design principles
+
+1. **Geometry before interpretation** — remove arbitrary coordinate-frame changes before discussing movement.
+2. **Explicit estimands** — distinguish displacement, magnitude, anchor distance, and cluster correspondence.
+3. **Visible limitations** — do not convert descriptive output into unsupported inference.
+4. **Domain-general internals** — package APIs and tests should not depend on one application.
+5. **Laptop-scale computation** — ordinary use should remain feasible without specialized hardware.
+
+## Citation
+
+Formal citation metadata will be finalized before a stable release. Until then, cite the repository and the exact package version or commit used in an analysis.
+
+---
+
+<div align="center">
+
+### Geometry first. Movement second. Inference only when justified.
+
+</div>

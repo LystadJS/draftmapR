@@ -4,6 +4,6 @@
   "different_package_blobs": [],
   "credential_pattern_files": [],
   "files_at_least_100_MiB": [],
-  "tracked_files": 308,
+  "tracked_files": 313,
   "scope": "Staged package blob identity and basic publication hygiene; not scientific or package execution."
 }

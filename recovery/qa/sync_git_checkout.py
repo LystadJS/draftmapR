@@ -23,7 +23,7 @@ for p in (root/'provenance').iterdir():
 for p in (root/'qa').rglob('*'):
     if not p.is_file():continue
     rel=p.relative_to(root/'qa')
-    if 'R-library' in rel.parts or '__pycache__' in rel.parts or p.suffix.lower()=='.rds':continue
+    if 'R-library' in rel.parts or '__pycache__' in rel.parts or p.suffix.lower()=='.rds' or p.name=='git-sync-status.json':continue
     cp(p,'qa/'+rel.as_posix())
 compact=['driftmapR-S07-D1-specification.zip','driftmapR-S07-R1-sources.zip','driftmapR-S07-R1-Recovery-Audit-20260924.zip','driftmapR-S07-R1-Recovery-009.zip']
 for name in compact:cp(root/'archives'/name,'source-archives/'+name)

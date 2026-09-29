@@ -6,4 +6,6 @@ Use the separate `../driftmapR-git` checkout. Keep the recovered original `repos
 
 Version the byte-preserved current package, recovery README and missing-file checklist, source records, verification scripts/results, and compact source/audit archives. Keep conversation exports private to the recovery workspace. Large scientific/runtime archives and extracted data remain in the local consolidated bundle; commit their exact identities and verification records, not a claim that GitHub contains their bytes. A Git push is therefore not a backup of all large binaries.
 
-Verify the resulting remote commit after pushing. Record commit IDs and push status locally. Do not claim successful upload until verified. The initial repository found was `LystadJS/draftmapR`; the user requested `driftmapR`, so exact destination confirmation is pending before publication.
+Confirmed destination: **https://github.com/LystadJS/draftmapR**, public, branch `main`. The user explicitly confirmed this destination. Commit and push there after each completed recovery step without asking again.
+
+Verify the resulting remote commit after pushing. Record commit IDs and push status locally in `qa/git-sync-status.json`; this local receipt is excluded from Git to avoid recursive commit-ID updates. Do not claim successful upload until verified.

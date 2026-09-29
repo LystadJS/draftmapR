@@ -1,0 +1,130 @@
+---
+title: "Paired measurement-unit resampling"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Paired measurement-unit resampling}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+The first bootstrap engine resamples declared measurement units while keeping
+entity identities, the period schedule, and observed availability fixed. It
+refits the embedding and alignment in every draw. The outputs are **conditional
+resampling summaries**. Calibrated confidence regions, significance tests, and
+bootstrap cluster stability are not implemented.
+
+## Declare what was sampled
+
+A measurement unit contains one feature or a disjoint block of features. All
+blocks must have equal width. Units must be independent and identically
+distributed, or satisfy that assumption within declared strata. Dependence
+within a unit, across entities and periods, stays intact. A unit's sampled
+multiplicity applies to all of its features in every period.
+
+Named covariates such as age and income are not exchangeable merely because
+they are columns in the same table. An unjustified feature bootstrap is a
+feature-choice sensitivity experiment. Supply a scientific sampling declaration
+with the design; the software cannot verify that declaration.
+
+Here each two-column unit has an independent random loading matrix. The
+dependence within its two columns and across periods is intentional.
+
+```{r data}
+library(driftmapR)
+set.seed(260914L)
+entity <- sprintf("E%02d", 1:12)
+positions <- cbind(seq(-2, 2, length.out = 12), rnorm(12))
+features <- sprintf("f%02d", 1:8)
+loadings <- lapply(1:4, function(i) diag(2) + matrix(rnorm(4, sd = 0.18), 2))
+panel <- do.call(rbind, lapply(1:3, function(period) {
+  latent <- positions
+  latent[12, ] <- latent[12, ] + (period - 1) * c(0.35, -0.2)
+  measured <- do.call(cbind, lapply(loadings, function(x) latent %*% x))
+  colnames(measured) <- features
+  data.frame(entity, time = period, measured, check.names = FALSE)
+}))
+design <- paired_unit_design(
+  units = stats::setNames(rep(paste0("unit", 1:4), each = 2), features),
+  assumptions = paste(
+    "Simulated units have iid random loading matrices; dependence across",
+    "columns, entities and periods remains within each unit. Results condition",
+    "on these entities and their observed availability."
+  )
+)
+```
+
+Four units and 20 replicates keep this example fast; they are not an adequate
+sample-size or simulation-budget recommendation for inference.
+
+## Refit the longitudinal analysis
+
+```{r fit}
+fit <- embed_snapshots(panel, features = features) |>
+  align_snapshots(anchors = entity[1:11])
+result <- bootstrap_drift(fit, design, B = 20L, seed = 914L,
+                          keep = "replicates")
+result$bootstrap$summary[result$bootstrap$summary$entity == "E12", ]
+```
+
+Each replicate first fits its baseline map to the observed baseline with
+translation and orthogonal rotation/reflection, **without scaling**. This
+expresses displacement vectors in a common observed coordinate frame while
+retaining variation in map size. Later maps align to that replicate's previous
+or first map, according to the original settings. Stable anchors in this
+example are known from the generator; selecting anchors from the data would
+require an explicitly conditional or refitted selection procedure.
+
+For `method = "cmds"`, distances are rebuilt from the resampled feature matrix.
+A supplied distance matrix alone has no declared underlying measurement units
+and is not supported by this design. Preweighted observed feature analyses are
+also outside the initial engine's contract.
+
+`preprocess = "refit"` recomputes the original centering/scaling recipe;
+`"fixed"` reuses observed calibration. With feature multiplicities alone, the
+unchanged feature values and rows make those modes equivalent. The distinction
+matters for future resamplers that change measurement values.
+
+## Inspect failures and reproducibility
+
+```{r accounting}
+result$bootstrap$attempts
+stopifnot(nrow(result$bootstrap$attempts) == 20L,
+          all(result$bootstrap$attempts$success))
+# This local check also confirms that a bootstrap call preserves caller RNG.
+set.seed(19L)
+before <- .Random.seed
+repeat_result <- bootstrap_drift(fit, design, B = 20L, seed = 914L,
+                                 keep = "replicates")
+stopifnot(identical(before, .Random.seed),
+          identical(result$bootstrap$replicates,
+                    repeat_result$bootstrap$replicates))
+```
+
+The engine attempts exactly `B` independent L'Ecuyer streams and never retries
+failed draws. A failure at any stage invalidates the whole replicate. The
+attempt log retains the stage, period, and message. Draw multiplicities and RNG
+streams remain available even when only summaries are retained.
+
+The default 95% success gate suppresses estimates if too few draws succeed;
+at least two valid draws are always required. Retained successful replicates
+can still be inspected. Passing this gate does not remove selection bias from
+conditioning on computational success. Check eigengaps, rank/overlap failures,
+warning records, and the declared target before interpreting summaries.
+
+## Interpretation stops before inference
+
+Component means, covariance, standard deviations, quantiles, and Monte Carlo
+standard errors summarize successful draws. Coordinate and movement tables
+carry their denominators. These tables do not contain an automatic significance
+decision. In particular, a positive lower percentile for `distance` does not
+establish movement: the norm is nondifferentiable at zero and sampled norms are
+usually positive.
+
+Calibration requires independent simulated datasets and a declared inferential
+target. Coverage, false-positive rates, power, simultaneous inference, angular
+summaries, and clustering refits remain future work. See the packaged
+`inst/validation/bootstrap-specification.md` for the full design and limitations.

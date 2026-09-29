@@ -1,0 +1,85 @@
+{
+  "checkpoint": 464,
+  "archive": "driftmapR-S07-R1-checkpoint464-011.zip",
+  "bytes": 1207516379,
+  "sha256": "d1fae48aab8d7afab071bdcbd34f91802e8f1cc12527e262c75618e7fa7c9c6f",
+  "parts": [
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint464-011.zip.part001",
+      "filename": "driftmapR-S07-R1-checkpoint464-011.zip.part001",
+      "bytes": 104857600,
+      "sha256": "08d79fff85dce930f098c30fd71ecf9d7468c340c14ea07edb6b97d7d0a09e33"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint464-011.zip.part002",
+      "filename": "driftmapR-S07-R1-checkpoint464-011.zip.part002",
+      "bytes": 104857600,
+      "sha256": "f7624771fdfb7770d6aa87586a3a75319ae2a871d55ebe1e8220279f36eda130"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint464-011.zip.part003",
+      "filename": "driftmapR-S07-R1-checkpoint464-011.zip.part003",
+      "bytes": 104857600,
+      "sha256": "d9a095f190bc019dfbdad4efb7e1ea7f1b3deeb06a90a226bec70fe3d660d9f6"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint464-011.zip.part004",
+      "filename": "driftmapR-S07-R1-checkpoint464-011.zip.part004",
+      "bytes": 104857600,
+      "sha256": "96bbcbed1f9857bf853e612041d90ca26f09923066b5903be397acae6c45e6f9"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint464-011.zip.part005",
+      "filename": "driftmapR-S07-R1-checkpoint464-011.zip.part005",
+      "bytes": 104857600,
+      "sha256": "3ac398f195049f52438d848f1fa7b1e1456753d0377ef70ed9b7c4355a6aa7e4"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint464-011.zip.part006",
+      "filename": "driftmapR-S07-R1-checkpoint464-011.zip.part006",
+      "bytes": 104857600,
+      "sha256": "dbb69eb992f5aef8f608e84f91a1577efa7f36eee1a58441388892ecae459aa5"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint464-011.zip.part007",
+      "filename": "driftmapR-S07-R1-checkpoint464-011.zip.part007",
+      "bytes": 104857600,
+      "sha256": "799e97097b57784b52a59f3f1f4826cbab1c9fcbf66c151a228b7ad02e6eefb0"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint464-011.zip.part008",
+      "filename": "driftmapR-S07-R1-checkpoint464-011.zip.part008",
+      "bytes": 104857600,
+      "sha256": "6c1e9d879dfef4d1db1e3dc2204b07979386f934eccc030204a796fc9fc5a62c"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint464-011.zip.part009",
+      "filename": "driftmapR-S07-R1-checkpoint464-011.zip.part009",
+      "bytes": 104857600,
+      "sha256": "40c092bef29cb492ee2b936d2aa9e87fcd8aabd445dcde9d2595678a65c30739"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint464-011.zip.part010",
+      "filename": "driftmapR-S07-R1-checkpoint464-011.zip.part010",
+      "bytes": 104857600,
+      "sha256": "347a183a23c13a0f4c329ad99527bb30930b8fc43f88f1fac7b59b570ad5fc90"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint464-011.zip.part011",
+      "filename": "driftmapR-S07-R1-checkpoint464-011.zip.part011",
+      "bytes": 104857600,
+      "sha256": "7fdb31648c0c26b17b081663addd3a7ba16e2290d74b96c9b2ccc09975ed70f6"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint464-011.zip.part012",
+      "filename": "driftmapR-S07-R1-checkpoint464-011.zip.part012",
+      "bytes": 54082779,
+      "sha256": "112b4f13b59cadd6d5ebf28020266afc1b8305503ac24b6398738ff1952b5958"
+    }
+  ],
+  "member_count": 86023,
+  "membership_sizes_crc_sha256_md5": "passed",
+  "manifest_hash": "passed",
+  "scientific_execution": false,
+  "scope": "This checkpoint delta only; ancestral snapshots and payloads still required."
+}

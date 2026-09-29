@@ -1,6 +1,6 @@
 # Implemented mathematics and prototype contract
 
-Version 0.0.3.9000; 2026-09-10. Alignment/movement mathematics are unchanged.
+Version 0.0.4.9000; 2026-09-10. Alignment/movement mathematics are unchanged.
 
 ## Estimand
 
@@ -147,13 +147,14 @@ are checked separately.
 The implementation follows the documented
 [PCA](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/prcomp.html) and
 [classical scaling](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cmdscale.html)
-geometry. See `bootstrap-specification.md` for the separate, unimplemented
+geometry. See `bootstrap-specification.md` for the separate paired-unit
 resampling design and calibration requirements.
 
 ## Limits of this validation stage
 
-No bootstrap, interval coverage, false-positive rate, power, or inferential
-movement detection is reported. A single reproducible synthetic demonstration
+The paired-unit engine now computes conditional resampling summaries and
+explicit attempt ledgers. No calibrated interval coverage, false-positive rate,
+power, or inferential movement detection is reported. A single reproducible synthetic demonstration
 and deterministic unit tests establish central executable behavior, not broad
 statistical calibration. Known stable anchors in that demonstration are supplied
 by simulation truth; their exact recovery cannot be generalized to unknown real

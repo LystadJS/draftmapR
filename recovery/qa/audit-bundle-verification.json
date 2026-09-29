@@ -1,0 +1,11 @@
+{
+  "archive": "driftmapR-S07-R1-Recovery-Audit-20260924.zip",
+  "bytes": 9895830,
+  "sha256": "a14aa6cadd81ab4f3676219cfc8619dcad32514df27ea72451d647bec7dab74c",
+  "receipt_match": true,
+  "manifest_hash_match": true,
+  "member_hashes_verified": 53,
+  "entries": 54,
+  "crc": "passed",
+  "scientific_payload_chain_reexecuted": false
+}

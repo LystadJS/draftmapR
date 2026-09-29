@@ -1,0 +1,8 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.github$
+^\.gitignore$
+^data-raw$
+^development$
+^simulation-output$
+^validation-output$

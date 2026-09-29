@@ -1,0 +1,38 @@
+[
+  {
+    "file": "driftmapR-S07-D1-specification.zip",
+    "bytes": 3890160,
+    "sha256": "0b7cae301393812e1c1343f64e90716f0a792bce0a5e209cf8356f648325c2b9",
+    "crc_failure": null,
+    "entries": 354
+  },
+  {
+    "file": "driftmapR-study06-pinned-runtime.tar.gz",
+    "bytes": 117877231,
+    "sha256": "a61e14e5815a70cd8d70e1600e2583c10d52c0af59475773934a9843dd7caf2d",
+    "entries": 4625,
+    "first_entries": [
+      "r-runtime",
+      "r-runtime/bin",
+      "r-runtime/bin/R",
+      "r-runtime/bin/Rscript",
+      "r-runtime/bin/Rscript-local",
+      "r-runtime/lib",
+      "r-runtime/lib/R",
+      "r-runtime/lib/R/COPYING",
+      "r-runtime/lib/R/SVN-REVISION",
+      "r-runtime/lib/R/bin",
+      "r-runtime/lib/R/bin/BATCH",
+      "r-runtime/lib/R/bin/COMPILE",
+      "r-runtime/lib/R/bin/INSTALL",
+      "r-runtime/lib/R/bin/LINK",
+      "r-runtime/lib/R/bin/R",
+      "r-runtime/lib/R/bin/REMOVE",
+      "r-runtime/lib/R/bin/Rcmd",
+      "r-runtime/lib/R/bin/Rd2pdf",
+      "r-runtime/lib/R/bin/Rdconv",
+      "r-runtime/lib/R/bin/Rdiff"
+    ],
+    "all_member_payloads_read": true
+  }
+]

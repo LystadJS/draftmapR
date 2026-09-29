@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "r1_ancestral_archives_recovered": 22,
+  "unique_checkpoint_objects": 6480,
+  "unique_draw_plan_objects": 6480,
+  "checkpoint_and_draw_plan_keysets_equal_latest_6480_input_receipts": true,
+  "cache_ledger_bound_checkpoints": 3916,
+  "recovered_checkpoint_inputs_without_compact_cache": 2564,
+  "scientific_execution": false,
+  "scope": "Complete R1 checkpoint/draw-plan input coverage, not completed scientific work; original archives and earlier raw outputs remain missing."
+}

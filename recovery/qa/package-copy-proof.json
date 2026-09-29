@@ -1,0 +1,754 @@
+[
+  {
+    "path": ".github/workflows/R-CMD-check.yaml",
+    "identical": true
+  },
+  {
+    "path": ".gitignore",
+    "identical": true
+  },
+  {
+    "path": ".Rbuildignore",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-01/analyze.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-01/diagnostics.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-01/model.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-01/protocol.md",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-01/README.md",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-01/regions.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-01/run-tests.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-01/run.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-01/tests/test-analysis.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-01/tests/test-model.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-01/tests/test-regions.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-01/tests/test-runner.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-01/tests/test-validator.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-01/validate.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/analysis-addendum.md",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/analyze.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/audit.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/diagnose.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/freeze.rds",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/kernel.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/model.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/protocol.md",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/README.md",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/retrospective-findings.md",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/run.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/supplemental-analysis.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/tests/test-analysis.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/tests/test-audit.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/tests/test-kernel.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/tests/test-runner.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/tests/test-supplemental.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-02/validate.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/analyze.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/audit.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/freeze-manifest.csv",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/freeze.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/freeze.rds",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/jackknife.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/method-specification.md",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/model.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/README.md",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/regions.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/run.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/test.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/tests/test-analysis.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/tests/test-audit.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/tests/test-jackknife.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/tests/test-regions.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/tests/test-runner.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-03/validate.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/analyze.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/audit.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/frame.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/freeze-manifest.csv",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/freeze.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/freeze.rds",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/model.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/README.md",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/run.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/test.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/tests/test-analysis.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/tests/test-design.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/tests/test-frame.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/tests/test-validation.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-04/validate.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/analysis-contract.md",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/contract.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/design/bounds.csv",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/design/case-plan.csv",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/design/dependence-gram-diagnostic.csv",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/design/population-anchor-geometry.csv",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/design/population-anchor-registration.csv",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/design/population-models.rds",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/design/population-spectra.csv",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/design/population-targets.csv",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/design/seed-plan.csv",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/design/seed-plan.rds",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/design/STATUS.txt",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/accounting.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/analyze.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/audit.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/core.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/covariance-analysis.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/freeze.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/geometry.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/implementation-freeze.rds",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/implementation-manifest.csv",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/load.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/README.md",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/run.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/runner.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/test.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/tests/test-analysis.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/tests/test-audits-validation.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/tests/test-covariance-analysis.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/tests/test-independent-validation.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/tests/test-kernel.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/tests/test-pipeline.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/tests/test-runner-contract.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/tests/test-stage-accounting.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/execution/validate.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/freeze-manifest.csv",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/freeze.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/freeze.rds",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/load.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/method-sources.md",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/model.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/plan.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/README.md",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/test.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/tests/test-contract.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/tests/test-integration.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/calibration-05/tests/test-model.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/run-tests.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/simulate-bootstrap.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/simulate-clusters.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/simulate-embeddings.R",
+    "identical": true
+  },
+  {
+    "path": "data-raw/simulate-prototype.R",
+    "identical": true
+  },
+  {
+    "path": "DESCRIPTION",
+    "identical": true
+  },
+  {
+    "path": "inst/examples/basic-workflow.R",
+    "identical": true
+  },
+  {
+    "path": "inst/examples/cluster-correspondence.R",
+    "identical": true
+  },
+  {
+    "path": "inst/examples/embedding-adapters.R",
+    "identical": true
+  },
+  {
+    "path": "inst/examples/paired-bootstrap.R",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/bootstrap-specification.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/calibration-study-01-protocol.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/calibration-study-01.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/calibration-study-02.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/calibration-study-03-protocol.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/calibration-study-03.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/calibration-study-04-protocol.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/calibration-study-04.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/calibration-study-05-analysis-contract.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/calibration-study-05-protocol.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/cluster-correspondence.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/cluster-simulation-design.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/landscape-review.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/methodology.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/roadmap.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/simulation-design.md",
+    "identical": true
+  },
+  {
+    "path": "inst/validation/studentized-region-specification.md",
+    "identical": true
+  },
+  {
+    "path": "LICENSE",
+    "identical": true
+  },
+  {
+    "path": "man/align_snapshots.Rd",
+    "identical": true
+  },
+  {
+    "path": "man/bootstrap_drift.Rd",
+    "identical": true
+  },
+  {
+    "path": "man/distance_to_anchor.Rd",
+    "identical": true
+  },
+  {
+    "path": "man/drift_data.Rd",
+    "identical": true
+  },
+  {
+    "path": "man/driftmapR-package.Rd",
+    "identical": true
+  },
+  {
+    "path": "man/embed_snapshots.Rd",
+    "identical": true
+  },
+  {
+    "path": "man/match_clusters.Rd",
+    "identical": true
+  },
+  {
+    "path": "man/measure_drift.Rd",
+    "identical": true
+  },
+  {
+    "path": "man/paired_unit_design.Rd",
+    "identical": true
+  },
+  {
+    "path": "man/plot_drift_map.Rd",
+    "identical": true
+  },
+  {
+    "path": "man/validate_drift_data.Rd",
+    "identical": true
+  },
+  {
+    "path": "NAMESPACE",
+    "identical": true
+  },
+  {
+    "path": "NEWS.md",
+    "identical": true
+  },
+  {
+    "path": "R/alignment.R",
+    "identical": true
+  },
+  {
+    "path": "R/bootstrap-fit.R",
+    "identical": true
+  },
+  {
+    "path": "R/bootstrap-rng.R",
+    "identical": true
+  },
+  {
+    "path": "R/bootstrap-summary.R",
+    "identical": true
+  },
+  {
+    "path": "R/bootstrap.R",
+    "identical": true
+  },
+  {
+    "path": "R/cluster-assignment.R",
+    "identical": true
+  },
+  {
+    "path": "R/cluster-matching.R",
+    "identical": true
+  },
+  {
+    "path": "R/cmds-kernel.R",
+    "identical": true
+  },
+  {
+    "path": "R/data.R",
+    "identical": true
+  },
+  {
+    "path": "R/driftmapR-package.R",
+    "identical": true
+  },
+  {
+    "path": "R/embedding.R",
+    "identical": true
+  },
+  {
+    "path": "R/movement.R",
+    "identical": true
+  },
+  {
+    "path": "R/plot.R",
+    "identical": true
+  },
+  {
+    "path": "README.md",
+    "identical": true
+  },
+  {
+    "path": "tests/testthat/helper-fixtures.R",
+    "identical": true
+  },
+  {
+    "path": "tests/testthat/test-alignment.R",
+    "identical": true
+  },
+  {
+    "path": "tests/testthat/test-bootstrap-fit.R",
+    "identical": true
+  },
+  {
+    "path": "tests/testthat/test-bootstrap-summary.R",
+    "identical": true
+  },
+  {
+    "path": "tests/testthat/test-bootstrap.R",
+    "identical": true
+  },
+  {
+    "path": "tests/testthat/test-cluster-matching.R",
+    "identical": true
+  },
+  {
+    "path": "tests/testthat/test-cluster-solver.R",
+    "identical": true
+  },
+  {
+    "path": "tests/testthat/test-cmds-kernel.R",
+    "identical": true
+  },
+  {
+    "path": "tests/testthat/test-data.R",
+    "identical": true
+  },
+  {
+    "path": "tests/testthat/test-embedding.R",
+    "identical": true
+  },
+  {
+    "path": "tests/testthat/test-movement.R",
+    "identical": true
+  },
+  {
+    "path": "tests/testthat/test-plot.R",
+    "identical": true
+  },
+  {
+    "path": "tests/testthat.R",
+    "identical": true
+  },
+  {
+    "path": "vignettes/cluster-correspondence.Rmd",
+    "identical": true
+  },
+  {
+    "path": "vignettes/embedding-adapters.Rmd",
+    "identical": true
+  },
+  {
+    "path": "vignettes/getting-started.Rmd",
+    "identical": true
+  },
+  {
+    "path": "vignettes/paired-bootstrap.Rmd",
+    "identical": true
+  }
+]

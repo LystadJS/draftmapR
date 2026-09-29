@@ -1,0 +1,3 @@
+DESIGN ONLY: states reserved, analytic population quantities computed.
+No reserved measurement panel or bootstrap weight vector generated.
+A separate implementation/execution code freeze is required before evaluation.

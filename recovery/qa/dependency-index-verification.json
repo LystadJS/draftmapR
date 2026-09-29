@@ -1,0 +1,52 @@
+{
+  "recorded_files": 534,
+  "groups": {
+    "source_or_operational": 5,
+    "checkpoint464": 12,
+    "checkpoint468": 2,
+    "checkpoint2250": 4,
+    "checkpoint3915": 3,
+    "ancestral_original": 25,
+    "ancestral_r1": 22,
+    "ancestral_raw_prefix": 81,
+    "publication_support": 344,
+    "published_raw_candidate": 30,
+    "checkpoint361_support": 6
+  },
+  "original_and_r1_ancestral_bytes": 10221806457,
+  "raw_prefix_archive_bytes": 3064202006,
+  "checkpoint_transport": [
+    {
+      "checkpoint": 464,
+      "parts": 12,
+      "bytes": 1207516379,
+      "metadata_offsets_and_sizes": "passed",
+      "archive_hash_verified_locally": true
+    },
+    {
+      "checkpoint": 468,
+      "parts": 2,
+      "bytes": 135663966,
+      "metadata_offsets_and_sizes": "passed",
+      "archive_hash_verified_locally": true
+    },
+    {
+      "checkpoint": 2250,
+      "parts": 4,
+      "bytes": 343136277,
+      "metadata_offsets_and_sizes": "passed",
+      "archive_hash_verified_locally": true
+    },
+    {
+      "checkpoint": 3915,
+      "parts": 3,
+      "bytes": 275145095,
+      "metadata_offsets_and_sizes": "passed",
+      "archive_hash_verified_locally": true
+    }
+  ],
+  "note": "All 128 historical ancestral archive identities resolved. Local recovery counts and missing bytes are reported separately. The 81 raw receipt hashes and publication bindings passed metadata checks; metadata alone does not recover payloads. Publication support/candidates are not all mandatory.",
+  "ancestral_archives_verified_locally": 25,
+  "ancestral_archives_missing": 103,
+  "ancestral_bytes_missing": 7537967210
+}

@@ -12,8 +12,8 @@
 #' @return An S3 `driftmap` list. `coordinates` holds canonical `entity`, `time`,
 #'   `x`, `y`, and `period_index` columns. `aligned` and `transformations` are
 #'   populated by [align_snapshots()]. [match_clusters()] populates `clusters`.
-#'   `movement` and `bootstrap` are reserved slots, initially `NULL`; movement
-#'   functions return tables without mutating the object. `diagnostics` and
+#'   `movement` and `bootstrap` are initially `NULL`; [bootstrap_drift()]
+#'   populates the latter. Movement functions return tables without mutating the object. `diagnostics` and
 #'   `settings` record the run.
 #' @details Only two-dimensional maps are supported in this prototype. Missing
 #'   entity observations are allowed, but missing/nonfinite coordinates are not.

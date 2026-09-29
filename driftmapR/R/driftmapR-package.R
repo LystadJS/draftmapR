@@ -7,9 +7,10 @@
 #' Alternatively start from repeated numeric features or labeled distances
 #' using [embed_snapshots()] for PCA or classical multidimensional scaling.
 #'
-#' The development prototype provides no bootstrap intervals, significance
-#' tests, or cluster fitting. A bootstrap specification accompanies the
-#' executable embedding adapters; it is not an uncertainty estimator. Movement
+#' Declare paired measurement units with [paired_unit_design()] and run serial
+#' full-pipeline resampling with [bootstrap_drift()]. Results are conditional
+#' resampling summaries; calibrated confidence regions, significance tests,
+#' and cluster fitting/stability are not implemented. Movement
 #' is relative to the selected alignment entities and coordinate reference.
 #'
 #' @keywords internal

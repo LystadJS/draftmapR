@@ -101,8 +101,8 @@ weighted <- embed_snapshots(input, features, feature_weights = c(2, 1, 0, 1))
 weighted$embedding_metadata$feature_weights
 ```
 
-Weights provide a building block for a future resampling engine. Setting them
-does not run a bootstrap and does not produce standard errors or intervals.
+The paired-unit resampling engine uses these multiplicities internally. Setting
+weights here alone does not run a bootstrap or produce resampling summaries.
 Named variables are not automatically exchangeable sampling units.
 
 ## Classical MDS from features or distances
@@ -173,6 +173,6 @@ column-duplication equivalence.
 This idealized example verifies geometry and data flow. It does not establish
 robustness under noisy dimension reduction, a correct sampling design, or
 confidence-interval coverage. The bootstrap specification is included in
-`inst/validation/bootstrap-specification.md` in the source package. A bootstrap
-engine, uncertainty intervals, cluster refitting and UMAP adapters are not
-implemented.
+`inst/validation/bootstrap-specification.md` in the source package. The paired-unit engine is described in the paired-bootstrap vignette.
+Calibrated confidence regions, cluster refitting and UMAP adapters remain
+unimplemented.

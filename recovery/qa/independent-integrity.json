@@ -1,0 +1,9 @@
+{
+  "archive_members": 353,
+  "archive_mismatches": [],
+  "freeze_members": 352,
+  "freeze_mismatches": [],
+  "missing": [],
+  "extra": [],
+  "original_verifier_note": "Original freeze.py compares ordered inventories; Windows Path sorting is case-insensitive. This independent check compares path membership and every size/SHA256 without depending on sort order."
+}

@@ -1,0 +1,8 @@
+/recovery/archives/
+/recovery/recovered/
+/recovery/qa/R-library/
+/recovery/qa/*.rds
+/recovery/provenance/conversations/
+**/__pycache__/
+.Rhistory
+.RData

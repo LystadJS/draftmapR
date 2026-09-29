@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "checkpoint2250_committed_panels": 2250,
+  "checkpoint2250_caches": 2251,
+  "checkpoint2250_exports": 2259,
+  "prefixes": [
+    {
+      "journal": "panel-journal.jsonl",
+      "bytes": 288953,
+      "rows": 2250,
+      "sha256": "c5ff48032698410cfdf62554bf1ad8be2e28657b00f9fb9cedcebc413876c8bb",
+      "newline_complete": true
+    },
+    {
+      "journal": "chunk-journal.jsonl",
+      "bytes": 118412155,
+      "rows": 253471,
+      "sha256": "bee80596d6fefbed578ec8d3a2cf98c02cf8cf4b6252d6520428e2db234ed082",
+      "newline_complete": true
+    },
+    {
+      "journal": "json-journal.jsonl",
+      "bytes": 427263,
+      "rows": 2259,
+      "sha256": "7910121baedd259c68bd4780e202d2905711721243ab470965877e4428bc06bf",
+      "newline_complete": true
+    },
+    {
+      "journal": "compact-cache-005.jsonl",
+      "bytes": 366853,
+      "rows": 2251,
+      "sha256": "2a7f5650e112823b9cf365b87d3890fb804c0b5b20fdfcd5f8576d364686c854",
+      "newline_complete": true
+    }
+  ],
+  "delta_counts": {
+    "2250": {
+      "raw": 10314,
+      "json": 1782
+    },
+    "3915": {
+      "raw": 4995,
+      "json": 1665
+    }
+  },
+  "raw_files_bound_to_latest_journal": 15309,
+  "raw_serial_min": 243158,
+  "raw_serial_max": 258466,
+  "raw_serials_contiguous": true,
+  "json_files_bound_to_latest_journal": 3447,
+  "checks_passed": 39772,
+  "scientific_execution": false,
+  "scope": "2250 to 3915 journal continuity and both recovered delta payload bindings. Earlier checkpoints and ancestral payloads remain absent; no scientific conclusions verified."
+}

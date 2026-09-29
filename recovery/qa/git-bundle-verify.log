@@ -1,0 +1,8 @@
+The bundle contains these 4 refs:
+b77775ee6502a2b6b930b21c320659f14022fee3 refs/heads/main
+b77775ee6502a2b6b930b21c320659f14022fee3 refs/remotes/origin/HEAD
+b77775ee6502a2b6b930b21c320659f14022fee3 refs/remotes/origin/main
+b77775ee6502a2b6b930b21c320659f14022fee3 HEAD
+The bundle records a complete history.
+The bundle uses this hash algorithm: sha1
+../archives/github-history.bundle is okay

@@ -31,8 +31,8 @@ Character times and unordered factors require explicit \code{periods}.}
 An S3 \code{driftmap} list. \code{coordinates} holds canonical \code{entity}, \code{time},
 \code{x}, \code{y}, and \code{period_index} columns. \code{aligned} and \code{transformations} are
 populated by \code{\link[=align_snapshots]{align_snapshots()}}. \code{\link[=match_clusters]{match_clusters()}} populates \code{clusters}.
-\code{movement} and \code{bootstrap} are reserved slots, initially \code{NULL}; movement
-functions return tables without mutating the object. \code{diagnostics} and
+\code{movement} and \code{bootstrap} are initially \code{NULL}; \code{\link[=bootstrap_drift]{bootstrap_drift()}}
+populates the latter. Movement functions return tables without mutating the object. \code{diagnostics} and
 \code{settings} record the run.
 }
 \description{

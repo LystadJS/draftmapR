@@ -1,0 +1,12 @@
+{
+  "package_files": 188,
+  "package_bytes_identical": true,
+  "prior_package_paths_removed": [],
+  "large_payloads_in_git": false,
+  "compact_source_archives": [
+    "driftmapR-S07-D1-specification.zip",
+    "driftmapR-S07-R1-sources.zip",
+    "driftmapR-S07-R1-Recovery-Audit-20260924.zip",
+    "driftmapR-S07-R1-Recovery-009.zip"
+  ]
+}

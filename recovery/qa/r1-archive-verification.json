@@ -1,0 +1,20 @@
+[
+  {
+    "archive": "driftmapR-S07-R1-sources.zip",
+    "sha256": "cf5096435d051c4909abcc98562b3ca3425661b5a6a2df2c01feaabf76c4c18c",
+    "bytes": 6465645,
+    "verified_files": 460,
+    "crc": "passed",
+    "membership_size_sha256_md5": "passed",
+    "scientific_execution": false
+  },
+  {
+    "archive": "driftmapR-S07-R1-Recovery-009.zip",
+    "sha256": "05a4657fbe1ce55b4edc3c21306f8ffef183b3c246d3d47625ee4425758dfa11",
+    "bytes": 15390924,
+    "verified_files": 786,
+    "crc": "passed",
+    "membership_size_sha256_md5": "passed",
+    "scientific_execution": false
+  }
+]

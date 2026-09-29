@@ -14,9 +14,10 @@ Alternatively start from repeated numeric features or labeled distances
 using \code{\link[=embed_snapshots]{embed_snapshots()}} for PCA or classical multidimensional scaling.
 }
 \details{
-The development prototype provides no bootstrap intervals, significance
-tests, or cluster fitting. A bootstrap specification accompanies the
-executable embedding adapters; it is not an uncertainty estimator. Movement
+Declare paired measurement units with \code{\link[=paired_unit_design]{paired_unit_design()}} and run serial
+full-pipeline resampling with \code{\link[=bootstrap_drift]{bootstrap_drift()}}. Results are conditional
+resampling summaries; calibrated confidence regions, significance tests,
+and cluster fitting/stability are not implemented. Movement
 is relative to the selected alignment entities and coordinate reference.
 }
 \author{

@@ -1,0 +1,25 @@
+{
+  "checkpoint": 468,
+  "archive": "driftmapR-S07-R1-checkpoint468-012.zip",
+  "bytes": 135663966,
+  "sha256": "a63c1189611e247a0b785a6d224bc47a3ead555a668c25f632c67235201e34e8",
+  "parts": [
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint468-012.zip.part001",
+      "filename": "driftmapR-S07-R1-checkpoint468-012.zip.part001",
+      "bytes": 104857600,
+      "sha256": "0c14a5b379154cb729fd4f05940632c2cf5fb183a03baf0db8f8507966b085b2"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint468-012.zip.part002",
+      "filename": "driftmapR-S07-R1-checkpoint468-012.zip.part002",
+      "bytes": 30806366,
+      "sha256": "166688db8d4c84beeb0089037cfa5fcfaf844737a358dc77786598a19f7618be"
+    }
+  ],
+  "member_count": 8465,
+  "membership_sizes_crc_sha256_md5": "passed",
+  "manifest_hash": "passed",
+  "scientific_execution": false,
+  "scope": "This checkpoint delta only; ancestral snapshots and payloads still required."
+}

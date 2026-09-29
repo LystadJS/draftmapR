@@ -1,0 +1,11 @@
+{
+  "provenance": "Values transcribed from Library rendered driftmapR-S07-R1-Recovery-Audit-20260924-receipt.json on 2026-09-28; not original receipt bytes",
+  "historical_status": "LOCALLY_BYTE_VERIFIED_LIBRARY_UPLOAD_AND_READBACK_PENDING",
+  "archive": "driftmapR-S07-R1-Recovery-Audit-20260924.zip",
+  "archive_bytes": 9895830,
+  "archive_sha256": "a14aa6cadd81ab4f3676219cfc8619dcad32514df27ea72451d647bec7dab74c",
+  "manifest_sha256": "a382a8fa3b2711fd4432d83740d5c54cda0d6b4f7ca246f67a592e0ec8511e43",
+  "archive_members_verified_historically": 54,
+  "report_sha256": "9bc19d3cc08df8e17a4ab44db6d58de9cf1aa5bf26d90d5410daae1c99762bb9",
+  "fresh_download_verified": false
+}

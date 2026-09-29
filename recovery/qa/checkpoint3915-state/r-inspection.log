@@ -1,0 +1,45 @@
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+R version 4.5.3 (2026-03-11 ucrt) 
+Purpose: read-only saved-state audit; frozen scientific runtime not reproduced.
+Parsed source files: 191 ; successful: 191 
+Input-verification receipts read: 6480 ; planned job matches: 6480 ; frozen identity matches: 6480 
+Compact caches read: 3916 ; valid table structures: 3916 ; matching case/dataset identities: 3916 
+                                                                           check
+                      Every recovered R source parses under inspection R runtime
+                                     Frozen metadata identify scientific R 4.5.3
+                                        Frozen plan has exactly 6480 unique jobs
+                             Receipt filenames equal the frozen planned job grid
+                                       All input-verification receipts: readable
+                              All input-verification receipts: planned_job_match
+                          All input-verification receipts: frozen_identity_match
+                        All input-verification receipts: ledger_checkpoint_match
+                                All input-verification receipts: md5_shape_valid
+                       Exactly 3916 receipt-to-cache checkpoint hash comparisons
+                           Receipts retain one uniform collector driver identity
+                                            Exactly 3916 readable compact caches
+                             All compact caches have named data-frame components
+ Every cache table matches its planned panel or explicit population-level schema
+           All 480 population derivative tables identical within each of 9 cases
+                         Audit did not create or change an R random-number state
+ passed                                                         detail
+   TRUE                                                            191
+   TRUE                                                               
+   TRUE                                                               
+   TRUE                                                               
+   TRUE                                                           6480
+   TRUE                                                           6480
+   TRUE                                                           6480
+   TRUE 6480 checkpoint references; 3916 applicable ledger comparisons
+   TRUE                                                           6480
+   TRUE                                                               
+   TRUE                                                               
+   TRUE                                                               
+   TRUE                                                               
+   TRUE                                                               
+   TRUE                                                               
+   TRUE                                                               
+EXECUTED SUCCESSFULLY: audit-only script completed; frozen scientific execution NOT performed.

@@ -1,0 +1,18 @@
+{
+  "provenance": "Transcribed from Library rendered checkpoint3915 manifest and 20260924 audit preview on 2026-09-28; not an original-byte download",
+  "status": "Metadata inspected; scientific payloads not yet retrieved",
+  "order": ["Recovery009", "checkpoint464", "checkpoint468", "checkpoint2250", "checkpoint3915"],
+  "archives": [
+    {"name":"driftmapR-S07-R1-checkpoint464-011.zip","bytes":1207516379,"sha256":"d1fae48aab8d7afab071bdcbd34f91802e8f1cc12527e262c75618e7fa7c9c6f","parts":12},
+    {"name":"driftmapR-S07-R1-checkpoint468-012.zip","bytes":135663966,"sha256":"a63c1189611e247a0b785a6d224bc47a3ead555a668c25f632c67235201e34e8","parts":2},
+    {"name":"driftmapR-S07-R1-checkpoint2250-013.zip","bytes":343136277,"sha256":"bbfa48bc60f25fb5e84f4f8225251af5d8f1121c5e3ab2ef26ece640c18f0516","parts":4},
+    {"name":"driftmapR-S07-R1-checkpoint3915-014.zip","bytes":275145095,"sha256":"35937acbabb66d70347b89bf14bda5cd057c5b025632e3218f061ce0c83952fc","parts":3}
+  ],
+  "checkpoint3915_parts": [
+    {"filename":"driftmapR-S07-R1-checkpoint3915-014.zip.part001","bytes":104857600,"sha256":"bd2c29ddf9fb7c13d758aa3e05ffa4345cda6525df515a4a55a4f8424fe376a5"},
+    {"filename":"driftmapR-S07-R1-checkpoint3915-014.zip.part002","bytes":104857600,"sha256":"fca3aa0730104236fb3efc5ff65c3dc3270e154f2754d5adcb1b4748b5db3776"},
+    {"filename":"driftmapR-S07-R1-checkpoint3915-014.zip.part003","bytes":65429895,"sha256":"2f436ac3dc1703104f0a04ba2778b51450ed3e41b6d51869a4a73c54830cae21"}
+  ],
+  "historical_audit_boundary": {"committed":3915,"planned":6480,"partial_panel":"s07_normal_mean_m160-1436","raw_chunk":258466,"remaining":2565},
+  "warning":"Later operational live counters do not preserve later scientific payloads. Full ancestral chain includes 128 prior archive dependencies. Part count 12 for checkpoint464 is inferred from the 21-total-parts audit and the other three counts; verify its original manifest before reconstruction."
+}

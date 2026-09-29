@@ -1,6 +1,6 @@
 Package: driftmapR
 Title: Align Repeated Coordinate Maps and Measure Relative Movement
-Version: 0.0.3.9000
+Version: 0.0.8.9000
 Authors@R: person("Prototype", "Maintainer", email = "maintainer@example.org",
     role = c("aut", "cre"))
 Description: A development prototype for ingesting repeated two-dimensional
@@ -12,7 +12,9 @@ Description: A development prototype for ingesting repeated two-dimensional
     maximum shared-entity overlap, with explicit assignment and ambiguity
     diagnostics. Includes centered PCA and classical multidimensional scaling
     adapters with retained inputs, preprocessing, and spectral diagnostics.
-    No inferential uncertainty is estimated.
+    Includes serial paired-measurement-unit bootstrap refits with reproducible
+    random streams, explicit failure accounting, and conditional resampling
+    summaries. Inferential confidence coverage is not yet calibrated.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: R (>= 4.1.0)
@@ -21,7 +23,9 @@ Imports:
     clue (>= 0.3-65),
     grid,
     grDevices,
+    parallel,
     stats,
+    tools,
     utils
 Suggests:
     testthat (>= 3.0.0),

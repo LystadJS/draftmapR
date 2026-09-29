@@ -1,0 +1,37 @@
+{
+  "checkpoint": 2250,
+  "archive": "driftmapR-S07-R1-checkpoint2250-013.zip",
+  "bytes": 343136277,
+  "sha256": "bbfa48bc60f25fb5e84f4f8225251af5d8f1121c5e3ab2ef26ece640c18f0516",
+  "parts": [
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint2250-013.zip.part001",
+      "filename": "driftmapR-S07-R1-checkpoint2250-013.zip.part001",
+      "bytes": 104857600,
+      "sha256": "983515388f2d6e8f3afda71305dc93d2aae9ca33b1164126e5659f0a6a4f5f9b"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint2250-013.zip.part002",
+      "filename": "driftmapR-S07-R1-checkpoint2250-013.zip.part002",
+      "bytes": 104857600,
+      "sha256": "97d96633fa00117a7e7d9ad3dcefb842f1f316aca5b14fca92a66431b09e3056"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint2250-013.zip.part003",
+      "filename": "driftmapR-S07-R1-checkpoint2250-013.zip.part003",
+      "bytes": 104857600,
+      "sha256": "2f4824f4355bc27bb89f0ded4b37b8b14f8eedc234a3ec2c346b2518f18e9ab0"
+    },
+    {
+      "path": "C:\\Users\\John\\Downloads\\driftmapR-S07-R1-checkpoint2250-013.zip.part004",
+      "filename": "driftmapR-S07-R1-checkpoint2250-013.zip.part004",
+      "bytes": 28563477,
+      "sha256": "449679f6f8924cfeade606d90e97b2e9bebf2686b17c9ee88224a30884f993d6"
+    }
+  ],
+  "member_count": 21041,
+  "membership_sizes_crc_sha256_md5": "passed",
+  "manifest_hash": "passed",
+  "scientific_execution": false,
+  "scope": "This checkpoint delta only; ancestral snapshots and payloads still required."
+}

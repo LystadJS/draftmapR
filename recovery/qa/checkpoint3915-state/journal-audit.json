@@ -1,0 +1,11 @@
+{
+  "committed_panel_records": 3915,
+  "cached_panels": 3916,
+  "input_receipts": 6480,
+  "chunk_records": 258466,
+  "verified_raw_delta_bindings": 4995,
+  "partial_panel": "s07_normal_mean_m160-1436",
+  "remaining_uncommitted": 2565,
+  "status": "passed",
+  "scope": "Latest snapshot journals, cache bytes and delta bindings only. Earlier journal prefix continuity and missing raw payloads not verified. No scientific execution."
+}

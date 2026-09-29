@@ -1,0 +1,107 @@
+# driftmapR recovery checkpoint — updated 29 September 2026
+
+This directory consolidates recovered package code, frozen design material, historical evidence, Git history, and fresh verification. It is a **partial recovery checkpoint**, not a complete S07 scientific checkpoint or CRAN release.
+
+Current recovery status: all four checkpoint deltas, all 22 ancestral R1 archives and the first three original-run archives are verified. Recovered R1 inputs include all 6,480 draw plans, all 6,480 distinct checkpoint objects and nine population objects, with companion manifests. Separately preserved original-run inputs include 6,480 draw plans, 80 checkpoint objects and nine population objects. There are 103 ancestral archives still missing (7,537,967,210 bytes): 22 original-run archives and 81 earlier raw-output archives. See `MISSING_ARTIFACTS.md` for the exact next files. Complete input recovery is not completion of the scientific run.
+
+## Start here
+
+- `driftmapR/`: working package 0.0.8.9000, copied byte-for-byte from the package vendored in S07-D1 and now confirmed identical to all 188 package files vendored in S07-R1.
+- `recovered/`: immutable extracted specification and its nested S06/S05 sources, protocols, plans, and historical evidence.
+- `repository/`: unchanged GitHub repository snapshot, including Git history. Its package is older (0.0.3.9000). Its newer README overstates the capabilities of that older code; it is preserved as provenance, not selected as the implementation baseline.
+- `archives/`: original recovered archives and a portable Git history bundle.
+- `provenance/`: conversation exports, project instructions, and source/chain records.
+- `qa/`: newly executed verification scripts and results. Historical results remain in their original source locations.
+- `reference/`: recovered presentation assets, preserved without claiming visual validation.
+
+## Verified in this recovery
+
+The specification ZIP passed CRC inspection. All 353 manifest-listed files match their saved sizes and SHA-256 values; all 352 frozen members match with no missing or extra files. The original freeze verifier failed because its ordered comparison depends on platform-specific path sorting; independent path-keyed verification passed without editing frozen bytes.
+
+The pinned Linux runtime archive was recovered, all member payloads were read, and its 117,877,231 bytes and SHA-256 match the historical runtime receipt. It has not been installed or used to execute the frozen study. External BLAS/LAPACK and runtime identity checks remain necessary for scientific reproduction.
+
+Package 0.0.8.9000 installed in an isolated library using native Windows R 4.5.3. All 115 recovered package R files parsed. Fresh package tests yielded **2,619 passing expectations in 147 blocks, zero failures/errors/warnings/skips**. These counts are from this run, not the historical 2,622-assertion claim. No full R CMD check or reserved simulation was run.
+
+The first test harness used `test_dir()` without the package's internal namespace and failed; it was corrected to `test_local()`. The successful test result object was saved before a CSV export error; its scalar summary was then exported successfully. Logs retain both issues. Neither required a package source change. R startup reported locale-setting warnings, distinct from zero warnings in test results.
+
+## Audit evidence added
+
+The user supplied `driftmapR-S07-R1-Recovery-Audit-20260924.zip`. Its 9,895,830 bytes and SHA-256 match the previously inspected receipt. All 54 ZIP entries passed CRC inspection; all 53 manifest-listed payloads, the manifest itself, and the report matched their recorded hashes. The unchanged archive and extracted evidence are now included. This verifies the audit bundle's integrity, not the scientific archives described by the audit.
+
+The exact transport list confirms 12 + 2 + 4 + 3 parts for the four checkpoints. Metadata offsets and total sizes are consistent. Recovery009 now resolves all 128 ancestral archive identities: 25 original, 22 R1, and 81 raw-prefix archives. All 81 receipt hashes and publication identity bindings passed fresh metadata checks. A further 30 published raw archives remain separately labeled candidates. See `provenance/RECOVERY_DEPENDENCIES.md` and its CSV for exact names, hashes, versions, and groups.
+
+## S07-R1 source and Recovery009 added
+
+Both archives were supplied and verified against the recovered audit records, including exact membership, CRC, sizes, SHA-256, and MD5: 460 files in `driftmapR-S07-R1-sources.zip` and 786 files in `driftmapR-S07-R1-Recovery-009.zip`. Sources remain unchanged under `recovered/`. The former includes the S07 recovery runner, execution source, frozen design, and vendored package. Recovery009 contains restoration evidence and controls, not the complete scientific payload.
+
+All 191 R source files in the later source archive parsed with native R 4.5.3. Parsing is not execution. The package files are identical to those previously tested, so those tests were not repeated. No engineering or reserved scientific run was launched.
+
+Runtime distinction: the pinned Linux runtime archive contains installed driftmapR **0.0.7.9000**, as confirmed by its archived DESCRIPTION; the editable vendored source is **0.0.8.9000**. The scientific runner's README also specifies the older pinned engine. Native Windows package-test success for 0.0.8.9000 does not validate substituting that package into the frozen scientific run.
+
+## Checkpoint3915 recovered and inspected
+
+All three supplied transport parts matched their recorded sizes and SHA-256 hashes. Their concatenation reconstructed the 275,145,095-byte archive, SHA-256 `35937acbabb66d70347b89bf14bda5cd057c5b025632e3218f061ce0c83952fc`.
+
+All 17,367 extracted files matched the audit's membership, sizes, CRC, SHA-256, and MD5 records. The reconstructed archive and unchanged extracted files are included; the original transport parts remain in Downloads. Their identities and paths are recorded in `qa/checkpoint3915-verification.json`.
+
+Fresh read-only journal and R-object inspections passed: 3,915 committed panel records, 3,916 readable caches, 6,480 input receipts, 258,466 chunk records, and 4,995 raw delta file bindings. Receipt identities, cache hashes and schemas were checked. Panel `s07_normal_mean_m160-1436` is partial, with one draw chunk and no committed panel record. There are 2,565 uncommitted panels in the 6,480-panel plan. Results and scope are in `qa/checkpoint3915-state/`. These inspections did not execute scientific code or generate simulations.
+
+This is a delta archive. Earlier raw payloads remain unavailable. Continuity from checkpoint2250 is now verified below; earlier links remain unverified. See `MISSING_ARTIFACTS.md`.
+
+## Checkpoint2250 recovered and linked to checkpoint3915
+
+All four supplied parts matched their recorded hashes and sizes, reconstructing the 343,136,277-byte archive with SHA-256 `bbfa48bc60f25fb5e84f4f8225251af5d8f1121c5e3ab2ef26ece640c18f0516`. All 21,041 extracted files passed membership, size, CRC, SHA-256 and MD5 verification against the audit records. Original extracted bytes and the reconstructed archive are preserved.
+
+All four checkpoint2250 journals are exact byte prefixes of checkpoint3915's journals and match its recorded predecessor identities. Checkpoint2250 contains 2,250 committed panel records and 2,251 caches; all cache files matched their recorded hashes. The two recovered deltas contain 15,309 raw files covering contiguous serials 243158–258466, and 3,447 JSON files, all bound to the latest journals by paths, sizes and hashes. See `qa/checkpoint2250-verification.json` and `qa/checkpoint2250-to-3915-lineage.json`.
+
+This verifies the 2250 → 3915 link, not the whole chain or scientific conclusions. The latest stopping point remains 3,915 committed panels plus a partial next panel. No new package tests, simulations, or scientific execution were performed during this addition.
+
+## Checkpoint468 recovered and linked through checkpoint3915
+
+Both supplied parts matched their recorded sizes and SHA-256 values. The reconstructed archive is 135,663,966 bytes with SHA-256 `a63c1189611e247a0b785a6d224bc47a3ead555a668c25f632c67235201e34e8`. All 8,465 extracted files matched the audit's membership, sizes, CRC, SHA-256 and MD5 records; archive and unchanged extracted files are preserved.
+
+All four journals are exact byte prefixes of checkpoint2250's journals and match its predecessor bindings. The 2250 → 3915 links were checked again. Checkpoint468 has 468 committed panel records and 469 caches; all cache files matched their ledger hashes. Across the three recovered deltas, 16,654 raw files cover contiguous serials 241813–258466, and 3,450 JSON files match the latest journals by path, size and hash. See `qa/checkpoint468-verification.json` and `qa/checkpoint468-to-3915-lineage.json`.
+
+The 468 → 2250 → 3915 segment passed verification. Checkpoint464 has since been recovered as described below. No scientific execution or new package tests were performed.
+
+## All four checkpoint deltas recovered
+
+All 12 checkpoint464 transport parts matched their recorded sizes and SHA-256 values. The reconstructed archive is 1,207,516,379 bytes, SHA-256 `d1fae48aab8d7afab071bdcbd34f91802e8f1cc12527e262c75618e7fa7c9c6f`. All 86,023 extracted files matched the audit's membership, size, CRC, SHA-256 and MD5 records. See `qa/checkpoint464-verification.json`.
+
+The fresh full-segment lineage audit passed all 32 checks, including all 12 exact predecessor journal-prefix comparisons across **464 → 468 → 2250 → 3915**. Across these four archives, 95,374 recovered raw files cover contiguous serials 163093–258466, and 3,643 JSON files match the latest journal records. All latest cache files also match their ledger hashes. The original historical audit script was adapted only for local paths/output, preserving the original script unchanged. Detailed results are in `qa/full-chain-state/checkpoint-lineage-audit.json`.
+
+This completes recovery of the four checkpoint deltas, not reconstruction of the entire scientific workspace. Raw serials 1–163092 and additional earlier checkpoint inputs remain unavailable. The next section records recovered ancestral inputs and the reduced missing-file list. This audit did not rerun simulations, validate scientific conclusions, or launch the frozen collection process. The latest saved stopping point remains 3,915 committed panels and one partial next panel.
+
+## R1-01 ancestral inputs recovered — 29 September 2026
+
+All three `driftmapR-S07-R1-checkpoint-01-checkpoints-part-001.tar.gz` through `-003.tar.gz` archives matched the immutable dependency identities and Recovery009 receipts (572,195,430 bytes total). All 13,102 regular files passed membership, size, SHA-256 and MD5 checks; compressed streams passed CRC verification. Original archives and unchanged extracted files are preserved separately.
+
+Contents include all 6,480 draw-plan objects, 59 checkpoint objects and nine population objects, each with its companion manifest, plus six administrative files. All 13,096 files referenced by the latest per-job input receipts match those receipt MD5s. The six administrative files are not referenced by those per-job receipts and instead retain their verified archive/member provenance. The 59 checkpoint objects also match the latest compact-cache checkpoint identities. See `qa/r1-01-verification.json`, `qa/r1-01-receipt-bindings.csv`, and the corresponding log.
+
+The first receipt-audit harness incorrectly required administrative files to occur in per-job receipts; its initial failure log is preserved. The corrected audit explicitly accounts for those six files and passes. Native R emitted startup locale warnings. No scientific computation or package tests were run. The missing ancestral set is now **125 archives / 12,713,813,033 bytes** (25 original, 19 R1, 81 raw-prefix). Exact outstanding identities are in `provenance/MISSING_ANCESTRAL_ARCHIVES.csv` and `.md`.
+
+## R1-02 ancestral inputs recovered — 29 September 2026
+
+All 16 `driftmapR-S07-R1-checkpoint-02-checkpoints-part-001.tar.gz` through `-016.tar.gz` archives passed their recorded archive identities, complete member inventories, size/SHA-256/MD5 and gzip CRC checks. The archives total 3,840,913,714 bytes and contain 868 regular files: 434 checkpoint objects and 434 companion manifests. All 868 file identities match the latest per-job receipts; all 434 checkpoint MD5s match the latest compact-cache ledger. They are distinct from the 59 R1-01 checkpoint objects, bringing the recovered ancestral total to 493. See `qa/r1-02-verification.json` and `qa/r1-02-receipt-bindings.csv`/`.log`.
+
+The remaining ancestral set is now 109 archives: 25 original, three R1-03, and 81 raw-prefix archives (8,872,899,319 bytes total). All original supplied archives and extracted bytes are preserved separately. Read-only verification ran under native R 4.5.3 with startup locale warnings; no package tests, simulations, frozen scientific execution, or scientific conclusion checks were performed in this addition. Saved execution progress remains 3,915 committed panels and one partial next panel.
+
+## R1-03 recovered: complete R1 checkpoint and draw-plan inputs
+
+All three `driftmapR-S07-R1-checkpoint-03-checkpoints-part-001.tar.gz` through `-003.tar.gz` archives passed their recorded identities, complete member inventories, size/SHA-256/MD5 and gzip CRC checks. These archives total 722,620,639 bytes and contain 11,974 regular files: 5,987 checkpoint objects and companion manifests. All 11,974 file identities match the latest per-job receipts. Of these checkpoint objects, 3,423 match existing compact-cache ledger identities; 2,564 belong to inputs without a compact cache. Their absence from the cache does not indicate missing input files or completed collection.
+
+The cumulative audit now confirms exactly 6,480 distinct checkpoint inputs and 6,480 distinct draw plans across all 22 R1 archives, with both key sets equal to the latest 6,480 input-receipt keys. All 3,916 applicable cache checkpoint hashes agree. See `qa/r1-03-verification.json`, `qa/r1-03-receipt-bindings.csv`/`.log`, and `qa/r1-input-coverage.json`.
+
+The inherited verification harness initially assumed every checkpoint had a compact cache. This assumption failed at an unprocessed panel; it was corrected to bind only applicable cache entries and use input receipts for all recovered files. No recovered bytes were changed. The corrected integrity and coverage audits passed. Native R emitted startup locale warnings; no simulations or package tests were rerun. Scientific saved progress remains 3,915 committed panels and one partial next panel. The 106 missing original/raw archives total 8,150,278,680 bytes.
+
+## First three original-run archives recovered
+
+The original execution-checkpoint archive and checkpoint-02/checkpoint-03 archives (612,311,470 bytes total) match their immutable archive SHA-256 identities. All 13,142 regular members match Recovery009's inventories, sizes and MD5s; compressed streams passed CRC checks. SHA-256 values were freshly computed for every member; historical per-member SHA-256 was not supplied by these original-run receipts. The 6,480 draw plans, 80 checkpoint objects and nine population objects are preserved with their companion manifests and four administrative files. They remain separate from the later R1 versions. See `qa/original-001-003-verification.json`.
+
+No scientific execution or package tests were rerun. The remaining ancestral set is 103 archives / 7,537,967,210 bytes. The user has now requested a commit and push after each completed recovery step; see `GIT_WORKFLOW.md` for persistence scope and destination handling.
+
+## Most comprehensive later checkpoint identified
+
+The verified 24 September audit bundle identifies an incremental chain ending at **checkpoint3915-014**: Recovery009 → 464 → 468 → 2250 → 3915. Its saved stopping point is now independently confirmed by inspecting the recovered latest snapshot. The complete scientific payload chain has not been reconstructed here, and this audit does not validate scientific conclusions or mark the simulation study complete. Later operational records do not preserve later scientific payloads.
+
+See `MISSING_ARTIFACTS.md` for the exact known recovery targets. Do not run the old collection commands directly or replace the pinned scientific environment with the native Windows test environment.

@@ -1,0 +1,2 @@
+"planned_cells","planned_panels","planned_bootstrap_draws","required_observed_occurrences","required_inner_occurrences_upper_bound","reserved_measurement_panels_generated","reserved_bootstrap_draws_generated","runner_implemented","freeze_scope"
+31,1640,326360,156960,31235040,0,0,FALSE,"design_generator_seed_plan_analysis_contract"

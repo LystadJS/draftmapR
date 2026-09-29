@@ -2,7 +2,7 @@
 
 This directory consolidates recovered package code, frozen design material, historical evidence, Git history, and fresh verification. It is a **partial recovery checkpoint**, not a complete S07 scientific checkpoint or CRAN release.
 
-Current recovery status: all four checkpoint deltas, all 22 ancestral R1 archives and the first three original-run archives are verified. Recovered R1 inputs include all 6,480 draw plans, all 6,480 distinct checkpoint objects and nine population objects, with companion manifests. Separately preserved original-run inputs include 6,480 draw plans, 80 checkpoint objects and nine population objects. There are 103 ancestral archives still missing (7,537,967,210 bytes): 22 original-run archives and 81 earlier raw-output archives. See `MISSING_ARTIFACTS.md` for the exact next files. Complete input recovery is not completion of the scientific run.
+Current recovery status: all four checkpoint deltas, all 22 ancestral R1 archives and the first six original-run archives are verified. Recovered R1 inputs include all 6,480 draw plans, all 6,480 distinct checkpoint objects and nine population objects, with companion manifests. Separately preserved original-run inputs include 6,480 draw plans, 103 distinct checkpoint objects and nine population objects. There are 100 ancestral archives still missing (6,940,149,473 bytes): 19 original-run archives and 81 earlier raw-output archives. See `MISSING_ARTIFACTS.md` for the exact next files. Complete input recovery is not completion of the scientific run.
 
 ## Start here
 
@@ -100,8 +100,15 @@ The original execution-checkpoint archive and checkpoint-02/checkpoint-03 archiv
 
 No scientific execution or package tests were rerun. The remaining ancestral set is 103 archives / 7,537,967,210 bytes. The user has now requested a commit and push after each completed recovery step; see `GIT_WORKFLOW.md` for persistence scope and destination handling.
 
+## Original-run archives 004–006 recovered
+
+Both checkpoint-04 archives and checkpoint-05 part-001 (597,817,737 bytes total) passed their immutable archive SHA-256 identities, complete member inventories, member size/MD5 comparisons and gzip CRC checks. All 46 regular files are checkpoint objects or their companion manifests: 23 objects with no key overlap with the previously recovered 80 original-run checkpoints. Original-run coverage is now 103 distinct checkpoint objects. Fresh SHA-256 values are recorded for all members; historical per-member SHA-256 was not supplied by these receipts. See `qa/original-004-006-verification.json`.
+
+This batch preserves historical original-run bytes separately from R1 inputs. No package tests or scientific execution were rerun. The remaining ancestral set is 100 archives / 6,940,149,473 bytes. Source, evidence and missing-file records are committed and pushed to the confirmed `LystadJS/draftmapR` repository after the recovery step; large scientific archives remain in the local consolidated checkpoint.
+
 ## Most comprehensive later checkpoint identified
 
 The verified 24 September audit bundle identifies an incremental chain ending at **checkpoint3915-014**: Recovery009 → 464 → 468 → 2250 → 3915. Its saved stopping point is now independently confirmed by inspecting the recovered latest snapshot. The complete scientific payload chain has not been reconstructed here, and this audit does not validate scientific conclusions or mark the simulation study complete. Later operational records do not preserve later scientific payloads.
 
 See `MISSING_ARTIFACTS.md` for the exact known recovery targets. Do not run the old collection commands directly or replace the pinned scientific environment with the native Windows test environment.
+

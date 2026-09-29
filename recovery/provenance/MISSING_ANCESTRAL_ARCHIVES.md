@@ -1,12 +1,9 @@
 # Missing ancestral archives
 
-103 of the 128 identified ancestral archives remain unrecovered: 22 original and 81 raw-prefix. All 22 R1 archives and the first three original archives are recovered. Preserve exact versions and hashes.
+100 of the 128 identified ancestral archives remain unrecovered: 19 original and 81 raw-prefix. All 22 R1 archives and the first six original archives are recovered. Preserve exact versions and hashes.
 
 ## ancestral_original
 
-- `driftmapR-S07-checkpoint-04-part-001.tar.gz` — 237562330 bytes; version 0
-- `driftmapR-S07-checkpoint-04-part-002.tar.gz` — 118884246 bytes; version 0
-- `driftmapR-S07-checkpoint-05-part-001.tar.gz` — 241371161 bytes; version 0
 - `driftmapR-S07-checkpoint-05-part-002.tar.gz` — 159173572 bytes; version 0
 - `driftmapR-S07-checkpoint-06-part-001.tar.gz` — 239902267 bytes; version 0
 - `driftmapR-S07-checkpoint-06-part-002.tar.gz` — 108886737 bytes; version 0

@@ -35,6 +35,7 @@ path=root/'MISSING_ARTIFACTS.md';text=path.read_text(encoding='utf-8-sig');start
 block=f'Full historical/scientific reconstruction still requires {len(missing)} ancestral archives ({size:,} bytes): {original_missing} original-run and 81 raw-prefix. All 22 R1 archives and {len(archive_names)} original-run archives are recovered. Original-run coverage is {len(keys)} distinct checkpoint objects. Raw serials 1–163092 remain missing.\n\nExact filenames, hashes, IDs and versions are in `provenance/MISSING_ANCESTRAL_ARCHIVES.csv` and the readable `.md` checklist.\n\nNext provide these independent original-run archives:\n\n'
 block+='\n'.join(f"{i}. `{r['filename']}`" for i,r in enumerate(missing[:3],1))+'\n\nDo not concatenate these independent archives.\n\n'
 text=text[:start]+block+text[end:]
-text=re.sub(r'all 22 R1 ancestral archives and the first \w+ original-run archives have been restored',f'all 22 R1 ancestral archives and {len(archive_names)} original-run archives have been restored',text)
+text=re.sub(r'all 22 R1 ancestral archives and (?:the first \w+|\d+) original-run archives have been restored',f'all 22 R1 ancestral archives and {len(archive_names)} original-run archives have been restored',text)
 text=text.replace('## Already recovered: do not reupload','## Already recovered: do not reupload\n\n- '+names+f' — all {len(latest["members"])} files verified.',1)
 path.write_text(text,encoding='utf-8');print(json.dumps(summary,indent=2))
+

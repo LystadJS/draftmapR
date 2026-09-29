@@ -1,0 +1,429 @@
+{
+  "status": "passed",
+  "archives": [
+    {
+      "filename": "driftmapR-S07-checkpoint-07-part-001.tar.gz",
+      "library_file_id": "libfile_cf2cb09fd7f88191a0787b91b9ed0406",
+      "version": 0,
+      "bytes": 241181955,
+      "sha256": "005dff80c0b2f64dda72a59d183a1a1c1badce0c679d17cbc32a1a975a5701ac",
+      "kind": "original",
+      "source": "C:\\Users\\John\\Downloads\\driftmapR-S07-checkpoint-07-part-001.tar.gz",
+      "files": 16,
+      "membership_size_md5": "passed",
+      "gzip_crc": "passed",
+      "member_sha256": "freshly recorded; only compared historically when supplied"
+    },
+    {
+      "filename": "driftmapR-S07-checkpoint-07-part-002.tar.gz",
+      "library_file_id": "libfile_0b4b3d7e8c6c8191a596de4a23112772",
+      "version": 0,
+      "bytes": 241273938,
+      "sha256": "7da7f743fe8d39ce38d6cc814ef38e8c3d99e4d380c4ea0bd06969725fdf16a4",
+      "kind": "original",
+      "source": "C:\\Users\\John\\Downloads\\driftmapR-S07-checkpoint-07-part-002.tar.gz",
+      "files": 16,
+      "membership_size_md5": "passed",
+      "gzip_crc": "passed",
+      "member_sha256": "freshly recorded; only compared historically when supplied"
+    },
+    {
+      "filename": "driftmapR-S07-checkpoint-07-part-003.tar.gz",
+      "library_file_id": "libfile_ed0a8cca656c81918867657f44276ad1",
+      "version": 0,
+      "bytes": 150804371,
+      "sha256": "96e191bab89471473797fc2ca22f2457801e7106f1b31d5fab82d88c58f408e4",
+      "kind": "original",
+      "source": "C:\\Users\\John\\Downloads\\driftmapR-S07-checkpoint-07-part-003.tar.gz",
+      "files": 10,
+      "membership_size_md5": "passed",
+      "gzip_crc": "passed",
+      "member_sha256": "freshly recorded; only compared historically when supplied"
+    }
+  ],
+  "members": [
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0002.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0002.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0002.rds",
+      "bytes": 32322554,
+      "sha256": "99efcbc22b6cbbada25700b74d4c38c43b97d53eadef841241f9c3207858c0dd",
+      "md5": "efa577e5534f0785014a3569d6dbf8b0",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0002.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0002.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0002.rds.manifest.rds",
+      "bytes": 3144,
+      "sha256": "1686a30fead0faf98d80dc0793659e2f64d76b69f331f6233cd22be98dd55336",
+      "md5": "6680a3c7c4a6dc4cb56915f0f971780b",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0003.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0003.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0003.rds",
+      "bytes": 32338140,
+      "sha256": "030857566810a1195731ff7cb80ff5b3fbfcf233e7ffe051c7b8dfe6c5878fc7",
+      "md5": "48754685cb1151e695d7d456f81f6eee",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0003.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0003.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0003.rds.manifest.rds",
+      "bytes": 3146,
+      "sha256": "593deb7222def006775d16e92c15bd71854296d4a0ec3dce80593c740227308b",
+      "md5": "7b756eb31eda0c1544a657275537c002",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0004.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0004.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0004.rds",
+      "bytes": 32283529,
+      "sha256": "93dcc75cb4bfda44db9ff46fcd799e22519ced63dc1bf2ce3565498bcf029911",
+      "md5": "f97a87ca42991db3d3f0f0ce2a7107f1",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0004.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0004.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0004.rds.manifest.rds",
+      "bytes": 3145,
+      "sha256": "42ba1d869eca288b3801c2ca9c1f975c5411d915d92d1d3fbeefe3590da34cea",
+      "md5": "1cd08ef244ff7a781855fc2b25cad797",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0005.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0005.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0005.rds",
+      "bytes": 32337145,
+      "sha256": "fb6ff562b2c583550e475d715dfe7807da8dd2bf444411043ebe3c81b4d2fa82",
+      "md5": "9f0f1ef60aa12adcc8c22d6ad0a293e0",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0005.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0005.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0005.rds.manifest.rds",
+      "bytes": 3143,
+      "sha256": "7e4f93aa924266d91efac8965f761a8f141063ff357f623c2aef306309a52533",
+      "md5": "7ccf818b768ec55edaebd953f325ba07",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0006.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0006.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0006.rds",
+      "bytes": 32361569,
+      "sha256": "828709330b579571feb183994398a32b3612cbb5bbff71675c8af332616ce666",
+      "md5": "1db5d27dc3305b16cec47cdbe7c9d6f2",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0006.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0006.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0006.rds.manifest.rds",
+      "bytes": 3145,
+      "sha256": "c769f39af750f8e984668da78d385aff537930c9b86ffcb0f7f7ae1dd32d30bd",
+      "md5": "bfa1072badc279ce47817740df203792",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0007.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0007.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0007.rds",
+      "bytes": 32365337,
+      "sha256": "ab510a11bd4efc876f6f7d04fc56ab139ff70007cfd45815b9856eeea634ad8f",
+      "md5": "8577a8b646a4c0e07862e4aaea53023f",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0007.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0007.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0007.rds.manifest.rds",
+      "bytes": 3148,
+      "sha256": "2212d0b0d0a265e0b7cf8a57f35500aee3226f1bc4667ef99316e149f164cb3a",
+      "md5": "1cdd974c6eaeb8fc07e26e6354b3d3ac",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0008.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0008.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0008.rds",
+      "bytes": 32348285,
+      "sha256": "90fdd91bb821fb12d67963bb934239baa6a39c40972180a3723aabf3da91cd8a",
+      "md5": "a1bca5ea16a7d2c6831a15387bb557b0",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0008.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0008.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0008.rds.manifest.rds",
+      "bytes": 3144,
+      "sha256": "e588d268653a29253d82666785be85856a6512271f8bac07a6d11c4ebcd20128",
+      "md5": "b1d1783a7f008a245c127c041e786a54",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0009.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0009.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0009.rds",
+      "bytes": 32389253,
+      "sha256": "f2ad73c0db07d34fb8b35d95296530c6c8db3fbe2a1705c6d8bce9ceb876769b",
+      "md5": "9c56182ff907d514e1564bf4c919a072",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-001/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0009.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0009.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0009.rds.manifest.rds",
+      "bytes": 3146,
+      "sha256": "da3ec82291712213c70940b003433f7b6fd9a6933e13cba1c52bf460a75e6d2e",
+      "md5": "61a2a61733176419eb92d0a60aee0f41",
+      "archive": "driftmapR-S07-checkpoint-07-part-001.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0010.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0010.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0010.rds",
+      "bytes": 32385134,
+      "sha256": "0abc1d7bf6e1fadc7f1bcb9ff736e704e754de1c9de488a8f4f3aae21e72ef1f",
+      "md5": "03e7caf178fbafd64c6c5bfd1596df73",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0010.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0010.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0010.rds.manifest.rds",
+      "bytes": 3144,
+      "sha256": "96f47caf2744b1811fc8846cd95df6bd2de80ba20d4d4ac1acd2352c9ba10f36",
+      "md5": "6c2b19ba1430c048b809f5993bd8c88f",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0011.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0011.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0011.rds",
+      "bytes": 32297786,
+      "sha256": "a8fd9685f94b0d8ff1b8d7d98835c56291b287a4f0f4564d2f65155041a8ac74",
+      "md5": "921c76916d74411284dcc8cfb8116ecd",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0011.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0011.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0011.rds.manifest.rds",
+      "bytes": 3141,
+      "sha256": "59c188e207331b8fd1644a8f83f5683e347d03ae7dad17d890df1e7fd711567a",
+      "md5": "2a1e27acc3ea1e077487c146b1a249fc",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0012.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0012.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0012.rds",
+      "bytes": 32354049,
+      "sha256": "324951e1f1e5bb3ea06c0d08aa3d9189f80137de7c6c410150fd403bc9900799",
+      "md5": "8da350fbcb16fc9c98082a0aa18e34ad",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0012.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0012.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0012.rds.manifest.rds",
+      "bytes": 3142,
+      "sha256": "1e796e16befde398982db428d4b08827ebf7a7337c4429569ed90a954228b26a",
+      "md5": "b4d7d8acdc2ec77571cbe70a0e65a7e5",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0013.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0013.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0013.rds",
+      "bytes": 32338731,
+      "sha256": "8ae6104c88d4ad3ad67a1586ad4e4dd7402c6bd802a6de8aed28b0c84b1e9088",
+      "md5": "03f8f15b57e35fe443822c29239e5a50",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0013.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0013.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0013.rds.manifest.rds",
+      "bytes": 3141,
+      "sha256": "92964a25fb08134e24f7ce2785598eef7b29abf40b0fefcbad5667132408f5c7",
+      "md5": "120475bc2d6e760cfaadc2571688d2ad",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0014.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0014.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0014.rds",
+      "bytes": 32412058,
+      "sha256": "81bd0f2aa673cf0b8df7b0c354f332d5e02d684cfbc2d61507ae0d0d3068e53c",
+      "md5": "4ed70e3946673237302021d82e48f4a5",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0014.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0014.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0014.rds.manifest.rds",
+      "bytes": 3145,
+      "sha256": "7b40c09f3732b148d8b999dcf867308724adc669355e093c7c3e163bcf93c146",
+      "md5": "ec4f7c937c1a293adee2ac7e02eda7dc",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0015.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0015.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0015.rds",
+      "bytes": 32381119,
+      "sha256": "0d0aebdc7f28f0aeaf936607bcfbe24aa4bd59daf8b09732875fff271f94f950",
+      "md5": "938f849cc1b604a45fc3a4d0a5d0d9d3",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0015.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0015.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0015.rds.manifest.rds",
+      "bytes": 3144,
+      "sha256": "6aec4e3d914b6c2d594c24632fd4ed72466a88af1cd48b1f872b5216142bb33a",
+      "md5": "ba04663ae09545580bd9973e00daac30",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0016.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0016.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0016.rds",
+      "bytes": 32338390,
+      "sha256": "d6e343f1f24eb4dd088f130159c95534e7650f6df3aa873727e12c83ee462712",
+      "md5": "d42b8089116bcba51e93c2aec84ab9d2",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0016.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0016.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0016.rds.manifest.rds",
+      "bytes": 3138,
+      "sha256": "88f446a4bb066562039f6621276e168e17cedc50cf69bbfd5c834b47dc0ff21e",
+      "md5": "4ceca4eda238150154a82f7bbcd1d957",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0017.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0017.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0017.rds",
+      "bytes": 32333716,
+      "sha256": "3f9163d6c17092607584260e9820b56dbec52cf525e940972e84742455550428",
+      "md5": "2633dea6b37f7f1ba85460f3e292c87f",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-002/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0017.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0017.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0017.rds.manifest.rds",
+      "bytes": 3143,
+      "sha256": "c6f28a761cdfd40295c4acb1f596c797b8fdc51238ef62fd65e6eb8d0590e0f3",
+      "md5": "c686ae9d8f7ce1f2887146cb94c8b853",
+      "archive": "driftmapR-S07-checkpoint-07-part-002.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-003/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0018.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0018.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0018.rds",
+      "bytes": 32336615,
+      "sha256": "b7e6b89b88254eea7e6b831104f1fa32c8600031d3a51ecf1b193c849022f06c",
+      "md5": "e03674b635c591186672fde76cf5f213",
+      "archive": "driftmapR-S07-checkpoint-07-part-003.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-003/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0018.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0018.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0018.rds.manifest.rds",
+      "bytes": 3144,
+      "sha256": "8cd601973754fb581b8a0c55e3771a4e55d8522345a6b2ad05c9224a9bca61fb",
+      "md5": "4b384e262373c3b71bbe44ec2413a21a",
+      "archive": "driftmapR-S07-checkpoint-07-part-003.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-003/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0019.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0019.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0019.rds",
+      "bytes": 32357858,
+      "sha256": "bb931a89e72adc6f6cbbd290d431f2f82985a7b165e5940fde369e19fc2758ee",
+      "md5": "7b39c12e73f2c9d94055ab5fc1802be9",
+      "archive": "driftmapR-S07-checkpoint-07-part-003.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-003/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0019.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0019.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0019.rds.manifest.rds",
+      "bytes": 3145,
+      "sha256": "7d6ad1ed03fc7ef25ddf1747c83cdebe726485d43bcc11a150edb5a2f5fe5594",
+      "md5": "1c2b9322259b1be922ac2b0c3b504004",
+      "archive": "driftmapR-S07-checkpoint-07-part-003.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-003/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0020.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0020.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0020.rds",
+      "bytes": 32350811,
+      "sha256": "b2488485dd8fd0770657ce2e13f097ad18b4d8ce055a72727f8dd99fe47bb47b",
+      "md5": "e14452e9644bdca8f96471033aaceccc",
+      "archive": "driftmapR-S07-checkpoint-07-part-003.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-003/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0020.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0020.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0020.rds.manifest.rds",
+      "bytes": 3144,
+      "sha256": "8f033b3f3bc3c1510e9c58bb899a533424c21468e6863ca7e4e6dbf8062e9330",
+      "md5": "d7ad44541825b2ca29e9f30251105c74",
+      "archive": "driftmapR-S07-checkpoint-07-part-003.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-003/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0021.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0021.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0021.rds",
+      "bytes": 32327005,
+      "sha256": "cdb5d5f6bf3c207d101d29f5bfce1e22f15dd56e07e54fc5b4a6bff603218113",
+      "md5": "d3b6bc87de084578c03ea90e19c3f272",
+      "archive": "driftmapR-S07-checkpoint-07-part-003.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-003/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0021.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0021.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0021.rds.manifest.rds",
+      "bytes": 3146,
+      "sha256": "63ca3a91ede0ef5c1cbe6e449925a1d109ec197e91f10f623117f0feeb5c5b26",
+      "md5": "4dbe8aa7a99533988b1afbfad5a02618",
+      "archive": "driftmapR-S07-checkpoint-07-part-003.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-003/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0022.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0022.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0022.rds",
+      "bytes": 32401050,
+      "sha256": "86bffe21055f80f91f90fac02ffe8f7f6b4c4f21e9390126a01232f62349a8d3",
+      "md5": "a85a6e933ff54f681b13ec2fa4eb41a1",
+      "archive": "driftmapR-S07-checkpoint-07-part-003.tar.gz"
+    },
+    {
+      "path": "recovered/driftmapR-S07-checkpoint-07-part-003/study07-results/S07-D1/checkpoints/s07_null_g1_m640-0022.rds.manifest.rds",
+      "original_path": "study07-results/S07-D1/checkpoints/s07_null_g1_m640-0022.rds.manifest.rds",
+      "receipt_path": "checkpoints/s07_null_g1_m640-0022.rds.manifest.rds",
+      "bytes": 3153,
+      "sha256": "04a85d8076a9ae30ea16ecb25cc809284efd114194d40f592611390e2f01d7ef",
+      "md5": "ebd670aa84c61a13bc39d0fcb266d0f3",
+      "archive": "driftmapR-S07-checkpoint-07-part-003.tar.gz"
+    }
+  ],
+  "categories": {
+    "checkpoints": 42
+  },
+  "scientific_execution": false,
+  "scope": "Original-run archives verified against immutable archive SHA256 and Recovery009 member size/MD5; fresh member SHA256 recorded. These are historical originals, not replacements for R1 files."
+}

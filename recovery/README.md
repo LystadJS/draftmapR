@@ -2,7 +2,7 @@
 
 This directory consolidates recovered package code, frozen design material, historical evidence, Git history, and fresh verification. It is a **partial recovery checkpoint**, not a complete S07 scientific checkpoint or CRAN release.
 
-Current recovery status: all four checkpoint deltas, all 22 ancestral R1 archives and 15 original-run archives are verified. The R1 inputs include all 6,480 checkpoint objects, all 6,480 draw plans and nine population objects, with companion manifests. Separately preserved original-run inputs include 6,480 draw plans, 215 distinct checkpoint objects and nine population objects. There are 91 ancestral archives still missing (5,195,648,327 bytes): 10 original-run and 81 raw-prefix archives. See `MISSING_ARTIFACTS.md`. Input recovery does not establish completed scientific execution.
+Current recovery status: all four checkpoint deltas, all 22 ancestral R1 archives and 18 original-run archives are verified. The R1 inputs include all 6,480 checkpoint objects, all 6,480 draw plans and nine population objects, with companion manifests. Separately preserved original-run inputs include 6,480 draw plans, 356 distinct checkpoint objects and nine population objects. There are 88 ancestral archives still missing (4,520,051,989 bytes): 7 original-run and 81 raw-prefix archives. See `MISSING_ARTIFACTS.md`. Input recovery does not establish completed scientific execution.
 
 ## Start here
 
@@ -117,6 +117,10 @@ This batch preserves historical original-run bytes separately from R1 inputs. No
 ## Original-run archives 013-015 recovered
 
 `driftmapR-S07-checkpoint-08-part-001.tar.gz`, `driftmapR-S07-checkpoint-08-part-002.tar.gz`, `driftmapR-S07-checkpoint-08-part-003.tar.gz` (603,278,306 bytes total) passed immutable archive SHA-256 identities, complete member inventories, member size/MD5 comparisons and gzip CRC checks. All 68 regular files are preserved unchanged. This batch adds 34 checkpoint objects with no key overlap in the recovered original-run set; cumulative coverage is 215 distinct original-run checkpoint objects. Fresh per-member SHA-256 is recorded, not represented as supplied by historical receipts. See `qa/original-013-015-verification.json` and `qa/original-input-coverage.json`. Original and R1 bytes remain separate. No simulations or package tests were rerun.
+
+## Original-run archives 016-018 recovered
+
+`driftmapR-S07-checkpoint-09-part-001.tar.gz`, `driftmapR-S07-checkpoint-09-part-002.tar.gz`, `driftmapR-S07-checkpoint-10-part-001.tar.gz` (675,596,338 bytes total) passed immutable archive SHA-256 identities, complete member inventories, member size/MD5 comparisons and gzip CRC checks. All 282 regular files are preserved unchanged. This batch adds 141 checkpoint objects with no key overlap in the recovered original-run set; cumulative coverage is 356 distinct original-run checkpoint objects. Fresh per-member SHA-256 is recorded, not represented as supplied by historical receipts. See `qa/original-016-018-verification.json` and `qa/original-input-coverage.json`. Original and R1 bytes remain separate. No simulations or package tests were rerun.
 
 ## Most comprehensive later checkpoint identified
 

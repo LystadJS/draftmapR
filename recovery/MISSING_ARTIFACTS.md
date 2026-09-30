@@ -6,15 +6,15 @@ The audit ZIP has now been supplied and verified. The remaining artifacts below 
 
 All 21 transport parts for checkpoint464, checkpoint468, checkpoint2250 and checkpoint3915 are now recovered and verified. No more parts are needed for those four archives. All 12 exact predecessor journal-prefix comparisons passed across 464 → 468 → 2250 → 3915.
 
-Full historical/scientific reconstruction still requires 91 ancestral archives (5,195,648,327 bytes): 10 original-run and 81 raw-prefix. All 22 R1 archives and 15 original-run archives are recovered. Original-run coverage is 215 distinct checkpoint objects. Raw serials 1–163092 remain missing.
+Full historical/scientific reconstruction still requires 88 ancestral archives (4,520,051,989 bytes): 7 original-run and 81 raw-prefix. All 22 R1 archives and 18 original-run archives are recovered. Original-run coverage is 356 distinct checkpoint objects. Raw serials 1–163092 remain missing.
 
 Exact filenames, hashes, IDs and versions are in `provenance/MISSING_ANCESTRAL_ARCHIVES.csv` and the readable `.md` checklist.
 
 Next provide these independent original-run archives:
 
-1. `driftmapR-S07-checkpoint-09-part-001.tar.gz`
-2. `driftmapR-S07-checkpoint-09-part-002.tar.gz`
-3. `driftmapR-S07-checkpoint-10-part-001.tar.gz`
+1. `driftmapR-S07-checkpoint-10-part-002.tar.gz`
+2. `driftmapR-S07-checkpoint-10-part-003.tar.gz`
+3. `driftmapR-S07-checkpoint-11-part-001.tar.gz`
 
 Do not concatenate these independent archives.
 
@@ -26,7 +26,7 @@ Other supplemental evidence: `driftmapR-S07-R1-engineering.tar.gz`, `driftmapR-S
 
 ## Earlier dependencies and operational provenance
 
-All 128 earlier archive identities are now resolved: 25 original, 22 R1, and 81 raw-prefix archives. The first 47 total 10,221,806,457 bytes; the 81 raw-prefix archives total 3,064,202,006 bytes. Each raw identity was matched to its hash-bound Recovery009 restoration receipt and publication record. Exact names and hashes are in `provenance/RECOVERY_DEPENDENCIES.csv` under ancestral groups. This is metadata verification; all 22 R1 ancestral archives and 15 original-run archives have been restored; the remaining payloads are still missing. Another 30 published raw candidates are separately labeled and are not automatically additional required inputs.
+All 128 earlier archive identities are now resolved: 25 original, 22 R1, and 81 raw-prefix archives. The first 47 total 10,221,806,457 bytes; the 81 raw-prefix archives total 3,064,202,006 bytes. Each raw identity was matched to its hash-bound Recovery009 restoration receipt and publication record. Exact names and hashes are in `provenance/RECOVERY_DEPENDENCIES.csv` under ancestral groups. This is metadata verification; all 22 R1 ancestral archives and 18 original-run archives have been restored; the remaining payloads are still missing. Another 30 published raw candidates are separately labeled and are not automatically additional required inputs.
 
 Preserve `driftmapR-S07-R1-checkpoint361-008.zip.part001` through `.part003`, especially **part002 version 1**, plus `driftmapR-S07-R1-checkpoint361-008-manifest.json`. The exact versioned IDs are recorded in the dependency CSV. The archive's historical name was `driftmapR-S07-R1-progress-20260922-007a.zip`; do not infer identity merely from a renamed file.
 
@@ -39,6 +39,8 @@ Known operational archives in Library:
 Earlier supplemental engineering archives identified in the conversation: `driftmapR-S07-I1-sources.zip`, `driftmapR-S07-I1-engineering.tar.gz`, and `driftmapR-S07-I1-validation.md`.
 
 ## Already recovered: do not reupload
+
+- `driftmapR-S07-checkpoint-09-part-001.tar.gz`, `driftmapR-S07-checkpoint-09-part-002.tar.gz`, `driftmapR-S07-checkpoint-10-part-001.tar.gz` — all 282 files verified.
 
 - `driftmapR-S07-checkpoint-08-part-001.tar.gz`, `driftmapR-S07-checkpoint-08-part-002.tar.gz`, `driftmapR-S07-checkpoint-08-part-003.tar.gz` — all 68 files verified.
 

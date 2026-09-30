@@ -1,0 +1,16 @@
+{
+  "archive": "driftmapR-recovery-20260929-original-013-015-integrated.zip",
+  "bytes": 20329770512,
+  "sha256": "202515eff1258f84f52d0557bebae9584701d80808f3f7e6898ab855822f880c",
+  "verified_files": 174325,
+  "zip_crc": "passed on every member read",
+  "all_member_hashes": "passed",
+  "previous_archive": "driftmapR-recovery-20260929-original-010-012-integrated.zip",
+  "added_archives": [
+    "driftmapR-S07-checkpoint-08-part-001.tar.gz",
+    "driftmapR-S07-checkpoint-08-part-002.tar.gz",
+    "driftmapR-S07-checkpoint-08-part-003.tar.gz"
+  ],
+  "scientific_execution": false,
+  "note": "Partial recovery; see README and missing-archive checklist."
+}

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "original_archives": 25,
+  "checkpoint_objects": 6475,
+  "draw_plan_objects": 6480,
+  "draw_plan_keys_equal_latest_input_receipts": true,
+  "checkpoint_keys_subset_of_receipts": true,
+  "inputs_with_incident_records_instead_of_checkpoints": [
+    "s07_sparse_m12-0018",
+    "s07_sparse_m12-0020",
+    "s07_sparse_m12-0030",
+    "s07_sparse_m12-0032",
+    "s07_sparse_m12-0037"
+  ],
+  "incident_paths": [
+    "checkpoints/infrastructure-incidents/s07_sparse_m12-0018.rds-20260916150112878597-96802-1.incident.rds",
+    "checkpoints/infrastructure-incidents/s07_sparse_m12-0020.rds-20260916150119341232-96830-1.incident.rds",
+    "checkpoints/infrastructure-incidents/s07_sparse_m12-0030.rds-20260916150144487308-96970-1.incident.rds",
+    "checkpoints/infrastructure-incidents/s07_sparse_m12-0032.rds-20260916150145044709-96996-1.incident.rds",
+    "checkpoints/infrastructure-incidents/s07_sparse_m12-0037.rds-20260916150156433511-97055-1.incident.rds"
+  ],
+  "other_checkpoint_directory_files": [],
+  "scientific_execution": false,
+  "scope": "Original-run names and immutable bytes verified; matching input keys do not imply equivalence to R1 contents or completed simulations."
+}

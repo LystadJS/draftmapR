@@ -1,8 +1,9 @@
 {
   "status": "passed",
-  "verified_original_archives": 21,
-  "distinct_original_checkpoint_objects": 465,
-  "missing_ancestral_archives": 85,
-  "missing_ancestral_bytes": 3849809660,
-  "scientific_execution": false
+  "verified_original_archives": 25,
+  "distinct_original_checkpoint_objects": 6475,
+  "missing_ancestral_archives": 81,
+  "missing_ancestral_bytes": 3064202006,
+  "scientific_execution": false,
+  "infrastructure_incident_records": 5
 }

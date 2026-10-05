@@ -6,13 +6,13 @@ The audit ZIP has now been supplied and verified. The remaining artifacts below 
 
 All 21 transport parts for checkpoint464, checkpoint468, checkpoint2250 and checkpoint3915 are now recovered and verified. No more parts are needed for those four archives. All 12 exact predecessor journal-prefix comparisons passed across 464 → 468 → 2250 → 3915.
 
-Full historical/scientific reconstruction still requires 57 raw-prefix archives (2,112,868,873 bytes). All 25 original and 22 R1 archives are recovered. 84,855 of the previously missing 163,092 raw journal entries now match restored bytes; 78,237 remain missing. Archived versions differing from the current journal remain separate. Exact serial gaps are in `qa/raw-prefix-coverage.json`.
+Full historical/scientific reconstruction still requires 54 raw-prefix archives (1,995,784,587 bytes). All 25 original and 22 R1 archives are recovered. 90,946 of the previously missing 163,092 raw journal entries now match restored bytes; 72,146 remain missing. Archived versions differing from the current journal remain separate. Exact serial gaps are in `qa/raw-prefix-coverage.json`.
 
 Next provide these independent archives:
 
-- `driftmapR-S07-R1-r1-final-raw20260921-04-raw-csv-004-products-part-001.tar.gz`
-- `driftmapR-S07-R1-r1-final-raw20260921-04-raw-csv-005-products-part-001.tar.gz`
-- `driftmapR-S07-R1-r1-final-raw20260921-04-raw-csv-006-products-part-001.tar.gz`
+- `driftmapR-S07-R1-r1-final-raw20260921-04-raw-csv-007-products-part-001.tar.gz`
+- `driftmapR-S07-R1-r1-final-raw20260921-05-raw-csv-001-products-part-001.tar.gz`
+- `driftmapR-S07-R1-r1-final-raw20260921-05-raw-csv-002-products-part-001.tar.gz`
 
 Full filenames and hashes: `provenance/MISSING_ANCESTRAL_ARCHIVES.csv`.
 
@@ -41,6 +41,8 @@ Known operational archives in Library:
 Earlier supplemental engineering archives identified in the conversation: `driftmapR-S07-I1-sources.zip`, `driftmapR-S07-I1-engineering.tar.gz`, and `driftmapR-S07-I1-validation.md`.
 
 ## Already recovered: do not reupload
+
+Cumulative raw-output recovery after batch 024-026: 90,946 files preserved; 90,946 match the latest chunk journal. 0 additional archived versions differ from the latest journal and remain separately preserved; they do not fill those current-state gaps. Every historical restoration-receipt member matched size/MD5. Full archive SHA256, member counts/bytes and gzip CRC passed. Fresh per-member SHA256 recorded. See `qa/raw-024-026-verification.json` and `qa/raw-prefix-coverage.json`. No scientific execution or package tests were performed.
 
 Cumulative raw-output recovery after batch 021-023: 84,855 files preserved; 84,855 match the latest chunk journal. 0 additional archived versions differ from the latest journal and remain separately preserved; they do not fill those current-state gaps. Every historical restoration-receipt member matched size/MD5. Full archive SHA256, member counts/bytes and gzip CRC passed. Fresh per-member SHA256 recorded. See `qa/raw-021-023-verification.json` and `qa/raw-prefix-coverage.json`. No scientific execution or package tests were performed.
 

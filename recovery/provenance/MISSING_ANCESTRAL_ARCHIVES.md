@@ -1,10 +1,7 @@
 # Missing ancestral archives
 
-66 raw-prefix archives remain (2,427,991,296 bytes). All 25 original-run and 22 R1 archives are recovered.
+63 raw-prefix archives remain (2,322,921,599 bytes). All 25 original-run and 22 R1 archives are recovered.
 
-- `driftmapR-S07-R1-r1-final-raw20260921-03-raw-csv-003-products-part-001.tar.gz` — 35058074 bytes; version 0
-- `driftmapR-S07-R1-r1-final-raw20260921-03-raw-csv-004-products-part-001.tar.gz` — 35041086 bytes; version 0
-- `driftmapR-S07-R1-r1-final-raw20260921-03-raw-csv-005-products-part-001.tar.gz` — 34970537 bytes; version 0
 - `driftmapR-S07-R1-r1-final-raw20260921-03-raw-csv-006-products-part-001.tar.gz` — 35046158 bytes; version 0
 - `driftmapR-S07-R1-r1-final-raw20260921-03-raw-csv-007-products-part-001.tar.gz` — 34926636 bytes; version 0
 - `driftmapR-S07-R1-r1-final-raw20260921-03-raw-csv-008-products-part-001.tar.gz` — 20708736 bytes; version 0

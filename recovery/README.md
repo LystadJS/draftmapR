@@ -2,7 +2,7 @@
 
 This directory consolidates recovered package code, frozen design material, historical evidence, Git history, and fresh verification. It is a **partial recovery checkpoint**, not a complete S07 scientific checkpoint or CRAN release.
 
-Current recovery status: all four checkpoint deltas, all 22 ancestral R1 archives and 25 original-run archives are verified. The R1 inputs include all 6,480 checkpoint objects, all 6,480 draw plans and nine population objects, with companion manifests. Separately preserved original-run inputs include 6,480 draw plans, 6475 distinct checkpoint objects and nine population objects. There are 39 ancestral raw-prefix archives still missing (1,343,578,314 bytes). See `MISSING_ARTIFACTS.md`. Input recovery does not establish completed scientific execution.
+Current recovery status: all four checkpoint deltas, all 22 ancestral R1 archives and 25 original-run archives are verified. The R1 inputs include all 6,480 checkpoint objects, all 6,480 draw plans and nine population objects, with companion manifests. Separately preserved original-run inputs include 6,480 draw plans, 6475 distinct checkpoint objects and nine population objects. There are 36 ancestral raw-prefix archives still missing (1,241,624,792 bytes). See `MISSING_ARTIFACTS.md`. Input recovery does not establish completed scientific execution.
 
 ## Start here
 
@@ -187,6 +187,10 @@ Cumulative raw-output recovery after batch 036-038: 115,142 files preserved; 115
 ## Raw-output batch 039-041 recovered
 
 Cumulative raw-output recovery after batch 039-041: 116,394 files preserved; 116,394 match the latest chunk journal. 0 additional archived versions differ from the latest journal and remain separately preserved; they do not fill those current-state gaps. Every historical restoration-receipt member matched size/MD5. Full archive SHA256, member counts/bytes and gzip CRC passed. Fresh per-member SHA256 recorded. See `qa/raw-039-041-verification.json` and `qa/raw-prefix-coverage.json`. No scientific execution or package tests were performed.
+
+## Raw-output batch 042-044 recovered
+
+Cumulative raw-output recovery after batch 042-044: 117,645 files preserved; 117,645 match the latest chunk journal. 0 additional archived versions differ from the latest journal and remain separately preserved; they do not fill those current-state gaps. Every historical restoration-receipt member matched size/MD5. Full archive SHA256, member counts/bytes and gzip CRC passed. Fresh per-member SHA256 recorded. See `qa/raw-042-044-verification.json` and `qa/raw-prefix-coverage.json`. No scientific execution or package tests were performed.
 
 ## Most comprehensive later checkpoint identified
 

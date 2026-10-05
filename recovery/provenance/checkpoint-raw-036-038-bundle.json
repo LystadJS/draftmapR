@@ -1,0 +1,16 @@
+{
+  "archive": "driftmapR-recovery-20261005-raw-036-038-integrated.zip",
+  "bytes": 27788675733,
+  "sha256": "4951e77f2b46dcc040c769447f12728f0925723ffec92e2029866f44b97acfa5",
+  "verified_files": 302096,
+  "zip_crc": "passed on every member read",
+  "all_member_hashes": "passed",
+  "previous_archive": "driftmapR-recovery-20261005-raw-033-035-integrated.zip",
+  "added_archives": [
+    "driftmapR-S07-R1-r1-final-raw20260921-06-raw-csv-003-products-part-001.tar.gz",
+    "driftmapR-S07-R1-r1-final-raw20260921-06-raw-csv-004-products-part-001.tar.gz",
+    "driftmapR-S07-R1-r1-final-raw20260921-06-raw-csv-005-products-part-001.tar.gz"
+  ],
+  "scientific_execution": false,
+  "note": "Partial recovery; see README and missing-archive checklist."
+}

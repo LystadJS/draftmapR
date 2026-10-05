@@ -46,7 +46,7 @@
     }
   ],
   "note": "All 128 historical ancestral archive identities resolved. Local recovery counts and missing bytes are reported separately. The 81 raw receipt hashes and publication bindings passed metadata checks; metadata alone does not recover payloads. Publication support/candidates are not all mandatory.",
-  "ancestral_archives_verified_locally": 47,
-  "ancestral_archives_missing": 81,
-  "ancestral_bytes_missing": 3064202006
+  "ancestral_archives_verified_locally": 50,
+  "ancestral_archives_missing": 78,
+  "ancestral_bytes_missing": 2914329812
 }

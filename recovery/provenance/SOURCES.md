@@ -69,3 +69,7 @@ Fresh verification is limited to recovered archive/member integrity, source copy
 ## Complete original-run inventory
 
 All 25 original-run archives are recovered. Their 6,480 draw-plan keys match the latest input receipts; 6,475 have original checkpoint objects. Five inputs have infrastructure-incident records instead: s07_sparse_m12-0018, -0020, -0030, -0032 and -0037. These five records are preserved separately and are not counted as checkpoint objects. No replacement checkpoint filenames are established by this evidence. Complete R1 inputs remain a separate lineage. See `qa/original-complete-coverage.json`.
+
+## First raw-output archives recovered
+
+First three raw-output archives: 24,261 files preserved; 24,261 match the latest chunk journal. 0 additional archived versions differ from the latest journal and remain separately preserved; they do not fill those current-state gaps. Every historical restoration-receipt member matched size/MD5. Full archive SHA256, member counts/bytes and gzip CRC passed. Fresh per-member SHA256 recorded. See `qa/raw-000-002-verification.json` and `qa/raw-prefix-coverage.json`. No scientific execution or package tests were performed.

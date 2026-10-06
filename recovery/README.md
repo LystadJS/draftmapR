@@ -202,3 +202,7 @@ The verified 24 September audit bundle identifies an incremental chain ending at
 
 See `MISSING_ARTIFACTS.md` for the exact known recovery targets. Do not run the old collection commands directly or replace the pinned scientific environment with the native Windows test environment.
 
+
+## Checkpoint storage status after raw batch 045-047
+
+The new cumulative ZIP attempt exhausted disk space and its incomplete output was removed. The recovered directory and GitHub evidence contain batch 045-047. At the time of the failed attempt, the last verified full ZIP was `driftmapR-recovery-20261005-raw-042-044-integrated.zip`. A separate incremental bundle passed full member verification; consult its receipt before use. It requires that exact base and is not standalone. The user authorized deletion of the superseded original-004-006 and original-007-009 full ZIPs; their receipts are retained. After the authorized cleanup, the full checkpoint driftmapR-recovery-20261006-raw-045-047-integrated.zip passed CRC and SHA256 verification for all 305,865 manifest files (28,377,504,819 bytes). It is now the latest verified full checkpoint. See provenance/checkpoint-raw-045-047-bundle.json. The builder now checks available disk space before creating a cumulative ZIP. The ZIP preserves the reports as they stood during construction; this completion record and its external receipt were added afterward.

@@ -2,7 +2,7 @@
 
 This directory consolidates recovered package code, frozen design material, historical evidence, Git history, and fresh verification. It is a **partial recovery checkpoint**, not a complete S07 scientific checkpoint or CRAN release.
 
-Current recovery status: all four checkpoint deltas, all 22 ancestral R1 archives and 25 original-run archives are verified. The R1 inputs include all 6,480 checkpoint objects, all 6,480 draw plans and nine population objects, with companion manifests. Separately preserved original-run inputs include 6,480 draw plans, 6475 distinct checkpoint objects and nine population objects. There are 27 ancestral raw-prefix archives still missing (935,516,384 bytes). See `MISSING_ARTIFACTS.md`. Input recovery does not establish completed scientific execution.
+Current recovery status: all four checkpoint deltas, all 22 ancestral R1 archives and 25 original-run archives are verified. The R1 inputs include all 6,480 checkpoint objects, all 6,480 draw plans and nine population objects, with companion manifests. Separately preserved original-run inputs include 6,480 draw plans, 6475 distinct checkpoint objects and nine population objects. There are 24 ancestral raw-prefix archives still missing (833,521,823 bytes). See `MISSING_ARTIFACTS.md`. Input recovery does not establish completed scientific execution.
 
 ## Start here
 
@@ -204,6 +204,10 @@ Cumulative raw-output recovery after batch 048-050: 120,147 files preserved; 120
 
 Cumulative raw-output recovery after batch 051-053: 121,398 files preserved; 121,398 match the latest chunk journal. 0 additional archived versions differ from the latest journal and remain separately preserved; they do not fill those current-state gaps. Every historical restoration-receipt member matched size/MD5. Full archive SHA256, member counts/bytes and gzip CRC passed. Fresh per-member SHA256 recorded. See `qa/raw-051-053-verification.json` and `qa/raw-prefix-coverage.json`. No scientific execution or package tests were performed.
 
+## Raw-output batch 054-056 recovered
+
+Cumulative raw-output recovery after batch 054-056: 122,649 files preserved; 122,649 match the latest chunk journal. 0 additional archived versions differ from the latest journal and remain separately preserved; they do not fill those current-state gaps. Every historical restoration-receipt member matched size/MD5. Full archive SHA256, member counts/bytes and gzip CRC passed. Fresh per-member SHA256 recorded. See `qa/raw-054-056-verification.json` and `qa/raw-prefix-coverage.json`. No scientific execution or package tests were performed.
+
 ## Most comprehensive later checkpoint identified
 
 The verified 24 September audit bundle identifies an incremental chain ending at **checkpoint3915-014**: Recovery009 → 464 → 468 → 2250 → 3915. Its saved stopping point is now independently confirmed by inspecting the recovered latest snapshot. The complete scientific payload chain has not been reconstructed here, and this audit does not validate scientific conclusions or mark the simulation study complete. Later operational records do not preserve later scientific payloads.
@@ -226,3 +230,8 @@ The incremental checkpoint passed CRC and SHA256 verification for all 1,422 mani
 All 1,251 new files passed recovery checks. The cumulative incremental checkpoint driftmapR-recovery-20261006-raw-048-053-incremental.zip contains batches 048-050 and 051-053. It requires the exact driftmapR-recovery-20261006-raw-045-047-integrated.zip base (SHA256 533b142dc6d1a06bbf76478fd956b05f90c99686ac5f37a6dde8c7e19247c7bd); the earlier 048-050 incremental is not additionally required. Preserve the base and this new ZIP together. Overlay enclosed files on a copy of the extracted base; use INCREMENTAL-MANIFEST.json for additions/replacements and the base manifest for unchanged files. This is not standalone. The working recovery directory remains consolidated. Another full ZIP exceeds available space; no backups were deleted.
 
 The cumulative incremental checkpoint passed CRC and SHA256 verification for all 2,680 manifest files (483,872,862 bytes). Its receipt is provenance/checkpoint-raw-048-053-incremental.json. Construction-time reports inside the ZIP precede this completion record and external receipt. No scientific execution or package tests were performed in this batch.
+
+## Checkpoint storage after raw batch 054-056
+
+All 1,251 new files passed recovery checks. The cumulative incremental checkpoint driftmapR-recovery-20261006-raw-048-056-incremental.zip contains batches 048-050, 051-053 and 054-056. It requires the exact driftmapR-recovery-20261006-raw-045-047-integrated.zip base (SHA256 533b142dc6d1a06bbf76478fd956b05f90c99686ac5f37a6dde8c7e19247c7bd). Earlier incremental ZIPs are not additionally required. Keep the full base and this incremental ZIP together. Overlay enclosed files on a copy of the extracted base; use INCREMENTAL-MANIFEST.json for additions/replacements and the base manifest for unchanged files. This is not standalone. The working recovery directory remains consolidated. Another full ZIP exceeds available space; no backups were deleted.
+

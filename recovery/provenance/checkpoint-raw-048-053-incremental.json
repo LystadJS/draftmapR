@@ -1,0 +1,12 @@
+{
+  "archive": "driftmapR-recovery-20261006-raw-048-053-incremental.zip",
+  "bytes": 483872862,
+  "sha256": "61ea969c309d3532c4c6c71aea2fa7250741f0a49f47d1f59d57f8ae87e5e352",
+  "verified_files": 2680,
+  "all_member_hashes": "passed",
+  "zip_crc": "passed on every member read",
+  "required_base": "driftmapR-recovery-20261006-raw-045-047-integrated.zip",
+  "required_base_sha256": "533b142dc6d1a06bbf76478fd956b05f90c99686ac5f37a6dde8c7e19247c7bd",
+  "standalone": false,
+  "scientific_execution": false
+}

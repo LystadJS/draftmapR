@@ -1,12 +1,12 @@
 {
-  "status": "building_cumulative_incremental_checkpoint",
+  "status": "verified_cumulative_incremental_checkpoint",
   "batch": "069-071",
   "verified_raw_files": 1251,
-  "github_recovery_commit": "0a63e640932760384a3bccccef5a310eeb2c10fd",
+  "github_recovery_commit": "6c6ceef8c515aaef74507b3ebba1f73d05148ddd",
   "failed_incomplete_zip_removed": true,
   "last_verified_full_checkpoint": "driftmapR-recovery-20261006-raw-045-047-integrated.zip",
   "incremental_bundle": "driftmapR-recovery-20261020-raw-048-071-incremental.zip",
-  "incremental_verification": "pending",
+  "incremental_verification": "passed",
   "scientific_execution": false,
   "authorized_superseded_zips_deleted": [
     "driftmapR-recovery-20260929-original-004-006-integrated.zip",

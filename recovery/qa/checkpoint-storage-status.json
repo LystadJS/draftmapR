@@ -1,19 +1,19 @@
 {
-  "status": "verified_cumulative_incremental_checkpoint",
-  "batch": "075-077",
-  "verified_raw_files": 5837,
+  "status": "building_cumulative_incremental_checkpoint",
+  "batch": "078-080",
+  "verified_raw_files": 17756,
   "github_recovery_commit": "9039f38742d325a9acbc48f5daa077992db9390f",
   "failed_incomplete_zip_removed": true,
   "last_verified_full_checkpoint": "driftmapR-recovery-20261006-raw-045-047-integrated.zip",
-  "incremental_bundle": "driftmapR-recovery-20261020-raw-048-077-incremental.zip",
-  "incremental_verification": "passed",
+  "incremental_bundle": "driftmapR-recovery-20261020-raw-048-080-incremental.zip",
+  "incremental_verification": "pending",
   "scientific_execution": false,
   "authorized_superseded_zips_deleted": [
     "driftmapR-recovery-20260929-original-004-006-integrated.zip",
     "driftmapR-recovery-20260929-original-007-009-integrated.zip"
   ],
   "full_checkpoint_sha256": "533b142dc6d1a06bbf76478fd956b05f90c99686ac5f37a6dde8c7e19247c7bd",
-  "free_bytes_at_preflight": 16397541376,
+  "free_bytes_at_preflight": 16532623360,
   "incremental_batches": [
     "048-050",
     "051-053",
@@ -24,6 +24,7 @@
     "066-068",
     "069-071",
     "072-074",
-    "075-077"
+    "075-077",
+    "078-080"
   ]
 }

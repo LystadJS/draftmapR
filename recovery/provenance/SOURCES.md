@@ -173,3 +173,7 @@ Cumulative raw-output recovery after batch 072-074: 130,155 files preserved; 130
 ## Raw-output batch 075-077 recovered
 
 Cumulative raw-output recovery after batch 075-077: 135,992 files preserved; 135,992 match the latest chunk journal. 0 additional archived versions differ from the latest journal and remain separately preserved; they do not fill those current-state gaps. Every historical restoration-receipt member matched size/MD5. Full archive SHA256, member counts/bytes and gzip CRC passed. Fresh per-member SHA256 recorded. See `qa/raw-075-077-verification.json` and `qa/raw-prefix-coverage.json`. No scientific execution or package tests were performed.
+
+## Raw-output batch 078-080 recovered
+
+Cumulative raw-output recovery after batch 078-080: 153,748 files preserved; 153,748 match the latest chunk journal. 0 additional archived versions differ from the latest journal and remain separately preserved; they do not fill those current-state gaps. Every historical restoration-receipt member matched size/MD5. Full archive SHA256, member counts/bytes and gzip CRC passed. Fresh per-member SHA256 recorded. See `qa/raw-078-080-verification.json` and `qa/raw-prefix-coverage.json`. No scientific execution or package tests were performed.

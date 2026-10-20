@@ -6,7 +6,7 @@ The package is in [`driftmapR/`](driftmapR/). It is byte-identical to the 188-fi
 
 Prior native Windows R 4.5.3 package verification recorded 2,619 passing expectations in 147 test blocks, with zero test failures/errors/warnings/skips. Those tests were executed during initial recovery, not rerun for every archive batch. There is no fresh full R CMD check or completed scientific simulation claim.
 
-Recovery status and exact missing files: [`recovery/README.md`](recovery/README.md), [`recovery/MISSING_ARTIFACTS.md`](recovery/MISSING_ARTIFACTS.md). All four checkpoint deltas and all R1 input archives are recovered. Saved execution remains 3,915 committed panels plus one partial panel out of 6,480 planned. Earlier original/raw archives remain missing.
+Recovery status and exact missing files: [`recovery/README.md`](recovery/README.md), [`recovery/MISSING_ARTIFACTS.md`](recovery/MISSING_ARTIFACTS.md). All four checkpoint deltas and all R1 input archives are recovered. Saved execution remains 3,915 committed panels plus one partial panel out of 6,480 planned. All 128 indexed ancestral archives are recovered, but 9,344 raw journal files remain absent from verified sources; checkpoint361 is the next recovery target.
 
 This repository versions package code, recovery scripts, evidence, exact source identities, and four compact source/audit archives. Large scientific/runtime archives and extracted data remain in the local consolidated checkpoint. GitHub does **not** contain those large binary payloads; the source identities and missing/recovered indexes identify them. Conversation exports are not published here.
 

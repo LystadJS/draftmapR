@@ -1,0 +1,11 @@
+{
+  "status": "incomplete_payload_recovery",
+  "journal_records": 258466,
+  "covered_by_verified_archive_evidence": 249122,
+  "missing_raw_files": 9344,
+  "missing_raw_bytes": 220469925,
+  "journal_sha256": "307836286ede93dba66434952126fa8a4968ba0821fad720f7cfd150473be9eb",
+  "scope": "Reconciliation of prior verified raw receipts and snapshot manifest bindings; not a fresh rehash of every recovered payload. Missing means absent from these verified sources.",
+  "next_artifact": "driftmapR-S07-R1-checkpoint361-008.zip parts 001-003 and manifest; part002 version 1 required. Coverage of the remaining gap is not yet confirmed.",
+  "scientific_execution": false
+}

@@ -1,17 +1,17 @@
 {
   "status": "passed",
-  "verified_raw_archives": 63,
-  "preserved_raw_files": 125151,
-  "latest_journal_matched_prefix_files": 125151,
+  "verified_raw_archives": 66,
+  "preserved_raw_files": 126402,
+  "latest_journal_matched_prefix_files": 126402,
   "archive_versions_differing_from_latest_journal": 0,
-  "missing_prefix_files": 37941,
+  "missing_prefix_files": 36690,
   "missing_serial_ranges": [
     [
-      125152,
+      126403,
       163092
     ]
   ],
-  "missing_ancestral_archives": 18,
-  "missing_ancestral_bytes": 629442541,
+  "missing_ancestral_archives": 15,
+  "missing_ancestral_bytes": 527504198,
   "scientific_execution": false
 }

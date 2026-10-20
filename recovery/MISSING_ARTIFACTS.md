@@ -8,14 +8,11 @@ All 21 transport parts for checkpoint464, checkpoint468, checkpoint2250 and chec
 
 All 128 indexed ancestral archives are recovered (25 original, 22 R1, 81 raw). However, the 81 raw archives cover 153,748 of the 163,092 historical prefix entries: **9,344 journaled raw files remain absent from verified sources**. Combined with the four checkpoint deltas, evidence covers 249,122 of 258,466 journal entries. Missing payloads total 220,469,925 uncompressed bytes. Exact paths, serials, sizes and MD5 values are in `qa/remaining-raw-journal-files.csv`; reconciliation scope is in `qa/raw-complete-inventory-audit.json`. Archive count does not establish complete recovery.
 
-Next retrieve this separately indexed checkpoint and its manifest. Whether it closes all remaining gaps is unconfirmed until inspection:
+Checkpoint361 is now recovered and verified: all 42,445 members passed hash/CRC verification; all four journals are exact prefixes of checkpoint464. Its 35,446 raw files match the latest journal, but none fills the remaining gap. Do not reupload its parts or manifest.
 
-- `driftmapR-S07-R1-checkpoint361-008.zip.part001`
-- `driftmapR-S07-R1-checkpoint361-008.zip.part002` — **version 1 required**
-- `driftmapR-S07-R1-checkpoint361-008.zip.part003`
-- `driftmapR-S07-R1-checkpoint361-008-manifest.json`
+Next retrieve `driftmapR-S07-R1-Restart-004.zip` (21,619,060 bytes; SHA256 `3261277c5707e49a2414dabb75b8beae58f299e6b96717604b69090f7a02399e`; Library ID `libfile_745d78462710819194411e14d00462fc`). It is named by checkpoint361 and has a preserved Recovery009 receipt. Its receipt describes 486 members, so it should be treated as recovery evidence/dependency material, not assumed to contain all 9,344 missing raw files. Its report `driftmapR-S07-R1-Restart-004.md` may provide additional context if available.
 
-Its recorded whole-archive identity is 569,351,915 bytes, SHA256 `6a77c721e26ccf794169f19e0db0fa0da8ba0b33f1710284bedbb4e37987024d`; historical name `driftmapR-S07-R1-progress-20260922-007a.zip`. Versioned Library IDs are preserved in the dependency index. The 30 separately published raw candidates remain secondary leads, not proven missing dependencies.
+Also identified for operational provenance: `driftmapR-S07-R1-Launch-005.zip` version 1 and `driftmapR-S07-R1-Launch-006.zip` version 0. The 30 separately published raw candidates and their catalogs remain secondary leads; exact candidate identities are in the dependency index. Do not execute saved launch commands during recovery.
 
 ## Original-run coverage limitation
 
@@ -31,7 +28,7 @@ Other supplemental evidence: `driftmapR-S07-R1-engineering.tar.gz`, `driftmapR-S
 
 All 128 earlier archive identities are now resolved: 25 original, 22 R1, and 81 raw-prefix archives. The first 47 total 10,221,806,457 bytes; the 81 raw-prefix archives total 3,064,202,006 bytes. Each raw identity was matched to its hash-bound Recovery009 restoration receipt and publication record. Exact names and hashes are in `provenance/RECOVERY_DEPENDENCIES.csv` under ancestral groups. This is metadata verification; all 22 R1 ancestral archives and 25 original-run archives have been restored; all 81 raw archives are now restored, but the journal reconciliation above still identifies absent payloads. Another 30 published raw candidates are separately labeled and are not automatically additional required inputs.
 
-Preserve `driftmapR-S07-R1-checkpoint361-008.zip.part001` through `.part003`, especially **part002 version 1**, plus `driftmapR-S07-R1-checkpoint361-008-manifest.json`. The exact versioned IDs are recorded in the dependency CSV. The archive's historical name was `driftmapR-S07-R1-progress-20260922-007a.zip`; do not infer identity merely from a renamed file.
+Recovered and verified: `driftmapR-S07-R1-checkpoint361-008.zip.part001` through `.part003` and its manifest. Part002 bytes match the required transport identity. The exact versioned IDs are recorded in the dependency CSV. The archive's historical name was `driftmapR-S07-R1-progress-20260922-007a.zip`; do not infer identity merely from a renamed file.
 
 Known operational archives in Library:
 

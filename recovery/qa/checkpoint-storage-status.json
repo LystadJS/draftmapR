@@ -1,19 +1,19 @@
 {
-  "status": "verified_cumulative_incremental_checkpoint_with_documented_raw_gaps",
-  "batch": "078-080",
-  "verified_raw_files": 17756,
+  "status": "building_checkpoint361_incremental",
+  "batch": "checkpoint361",
+  "verified_raw_files": 35446,
   "github_recovery_commit": "60cea01de378bab4030f5a4d7145ad6d620505ac",
   "failed_incomplete_zip_removed": true,
   "last_verified_full_checkpoint": "driftmapR-recovery-20261006-raw-045-047-integrated.zip",
-  "incremental_bundle": "driftmapR-recovery-20261020-raw-048-080-incremental.zip",
-  "incremental_verification": "passed",
+  "incremental_bundle": "driftmapR-recovery-20261020-checkpoint361-incremental.zip",
+  "incremental_verification": "pending",
   "scientific_execution": false,
   "authorized_superseded_zips_deleted": [
     "driftmapR-recovery-20260929-original-004-006-integrated.zip",
     "driftmapR-recovery-20260929-original-007-009-integrated.zip"
   ],
   "full_checkpoint_sha256": "533b142dc6d1a06bbf76478fd956b05f90c99686ac5f37a6dde8c7e19247c7bd",
-  "free_bytes_at_preflight": 16532623360,
+  "free_bytes_at_preflight": 12633411584,
   "incremental_batches": [
     "048-050",
     "051-053",
@@ -26,5 +26,6 @@
     "072-074",
     "075-077",
     "078-080"
-  ]
+  ],
+  "required_preceding_incremental": "driftmapR-recovery-20261020-raw-048-080-incremental.zip"
 }

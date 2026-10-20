@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "journal": "chunk-journal.jsonl",
+      "rows": 198538,
+      "sha256": "a6a6d123f441864e7a47d19bffc5478b29ac4fc0969cecea2154b69141bc660f",
+      "exact_prefix_of_464": true
+    },
+    {
+      "journal": "panel-journal.jsonl",
+      "rows": 361,
+      "sha256": "1604fe642ed368044d17da77a5990d563feef9bb45194af165d4e810b9e43b92",
+      "exact_prefix_of_464": true
+    },
+    {
+      "journal": "json-journal.jsonl",
+      "rows": 368,
+      "sha256": "cc2f6489a6e8322476d8bf8955dc66b83a412a4846d063edfa8a9142c91e708d",
+      "exact_prefix_of_464": true
+    },
+    {
+      "journal": "compact-cache-005.jsonl",
+      "rows": 362,
+      "sha256": "5ead4bdeabb5a2fdb95fd5d84a1ace95491463d43c6d0cd4ec57c5f921af2eb9",
+      "exact_prefix_of_464": true
+    }
+  ],
+  "scientific_execution": false
+}

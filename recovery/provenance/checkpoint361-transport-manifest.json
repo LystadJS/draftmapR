@@ -1,0 +1,41 @@
+{
+  "schema": "exact-binary-checkpoint-transport-v1",
+  "created_unix": 1790118463.8588006,
+  "source_archive": "driftmapR-S07-R1-progress-20260922-007a.zip",
+  "source_bytes": 569351915,
+  "source_sha256": "6a77c721e26ccf794169f19e0db0fa0da8ba0b33f1710284bedbb4e37987024d",
+  "collection_panels": 361,
+  "planned_panels": 6480,
+  "through_chunk": 198537,
+  "parts": [
+    {
+      "index": 1,
+      "file": "driftmapR-S07-R1-checkpoint361-008.zip.part001",
+      "offset": 0,
+      "bytes": 209715200,
+      "sha256": "ca63d8ac82f75f5a3acf4e4530540e69d3f71d9644b63ca5d857f9dd7cd318e0"
+    },
+    {
+      "index": 2,
+      "file": "driftmapR-S07-R1-checkpoint361-008.zip.part002",
+      "offset": 209715200,
+      "bytes": 209715200,
+      "sha256": "4afca86c20830ff3446515d3733d673d0ae594185193dc9cbde230b1d03cf318"
+    },
+    {
+      "index": 3,
+      "file": "driftmapR-S07-R1-checkpoint361-008.zip.part003",
+      "offset": 419430400,
+      "bytes": 149921515,
+      "sha256": "1ca8d2797be4999d64089b9bc205797c82566388b88a729b607cf0f87b69e105"
+    }
+  ],
+  "prior_attempt": {
+    "outcome": "No successful save confirmed",
+    "stage": "prepare_uploads failed",
+    "search_current": "No exact matching saved archive or receipt returned",
+    "automatic_retry": false
+  },
+  "authorization": "Current user explicitly requests resolving save status and preserving361 checkpoint; this is a reviewed new multipart transport, preserving exact original archive bytes",
+  "scientific_completion": false
+}

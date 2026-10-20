@@ -1,0 +1,12 @@
+{
+  "archive": "driftmapR-recovery-20261020-checkpoint361-incremental.zip",
+  "bytes": 1219802490,
+  "sha256": "10086cd060077f9d22bea39ec8a362bcc25da72cf448a267a7c038b142deb951",
+  "verified_files": 42659,
+  "all_member_hashes": "passed",
+  "zip_crc": "passed on every member read",
+  "required_base": "driftmapR-recovery-20261020-raw-048-080-incremental.zip",
+  "required_base_sha256": "421a9370743f86b0892bc79686c544716ee82fdb53f0433aa6472e0b311f79d0",
+  "standalone": false,
+  "scientific_execution": false
+}

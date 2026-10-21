@@ -1,0 +1,27 @@
+[
+  {
+    "file": "numpy-2.3.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "bytes": 16606086,
+    "sha256": "0d8163f43acde9a73c2a33605353a4f1bc4798745a8b1d73183b28e5b435ae28"
+  },
+  {
+    "file": "python-3.12.14-20260814.tar.gz",
+    "bytes": 34143739,
+    "sha256": "5acfa3e9ba26b51ae161c83aff278da915b590d22373a424b2ba55b8afe91fcc"
+  },
+  {
+    "file": "python-3.12.14-20260825.tar.gz",
+    "bytes": 34130340,
+    "sha256": "7ce4a71285d913955a76053cc7605ea96da8ecada54dba9cf395245961816421"
+  },
+  {
+    "file": "python-3.12.14-20260901-unstripped.tar.gz",
+    "bytes": 111368545,
+    "sha256": "936c246dfdbbfa7cb22dd01814a21f582a892689fae96b06071a5e433baffa22"
+  },
+  {
+    "file": "python-3.12.14-20260901.tar.gz",
+    "bytes": 34143368,
+    "sha256": "72748da13197c1fb161e3afeef20a6a385ff24f2165e6e2758e47008e7faba4c"
+  }
+]

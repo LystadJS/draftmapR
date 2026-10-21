@@ -1,0 +1,5 @@
+{"status": "passed", "action": "verified", "files": 352, "freeze_sha256": "d8286657a1ec3410e2574f98e08a0a9c98936a987872c32136e579871eb2d85b"}
+{"status": "passed", "freeze_id": "S07-I1", "files": 53, "freeze_sha256": "f9d2ce830c8e8cde52ad22d995fdf343b3df7f7430dcf7df0ee11a169f32dd7e"}
+Exact S07-D1, S07-I1, installed estimator and numerical runtime verified.
+{"status": "passed", "freeze_id": "S07-I1", "files": 53, "freeze_sha256": "f9d2ce830c8e8cde52ad22d995fdf343b3df7f7430dcf7df0ee11a169f32dd7e"}
+Frozen implementation validation passed. Study was not resumed.

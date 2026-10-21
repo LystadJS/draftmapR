@@ -1,0 +1,4 @@
+FROM ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libblas3 liblapack3 libgfortran5 libreadline8t64 libpcre2-8-0 liblzma5 libbz2-1.0 zlib1g libcurl4t64 libicu74 libtirpc3t64 libpng16-16t64 libjpeg-turbo8 libtiff6 libgomp1 libglib2.0-0t64 libfontconfig1 libfreetype6 libharfbuzz0b libfribidi0 libssl3t64 ca-certificates curl tar xz-utils locales
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+WORKDIR /workspace/scratch/837e4400dd1d

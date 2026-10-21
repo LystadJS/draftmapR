@@ -5,3 +5,7 @@ Executed on Windows 11 with R 4.5.3, ggplot2 4.0.2, clue 0.3.68 and testthat 3.3
 This validates editable package 0.0.8.9000 on the current Windows runtime. It does not validate the frozen Linux study runtime (installed package 0.0.7.9000), external BLAS/LAPACK identity or continuation of reserved simulation streams. WSL lists only docker-desktop; the Docker Linux engine is unavailable. No scientific panels were generated or resumed.
 
 Next engineering step: activate the recovered R CMD check workflow at the repository root and point it at the nested driftmapR package. The existing workflow under driftmapR/.github/workflows is not a root workflow. Preserve the recovered package source unchanged.
+
+CI development step: added .github/workflows/R-CMD-check.yaml at the repository root with Linux, Windows and macOS jobs. Both dependency setup and package check target driftmapR/. Successful check artifacts are retained and manual dispatch is available. Local YAML parsing and matrix/path assertions passed. Hosted R CMD check results are not yet established. Package source remains unchanged.
+
+Action input references: https://github.com/r-lib/actions/tree/v2/setup-r-dependencies and https://github.com/r-lib/actions/tree/v2/check-r-package.

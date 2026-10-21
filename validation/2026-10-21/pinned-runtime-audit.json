@@ -1,0 +1,278 @@
+{
+  "status": "archive_identity_passed_execution_not_validated",
+  "archive_sha256": "a61e14e5815a70cd8d70e1600e2583c10d52c0af59475773934a9843dd7caf2d",
+  "freeze_sha256": "f9d2ce830c8e8cde52ad22d995fdf343b3df7f7430dcf7df0ee11a169f32dd7e",
+  "verified_files": [
+    {
+      "member": "r-runtime/lib/R/bin/exec/R",
+      "md5": "1bd18cb19712cd2338426502af7e5b2b"
+    },
+    {
+      "member": "r-runtime/lib/R/lib/libR.so",
+      "md5": "b361701be041f3fbfb6a8250a9d3b2f5"
+    },
+    {
+      "member": "r-runtime/lib/R/library/base/R/base.rdb",
+      "md5": "cb26959c51567d30aa8fac8cc480095e"
+    },
+    {
+      "member": "r-runtime/lib/R/library/stats/R/stats.rdb",
+      "md5": "7f425d2d8a73e1fd731fd95d1ccad643"
+    },
+    {
+      "member": "r-runtime/lib/R/library/stats/libs/stats.so",
+      "md5": "0f84556d5a21c695d6646d122a860a02"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/DESCRIPTION",
+      "md5": "21f7b95cb62bf601c8813ae6b3e30fce"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/doc/cluster-correspondence.html",
+      "md5": "89b8280914b62ae78c887903384ff957"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/doc/cluster-correspondence.R",
+      "md5": "a29a2362a6aa3d37b88864d6a6ac35b6"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/doc/cluster-correspondence.Rmd",
+      "md5": "6d8293418227a2929f48b25eee97e16c"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/doc/embedding-adapters.html",
+      "md5": "568d713b4a1764d6e689e2b20120c06f"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/doc/embedding-adapters.R",
+      "md5": "4d7507b49b006008d31b85240b345b93"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/doc/embedding-adapters.Rmd",
+      "md5": "89290ce10d066a9f762cfc12e0bb0a32"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/doc/getting-started.html",
+      "md5": "934afc508cb2f07328450d34cb25f79c"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/doc/getting-started.R",
+      "md5": "c564c561195c3cb33c35d76d31c545b6"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/doc/getting-started.Rmd",
+      "md5": "be26f6abce45da60c1318b0867a95b18"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/doc/index.html",
+      "md5": "07a57d90235dfe73b4f6641c596ff23c"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/doc/paired-bootstrap.html",
+      "md5": "f53be4536076de826b678d82b838371d"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/doc/paired-bootstrap.R",
+      "md5": "7c9e7c8b5c2a6cd41022787a96a92154"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/doc/paired-bootstrap.Rmd",
+      "md5": "b8253d8e4e38a45b93944b3cfedda33c"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/examples/basic-workflow.R",
+      "md5": "b5bb8fd1ded20cd9cae950c4a9be3745"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/examples/cluster-correspondence.R",
+      "md5": "f3d664bc81e9281d2ad2b912f00b3010"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/examples/embedding-adapters.R",
+      "md5": "e1bad67af5f6f171fbb1a8d43f86795f"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/examples/paired-bootstrap.R",
+      "md5": "19aaac28b6aa3680e8bd2b6c6b25227e"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/help/aliases.rds",
+      "md5": "f9802446947efaa8e0b94dbd5b58a9ca"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/help/AnIndex",
+      "md5": "fe1d877476538031398f085469c1f0b9"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/help/driftmapR.rdb",
+      "md5": "1fbd8a3db873f1a1c538641b63ca2932"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/help/driftmapR.rdx",
+      "md5": "3697ce44746d49b7ea7422f7d91fe69b"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/help/paths.rds",
+      "md5": "89d7ac9cf92d8926c23a3f8a7712d16a"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/html/00Index.html",
+      "md5": "23b6ced7ea0760deb4b30112465a44d4"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/html/R.css",
+      "md5": "8b9362669af13540a86a3ac6cf22f99d"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/INDEX",
+      "md5": "db41686fa90cf789ab5bd4c0fee869a2"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/LICENSE",
+      "md5": "5fdaad8f578fa16a8e79472acf756850"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/Meta/features.rds",
+      "md5": "6a1cc1bbe8582c912df9899929be6ae2"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/Meta/hsearch.rds",
+      "md5": "41c8323444442a20753f737f6976101e"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/Meta/links.rds",
+      "md5": "2e2e6eb395ca127605cd52fc8d11b981"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/Meta/nsInfo.rds",
+      "md5": "3b1529a85691e852fc3d55dbc75c0d12"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/Meta/package.rds",
+      "md5": "b17e9b033914cc35cd106aef4358a560"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/Meta/Rd.rds",
+      "md5": "cacfc33cc5bba9bf455b374743f0c680"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/Meta/vignette.rds",
+      "md5": "adce218db9fd3e79d4c990828b890e83"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/NAMESPACE",
+      "md5": "b9763660382043a481a5b24b668537e0"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/NEWS.md",
+      "md5": "9686d950437d40da9ff3496883735ecd"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/R/driftmapR",
+      "md5": "d6c68f1fe41ced6e98a766a3757313da"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/R/driftmapR.rdb",
+      "md5": "bc62e0606b6b4cfb8130d3ef8208af82"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/R/driftmapR.rdx",
+      "md5": "d815c3e7140cbc308b416d301ee9eea9"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/validation/bootstrap-specification.md",
+      "md5": "2c5c726328f7240d5955e625ef99e853"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/validation/calibration-study-01-protocol.md",
+      "md5": "41f5377d0bc5459c3b2feb396d9d3420"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/validation/calibration-study-01.md",
+      "md5": "2d9bf6cedd9699066958c21e645602a2"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/validation/calibration-study-02.md",
+      "md5": "a4d40058a3554b019e3c60b0c8ae3348"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/validation/calibration-study-03-protocol.md",
+      "md5": "354ccc582662287ae306bf5bde8ad81b"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/validation/calibration-study-03.md",
+      "md5": "e5f4b27b909101dcb458a0f1681ce144"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/validation/cluster-correspondence.md",
+      "md5": "cf0435f8e322d8305b1d52dbe4ae54db"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/validation/cluster-simulation-design.md",
+      "md5": "f5016ec830e617458ce09acdaaa8246a"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/validation/landscape-review.md",
+      "md5": "224c48fb1fe8375f2c0d971805ab0449"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/validation/methodology.md",
+      "md5": "45bfc917e0022160c0e773986aeb4171"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/validation/roadmap.md",
+      "md5": "165667b606092002cdf7c5b4e1392fe6"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/validation/simulation-design.md",
+      "md5": "54d07b62cce5f3a9c1d8cf1dc3078541"
+    },
+    {
+      "member": "r-runtime/lib/R/library/driftmapR/validation/studentized-region-specification.md",
+      "md5": "912895804794251528d5de58d18f0ea4"
+    }
+  ],
+  "package_versions": {
+    "driftmapR": "0.0.7.9000",
+    "ggplot2": "4.0.3",
+    "clue": "0.3-68",
+    "testthat": "3.3.2",
+    "rlang": "1.3.0",
+    "vctrs": "0.7.3",
+    "S7": "0.2.2",
+    "cli": "3.6.6",
+    "withr": "3.0.3",
+    "scales": "1.4.0",
+    "gtable": "0.3.6"
+  },
+  "required_external_numeric_files": [
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0",
+      "md5": "6d66ad7c39b2c4f52a3faa01e47ad5ac",
+      "in_archive": false
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0",
+      "md5": "972fa536583d6c4cb1736dff2865f532",
+      "in_archive": false
+    }
+  ],
+  "required_python": {
+    "files": [
+      {
+        "name": "python3.12",
+        "sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7"
+      },
+      {
+        "name": "_multiarray_umath.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "ba96467ae494babaf7c3458b09cc03c4200c2e10010860d80e452ffb8b01c8cd"
+      }
+    ],
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  },
+  "required_installation_root": "/workspace/scratch/837e4400dd1d",
+  "runtime_executed": false,
+  "study_resumed": false,
+  "host_blocker": "Docker Desktop startup failed accessing dockerInference socket; Linux engine unavailable."
+}

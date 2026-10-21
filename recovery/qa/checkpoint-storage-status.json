@@ -1,12 +1,12 @@
 {
-  "status": "live002_incremental_pending",
+  "status": "verified_live002_incremental_raw_journal_complete",
   "batch": "live002",
   "verified_raw_files": 9344,
-  "github_recovery_commit": "d3afe36",
+  "github_recovery_commit": "8a1c5c9",
   "failed_incomplete_zip_removed": true,
   "last_verified_full_checkpoint": "driftmapR-recovery-20261006-raw-045-047-integrated.zip",
   "incremental_bundle": "driftmapR-recovery-20261021-live002-incremental.zip",
-  "incremental_verification": "pending",
+  "incremental_verification": "passed",
   "scientific_execution": false,
   "authorized_superseded_zips_deleted": [
     "driftmapR-recovery-20260929-original-004-006-integrated.zip",

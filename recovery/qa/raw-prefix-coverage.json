@@ -41,5 +41,6 @@
   ],
   "missing_ancestral_archives": 0,
   "missing_ancestral_bytes": 0,
-  "scientific_execution": false
+  "scientific_execution": false,
+  "scope": "Historical coverage from the 81 raw-prefix archives only; live002 subsequently fills all 9344 gaps. Current consolidated result: qa/raw-complete-inventory-audit.json."
 }

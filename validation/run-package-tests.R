@@ -1,0 +1,18 @@
+args <- commandArgs(TRUE)
+repo <- normalizePath(args[1], winslash = "/")
+lib <- normalizePath(args[2], winslash = "/")
+.libPaths(c(lib, "C:/Users/John/AppData/Local/R/win-library/4.5", .libPaths()))
+out <- file.path(repo, "validation", "2026-10-21")
+cat("Current Windows engineering validation; not a frozen Linux scientific continuation\n")
+print(sessionInfo())
+deps <- c("ggplot2", "clue", "testthat", "pkgload", "knitr", "rmarkdown")
+print(sapply(deps, function(x) as.character(packageVersion(x))))
+writeLines(capture.output(sessionInfo()), file.path(out, "session-info.txt"))
+res <- testthat::test_local(file.path(repo, "driftmapR"), reporter = "summary", stop_on_failure = FALSE)
+tab <- as.data.frame(res)
+tab <- tab[, !vapply(tab, is.list, logical(1)), drop = FALSE]
+write.csv(tab, file.path(out, "test-results.csv"), row.names = FALSE)
+print(colSums(tab[, c("nb", "failed", "skipped", "error", "warning", "passed")]))
+cat("Test blocks:", nrow(tab), "\n")
+stopifnot(sum(tab$failed) == 0, !any(tab$error))
+

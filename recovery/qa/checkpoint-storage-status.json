@@ -1,12 +1,12 @@
 {
-  "status": "verified_restart004_incremental_with_unresolved_raw_gap",
-  "batch": "restart004",
-  "verified_raw_files": 0,
+  "status": "live002_incremental_pending",
+  "batch": "live002",
+  "verified_raw_files": 9344,
   "github_recovery_commit": "d3afe36",
   "failed_incomplete_zip_removed": true,
   "last_verified_full_checkpoint": "driftmapR-recovery-20261006-raw-045-047-integrated.zip",
-  "incremental_bundle": "driftmapR-recovery-20261020-restart004-incremental.zip",
-  "incremental_verification": "passed",
+  "incremental_bundle": "driftmapR-recovery-20261021-live002-incremental.zip",
+  "incremental_verification": "pending",
   "scientific_execution": false,
   "authorized_superseded_zips_deleted": [
     "driftmapR-recovery-20260929-original-004-006-integrated.zip",
@@ -27,6 +27,6 @@
     "075-077",
     "078-080"
   ],
-  "required_preceding_incremental": "driftmapR-recovery-20261020-checkpoint361-incremental.zip",
-  "verified_members": 486
+  "required_preceding_incremental": "driftmapR-recovery-20261020-restart004-incremental.zip",
+  "verified_members": 9771
 }

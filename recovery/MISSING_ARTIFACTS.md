@@ -6,11 +6,9 @@ The audit ZIP has now been supplied and verified. The remaining artifacts below 
 
 All 21 transport parts for checkpoint464, checkpoint468, checkpoint2250 and checkpoint3915 are now recovered and verified. No more parts are needed for those four archives. All 12 exact predecessor journal-prefix comparisons passed across 464 â†’ 468 â†’ 2250 â†’ 3915.
 
-All 128 indexed ancestral archives are recovered (25 original, 22 R1, 81 raw). However, the 81 raw archives cover 153,748 of the 163,092 historical prefix entries: **9,344 journaled raw files remain absent from verified sources**. Combined with the four checkpoint deltas, evidence covers 249,122 of 258,466 journal entries. Missing payloads total 220,469,925 uncompressed bytes. Exact paths, serials, sizes and MD5 values are in `qa/remaining-raw-journal-files.csv`; reconciliation scope is in `qa/raw-complete-inventory-audit.json`. Archive count does not establish complete recovery.
+Current status (2026-10-21): live002 is recovered and verified, including all 9,344 previously missing raw files. All 258,466 records in the latest raw journal now have verified payload evidence. This establishes saved-payload recovery, not completed simulations: saved execution remains 3,915 committed panels plus one partial panel out of 6,480 planned. No tests or simulations were run in this recovery step.
 
-Checkpoint361 is now recovered and verified: all 42,445 members passed hash/CRC verification; all four journals are exact prefixes of checkpoint464. Its 35,446 raw files match the latest journal, but none fills the remaining gap. Do not reupload its parts or manifest.
-
-Restart-004 is verified. All 9,344 missing raw files match logical paths and sizes in its preserved live002 member manifest; payload bytes remain unavailable. Next retrieve driftmapR-S07-R1-live-state-20260921-002.zip (214,782,459 bytes; SHA256 82da3464aab96d65f7ec208532a6c922b17a1d9d26a0356bb6ae6a663fbe51ed).
+No additional archive is required to fill the latest raw-journal gap. Supplemental operational and engineering artifacts below may improve provenance but are not established blockers.
 
 Also identified for operational provenance: `driftmapR-S07-R1-Launch-005.zip` version 1 and `driftmapR-S07-R1-Launch-006.zip` version 0. The 30 separately published raw candidates and their catalogs remain secondary leads; exact candidate identities are in the dependency index. Do not execute saved launch commands during recovery.
 
@@ -26,7 +24,7 @@ Other supplemental evidence: `driftmapR-S07-R1-engineering.tar.gz`, `driftmapR-S
 
 ## Earlier dependencies and operational provenance
 
-All 128 earlier archive identities are now resolved: 25 original, 22 R1, and 81 raw-prefix archives. The first 47 total 10,221,806,457 bytes; the 81 raw-prefix archives total 3,064,202,006 bytes. Each raw identity was matched to its hash-bound Recovery009 restoration receipt and publication record. Exact names and hashes are in `provenance/RECOVERY_DEPENDENCIES.csv` under ancestral groups. This is metadata verification; all 22 R1 ancestral archives and 25 original-run archives have been restored; all 81 raw archives are now restored, but the journal reconciliation above still identifies absent payloads. Another 30 published raw candidates are separately labeled and are not automatically additional required inputs.
+All 128 earlier archive identities are now resolved: 25 original, 22 R1, and 81 raw-prefix archives. The first 47 total 10,221,806,457 bytes; the 81 raw-prefix archives total 3,064,202,006 bytes. Each raw identity was matched to its hash-bound Recovery009 restoration receipt and publication record. Exact names and hashes are in `provenance/RECOVERY_DEPENDENCIES.csv` under ancestral groups. This is metadata verification; all 22 R1 ancestral archives and 25 original-run archives have been restored; all 81 raw archives plus live002 are restored, and journal reconciliation now shows zero absent raw payloads. Another 30 published raw candidates are separately labeled and are not automatically additional required inputs.
 
 Recovered and verified: `driftmapR-S07-R1-checkpoint361-008.zip.part001` through `.part003` and its manifest. Part002 bytes match the required transport identity. The exact versioned IDs are recorded in the dependency CSV. The archive's historical name was `driftmapR-S07-R1-progress-20260922-007a.zip`; do not infer identity merely from a renamed file.
 

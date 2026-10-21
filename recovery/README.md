@@ -2,7 +2,7 @@
 
 This directory consolidates recovered package code, frozen design material, historical evidence, Git history, and fresh verification. It is a **partial recovery checkpoint**, not a complete S07 scientific checkpoint or CRAN release.
 
-Current recovery status: all four checkpoint deltas, all 22 ancestral R1 archives and 25 original-run archives are verified. The R1 inputs include all 6,480 checkpoint objects, all 6,480 draw plans and nine population objects, with companion manifests. Separately preserved original-run inputs include 6,480 draw plans, 6475 distinct checkpoint objects and nine population objects. All 81 raw archives are recovered, but 9,344 prefix journal files remain absent from verified sources (220,469,925 uncompressed bytes). Across the prefix and checkpoint deltas, verified evidence covers 249,122 of 258,466 raw journal entries. Checkpoint361 is recovered and fills none of the remaining gap. Restart-004 is verified. All 9,344 missing raw files match logical paths and sizes in its preserved live002 member manifest; payload bytes remain unavailable. Next retrieve driftmapR-S07-R1-live-state-20260921-002.zip (214,782,459 bytes; SHA256 82da3464aab96d65f7ec208532a6c922b17a1d9d26a0356bb6ae6a663fbe51ed). See `MISSING_ARTIFACTS.md`. Input recovery does not establish completed scientific execution.
+Current status (2026-10-21): live002 is recovered and verified, including all 9,344 previously missing raw files. All 258,466 records in the latest raw journal now have verified payload evidence. This establishes saved-payload recovery, not completed simulations: saved execution remains 3,915 committed panels plus one partial panel out of 6,480 planned. No tests or simulations were run in this recovery step.
 
 ## Start here
 
@@ -330,3 +330,9 @@ Restart-004 verified: all 9,344 missing files map by path and size to the preser
 Restore chain: full raw-045-047 base, raw-048-080 incremental, checkpoint361 incremental, then Restart004 incremental. Each layer requires all predecessors.
 
 Restart004 incremental verified: 706 manifest files, 118,418,889 bytes, CRC and SHA256 passed. Receipt: provenance/restart004-incremental-receipt.json. Construction-time status inside the immutable ZIP precedes this external completion record.
+
+## 2026-10-21: live002 closes the raw payload gap
+
+Current status (2026-10-21): live002 is recovered and verified, including all 9,344 previously missing raw files. All 258,466 records in the latest raw journal now have verified payload evidence. This establishes saved-payload recovery, not completed simulations: saved execution remains 3,915 committed panels plus one partial panel out of 6,480 planned. No tests or simulations were run in this recovery step. All 9,771 ZIP members passed CRC and manifest SHA256; missing files also match journal size/MD5. Three saved journals are exact prefixes of checkpoint3915. See qa/live002-verification.json and qa/raw-complete-inventory-audit.json. Earlier dated entries are historical.
+
+Portable restore chain: full raw-045-047 base, raw-048-080 incremental, checkpoint361 incremental, Restart004 incremental, then live002 incremental. Restore all layers in order. Large payloads remain local; Git stores source, scripts and provenance.

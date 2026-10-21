@@ -1,0 +1,7 @@
+{
+  "status": "inactive_read_only_base_assembled",
+  "files": 325636,
+  "logical_bytes": 31285826141,
+  "scope": "Manifest identities from prior successful verification; current source size and hard-link identity checked. Full content verification remains in continuation gates. Never mount this base writable.",
+  "study_started": false
+}

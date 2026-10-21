@@ -4,13 +4,13 @@ The audit ZIP has now been supplied and verified. The remaining artifacts below 
 
 ## Highest priority
 
-All 21 transport parts for checkpoint464, checkpoint468, checkpoint2250 and checkpoint3915 are now recovered and verified. No more parts are needed for those four archives. All 12 exact predecessor journal-prefix comparisons passed across 464 → 468 → 2250 → 3915.
+All 21 transport parts for checkpoint464, checkpoint468, checkpoint2250 and checkpoint3915 are now recovered and verified. No more parts are needed for those four archives. All 12 exact predecessor journal-prefix comparisons passed across 464 â†’ 468 â†’ 2250 â†’ 3915.
 
 All 128 indexed ancestral archives are recovered (25 original, 22 R1, 81 raw). However, the 81 raw archives cover 153,748 of the 163,092 historical prefix entries: **9,344 journaled raw files remain absent from verified sources**. Combined with the four checkpoint deltas, evidence covers 249,122 of 258,466 journal entries. Missing payloads total 220,469,925 uncompressed bytes. Exact paths, serials, sizes and MD5 values are in `qa/remaining-raw-journal-files.csv`; reconciliation scope is in `qa/raw-complete-inventory-audit.json`. Archive count does not establish complete recovery.
 
 Checkpoint361 is now recovered and verified: all 42,445 members passed hash/CRC verification; all four journals are exact prefixes of checkpoint464. Its 35,446 raw files match the latest journal, but none fills the remaining gap. Do not reupload its parts or manifest.
 
-Next retrieve `driftmapR-S07-R1-Restart-004.zip` (21,619,060 bytes; SHA256 `3261277c5707e49a2414dabb75b8beae58f299e6b96717604b69090f7a02399e`; Library ID `libfile_745d78462710819194411e14d00462fc`). It is named by checkpoint361 and has a preserved Recovery009 receipt. Its receipt describes 486 members, so it should be treated as recovery evidence/dependency material, not assumed to contain all 9,344 missing raw files. Its report `driftmapR-S07-R1-Restart-004.md` may provide additional context if available.
+Restart-004 is verified. All 9,344 missing raw files match logical paths and sizes in its preserved live002 member manifest; payload bytes remain unavailable. Next retrieve driftmapR-S07-R1-live-state-20260921-002.zip (214,782,459 bytes; SHA256 82da3464aab96d65f7ec208532a6c922b17a1d9d26a0356bb6ae6a663fbe51ed).
 
 Also identified for operational provenance: `driftmapR-S07-R1-Launch-005.zip` version 1 and `driftmapR-S07-R1-Launch-006.zip` version 0. The 30 separately published raw candidates and their catalogs remain secondary leads; exact candidate identities are in the dependency index. Do not execute saved launch commands during recovery.
 
@@ -94,35 +94,35 @@ Cumulative raw-output recovery after batch 003-005: 46,519 files preserved; 46,5
 
 First three raw-output archives: 24,261 files preserved; 24,261 match the latest chunk journal. 0 additional archived versions differ from the latest journal and remain separately preserved; they do not fill those current-state gaps. Every historical restoration-receipt member matched size/MD5. Full archive SHA256, member counts/bytes and gzip CRC passed. Fresh per-member SHA256 recorded. See `qa/raw-000-002-verification.json` and `qa/raw-prefix-coverage.json`. No scientific execution or package tests were performed.
 
-- `driftmapR-S07-checkpoint-11-part-002.tar.gz`, `driftmapR-S07-checkpoint-12-part-001.tar.gz`, `driftmapR-S07-checkpoint-12-part-002.tar.gz`, `driftmapR-S07-checkpoint-12-part-003.tar.gz` — all 12027 files verified.
+- `driftmapR-S07-checkpoint-11-part-002.tar.gz`, `driftmapR-S07-checkpoint-12-part-001.tar.gz`, `driftmapR-S07-checkpoint-12-part-002.tar.gz`, `driftmapR-S07-checkpoint-12-part-003.tar.gz` â€” all 12027 files verified.
 
-- `driftmapR-S07-checkpoint-10-part-002.tar.gz`, `driftmapR-S07-checkpoint-10-part-003.tar.gz`, `driftmapR-S07-checkpoint-11-part-001.tar.gz` — all 218 files verified.
+- `driftmapR-S07-checkpoint-10-part-002.tar.gz`, `driftmapR-S07-checkpoint-10-part-003.tar.gz`, `driftmapR-S07-checkpoint-11-part-001.tar.gz` â€” all 218 files verified.
 
-- `driftmapR-S07-checkpoint-09-part-001.tar.gz`, `driftmapR-S07-checkpoint-09-part-002.tar.gz`, `driftmapR-S07-checkpoint-10-part-001.tar.gz` — all 282 files verified.
+- `driftmapR-S07-checkpoint-09-part-001.tar.gz`, `driftmapR-S07-checkpoint-09-part-002.tar.gz`, `driftmapR-S07-checkpoint-10-part-001.tar.gz` â€” all 282 files verified.
 
-- `driftmapR-S07-checkpoint-08-part-001.tar.gz`, `driftmapR-S07-checkpoint-08-part-002.tar.gz`, `driftmapR-S07-checkpoint-08-part-003.tar.gz` — all 68 files verified.
+- `driftmapR-S07-checkpoint-08-part-001.tar.gz`, `driftmapR-S07-checkpoint-08-part-002.tar.gz`, `driftmapR-S07-checkpoint-08-part-003.tar.gz` â€” all 68 files verified.
 
-- `driftmapR-S07-checkpoint-07-part-001.tar.gz`, `driftmapR-S07-checkpoint-07-part-002.tar.gz`, `driftmapR-S07-checkpoint-07-part-003.tar.gz` — all 42 files verified.
+- `driftmapR-S07-checkpoint-07-part-001.tar.gz`, `driftmapR-S07-checkpoint-07-part-002.tar.gz`, `driftmapR-S07-checkpoint-07-part-003.tar.gz` â€” all 42 files verified.
 
-- `driftmapR-S07-checkpoint-05-part-002.tar.gz`, `driftmapR-S07-checkpoint-06-part-001.tar.gz`, `driftmapR-S07-checkpoint-06-part-002.tar.gz` — all 114 files verified.
+- `driftmapR-S07-checkpoint-05-part-002.tar.gz`, `driftmapR-S07-checkpoint-06-part-001.tar.gz`, `driftmapR-S07-checkpoint-06-part-002.tar.gz` â€” all 114 files verified.
 
-- `driftmapR-S07-checkpoint-04-part-001.tar.gz`, `driftmapR-S07-checkpoint-04-part-002.tar.gz`, and `driftmapR-S07-checkpoint-05-part-001.tar.gz` — all 46 original-run files verified.
+- `driftmapR-S07-checkpoint-04-part-001.tar.gz`, `driftmapR-S07-checkpoint-04-part-002.tar.gz`, and `driftmapR-S07-checkpoint-05-part-001.tar.gz` â€” all 46 original-run files verified.
 
-- `driftmapR-S07-execution-checkpoint-part-001.tar.gz`, `driftmapR-S07-checkpoint-02-part-001.tar.gz`, and `driftmapR-S07-checkpoint-03-part-001.tar.gz` — 13,142 original-run files verified.
+- `driftmapR-S07-execution-checkpoint-part-001.tar.gz`, `driftmapR-S07-checkpoint-02-part-001.tar.gz`, and `driftmapR-S07-checkpoint-03-part-001.tar.gz` â€” 13,142 original-run files verified.
 
-- `driftmapR-S07-R1-checkpoint-03-checkpoints-part-001.tar.gz` through `-003.tar.gz` — three independent archives; all 11,974 files and complete R1 input key coverage verified.
+- `driftmapR-S07-R1-checkpoint-03-checkpoints-part-001.tar.gz` through `-003.tar.gz` â€” three independent archives; all 11,974 files and complete R1 input key coverage verified.
 
-- `driftmapR-S07-R1-checkpoint-02-checkpoints-part-001.tar.gz` through `-016.tar.gz` — 16 independent archives, all 868 files verified.
+- `driftmapR-S07-R1-checkpoint-02-checkpoints-part-001.tar.gz` through `-016.tar.gz` â€” 16 independent archives, all 868 files verified.
 
-- `driftmapR-S07-R1-checkpoint-01-checkpoints-part-001.tar.gz` through `-003.tar.gz` — three independent archives, all 13,102 files verified.
+- `driftmapR-S07-R1-checkpoint-01-checkpoints-part-001.tar.gz` through `-003.tar.gz` â€” three independent archives, all 13,102 files verified.
 
-- `driftmapR-S07-R1-checkpoint464-011.zip.part001` through `.part012` — reconstructed archive and all 86,023 files verified; full four-checkpoint journal segment verified.
+- `driftmapR-S07-R1-checkpoint464-011.zip.part001` through `.part012` â€” reconstructed archive and all 86,023 files verified; full four-checkpoint journal segment verified.
 
-- `driftmapR-S07-R1-checkpoint468-012.zip.part001` through `.part002` — reconstructed archive and 8,465 files verified; journal continuity through checkpoint2250 to checkpoint3915 confirmed.
-- `driftmapR-S07-R1-checkpoint2250-013.zip.part001` through `.part004` — reconstructed archive and 21,041 files verified; exact journal continuity to checkpoint3915 confirmed.
-- `driftmapR-S07-R1-checkpoint3915-014.zip.part001` through `.part003` — reconstructed archive and all 17,367 files verified; saved state inspected read-only.
-- `driftmapR-S07-R1-sources.zip` — 460 files verified.
-- `driftmapR-S07-R1-Recovery-009.zip` — 786 files verified.
+- `driftmapR-S07-R1-checkpoint468-012.zip.part001` through `.part002` â€” reconstructed archive and 8,465 files verified; journal continuity through checkpoint2250 to checkpoint3915 confirmed.
+- `driftmapR-S07-R1-checkpoint2250-013.zip.part001` through `.part004` â€” reconstructed archive and 21,041 files verified; exact journal continuity to checkpoint3915 confirmed.
+- `driftmapR-S07-R1-checkpoint3915-014.zip.part001` through `.part003` â€” reconstructed archive and all 17,367 files verified; saved state inspected read-only.
+- `driftmapR-S07-R1-sources.zip` â€” 460 files verified.
+- `driftmapR-S07-R1-Recovery-009.zip` â€” 786 files verified.
 - `driftmapR-S07-R1-Recovery-Audit-20260924.zip`, including its report, scripts, results, and dependency indexes.
 - `driftmapR-S07-D1-specification.zip`.
 - `driftmapR-study06-pinned-runtime.tar.gz` (matching historical hash).

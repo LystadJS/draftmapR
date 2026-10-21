@@ -1,0 +1,13 @@
+{
+  "status": "metadata_mapping_only_payload_not_recovered",
+  "restart_members_verified": 486,
+  "standalone_report_identical": true,
+  "missing_files": 9344,
+  "mapped_to_live002_manifest": 9344,
+  "unmapped_serials": [],
+  "target_archive": "driftmapR-S07-R1-live-state-20260921-002.zip",
+  "target_bytes": 214782459,
+  "target_sha256": "82da3464aab96d65f7ec208532a6c922b17a1d9d26a0356bb6ae6a663fbe51ed",
+  "scope": "Exact logical-path and size match to preserved live002 member manifest; SHA256 identities recorded for subsequent payload verification. No missing payload bytes recovered.",
+  "scientific_execution": false
+}

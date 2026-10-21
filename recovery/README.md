@@ -1,8 +1,8 @@
-# driftmapR recovery checkpoint — updated 20 October 2026
+# driftmapR recovery checkpoint â€” updated 20 October 2026
 
 This directory consolidates recovered package code, frozen design material, historical evidence, Git history, and fresh verification. It is a **partial recovery checkpoint**, not a complete S07 scientific checkpoint or CRAN release.
 
-Current recovery status: all four checkpoint deltas, all 22 ancestral R1 archives and 25 original-run archives are verified. The R1 inputs include all 6,480 checkpoint objects, all 6,480 draw plans and nine population objects, with companion manifests. Separately preserved original-run inputs include 6,480 draw plans, 6475 distinct checkpoint objects and nine population objects. All 81 raw archives are recovered, but 9,344 prefix journal files remain absent from verified sources (220,469,925 uncompressed bytes). Across the prefix and checkpoint deltas, verified evidence covers 249,122 of 258,466 raw journal entries. Checkpoint361 is recovered and fills none of the remaining gap. Restart-004 is the next recovery evidence target. See `MISSING_ARTIFACTS.md`. Input recovery does not establish completed scientific execution.
+Current recovery status: all four checkpoint deltas, all 22 ancestral R1 archives and 25 original-run archives are verified. The R1 inputs include all 6,480 checkpoint objects, all 6,480 draw plans and nine population objects, with companion manifests. Separately preserved original-run inputs include 6,480 draw plans, 6475 distinct checkpoint objects and nine population objects. All 81 raw archives are recovered, but 9,344 prefix journal files remain absent from verified sources (220,469,925 uncompressed bytes). Across the prefix and checkpoint deltas, verified evidence covers 249,122 of 258,466 raw journal entries. Checkpoint361 is recovered and fills none of the remaining gap. Restart-004 is verified. All 9,344 missing raw files match logical paths and sizes in its preserved live002 member manifest; payload bytes remain unavailable. Next retrieve driftmapR-S07-R1-live-state-20260921-002.zip (214,782,459 bytes; SHA256 82da3464aab96d65f7ec208532a6c922b17a1d9d26a0356bb6ae6a663fbe51ed). See `MISSING_ARTIFACTS.md`. Input recovery does not establish completed scientific execution.
 
 ## Start here
 
@@ -52,27 +52,27 @@ This is a delta archive. Earlier raw payloads remain unavailable. Continuity fro
 
 All four supplied parts matched their recorded hashes and sizes, reconstructing the 343,136,277-byte archive with SHA-256 `bbfa48bc60f25fb5e84f4f8225251af5d8f1121c5e3ab2ef26ece640c18f0516`. All 21,041 extracted files passed membership, size, CRC, SHA-256 and MD5 verification against the audit records. Original extracted bytes and the reconstructed archive are preserved.
 
-All four checkpoint2250 journals are exact byte prefixes of checkpoint3915's journals and match its recorded predecessor identities. Checkpoint2250 contains 2,250 committed panel records and 2,251 caches; all cache files matched their recorded hashes. The two recovered deltas contain 15,309 raw files covering contiguous serials 243158–258466, and 3,447 JSON files, all bound to the latest journals by paths, sizes and hashes. See `qa/checkpoint2250-verification.json` and `qa/checkpoint2250-to-3915-lineage.json`.
+All four checkpoint2250 journals are exact byte prefixes of checkpoint3915's journals and match its recorded predecessor identities. Checkpoint2250 contains 2,250 committed panel records and 2,251 caches; all cache files matched their recorded hashes. The two recovered deltas contain 15,309 raw files covering contiguous serials 243158â€“258466, and 3,447 JSON files, all bound to the latest journals by paths, sizes and hashes. See `qa/checkpoint2250-verification.json` and `qa/checkpoint2250-to-3915-lineage.json`.
 
-This verifies the 2250 → 3915 link, not the whole chain or scientific conclusions. The latest stopping point remains 3,915 committed panels plus a partial next panel. No new package tests, simulations, or scientific execution were performed during this addition.
+This verifies the 2250 â†’ 3915 link, not the whole chain or scientific conclusions. The latest stopping point remains 3,915 committed panels plus a partial next panel. No new package tests, simulations, or scientific execution were performed during this addition.
 
 ## Checkpoint468 recovered and linked through checkpoint3915
 
 Both supplied parts matched their recorded sizes and SHA-256 values. The reconstructed archive is 135,663,966 bytes with SHA-256 `a63c1189611e247a0b785a6d224bc47a3ead555a668c25f632c67235201e34e8`. All 8,465 extracted files matched the audit's membership, sizes, CRC, SHA-256 and MD5 records; archive and unchanged extracted files are preserved.
 
-All four journals are exact byte prefixes of checkpoint2250's journals and match its predecessor bindings. The 2250 → 3915 links were checked again. Checkpoint468 has 468 committed panel records and 469 caches; all cache files matched their ledger hashes. Across the three recovered deltas, 16,654 raw files cover contiguous serials 241813–258466, and 3,450 JSON files match the latest journals by path, size and hash. See `qa/checkpoint468-verification.json` and `qa/checkpoint468-to-3915-lineage.json`.
+All four journals are exact byte prefixes of checkpoint2250's journals and match its predecessor bindings. The 2250 â†’ 3915 links were checked again. Checkpoint468 has 468 committed panel records and 469 caches; all cache files matched their ledger hashes. Across the three recovered deltas, 16,654 raw files cover contiguous serials 241813â€“258466, and 3,450 JSON files match the latest journals by path, size and hash. See `qa/checkpoint468-verification.json` and `qa/checkpoint468-to-3915-lineage.json`.
 
-The 468 → 2250 → 3915 segment passed verification. Checkpoint464 has since been recovered as described below. No scientific execution or new package tests were performed.
+The 468 â†’ 2250 â†’ 3915 segment passed verification. Checkpoint464 has since been recovered as described below. No scientific execution or new package tests were performed.
 
 ## All four checkpoint deltas recovered
 
 All 12 checkpoint464 transport parts matched their recorded sizes and SHA-256 values. The reconstructed archive is 1,207,516,379 bytes, SHA-256 `d1fae48aab8d7afab071bdcbd34f91802e8f1cc12527e262c75618e7fa7c9c6f`. All 86,023 extracted files matched the audit's membership, size, CRC, SHA-256 and MD5 records. See `qa/checkpoint464-verification.json`.
 
-The fresh full-segment lineage audit passed all 32 checks, including all 12 exact predecessor journal-prefix comparisons across **464 → 468 → 2250 → 3915**. Across these four archives, 95,374 recovered raw files cover contiguous serials 163093–258466, and 3,643 JSON files match the latest journal records. All latest cache files also match their ledger hashes. The original historical audit script was adapted only for local paths/output, preserving the original script unchanged. Detailed results are in `qa/full-chain-state/checkpoint-lineage-audit.json`.
+The fresh full-segment lineage audit passed all 32 checks, including all 12 exact predecessor journal-prefix comparisons across **464 â†’ 468 â†’ 2250 â†’ 3915**. Across these four archives, 95,374 recovered raw files cover contiguous serials 163093â€“258466, and 3,643 JSON files match the latest journal records. All latest cache files also match their ledger hashes. The original historical audit script was adapted only for local paths/output, preserving the original script unchanged. Detailed results are in `qa/full-chain-state/checkpoint-lineage-audit.json`.
 
-This completes recovery of the four checkpoint deltas, not reconstruction of the entire scientific workspace. Raw serials 1–163092 and additional earlier checkpoint inputs remain unavailable. The next section records recovered ancestral inputs and the reduced missing-file list. This audit did not rerun simulations, validate scientific conclusions, or launch the frozen collection process. The latest saved stopping point remains 3,915 committed panels and one partial next panel.
+This completes recovery of the four checkpoint deltas, not reconstruction of the entire scientific workspace. Raw serials 1â€“163092 and additional earlier checkpoint inputs remain unavailable. The next section records recovered ancestral inputs and the reduced missing-file list. This audit did not rerun simulations, validate scientific conclusions, or launch the frozen collection process. The latest saved stopping point remains 3,915 committed panels and one partial next panel.
 
-## R1-01 ancestral inputs recovered — 29 September 2026
+## R1-01 ancestral inputs recovered â€” 29 September 2026
 
 All three `driftmapR-S07-R1-checkpoint-01-checkpoints-part-001.tar.gz` through `-003.tar.gz` archives matched the immutable dependency identities and Recovery009 receipts (572,195,430 bytes total). All 13,102 regular files passed membership, size, SHA-256 and MD5 checks; compressed streams passed CRC verification. Original archives and unchanged extracted files are preserved separately.
 
@@ -80,7 +80,7 @@ Contents include all 6,480 draw-plan objects, 59 checkpoint objects and nine pop
 
 The first receipt-audit harness incorrectly required administrative files to occur in per-job receipts; its initial failure log is preserved. The corrected audit explicitly accounts for those six files and passes. Native R emitted startup locale warnings. No scientific computation or package tests were run. The missing ancestral set is now **125 archives / 12,713,813,033 bytes** (25 original, 19 R1, 81 raw-prefix). Exact outstanding identities are in `provenance/MISSING_ANCESTRAL_ARCHIVES.csv` and `.md`.
 
-## R1-02 ancestral inputs recovered — 29 September 2026
+## R1-02 ancestral inputs recovered â€” 29 September 2026
 
 All 16 `driftmapR-S07-R1-checkpoint-02-checkpoints-part-001.tar.gz` through `-016.tar.gz` archives passed their recorded archive identities, complete member inventories, size/SHA-256/MD5 and gzip CRC checks. The archives total 3,840,913,714 bytes and contain 868 regular files: 434 checkpoint objects and 434 companion manifests. All 868 file identities match the latest per-job receipts; all 434 checkpoint MD5s match the latest compact-cache ledger. They are distinct from the 59 R1-01 checkpoint objects, bringing the recovered ancestral total to 493. See `qa/r1-02-verification.json` and `qa/r1-02-receipt-bindings.csv`/`.log`.
 
@@ -100,7 +100,7 @@ The original execution-checkpoint archive and checkpoint-02/checkpoint-03 archiv
 
 No scientific execution or package tests were rerun. The remaining ancestral set is 103 archives / 7,537,967,210 bytes. The user has now requested a commit and push after each completed recovery step; see `GIT_WORKFLOW.md` for persistence scope and destination handling.
 
-## Original-run archives 004–006 recovered
+## Original-run archives 004â€“006 recovered
 
 Both checkpoint-04 archives and checkpoint-05 part-001 (597,817,737 bytes total) passed their immutable archive SHA-256 identities, complete member inventories, member size/MD5 comparisons and gzip CRC checks. All 46 regular files are checkpoint objects or their companion manifests: 23 objects with no key overlap with the previously recovered 80 original-run checkpoints. Original-run coverage is now 103 distinct checkpoint objects. Fresh SHA-256 values are recorded for all members; historical per-member SHA-256 was not supplied by these receipts. See `qa/original-004-006-verification.json`.
 
@@ -242,7 +242,7 @@ Cumulative raw-output recovery after batch 078-080: 153,748 files preserved; 153
 
 ## Most comprehensive later checkpoint identified
 
-The verified 24 September audit bundle identifies an incremental chain ending at **checkpoint3915-014**: Recovery009 → 464 → 468 → 2250 → 3915. Its saved stopping point is now independently confirmed by inspecting the recovered latest snapshot. The complete scientific payload chain has not been reconstructed here, and this audit does not validate scientific conclusions or mark the simulation study complete. Later operational records do not preserve later scientific payloads.
+The verified 24 September audit bundle identifies an incremental chain ending at **checkpoint3915-014**: Recovery009 â†’ 464 â†’ 468 â†’ 2250 â†’ 3915. Its saved stopping point is now independently confirmed by inspecting the recovered latest snapshot. The complete scientific payload chain has not been reconstructed here, and this audit does not validate scientific conclusions or mark the simulation study complete. Later operational records do not preserve later scientific payloads.
 
 See `MISSING_ARTIFACTS.md` for the exact known recovery targets. Do not run the old collection commands directly or replace the pinned scientific environment with the native Windows test environment.
 
@@ -322,3 +322,9 @@ The supplied transport reconstructs the independently recorded 569,351,915-byte 
 
 The new checkpoint361 incremental requires BOTH driftmapR-recovery-20261020-raw-048-080-incremental.zip and its full base driftmapR-recovery-20261006-raw-045-047-integrated.zip. Restore the full base, overlay raw-048-080, then overlay checkpoint361. Each layer has a separate manifest and receipt; later files supersede earlier paths. This is not standalone. The working recovery directory is consolidated, while historical snapshots remain separate. No source code, simulations, or tests were executed from checkpoint361.
 The checkpoint361 incremental passed CRC and SHA256 verification for all 42,659 manifest files (1,219,802,490 bytes). Its receipt is provenance/checkpoint361-incremental-receipt.json. Construction-time reports inside the ZIP precede this completion record and external receipt. The documented 9,344 missing raw journal files remain unresolved.
+
+## 2026-10-20: Restart-004 verified
+
+Restart-004 verified: all 9,344 missing files map by path and size to the preserved live002 manifest. Payload still unavailable. Retrieve driftmapR-S07-R1-live-state-20260921-002.zip (214,782,459 bytes; SHA256 82da3464aab96d65f7ec208532a6c922b17a1d9d26a0356bb6ae6a663fbe51ed). All 486 members passed verification; standalone report equals embedded report. See qa/restart004-verification.json and qa/remaining-raw-live002-map.csv. Coverage remains 249,122/258,466. No tests or simulations executed.
+
+Restore chain: full raw-045-047 base, raw-048-080 incremental, checkpoint361 incremental, then Restart004 incremental. Each layer requires all predecessors.

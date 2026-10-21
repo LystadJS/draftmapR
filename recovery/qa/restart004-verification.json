@@ -1,0 +1,2441 @@
+{
+  "status": "passed",
+  "archive": "driftmapR-S07-R1-Restart-004.zip",
+  "bytes": 21619060,
+  "sha256": "3261277c5707e49a2414dabb75b8beae58f299e6b96717604b69090f7a02399e",
+  "verified_files": 486,
+  "members": [
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/driftmapR-S07-R1-Restart-004.md",
+      "bytes": 4814,
+      "sha256": "fc57e9a53239cc7db697807211d5695c478030e848ed02979e7198ad4918db0b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/bundle-search.json",
+      "bytes": 11507,
+      "sha256": "6b5de263fd24b00c37c1af1b728c86c4a16107e50375f511185fa727bfd946cd"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/bundle-verification.json",
+      "bytes": 1768,
+      "sha256": "d8bf8dbddd65d34dd86fee9065168b376d46d1d126475ae697aa234f598a076e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-001.json",
+      "bytes": 3708063,
+      "sha256": "f19d7cefe6ed479031452526ea0f3c178e50bc220e901127e5c7a84563966468"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-002.json",
+      "bytes": 22569,
+      "sha256": "c1faa224879e880cd3e29be6dc82aea3296413468fc5999f6054a71b768d5cb1"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-003.json",
+      "bytes": 23700,
+      "sha256": "2d995a7e2a19044c12ac171b2081d1a145ed0429876c4122862e0ac28ff82169"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-004.json",
+      "bytes": 5046,
+      "sha256": "e19eefdff2b71091bb9f9c6f824a348db8761da0cec45f87bcea20f219afceed"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-005.json",
+      "bytes": 2769,
+      "sha256": "fb3845f2480dccfa6c2c7f3d71d13342c097c0ae86db49a8ad5820e83ca1e1e8"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-006.json",
+      "bytes": 6749,
+      "sha256": "afba930520406b1c657e19db50849bc6ff5ea2fe931d0ba8432e2c50e7c1c9b5"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-007.json",
+      "bytes": 11286,
+      "sha256": "205c01753e7f28907ca6195b39a2b401c755dd29b85294cf9c1b95cb0ee15004"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-008.json",
+      "bytes": 14695,
+      "sha256": "8f977acf02a243607d2654dd4dd742e9331175ca6cafd01648bc8d4dd9910d4f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-009.json",
+      "bytes": 7878,
+      "sha256": "6465efebfc68bc6333c6b755a4f2800f8f2520ab90db4a5c18d623f865fd2b82"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-010.json",
+      "bytes": 5065,
+      "sha256": "78a8e429617b8a48ff795eaddebfe9e79df31ae06070db4aced12608a48ae812"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-011.json",
+      "bytes": 5065,
+      "sha256": "23d7f461c055d764f944513f5af539dd7d99ddbcdbd68d662a1c7f50fcbb1573"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-012.json",
+      "bytes": 3340,
+      "sha256": "954a9efff485650ec00f302ee6cd7a9a61e65b560369ba051039ab9da8b5c90f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-013.json",
+      "bytes": 4478,
+      "sha256": "c644709d4cabe4a679dcbd6ff23d73aa2ac2185a2a7f518b20e2b7fe6c5ac0c9"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-014.json",
+      "bytes": 5047,
+      "sha256": "86d06d6c2cafc488a5ebe3d2add9c61edb24b662779fef16c0f78470f6b63068"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-015.json",
+      "bytes": 11578,
+      "sha256": "8700414a5306c303799717b4c8fe2ed244ac444984b84e5a93ca9d46e3fa3c12"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-016.json",
+      "bytes": 40961,
+      "sha256": "281399d2a6ba6e84de499eff363723d9b4a8160ec2089cf2143d4fb3987ac777"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-017.json",
+      "bytes": 26272,
+      "sha256": "2921053a6f3a9f9db80b27ee664607ea0e8a56b6be2f03af64205a2df0634c9f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-018.json",
+      "bytes": 16623,
+      "sha256": "52937dfbe34bb89c0e5d70af4f2012a9755385dac12312bd780354abb67a05eb"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-019.json",
+      "bytes": 16768,
+      "sha256": "929ce1c663287ee9e62be638956eaa1b42ed0debdc9ce2ac57a581ad041fd967"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-020.json",
+      "bytes": 30098,
+      "sha256": "ec728723411c96365dce4c4b695a8afeaa8a668fb0d0066cb52e1b5a0147ce33"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-021.json",
+      "bytes": 16910,
+      "sha256": "a67a9a9412f1184e72ae887aafdb1aecd31f5c59273782f67ef5ca3081cb855c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-022.json",
+      "bytes": 1015149,
+      "sha256": "2a997267686b1e0b29f02040f9cfcd1ee5a382810ef2f38ebb3128d145838d57"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-023.json",
+      "bytes": 1462880,
+      "sha256": "e02104973ee5b5ac8ce468e930032849316cae126540493aa41d346b61c69775"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-024.json",
+      "bytes": 716947,
+      "sha256": "f3266625084d07b7a5006e2224cdf5c2c54d3eccb4eabf18b28d04d5b7d8815f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-025.json",
+      "bytes": 256893,
+      "sha256": "cac07d9e5131c8a3d8eedff16c46114970e0e2ec6bfb493409b2a4c63484a030"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-026.json",
+      "bytes": 22579,
+      "sha256": "23dec1b76a70d128568e6c0f97b3ca0855f0f08caf8c17755b9af02a53853523"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-027.json",
+      "bytes": 3156963,
+      "sha256": "70d8063ad8641c05a6ae78cfd1e361fb8caaf821681594be34bd9e2167d7c9f1"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-028.json",
+      "bytes": 563449,
+      "sha256": "4c1471687b7a6a6aad0f8f1dabbef346e39a718dcc32d7a017141ad84b15a779"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-029.json",
+      "bytes": 45747,
+      "sha256": "0a5f1efd80742122e784aa9b73f7f7b6f717e6c9047912a0e6ce0424fe0985be"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-030.json",
+      "bytes": 33062,
+      "sha256": "5aefc21cc1a61dfea7bc7aa430ac722ae2ea7e83516b00ada5b27daa6d2bbecc"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-031.json",
+      "bytes": 16951,
+      "sha256": "b888a0cc3bf64590d1694418adcbbc920c1ed38250e3a0b2ec790410a31af9d0"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-032.json",
+      "bytes": 16800,
+      "sha256": "66b7d03f26ca224c1d183267c3dcce75ff1f8c0357996be86243f12f97c82154"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-033.json",
+      "bytes": 16693,
+      "sha256": "a10d0ebd7cb23dc6cafe5f24f14ce84994b4e83410bdfc54b32731a5a381bc9b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-034.json",
+      "bytes": 21181,
+      "sha256": "edf2bf6c2b295c8e69a4abbd6ba9e01838a37966a82880b5593a764f8b38568f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-035.json",
+      "bytes": 5056,
+      "sha256": "9c0ea4545121f29dfee2f7521009d41ad1c5a2c53bca33358ef5aec28443019e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-036.json",
+      "bytes": 5056,
+      "sha256": "66d8d5364facb1e3d1e0c8afa40590fa79271b4c46de5d928db75987681b2ec6"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-037.json",
+      "bytes": 12435,
+      "sha256": "7c5319428510071417d4ab8ef774cb3faf7a23cf1306337c034c88ff27fbcfa4"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-038.json",
+      "bytes": 16976,
+      "sha256": "009bb81e0b4295fb9dc595d1728c3ba2ccac962b156ed4fde957922e2154bc1a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-039.json",
+      "bytes": 20912,
+      "sha256": "461c06763224a90ad0a4a03070e2c6ddab12d50da7182eded12d2c47dcaf85a5"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-040.json",
+      "bytes": 5056,
+      "sha256": "b3d8784c0e2df1ad584882f7572cfebf6885d10188a29427042a268bc4363e05"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-041.json",
+      "bytes": 5056,
+      "sha256": "86a2d24e6d8f47e2460f11d2ad096815f50f8113bfdcffe0fcae730535e0d98e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-042.json",
+      "bytes": 5056,
+      "sha256": "07b153f40b54f0e16bc1d66e6bd1f0b508c89d0921e3053ef2e78b155d18edd1"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-043.json",
+      "bytes": 5056,
+      "sha256": "9b5aab737599eb3eb7707829c84224a27599e6f984ca762f7ded49fc1bc88f79"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-044.json",
+      "bytes": 26463,
+      "sha256": "9fb54ce566c17f9a1b8b3ff9873e7f23424f9b2a0211c4ac95242fcdf48e72d7"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-045.json",
+      "bytes": 1774274,
+      "sha256": "09b62b6e926821567be37a45f9f457f8d22cd3cf3eb34c2fbb1a8488c416ca2a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-046.json",
+      "bytes": 1055252,
+      "sha256": "76d4091ca26bc635d8d0e2ee69f09bbd06927d9687aaf3c7706ca8b4150c3c44"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-047.json",
+      "bytes": 606556,
+      "sha256": "d788e2c137d9cf30a810e2a81bc0ea6573af85ca4a63fee90ebd83e0f2bb9a9a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-chain-verification.json",
+      "bytes": 574,
+      "sha256": "d57b8d04ba7e97123baaf7f7a80e40446eda8f475ead57a6a4143c74e9d90ddf"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-download-retirement-complete.json",
+      "bytes": 172,
+      "sha256": "016b33eb9e7dde5f50e5ee69df0d3f33bc3a7f03f4cd3a622074e66a1a88f5d1"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-download-retirement-events.jsonl",
+      "bytes": 8878,
+      "sha256": "4497b94b7799a6e3a8c4731c25625ef18ced5b2295a091b2b5016adcbcc83f1d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-download-retirement-intent.json",
+      "bytes": 26786,
+      "sha256": "8c1e3b52cc05a4479b25291eef198fbf6ee3e8a5d141b38aaa50db6e2381da66"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/checkpoint-search.json",
+      "bytes": 99599,
+      "sha256": "e064bd53c2513139c05daa07ade65bb5b33cff10bdc242f9ab852074aa4b20c3"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/download-residue-relocation.json",
+      "bytes": 16846,
+      "sha256": "866d30218bc087c414ccfa03eddc64e743a7fb98a12f2bf79c9e5ba0c4bc69ce"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/final-audit-grid-observation.json",
+      "bytes": 126,
+      "sha256": "cf2f7598a54c59f0c99b65311704b0328c118e7f06d12f2ac2e822cceadbd8bd"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/final-recovery-audit-exit.json",
+      "bytes": 391,
+      "sha256": "ee27ce3bd688a4b5f080e1827c7c3555944eaa947e5ced4f7dc40ee7afd9da57"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/frozen_sources-restoration.json",
+      "bytes": 135674,
+      "sha256": "495f57a4e9e0d0c64d31cfd1a9f9b21062736d66abee1c12d64b5cb32388ab18"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/live-002-verification.json",
+      "bytes": 473,
+      "sha256": "fe849b354622791de4f55eaff4752e68bb901c9878b11c77e8c87861f7c40041"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/missing-alias-repair-complete.json",
+      "bytes": 433,
+      "sha256": "6e9798426ab4124c9e97ca7c25d4f4ec2a9e2894923d485362559335e8a72880"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/missing-alias-repair-intent.json",
+      "bytes": 1272,
+      "sha256": "c86f39bfd182377ed7327c609d390f80be14442eb4c3b3420c110e491e1cceaa"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/pinned_runtime-restoration.json",
+      "bytes": 985874,
+      "sha256": "559cf4ac8b32e51a29049114755b06d795976425355611669000bd0c21f0de9e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/prefix-overlay-plan.json",
+      "bytes": 8805514,
+      "sha256": "a3aa545550bc1860b7c25e49a8944e1d09d642bc4308e54cd2e237bcaa2393e9"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/prefix-tree-restoration.json",
+      "bytes": 367,
+      "sha256": "c0fdc660912850bca00c6a6693f4a2981233d8e4a21789b732da9460e556cb59"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/prefix-verification.json",
+      "bytes": 448,
+      "sha256": "462e1214dcaf7ff41b21659a60f5ffc356b1d009e285879a4af3cb860f6bbad6"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/provenance-exit.json",
+      "bytes": 62,
+      "sha256": "169171adbc20495080d0fd693e46026d7d2f288447514066237bb5b164ad598d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/provenance-launch.json",
+      "bytes": 399,
+      "sha256": "881ef502e67c5b79cf2b48c0a0e3e05addb86549339e54326305b0c8c0927cc5"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/provenance-publication.json",
+      "bytes": 539,
+      "sha256": "5104713de2f545dbbe71ca455c2414851f09c36c782cbc2dd2d8e8b28f08a5e1"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/provenance.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/provenance.stdout.log",
+      "bytes": 89,
+      "sha256": "565606c987022ac64ad259c09697f784da45e6a91fdd75d94a679e559517fd4b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-000-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "30b78b296ec77f807c60f75cb53e6dd98e2222e03d46dfc84f3479e8915949af"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-000-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "a14e7b23a9fe8634f18b960ef54ffbc1e930165a0e9e7c079d91eb217f1a996b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-000.json",
+      "bytes": 2323056,
+      "sha256": "56d12c909e6b618cc939fa0daceca188a66bd0ab9ef77e0d0c0d069e3bf23a3a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-001-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "3ad10116a68d8b8967cd8ef020187f8bc104df11aa504026594d4f48745c3f02"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-001-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "5c448ec92041d633d96725c2e7bb3a171e849b508db31f45164eb21b00c44705"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-001.json",
+      "bytes": 2321323,
+      "sha256": "7e903bc0960c73bbad3c9097bc9e37f3cfc8a04eb3effe99e37b82554525b06c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-002-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "18305762620b881a3002c8dc9743df0728bf73b21647d25b601170505c375934"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-002-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "5f9ce661a5a6d6cacc033126adaf3ed014e31b8e9342c72df944da49f708fb19"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-002.json",
+      "bytes": 2321323,
+      "sha256": "f3b409afc9036cda20801eb2e470ca67642854d31b7b5f594d9c669ba5180388"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-003-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "0b6b1c6e7c92ef45928ab16df5da5e601ae7ceefa54de3a5bb2f61e6bf4f6855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-003-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "572850c6f938c7a53fc65632ccdb56c8d1bcfcf06a5fe0c43f0147c570b135de"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-003.json",
+      "bytes": 2680110,
+      "sha256": "542290f4ea1291f9bfca1f2ab7bb158ba820e081a3440be09b4c1ff59272aabb"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-004-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "2fe861ac6a8d45e431663b34a0db33f6fcd70591a907ad2b3aae4aab5829b900"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-004-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "0656a870306d4a06887f6cec0d6c168d7b859cc84914b213a2e8d7f3198f2834"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-004.json",
+      "bytes": 2545970,
+      "sha256": "458239e45c66e10086af6101e770493986e4a1464f01648232a62f844a546cf5"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-005-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "7da186d3fd729c7fc354e822588325953baec09e80254c9afa47b30bdc0c1413"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-005-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "429502c1c696892adf967c9e05811aafc38a0715f85e1e94d6f89b7ed2aec27d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-005.json",
+      "bytes": 1165039,
+      "sha256": "1c7d3d9bf60c997eb6448e19575a5324670a43652108927dac1270fc82f908a1"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-006-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "339145995938d8d101a15e111f8a7a7c3ed5fba3e0fe44d5dbefb7bd3dff2a90"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-006-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "98bbda6f155b56b63381a766bdd0967a9b923335632403bb99deb9bfa5941a5c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-006.json",
+      "bytes": 2522441,
+      "sha256": "1257a4337fe6a625fa943091b6f139778f8ba2e3ad3c77afc8c8ecf894e0fc77"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-007-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "27064091d5ec0d5e63dd37213623c3ff012b458116a23637391aec9c30ff6631"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-007-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "762154b7a77cd0002fb70ec7c4df2bc22011cc6ae7bb96ad888a618d78a7018d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-007.json",
+      "bytes": 1058109,
+      "sha256": "6aefa23743da294daf70c751432d92ce8dde34f93ff871014de45d3e502e344f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-008-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "57dddaa6aea9a48daff7f596489f732c029c869f5ee1391e872a6e68d4d026cb"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-008-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "c2ecc83c6fe9feb8f3bc8f3997013ef7e3fe6d26e2f5d17701a4e3af8c15ed2c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-008.json",
+      "bytes": 466828,
+      "sha256": "6bcb05c31a70fdac82db2417e44e5b6a58df719b65dc99b352c0665f55234c11"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-009-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "1cfe37c576ad495d30aebdf4714a2d0fce7c19fcb9d0e96f5faddb14d909dd73"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-009-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "d01b1091bd1ddcd4a0cfd0dfbc65c94296e4e53dc50df7275faa116d621c8ca8"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-009.json",
+      "bytes": 466537,
+      "sha256": "a3631d68ead723f424e641b387d5ea395430fe1727a53d749d7b3d2187c5707c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-010-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "bf72353ac20c39da21a5d3c9dab1e5e3eb6ceffe04efacfa56968b542f01c6e1"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-010-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "d4bcf8ab0a453a02240dce638de90ab5c0719723827c995c57ecc8c0191f9289"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-010.json",
+      "bytes": 466536,
+      "sha256": "cec7449976635d9514c7440c7ba44db1a238e5b9cd091710aa3b9d21459f9d76"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-011-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "8ad8ebc49f30e53eab30e27e4248209b8db5ce25cba8aec0b2ee06ad5c0ac34a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-011-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "2efe1d64acb8d8d91593913ab7ec3fb04d482f3bab791f5f2c3fd8e1daba847b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-011.json",
+      "bytes": 466536,
+      "sha256": "83112537f347514290be05cbfc93f69cb67efbcbd3cbd39dde2facb983bfc8d4"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-012-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "3d9e37a3920eca6ebff87377a8643b552e4bb2bf76547a8ed394fbd37c25d608"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-012-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "2013b2976d88f7278ac4329e105fc6451aa7c15e532498ec3e61fb9bfede1a34"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-012.json",
+      "bytes": 465093,
+      "sha256": "8c6fbf3333f63c9ada52b89e97f57bac6a316fb1163ead71240adfa918802f21"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-013-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "b62d31117436864ded4200467842c052960f2801979e7f94148e5ea2cc2c504e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-013-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "99d253fba096e5ee69814a0fe51c980805ac57e92992329cf61289b81baebbe6"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-013.json",
+      "bytes": 467982,
+      "sha256": "af69b0ffba101e317e8a7f8faa1333b39c59e3a0c0cec013396ed5ec509dc40b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-014-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "c91f7fe07d290d7ec4f86064e5b389d9bdf3d499e49093f7a0162a4d1e2f2159"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-014-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "5eaf304c81651a864bb6a7415473c6210435954372471ab77139cf1563f4cd99"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-014.json",
+      "bytes": 466538,
+      "sha256": "4ddcc0a4cbe7e9f0294d280fac69359ef6a1fd083c82d5c64f3500685a27261f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-015-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "6137122a44b6b5d7f1b408c629f9dad822e8fa8a8288b7197256dbc0838689f2"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-015-transport-retirement-intent.json",
+      "bytes": 1148,
+      "sha256": "b0542f425a0cbfe26407b47908ea590ce80334c6c082e0b69fae02c1f460dfad"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-015.json",
+      "bytes": 466538,
+      "sha256": "050fadc1b4afb26c0e41a503bd46e6cb7ed3401c83807989f599b50e3a1188b2"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-016-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "219652d2bdc2ce8bd78b461f31ca35b909b6247aa28d1069f3268fb09772bca5"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-016-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "bd2cf1c44ac25b0b69d1c1d5f12fe04263e5314bcb281ae7a409b05e83d9b09d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-016.json",
+      "bytes": 466538,
+      "sha256": "1b719006c82720872b79ed1bd91a90fa2525d7100c5fedaa535bf52de75cd2a1"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-017-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "79e58e83438167761a95a8bff23bbcb1f5b79e0f8a7b42759c4c2ec3b05bfd86"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-017-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "e9a0c0c6a68767ef8e32a074058e51a5dafe2dd192411e410efa46fab03105b1"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-017.json",
+      "bytes": 466538,
+      "sha256": "a5a7e633eed91543881eea25ca370483a56c1a70ebd180f02ff290b66da40794"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-018-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "1a612d68ab50d06ed458381f02fa683b120e896a3d0dbccef9d56b82c91b8893"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-018-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "b41145d75b042b5d48eb3f623f4a0d707646570a53aa1cc1f16279bbdd7bfb85"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-018.json",
+      "bytes": 466538,
+      "sha256": "f36546ef6ad1aaae7779205591f89f2bd8ff1e650757108ad1d01870cf5f349d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-019-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "11dd7dafa5981cd1040820fc5c866e6f4796ae4dd2f7ae7354a47be7b133e564"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-019-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "8b0539aebf7f495905a17fc22b9ef4f84049870e92099178309df9dcfe072fc3"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-019.json",
+      "bytes": 466538,
+      "sha256": "bb262dd2bc37851f4875f4315b61dfa6fd2ae3916bb07b3d2958d30fa9f2ac99"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-020-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "fde9001e399c85e554f24e4cd3611414a66f8447e8fe66fe93267de1d5be9247"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-020-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "b621fa21f7e64a7ad02323021e6147e3187dd59604047b356c032957dc456bbe"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-020.json",
+      "bytes": 465091,
+      "sha256": "3cf62fc6f99efe63be152932266696035e23d864f284598e70dac98b9b5a12a3"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-021-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "e2f847535b0a8859458500fa56b806cd4ab9cf26dff5f585a3e2ab6673fe788f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-021-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "b3484cceee08697482bc1852b6c2fc5a99a04a65ee2a0a4a3abc6abf325b74c0"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-021.json",
+      "bytes": 467980,
+      "sha256": "cb3b9b2957ce849b491008d365404696683fa8be0f3037392c9b4023ec216c1e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-022-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "abf08b5d0c3e198270f7e014fb46c2d76e3bf9e401600de4e4665c13b0bfe538"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-022-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "56e25c13f3b081713cebb6f70a5e5cc6eaff8503f724118e3e1e6599f6a6ea63"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-022.json",
+      "bytes": 466536,
+      "sha256": "e0468aeee307ee06a0a0b6ff168e33953f7c2af8439ae0730846d675f62d0e75"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-023-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "afea867d9c5c199484172ef315e8d4e0606be85c0946d83ac0f8e4b7e1945b78"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-023-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "8924277e8da033ec3fcfb03ca88e2eedb2043669cac82977edb72a3eb705721b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-023.json",
+      "bytes": 466536,
+      "sha256": "d93cb062d2f601a4ffc4d7ab6cbbc6b117c16d06baf40c070ef6678ba90042d5"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-024-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "f418e3d0322ebe9e716f83e9b900e914b786efcd92e65f3fbfc42d53ba7c0dda"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-024-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "c320ed39e56672d71d8114eb0deff50a3862e709a178bf04a10ab70e7ab15bbe"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-024.json",
+      "bytes": 466536,
+      "sha256": "5e2488e489d88c202ac3514ae4a8cbcb29acb286f731282ec651da2f42fcb866"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-025-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "0f4a4a3b813396d5b78338c4c0d929db9a563f54f40aaabd95aea9257de1c19e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-025-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "73f4f3d5e0846a8220a833405360615b4503244d211afba61a9208e9980d89d6"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-025.json",
+      "bytes": 466537,
+      "sha256": "720877c18185372db76bae2c2188bcaeed0373968a2db342345e81ced7e84809"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-026-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "86b35574174e187e6346177a13a9d17f6f7f132c84e6ce3c7c2ce95d880afbaa"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-026-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "582c8cda1b4d1280fb66b95133715b8ddb2e248effe7942aea01d0b08746f9fb"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-026.json",
+      "bytes": 823649,
+      "sha256": "07b3f5cc95f58b28cd9960e59e6da60023d5f7bd4313630f955aa56c192efbe5"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-027-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "028f51a8a82c05fe58ecb9868480103418734e22225f12aca0d8e22dbe86dcc0"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-027-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "557f093a027b8f72a5a3aed45a39e6d63980ffcdde818faf8635a3cca5de62a8"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-027.json",
+      "bytes": 362853,
+      "sha256": "354c8a537c2c7ee76dfe2ff5b108c712aecca1259248fdebe1eaa4715eb9d325"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-028-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "db52302446907476b62bd1147be75e5af8a748e47b8d18a1510902285baa553b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-028-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "1948ac6d57f0337b6499b37dece6e2c976f3472a165724ffcbe8879f80e74503"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-028.json",
+      "bytes": 602760,
+      "sha256": "529b94c020debf959cb89491157d85807c5845e2ec3b5ca4bb5fea54d07c9324"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-029-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "67cb554a73f6842ee98ec6154b6d4edf8c52e93fb623461f4314738439595a04"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-029-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "49448ab566287932360d42f279dc09ef2b1bf8b0352537efae8b7298ca4ebf2f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-029.json",
+      "bytes": 721120,
+      "sha256": "adc3f3d1138d852dc8bebc5a1a74e844c103b35c2eada6cc73523a45ba61f004"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-030-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "a3c413f2a0eca3e3f7001b2328bc43677cd84646848b8f21cbb53dd34e7c49b2"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-030-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "589f6cc38d2f0a5ed27493b0c0a67cd1d6da25d814ebc8c60fce5c9daad43794"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-030.json",
+      "bytes": 601604,
+      "sha256": "cda0af5223a65a0793c4b93891b555b1808f0c7861fb43a338aa8e3cf7ea9c71"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-031-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "ae6ecfba207beb15de4223ec7fa89957a05e04c3081b3ede42c5416f3f1a541d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-031-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "50f048e7dc4ba183381be3c425db529385729fc903cecb755a164ca57bf7197f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-031.json",
+      "bytes": 721119,
+      "sha256": "cc3b165bdbcec5eab6e2c6165ad5232f227f3acc00a3dbebefa5991b0d880b26"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-032-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "550b913da28377af73946ab00e3240d6643b3c646edc4c9aee04424159e992cd"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-032-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "ec99a97f88282885e9f25a149c1791963bd286e1cccdc7d1f364abd493e24b8f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-032.json",
+      "bytes": 601607,
+      "sha256": "16c090bdbb3ba13d7eb7bd5547df288b63fcaa26d3d6b082946c13b8a53add58"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-033-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "d4ba9d809e4fe704f6243f6d1dab44b2605e034ed2ebdc8a0f44fdf16304dd40"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-033-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "c117acf7d9b49a81b42c5576f411d80e74fc6b8dabdc076892889c162942e592"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-033.json",
+      "bytes": 479776,
+      "sha256": "988e51bbe5fe2071b18fbe52efb78263216d2bee56df1bc9854faf1c53146f49"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-034-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "fb8b6d66d531e2f64da63c07125b3662b1b86e0ea68c221eec6f0a15c253fb42"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-034-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "e6cdb1863c2889aa79a7bd4ffd06aeec34e58724ac276197906cb8f085ca5f15"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-034.json",
+      "bytes": 602760,
+      "sha256": "6876e6d428199d3eb5d0a099972b68a227a4ae9a76d910c05c43c9052e19d588"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-035-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "366864fda36145fca5b70c9a5fa06a019c2ba4dc96a13275fbea47e9cf097854"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-035-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "2f9adb8b81638190b0b9f10b22ecffe7ed40e2e20ea0441c4f851a14c24b8a92"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-035.json",
+      "bytes": 721120,
+      "sha256": "3ec6a81b985510cab96329db0bd24e4530bcb1e5aec3b71b2abcfa095bf0b6a4"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-036-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "61994aadabf17102d8a4d6187d0309df93d0d2f53fc1448782f828a9542dc07f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-036-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "b08939d8cdcf5dea61c7331347f4335593ecc391aac9a9e29e0977ae9d976ee3"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-036.json",
+      "bytes": 602757,
+      "sha256": "0645d5ea515705adeed58b9c7dd1a01518bcadad57ef590e4f7435022ba37105"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-037-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "5684ae0fa8e810bef981dcbbf10e42cb729b306c7b15ef526bfc863fccb70440"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-037-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "1b64a00892082c8592a5881f6497fac820178b0e5f814bb8d283d7e5580e6fa4"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-037.json",
+      "bytes": 720262,
+      "sha256": "d0069bd5109acc8194fad88d388c8c56a0d2f19d55d335b42a75d19f1939f930"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-038-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "d49df3361b38981333227255bc440d2e43ee3ea134f96cb8dd9e61c0e281d97d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-038-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "17a0190b12f77fcfbb5f83a820ef1f81d197238f73d07b3de09f0f61c9974ff3"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-038.json",
+      "bytes": 240747,
+      "sha256": "5ed22b9ca4da093072b5e7b1e5b5f0a26ca3e94b858b5dbc04eb9392ad271fa8"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-039-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "1d1806b34a84033879c80ea13d1b09975758178f017dc214f3055018247d4f76"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-039-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "1c37c8860e5abd0a93ce14715b574038db982f741e88b48f073e635f5674df64"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-039.json",
+      "bytes": 119782,
+      "sha256": "62de58aa4c61bee59888bb128ecc920f0a1c14c55de77971c2fd478dbe7fe5d5"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-040-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "dcc117a5e1b5059361252bccf3856877cc406d35d20b13e0c171cbd01423a7c4"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-040-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "b02a9a827693cd47e0c990f33f9a3d9fbc82d675213c7c20c74228947761bc55"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-040.json",
+      "bytes": 122383,
+      "sha256": "77ff031022e1a89ff80f75e22d3a99f034c354dbd80cd6a17fd4c388476e819e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-041-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "f8d3562e1eb687c8f6e2c339bf37ec426caf31e34dcfd65016eb5b19cbcba323"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-041-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "90a81443276ec9de4930237362ca44ef6ec94f82cb4108314bf1f69c9067dfce"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-041.json",
+      "bytes": 120936,
+      "sha256": "57e1c080cebb7b1e66ad8c8d9fe43cd64fcd48c93585b07baf7492aa1ce87d1b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-042-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "9e52b09ea60929e11369ef3e149d42faeb379b8ba2ed07531d5790e9a3f1a45d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-042-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "ca5e14fa7a3286547d7318d136a52a05da12935be4526e57c015c28d0378fe38"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-042.json",
+      "bytes": 120937,
+      "sha256": "fa5f513a533c5717f87e85656a7d401c0ae1a16dda4e5b0f6c4ed127d680dcd5"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-043-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "73bd90dca59611f782ae5179d3c23d0a129f429d6e6c5c6260d54ebf01a45b64"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-043-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "432e25790ebb50358ef4e2012dc7024c3ac2d1288c87129b1c446b818d1e62bf"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-043.json",
+      "bytes": 120937,
+      "sha256": "c06254e8427f39451175cdbf7168f6e2971cd4d5ee65346f14d436d24d83e19b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-044-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "781575387480d54dcfc20ff2319a9f30b4ef803b9f081a2ebaf7348dfbcca636"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-044-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "55889e6985a31768f1fb22c305cbe56fb1a97026934221425a3169b324d79e7d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-044.json",
+      "bytes": 120937,
+      "sha256": "8c646ffedd7676a34106345ae0007d2bf68c4ef07296019e3ce00e0fcc6d77d0"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-045-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "6aa3e102e0f2548e7e99b5ab147e3c32150e4fb52fe1f0975a571cb081c90902"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-045-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "567794b670e07541b6eedf6a91ca1489033fbaea9ba6f9239f8c20f73034be7c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-045.json",
+      "bytes": 120938,
+      "sha256": "00e71ab286d3c19296fe05ed276c7e5675066f23548441ee2005e03609ce4cbf"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-046-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "55a7be7dbb73d67034aa5169950610f5461d40c05add61e9a799b14fe4a1af5c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-046-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "370f2ede4cd0fcadf1508450a23d4347d9fc336f51f1f1e57a3ad03b29adbcd3"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-046.json",
+      "bytes": 120938,
+      "sha256": "373e00e98eabe394ee34003e2602c00d2dcfd7a55f7a11699c9ccaf3e8d3edaf"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-047-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "4282a4f284c3020654bde784ff41c538e8eeba9bb1406e44da19d15a0d540ca1"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-047-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "8df2ad93335cdcd8c6a7aaa71443094e4aa98415f15d94d805d10751e6122980"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-047.json",
+      "bytes": 119201,
+      "sha256": "31e60d31958155a106ee129b8a75be29af3a70e777e71a9bc5c2e30fecbd3157"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-048-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "e510cc323e50fb987824476b7b21f15bc1a7093d65b139de469ec072c7c399ef"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-048-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "1c4a92ca742353df9e58e41a672966714e6aa8d28810fd24696e9da49e5e02db"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-048.json",
+      "bytes": 122674,
+      "sha256": "d21490070eac0e75a87745c956227956f593495b28f8e2ffbafc4a2f5d01a80d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-049-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "317b8a3446cc32789789e0c74b2b1976a706b04da6dcc99d8daf320a8a8c04dc"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-049-transport-retirement-intent.json",
+      "bytes": 544,
+      "sha256": "fcf5e9029408bbcbcd5207b98c244e9dd0236f11bd483329d3d38e2138926b7b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-049.json",
+      "bytes": 120918,
+      "sha256": "a44b521f76b32fd4bbbef4433a0f415410434f770d7b7bb5976b2d2027cd8ed3"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-050-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "a2defafcb5c00eb0ae284050ac01a0797ef1b4a9152c6db35f987c285b5b4aea"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-050-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "a87d1646a2d22385b0ebe8dc9783eeaf9d223e1f7d1ba302730d12f4299b8687"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-050.json",
+      "bytes": 120931,
+      "sha256": "5d41c5264e0fc3f0bc4e5873fb10569ab8ccb852beeda853bc4199447ef87890"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-051-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "2aaf580b2145ada0e79ca796f324eaba831b5ebb8258c5984f0164a064d29c42"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-051-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "62e4600c2dcaa4d00f53fb1691e7fd6ceecff1360785ab9e89b8bac146009954"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-051.json",
+      "bytes": 120931,
+      "sha256": "f86bcdafd6d2591e1bf2c0c6e81694d7b4c5096e9f679b75b64cbca2a5ed5631"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-052-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "ccdbd2594d158813a25ca042bedd5c4699ea86c201fbac5c33c120d2d93c80e5"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-052-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "e328926cf1564b7e42a081a0149dac914627ae9c84dc283a621819c009d6974e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-052.json",
+      "bytes": 120931,
+      "sha256": "2bb3485244ccff4b9798d9fdd20f537396352a078a189cc646df5e8a944d0a73"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-053-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "67ad64a0c0222fc23589c56e6a56fe671dcb571ee31cbcd43b60afe3f2187511"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-053-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "2b9c77fe147a70b0568871ae42b6bfbc080f90f8fc0284fde837cc8f3ddb853e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-053.json",
+      "bytes": 120931,
+      "sha256": "165a92f87adb510e000fc02d6915dc3f7ac6f4c79452dd59c0840d285bd3f121"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-054-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "f14f9f9f61c80978e051354cacbe575c7773e267dc52066cf6f75af72ace021c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-054-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "3deef6c547eebe9cfd794f2e97d7ee1b27ca30469117337482ffe0e6c4dbb4b3"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-054.json",
+      "bytes": 120931,
+      "sha256": "e272fcdd631024851d20aecef60840188e42ca83df7c374324c48a1725b374fc"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-055-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "11bf73e0383a5c7c8764d25188271889d6191192f0c20b29f5d8be3440db3ffb"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-055-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "8365f6a6d0bbca59e8886a0a3031a9b41c1e1177649532eb138727bbfe825428"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-055.json",
+      "bytes": 120931,
+      "sha256": "9155c0e4089f212e2b874ee06505f88a3e1dbfd78ba0a5156f29bc3243b14841"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-056-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "31522ce685db54f66c4a6bc835c129772c9820b8ab7177096b026cb6445d7b15"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-056-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "00281dd78bc562bd5316c8d704eb58a0e26b02067d0d47db2adb5a2dc5cec763"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-056.json",
+      "bytes": 120931,
+      "sha256": "af5ef168819561853c30bdceac08e1e7a5a2fff2fa75accf9b11c8f2dc72be32"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-057-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "aa35ed0e7b73f1ac0d00c9df5dc78e8b074b6869fb9b294f4d102ad9200823ef"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-057-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "e0928c445e1453543358fb8c82392970a12b078b763031489fe6ae199948c32d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-057.json",
+      "bytes": 120931,
+      "sha256": "4e78e9b56c8926fdfc1973e2b8b214f505936fea89751cc945d989a817cdcc3b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-058-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "146bbbd7f14e74b4c016868461592aabc4c8fe70c3c5be0d1261e445772d306d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-058-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "a212e122ebb699259ad1c1d4dca69ff9e793cfa0393feda83f0247fa5a8efa19"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-058.json",
+      "bytes": 120931,
+      "sha256": "8f4229216d84f974cee9fddf1769a969ed220e011c63cf8c431713126716c01e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-059-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "31df78b9ed45586d1366b6d5d446aa0892d159e30e302d514eb6f9d74c96b9ac"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-059-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "9a96193f0ebc90f92745d0c8357b857b610ef2261668228bd87292d6ff9d01bb"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-059.json",
+      "bytes": 120931,
+      "sha256": "345483dfd00e1d7da7df8759daee8b1e2bc0ea488aeeeeef0fbd684c777e754c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-060-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "bec0d53567557414908b292bcba00a512b2e256683ace6236b30ae772ec5ad74"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-060-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "6e44493e91b43fb74a194c533056456fbab4371afcc9e97161af18991467edbd"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-060.json",
+      "bytes": 120931,
+      "sha256": "8c2a86da674b488c9be8063f2854b2808351eebf7e98a1dcd2cf556aaa69b183"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-061-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "940e64a8d944cca10e9907836bbb596362a20277d90b5a5a625e146a5783772d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-061-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "6e743c8d390eed45bebc36fe43c115e2a86b9c804a8e69f8f9aaca3e0dd3ce04"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-061.json",
+      "bytes": 120931,
+      "sha256": "f8ca199b47ff35b82362f8030ab9f771548f07fd90eae313e12ccfbdd4f8367c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-062-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "05c1ac880276a864c4dab7cf647bf6d04c8b73887fa3aa137f3951e4a897d78a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-062-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "6563fec20a1a0e2e92be01982fc3505714f7538c5dad428dbb7bcf7b2c088651"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-062.json",
+      "bytes": 120931,
+      "sha256": "0d8541f85f5ddeb06042857347dcb4a8e5071b919c1da83f42fef6316eaccee2"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-063-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "21c38e0655df296f1b12ee4ec17133562780a67ac6248deda578d7cd94b1c4fe"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-063-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "634b37df0ea46b04db71f275d3174e76b15a45204745b3f25a03d8b219894e19"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-063.json",
+      "bytes": 120931,
+      "sha256": "f50d8def3a97ff3b5c754ee914a7e4af9484aaf6e27cd9ed4393df0eeb71a590"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-064-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "f74b388bdb93b4fa347f02ad3acbdb51b77a8ad8e535fad54c106599e9d99416"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-064-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "48380638d5879345c12f3b7501b3a7ef32ac1fe9c64d49e63782e8a44f19b6be"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-064.json",
+      "bytes": 76282,
+      "sha256": "3eac365a69a396210be520020f5471f8481c23e8fe75bbcb87bc1e74b7681130"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-065-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "a99a5e59bab2f6ba6db541b64389c694950596d0a9cba180ca5c0c9a8626d1f8"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-065-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "58980825c07debce759e8991c41026ea91318007a70781ba811e454c7247b337"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-065.json",
+      "bytes": 165579,
+      "sha256": "e87c683e6553e4d2d7220dfabfd19393dd6682c9db02f9e3248ec63f0359ac87"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-066-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "5037057a639d00baa3dffc82962fe2493809a48b41fafa33bde44b116be11b06"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-066-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "4c2a041725805881ff51cf67f8d0e992eed0efb3a178faf2dfcad310108b232a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-066.json",
+      "bytes": 120931,
+      "sha256": "358c03c682ff72b16162efe99671f05fe348a8a6145480a9a82cf1dd7e81485e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-067-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "3fd7ca741b93810300de0e998742aefd6fb2d99b318c4a8696846cbef9fe27ec"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-067-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "23e7f25459165e2fbab18da4797045b89e6b9d48afe08c20a38bfd7c0c9fe2f2"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-067.json",
+      "bytes": 120931,
+      "sha256": "71043163bee8b34d8fdc536fd86f987d51ca73e4f8c5a384d6ebcf488928eea0"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-068-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "e0e36889d3ef96553d8f529697e84bae65ca19baf441e5f2b6974ed9c3c40d16"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-068-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "45b5e450224ded58da852a375602b20e8f789828204c44bdb32f723be9ca4f17"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-068.json",
+      "bytes": 120931,
+      "sha256": "ab71ec3eebd9362b35c6081d3b1cc524fc20e28d825acbf267a9de8d737422b6"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-069-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "c6da255d6c71a48982a6b3ae76fdbc5cd298e2454c424be2b03d8763b094b70d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-069-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "bbf3fa0d18b91f31ab09085af69b4168fefaa9d48e593be454f5d0a47b6a834a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-069.json",
+      "bytes": 120931,
+      "sha256": "8ce55b3f83ba1d1e1ae929bb1007b6c781ab38f6c5a450151b844f10e76fcf01"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-070-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "cb2f35f9fca12c8f6a7ea0a9eb98fca831ada34822a7cf0258c1fde39f09d54b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-070-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "d9daeae27b52d36f335d5e2c2a5b873c7e337dbe790cd503b9d7580e880816be"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-070.json",
+      "bytes": 120931,
+      "sha256": "50720eb6a90b73f80e054836b20f1d554731adfa12eddedcddc8de3706f133df"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-071-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "d31c81da1b63f025132d1f4a410c22eebe79d86134674c22c04dc08c77684411"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-071-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "0865e29b86968e4a11853cab0770bbdd730dbf9d13ab74463a66be0fcd06bfbb"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-071.json",
+      "bytes": 120931,
+      "sha256": "0d2fb4a59611387ca88c0b32c77155221681b3bad1632b0eee5c0f7c5b85cfe4"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-072-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "8ebdafb7a4c8042fd56d776f540c2db14c5f1fccf17e30a3e2a0eb5f8d785fc6"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-072-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "4431c3528f26701291503ca71e28a400821f3922c3e1b6c59017e101beeec3f2"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-072.json",
+      "bytes": 120931,
+      "sha256": "93ebb7f58f2b111819091120bc6c1ecd006985ebbcd6e03a1ca48324e034fc1f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-073-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "3d1de3f3bde124ef95d0c069d99730b5c08f194b13c1dd97947dc5be58e4c442"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-073-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "051e2a7853da24ea56fb08d0a812c25e94fed665b0303f7167fed423b64fd437"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-073.json",
+      "bytes": 84346,
+      "sha256": "d8cade7648b1b82cee77381b00a04ee54e2803400971c9e08c0100773140cac3"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-074-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "d386eddc218cb925959f0da0d0e51b20a4bda04c5272a33cab1832f1cb4432ba"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-074-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "f7e02487be356146bff26f351334f287408aae88ec88d1f76061579e5fe2c94f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-074.json",
+      "bytes": 157515,
+      "sha256": "cf48ffbe49ac62b547c7f92b9cf7b6a73284d7c07b9d83dcdaeedab08f1f4811"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-075-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "95ac406e68084d3b5bbff73c7895161a71bf67b4f3b7191646cd5419ddbb5a17"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-075-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "15f38079213bed8a93582de6ecb1075088925f429dc74c20cdf0ad0065aa271c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-075.json",
+      "bytes": 120931,
+      "sha256": "56d58408182abb249ae8b975c5fc60cf4d475950b44d649301cd7190f7e41fef"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-076-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "b7a230d380e50c2bc45e3ce0c7da928b4e0a6561f80bb0d0b07be803b9c07622"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-076-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "d710f1f505827485fb7e435604cced4b6cc0f9e2f6ed6620ad1cba36816be24a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-076.json",
+      "bytes": 120931,
+      "sha256": "494442ff12a2166850a91bc9d5bf2793a7c05573b08b921f8defc5b527440c20"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-077-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "d760477bf5a8790728c57ca74cb98b32b776aa8194831d0989c5a1220cc12ea8"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-077-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "0d23cec177086abaf12c6a26583793b547621ae8cff291c7c5e226e838517e52"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-077.json",
+      "bytes": 1437261,
+      "sha256": "1ba7424e1021918e4a5c2ce4e99a5bc29388bc1e3058103ece0967839fd3e840"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-078-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "b96a33334546f1434d3f9f668be1666f6fa21449007a01391c90465b265b6f4d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-078-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "ff48d9b61dd4cc43bdb4986f42ca5da46424b32e9573ffba7415dc6f8d50c610"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-078.json",
+      "bytes": 2513522,
+      "sha256": "789255a4bd2e47b2aa8d1903877ec0ccc27fb72f704506326a663b94b665fc45"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-079-transport-retirement-complete.json",
+      "bytes": 96,
+      "sha256": "17e07da2de48b4aca04c73d20bb265d27cff2e3e7ae79c182c45a18a08c09afa"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-079-transport-retirement-intent.json",
+      "bytes": 606,
+      "sha256": "20c755aa57d0ac0afd51c61f07cdd3bfcb3fbc90cfd1f40c878a17c7dcccac55"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-079.json",
+      "bytes": 2513811,
+      "sha256": "21ef0ca59c52d698752080059a866e4ac1e30d1eb21a0bb6b2404fd86109a0a9"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-080-transport-retirement-complete.json",
+      "bytes": 95,
+      "sha256": "e2d847d07f2d1e6c10077dc559486a1b587c4a6af27e9392b255bcb12407c6e4"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-080-transport-retirement-intent.json",
+      "bytes": 604,
+      "sha256": "359aa00f10fb2c3fd8f21ba591f1a7ef7340c856613ca0446e3abd446953038c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-080.json",
+      "bytes": 71732,
+      "sha256": "abc84ede1a573320058870e19f079c045db1a2c315b361ee1cb37c03b3939107"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-010-020-download-exit.json",
+      "bytes": 54,
+      "sha256": "258def2d4aac775ed2ba4d7d7870fc32683c4d2648b24b4aec741287b336a9d4"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-010-020-download-launch.json",
+      "bytes": 217,
+      "sha256": "84d29410276e1c507f928a408d1bffae2322f78cf61d230de06bff9761ad75ff"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-010-020-download.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-010-020-download.stdout.log",
+      "bytes": 1475,
+      "sha256": "a9667ae0441898dd0ac7a8c8881074b1bf60a036721c107a4538da65295742a4"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-010-020-restore-exit.json",
+      "bytes": 55,
+      "sha256": "300f8501e359208936da964958e273159904c2ecd027ea20573f496dc2e4ca7f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-010-020-restore-launch.json",
+      "bytes": 216,
+      "sha256": "22c21e50973d0785400a5b0f8dfbd6816576903c52497f2ec31129c98bb7dcfc"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-010-020-restore.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-010-020-restore.stdout.log",
+      "bytes": 1390,
+      "sha256": "e8a9adc09bafc438b199629ec8171f27e4a36fc29c8c138b0f292eda990faa7a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-020-030-download-exit.json",
+      "bytes": 55,
+      "sha256": "5d6fe5a74bbd493312d48cf06e3246cd1d815573dd3afe947e5ea9ecaeafd019"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-020-030-download-launch.json",
+      "bytes": 217,
+      "sha256": "a551ec73a238d96d26b2d316c0986999bcada1ed4c9962a97af797a2c382e244"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-020-030-download.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-020-030-download.stdout.log",
+      "bytes": 1475,
+      "sha256": "0103457a309ec2143fd6fb21571666ef4546b39bd02edec814bec908622343e0"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-020-030-restore-exit.json",
+      "bytes": 55,
+      "sha256": "2f1d27b500edab321c6ad15b3556786711fce9c972462933fabb09445a3d2457"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-020-030-restore-launch.json",
+      "bytes": 216,
+      "sha256": "f1271ba3bd580a09a2015a130df5c4bd91a0adf08bdc9b95a753ca0b0ac353b2"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-020-030-restore.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-020-030-restore.stdout.log",
+      "bytes": 1380,
+      "sha256": "ab7213839742ce4861ab38efa8c23fc0e7b767891b4bfede97c8b8f63c83c029"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-030-040-download-exit.json",
+      "bytes": 55,
+      "sha256": "04f37a5c857798a6fb553a99f2ef9c7913cf241ba8ee0c1b80c6a8372f746e45"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-030-040-download-launch.json",
+      "bytes": 216,
+      "sha256": "d4b77478042720bbd517cedaa2c12f9cdb4fca6ea4af7684d8841f2321a60793"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-030-040-download.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-030-040-download.stdout.log",
+      "bytes": 1475,
+      "sha256": "d6bdf57887b018e6b5aff9a945a6b8dadfd39487d51758c5ee8301fd453ad890"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-030-040-restore-exit.json",
+      "bytes": 56,
+      "sha256": "f12e4ee3e8b5249495088593b38231f8d28ede0b246b1cf9e2cb8570d6d95ec3"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-030-040-restore-launch.json",
+      "bytes": 216,
+      "sha256": "01785c5633609493e47996b57e44c3d235846394ce44aa1acc2688c2c1fcfdf8"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-030-040-restore.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-030-040-restore.stdout.log",
+      "bytes": 1378,
+      "sha256": "80ecd98b1becc1b86d4a6181a090326c5bbd8638dd7eea86d8689cd8e5839b74"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-040-050-download-exit.json",
+      "bytes": 55,
+      "sha256": "2bd52970ba52e98de4be0e367f62ee56c97de824da1b9c7d841d29a75e3e937e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-040-050-download-launch.json",
+      "bytes": 216,
+      "sha256": "f91090c9f495f36616984b395859f247ca4bc5455daf7cb39c4f2eb081511a5d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-040-050-download.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-040-050-download.stdout.log",
+      "bytes": 1475,
+      "sha256": "c1ab641feceabeaee07ca076c31350f4d5e05d7715c0a7d05b253b93b4ed9489"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-040-050-restore-exit.json",
+      "bytes": 56,
+      "sha256": "3dcbb244d3ee2efc6413ab423954211c468526adeab1f44a9857065878cf4dec"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-040-050-restore-launch.json",
+      "bytes": 216,
+      "sha256": "6ad5a719c9c05fe5c8cd340b690a1d665e844d97e078e8e5a14ea9db26a79dff"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-040-050-restore.stderr.log",
+      "bytes": 747,
+      "sha256": "fa5b5f9d59b00c52578ab336a2ab05ead9ae98cf4639af2ead9e4ccd139cf171"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-040-050-restore.stdout.log",
+      "bytes": 1232,
+      "sha256": "becfd6cf706d1a6c1eed48492883068fae9cab9b6a27b0c3b517f7c3f249a283"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-050-060-download-exit.json",
+      "bytes": 55,
+      "sha256": "4fc4ac80b9cbf45f46754227c120deaa98d64e49e519fcc8aa4e4452abddd3d3"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-050-060-download-launch.json",
+      "bytes": 217,
+      "sha256": "043a8508730ce51cd37d95b1c286d732fb620ec138b4514f7aaade5e89a5964a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-050-060-download.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-050-060-download.stdout.log",
+      "bytes": 1475,
+      "sha256": "b655e2c7144a2a8e1ecc78d97bef9ac28416968a772f47dc11d9295bef86fc2d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-050-060-restore-exit.json",
+      "bytes": 56,
+      "sha256": "7916c2cd5b7bbb758ca5163d19a1f618c7d6d94c86f72ad603f3b38c48a54b7a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-050-060-restore-launch.json",
+      "bytes": 220,
+      "sha256": "a3749de50a8078913415e4f8747474c9566621722e7c41e6267e7873c87c5bce"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-050-060-restore.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-050-060-restore.stdout.log",
+      "bytes": 1380,
+      "sha256": "727e0a10471bb998e3c54f33437ad190987773acb6562bad5681e438ed11fafb"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-060-070-download-exit.json",
+      "bytes": 55,
+      "sha256": "9b38b468107092edcf40e98f64044eac681258c8a1ea87743f45438fa233d70d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-060-070-download-launch.json",
+      "bytes": 217,
+      "sha256": "ce7748fda5fa1ba8402f9b47285323a46abccadb23588a2b68649f2a3015739c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-060-070-download.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-060-070-download.stdout.log",
+      "bytes": 1475,
+      "sha256": "03330edc9b454d02593ff07355fc136f4662346c0fa3fbb796ae90924d67b1be"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-060-070-restore-exit.json",
+      "bytes": 56,
+      "sha256": "2f386314556c6629211eda42db45cdb000e763c0acc25b85c1477ce966a92686"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-060-070-restore-launch.json",
+      "bytes": 220,
+      "sha256": "fc12ec39a446a5057b0e81f8c0aae75fce2a9cee58cb21c46c2c0551a9d74166"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-060-070-restore.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-060-070-restore.stdout.log",
+      "bytes": 1379,
+      "sha256": "df1fcca49605d60c1ea8ad015b77fb55e5da6fbe9ef8dd28407d28156f07c32e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-070-080-download-exit.json",
+      "bytes": 55,
+      "sha256": "41e3090797a3d8e62071374efc4ddedb1b0560c2f30cb7087e0eca35ee998252"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-070-080-download-launch.json",
+      "bytes": 216,
+      "sha256": "73e8c766531950784a975fdf4fcbafc0d4b005acf41b66b8b888325ca7491f26"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-070-080-download.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-070-080-download.stdout.log",
+      "bytes": 1475,
+      "sha256": "0ba55dac6b5b3e29117f35a4cf3aabc58f84203d107faae3edcce13a114f108c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-070-080-restore-exit.json",
+      "bytes": 56,
+      "sha256": "cdddf86e1e13e1863fd3394ecd4f04d145b50fa1b3653e2cca0a9eeba2419136"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-070-080-restore-launch.json",
+      "bytes": 219,
+      "sha256": "7770f356558d7c1c221aa8c01fedd3f3aca30894254a1a4bd28fe7e7f503c855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-070-080-restore.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-070-080-restore.stdout.log",
+      "bytes": 1382,
+      "sha256": "f8757626547b38bf1b13f4d795aa9c5a3bfde2d012798023ca1f61c262efa69a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-080-081-download-exit.json",
+      "bytes": 56,
+      "sha256": "9d2b84300f037680b67b174aa3a19c91bdb073ebab9e54fcf41edd6f44e76c93"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-080-081-download-launch.json",
+      "bytes": 217,
+      "sha256": "0dca10c743fcb4afeeadb53e6bf1a3529782fc05ea4f93fcaf64e931bd2a1e8e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-080-081-download.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-080-081-download.stdout.log",
+      "bytes": 224,
+      "sha256": "c184f575b3b61f1f52d012d256fdd6356b5941f9f8617f2f4823511fcf038156"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-080-081-restore-exit.json",
+      "bytes": 56,
+      "sha256": "132589054f0083b1ad840973468a0116fca8df4e8dad3452261ea4a088428409"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-080-081-restore-launch.json",
+      "bytes": 220,
+      "sha256": "cc2d9c9d4285d8a8cf6d560cdd920f13f89ac8b87bccf9425ce57f1ba4d0ad1f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-080-081-restore.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-batch-080-081-restore.stdout.log",
+      "bytes": 136,
+      "sha256": "ec5ef04a8fd44ffb040bf11ef00eadfb5d9808951a07779e97a67978e9efbda7"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-download-000-010.json",
+      "bytes": 1555,
+      "sha256": "bdcfb6068a3dd673b84dc105f06bdd43ad457cf93860f1abf13ec8e014ba2617"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-download-010-020.json",
+      "bytes": 1555,
+      "sha256": "67bd047d1ce5da635291bfd4566da9f289824e8ac18247d1eec5030f313ba88b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-download-020-030.json",
+      "bytes": 1555,
+      "sha256": "ba1c9fe31bf2844337b47d180269978d231e16792a20d19aec6e9c931f554e42"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-download-030-040.json",
+      "bytes": 1555,
+      "sha256": "910d459cc514b856d2cb9142a10401b2adcf6549693742cdea124da5da1a34d1"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-download-040-050.json",
+      "bytes": 1555,
+      "sha256": "d636dd46e46ea34e6227f68527e079edfb416e1014e95ebfc6ccef7c8effed7a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-download-050-060.json",
+      "bytes": 1555,
+      "sha256": "27f0c6d9df38c9e3d202584b07e78096a74aab750f7be5b9cdf4beca042049a9"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-download-060-070.json",
+      "bytes": 1555,
+      "sha256": "4eaf4f3a0ab955810ac92763da0e3944ac90dfee4d83251522f118abb7058ea1"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-download-070-080.json",
+      "bytes": 1555,
+      "sha256": "5951a2e809bc08ca913c9a1db0e056d397611e3697924869cda1361419483770"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-download-080-081.json",
+      "bytes": 286,
+      "sha256": "a0e9f0f956b8dd2bca48c5068d08b85be1daea6543e439d8c826bd219f32d896"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/raw-search.json",
+      "bytes": 200583,
+      "sha256": "c4c8f3a4b6e1893970db648636d3549022e54f7748d1912b9bd91c51fa0cdf84"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/recovery-scope-notes.json",
+      "bytes": 1920,
+      "sha256": "d8786aff3a6875a7536dd366fe22c4e6ac85a7d7c84ca5721d8d4b4d512b651a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/remaining-raw-restoration-review.json",
+      "bytes": 690,
+      "sha256": "8475faf1c5eaf8e703fbf1241338ab6c6f5373c9e425912814a778f166b8eba2"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-000-complete.json",
+      "bytes": 512,
+      "sha256": "e71d6c820c669a36c39467e0e263722e5c4bfd8ff4ae9547b9aef849e16f1494"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-000-intent.json",
+      "bytes": 471,
+      "sha256": "5f7d8b788e94da2f0f551fde3e57a520f66fe4fbb33901172765707ce550bfe4"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-001-complete.json",
+      "bytes": 520,
+      "sha256": "1877ae7792fe9cf2c8511136728887922b386fa22d313ff086eed948dd09bbab"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-001-intent.json",
+      "bytes": 479,
+      "sha256": "ff20bc43b4d1c781ca2b3b3c7049168c686dba9deb9a78e05f6e7e77c17a692c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-002-complete.json",
+      "bytes": 520,
+      "sha256": "e49fc0b9844ded32c4e2fe9e1d81696189cc5050ff105154cd74eba78c669c2d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-002-intent.json",
+      "bytes": 479,
+      "sha256": "46468672116ba14fee35c8007e5d93b0df202fd91014e64e5bf04aa4d072eaa4"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-003-complete.json",
+      "bytes": 520,
+      "sha256": "440fec3def142caba5b186700e9a83f45a54cbd11fc9dcb34b5c9341a0c530b6"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-003-intent.json",
+      "bytes": 479,
+      "sha256": "3e2ad40210a95c99971dfba108ec7487ff854270780e3938a9ce42c9facce719"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-004-complete.json",
+      "bytes": 471,
+      "sha256": "01f7a55b575157bc6e87b0aae08d9377402267dba9f1fc273938955cd491c691"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-004-intent.json",
+      "bytes": 430,
+      "sha256": "9cf400742f5039b8795f78d90163d86f21418ca63110774b434dbab60dead9db"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-005-complete.json",
+      "bytes": 528,
+      "sha256": "4bbe09765207dc3c9905fa99ffb1ade599db76be672f0033cf1d6d86e6a04f81"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-005-intent.json",
+      "bytes": 487,
+      "sha256": "661ce535df14188e1285e7b6c00f91a5e2d8dc064e7ecb430b2727bc80a6d6f7"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-006-complete.json",
+      "bytes": 464,
+      "sha256": "b30f20beb057e9ad457ba4778c5daa701f480ef0b28a5c71d2788077dae58281"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-006-intent.json",
+      "bytes": 423,
+      "sha256": "4765bf9f20c3af0197ec1efcfaa3aabdc090d26b472e251cb9d916acba4b8701"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-007-complete.json",
+      "bytes": 512,
+      "sha256": "336d9c2a40020cfdcf7f506d9119e61d07ad43573d78b88f03d34f1d524cf2d1"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-007-intent.json",
+      "bytes": 471,
+      "sha256": "ab134609d95f5c113d874f1f4364491bd423d4a4ccf4ccd5a30edd7b26f5c7a2"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-008-complete.json",
+      "bytes": 505,
+      "sha256": "bc64d9a1bdba5edfc1b39b28bd33e45a239c9ded3db3c8dbdbde697bd1bc5736"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-008-intent.json",
+      "bytes": 464,
+      "sha256": "d26a118e6a4607c202db60265cdbdd9a68557cf3592099543acef6f75afc0bff"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-009-complete.json",
+      "bytes": 520,
+      "sha256": "01020f5b2383f97fa2b70e8966cd43fae8e64bdd90f18c0d4bf88b69dd5d16d9"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-009-intent.json",
+      "bytes": 479,
+      "sha256": "274dbe270f2ccb0da5cfd2aa72e7903188093d67f3ccacc9ab52118ccbea5b45"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-010-complete.json",
+      "bytes": 520,
+      "sha256": "8c61a97319e603c783a9c7cbd3169d1cdcd913fb809ac416ada84440a5f6ed9f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-010-intent.json",
+      "bytes": 479,
+      "sha256": "407a3cd37904165dfee5be04ce0c88028577f07a564a18bfc4eb9e39b0c0b782"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-011-complete.json",
+      "bytes": 528,
+      "sha256": "d838a4411de4f616d5c6dcaaf433a7f8d9147f2386ed67dacdb8b5ee98a9db8f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-011-intent.json",
+      "bytes": 487,
+      "sha256": "48ab70212519d3c713b2c8d72942045339a1386a30748b8344ed6a65012beb86"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-012-complete.json",
+      "bytes": 479,
+      "sha256": "6d47df0e4ee9d3f4c73ff5af0ed930c36a78247177cf0fb8a203f3d6221dc627"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-012-intent.json",
+      "bytes": 438,
+      "sha256": "bb9a0cbec3e363a6860871ccb86caa83e9ca0441702c50e46be20c9c57a7ca97"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-013-complete.json",
+      "bytes": 464,
+      "sha256": "621175ee27a8396de9596fd6f1d292f274a785a4d96008d731a1cf2ec83c661d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-013-intent.json",
+      "bytes": 423,
+      "sha256": "f5c3362def5c2c4e333834daa5b254929b56795a8e0829205bcb6c615b711fea"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-014-complete.json",
+      "bytes": 519,
+      "sha256": "bfea116d19aeb570d6289459baf12e37ce3b38299f81b71b80a49808688f804e"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-014-intent.json",
+      "bytes": 478,
+      "sha256": "9bfee0ea92960391aef27ae6d8827b9fdc274444a69a668e98f51e5ad7a06c4b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-015-complete.json",
+      "bytes": 505,
+      "sha256": "d2f254b545b6465c9c0649d699d67ccd7fe2395bffe0c6e95b9052ac766f8672"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-015-intent.json",
+      "bytes": 464,
+      "sha256": "c34a1b45c1c311141a91703c634c0098896914ee799a4eac7777cb5621fe2273"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-016-complete.json",
+      "bytes": 479,
+      "sha256": "19039640252bc8ee9e7294a5db5ca8ce8e8e63e31d2dee7d4ddc61bbaf142924"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-016-intent.json",
+      "bytes": 438,
+      "sha256": "c0d656e0a61c3b5c3a83fa89c1b2cac4171f5a82a270cbdbfeffccf5c80b0c1d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-017-complete.json",
+      "bytes": 528,
+      "sha256": "05be511eb3e4f66d349c8934cac1beb7c3f1a56cca3122f9206135d262207d11"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-017-intent.json",
+      "bytes": 487,
+      "sha256": "7f3e1ebfdab6efdd19d5dd1bea726c991fda0c2858a49c1898e5db6fe8d47635"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-018-complete.json",
+      "bytes": 520,
+      "sha256": "9ee9ce55e7a1e6748286d84397270255b7c7c3c0e5bb8c8e45c9a4f2a16dad3f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-018-intent.json",
+      "bytes": 479,
+      "sha256": "c1e95448f70d34008e70846d3d831aa8c3c5c0abe33198dfd4e9c7f095fd8f3c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-019-complete.json",
+      "bytes": 513,
+      "sha256": "1b9b6726a5ce1d75ad9aeaa7084951c8a9a82237eb89dae4cb836203afaa4426"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-019-intent.json",
+      "bytes": 472,
+      "sha256": "7544cb32ea24aacc1b41510552d8c9cf79b560637cd74955253fb36dc0c0ff88"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-020-complete.json",
+      "bytes": 463,
+      "sha256": "5443c46dbd47662735b9336c3e23d52a9f7d9fc6bb67f0ae13d9be74cc3b49e9"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-020-intent.json",
+      "bytes": 422,
+      "sha256": "8679fbe9ea3f66735a86077d3e48f77b6e8901ef0f5bc163e62374bcfd963876"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-021-complete.json",
+      "bytes": 520,
+      "sha256": "1c60742fea22cc661e985acb2dc5e9254184c33fe647a6805f875fee99311c86"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-021-intent.json",
+      "bytes": 479,
+      "sha256": "56df7b324a5f79fdae58829447aa3ad2dc468f049e6ab6e0caf3b016c9721edb"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-022-complete.json",
+      "bytes": 513,
+      "sha256": "a66fd908e0707a068669ba254959c24d539a6a6dd4f9cd60836ffe11b135ec6f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-022-intent.json",
+      "bytes": 472,
+      "sha256": "bf5dcdf107312f57f492938fc23f25440aa35567f72ebcb9bde2333cbfb38a77"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-023-complete.json",
+      "bytes": 478,
+      "sha256": "ed1fdc5ea138968ec88d2770abd2339d371ca71c37ef7d9e5a4738ddd510318d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-023-intent.json",
+      "bytes": 437,
+      "sha256": "032cfb851acf5ded71afc51d602443202d324009b2c64e447b3c968c8a6e951c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-024-complete.json",
+      "bytes": 479,
+      "sha256": "d3cef83d39d872241a23011fb0319645e0a9affb30909cd38f6b188d9a4349ce"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-024-intent.json",
+      "bytes": 438,
+      "sha256": "d7aacc29b1439d671bc55b21c8aa8b4123ace61bcba36abe49fb8bb2da03389a"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-025-complete.json",
+      "bytes": 513,
+      "sha256": "9a8990ffc3f88a2292197637e1f4fdeb00f0770c777ccefdbff75fcba1030758"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-025-intent.json",
+      "bytes": 472,
+      "sha256": "8737dfeae4daf2a079782ee385efbd3eed7116c3869ee2423700db45978930c2"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-026-complete.json",
+      "bytes": 519,
+      "sha256": "d23528cb19192ab7d120efa1a51384f541b4ff1fe43692228d417ce62f74f7a4"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-026-intent.json",
+      "bytes": 478,
+      "sha256": "62c5c50e8d94c4ef436454bbf4df5721e613e4be035fc49bddd619eaa09e3966"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-027-complete.json",
+      "bytes": 505,
+      "sha256": "a202fa9d661264b77170cd01e50855efba40c10d2d3e94997bee278dee18bf72"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-027-intent.json",
+      "bytes": 464,
+      "sha256": "bd85d61c7f3ab2c30d8fb1da793d1123382cc3951f6fa120a07a3ee92dc62baf"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-028-complete.json",
+      "bytes": 527,
+      "sha256": "4ce1db87ecc5b1d7828dfde98ed32b92b0b385147877cd4f0783fedf73b60258"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-028-intent.json",
+      "bytes": 486,
+      "sha256": "fb1a4ab60c5c565431f45cf9452b00b268d94da710e33797653f461583d871cf"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-029-complete.json",
+      "bytes": 505,
+      "sha256": "761c24fafcc5b60449b7c319c80c47a0d38ebb230bacb5a6d35f6897067760dc"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-029-intent.json",
+      "bytes": 464,
+      "sha256": "8921ae255e7cb24bdc23c850798a87c7ceb25f638f9c4b225fb0613a4cfec03f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-030-complete.json",
+      "bytes": 505,
+      "sha256": "3c0284016cfd700921165f0882cac9f43d9973d7f4cc02e634900ee211fb9b45"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-030-intent.json",
+      "bytes": 464,
+      "sha256": "afdbeb4ec3dd515a1fd7de26a52acc9f328c4ca333d091721ac22934745b15ac"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-031-complete.json",
+      "bytes": 464,
+      "sha256": "1d7137c6f06770b49f8d491ec69a744add1ebde95c4ef7a6a38214c43cd91c2b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-031-intent.json",
+      "bytes": 423,
+      "sha256": "fc59142bfccd7f859b0201b9708212d09c5922f7332531cb2f256c7f229defd9"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-032-complete.json",
+      "bytes": 522,
+      "sha256": "bf56e1165d009ae151c194e048c2054893d381ca95a31451e080cd857ca063a8"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/residue-032-intent.json",
+      "bytes": 481,
+      "sha256": "b14c7f3bea8b1ae34c61a5f9b04c5a3eeca5fd1099fc8c71b8c16f6cfa12726d"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/resume-r2-verification.json",
+      "bytes": 469,
+      "sha256": "246e3a43232310394de496b797a59d3383a42853cd9f165e2b8991912aa08f31"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/resume-v3-verification.json",
+      "bytes": 481,
+      "sha256": "98e644e410b9e95d85c249f2b34f91519a8d908a93d2cfc0645cad0de62daa18"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/spill-journal-after-remaining-restoration.json",
+      "bytes": 687,
+      "sha256": "1f7ca02af5decf1959f55a71b43730113a7bec660df88bdd49b08e2e651105b6"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/spill-state-interference-observations.json",
+      "bytes": 1985,
+      "sha256": "75b8a7c6891b40683e162477a4b05cf35f1381661374f0e2ed10573cfe6b591b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/evidence/verified-restart.json",
+      "bytes": 31796,
+      "sha256": "32306dfdf83a954d290585361e680b1ce5ce7e1e230c2a51552942f3fc1ab93c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/build_restart_report.py",
+      "bytes": 7013,
+      "sha256": "fc545a5ae8057c17b83ba07b3f130c61f4c3c3b8ae4a0548d4d82879f707dca9"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/close_raw49_postcondition.py",
+      "bytes": 4164,
+      "sha256": "f98e19f29cdb7d428a5bef33750ae727e8be9cc8ef121b6dd97bb7e46b0ca3f0"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/download_raw_batch.py",
+      "bytes": 1108,
+      "sha256": "a48549601d81775c1a0a920abf7382e8a3c5ae3fa3a92d11175dc8df56ee90cc"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/final_recovery_audit.py",
+      "bytes": 6878,
+      "sha256": "ee060e77f6f5405b4f650c6f26808458cce26b38c4c990f049ad0bba57bfad66"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/publish_provenance.py",
+      "bytes": 2782,
+      "sha256": "eb36d657947405443bbb8b2525e3095db1c1902a5a1e63a1937d45d7e161979f"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/relocate_download_residues.py",
+      "bytes": 2504,
+      "sha256": "3258516d3ceb340b31e7c6d307a0f97ffc98253e2505996121399af6204cd549"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/restore_inputs.py",
+      "bytes": 4685,
+      "sha256": "2ebcac918a798aa6cecf26f49ed226694183471c55d92fcee8bb4677d956feb5"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/restore_prefix_tree.py",
+      "bytes": 3148,
+      "sha256": "a7fe5c6a072fc3c90f053befac1378725814ec2c706df9304a61228508b95e17"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/restore_raw_batch.py",
+      "bytes": 5698,
+      "sha256": "1e7541fc6739c98822edea72d56648037351fdca2cf68c21777c31837c513b05"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/restore_raw_remaining.py",
+      "bytes": 5859,
+      "sha256": "c4db126257da2b219077f8bf3f27d8e7cba6311c51bd8dbfad6cc0eecc4694cc"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/retire_checkpoint_downloads.py",
+      "bytes": 1932,
+      "sha256": "a14618fe00dba5cae18633f6225b615faf58270fa79d23f34b60a16c5802b4d3"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/run_raw_recovery.py",
+      "bytes": 1303,
+      "sha256": "b4ace2427fbb9654d5b41541c1c268d68a63dbbb64fdcea65f197f650655debb"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/run_raw_remaining.py",
+      "bytes": 1307,
+      "sha256": "122cd1f8f87dbe2422c696c82bd0a6701de86a0ca1653d84a8d4f6cb92378bf1"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/verify_bundles.py",
+      "bytes": 3012,
+      "sha256": "fd939549edcf15a1409681b8366cb24aa2825cc22822455a7d9ae5a9d7826afd"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/verify_checkpoint_tree.py",
+      "bytes": 2693,
+      "sha256": "8e85a7fb95b2b5cf0d6ae973ac25dce0d2bac528f7ae3c945bf0da2ded739084"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/verify_prefix.py",
+      "bytes": 3177,
+      "sha256": "ee690a4f221b557fc9f25647ac0cc54bdc694b14a4c9306a771b7107e1fb04a5"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/recovery-code/recover_provenance.R",
+      "bytes": 1664,
+      "sha256": "76d462c52fc0a25f30fec9c91c617a57a147ed907064a81f2576925f87a32336"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/reconstructed-provenance/reconstruction.json",
+      "bytes": 318,
+      "sha256": "db5a341d5f42ed02f538cd78d569b9787d2b1b28be94499a66273bbef8ef3e55"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/reconstructed-provenance/recovery-provenance.json",
+      "bytes": 6073492,
+      "sha256": "599aa268dc4a0e82a39366effac7bb21e6d0c6cbc8686c048761b5d1f1c8331b"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/saved-restart-reference/SNAPSHOT-MANIFEST.json",
+      "bytes": 422343,
+      "sha256": "8faed4263b878b0c268f5118ecb962343222d21e5d3d727f76d093ba2283958c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/saved-restart-reference/RAW-DEPENDENCIES.csv",
+      "bytes": 39197450,
+      "sha256": "7defd41dfa5e773f7cada53ce1e48840b20f665b70371e8484a7caed8b3dfd1c"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/saved-restart-reference/MEMBERS-SHA256.csv",
+      "bytes": 1951988,
+      "sha256": "3776a24dc21195b1d47cd9532cafdbc31d6389733e97bd4d986e1327fe1e75f0"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/saved-restart-reference/current-workspace/recovery/restore-plan.json",
+      "bytes": 24121,
+      "sha256": "983585d3f9b6309fe16166fdc8b82c765b7c276549d1f247d41bee842f126795"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/restored-operational-state/spill-events.jsonl",
+      "bytes": 1538472,
+      "sha256": "50c20659e8b92af7a5bf00098dc827782a112cde6908c58f3fff647f9c849d99"
+    },
+    {
+      "path": "recovered/driftmapR-S07-R1-Restart-004/MEMBERS-SHA256.csv",
+      "bytes": 53437,
+      "sha256": "aa12db9cbe56a24bb735f8ef9e35680fb458a32ca8dafe31b9fdd2157f1413b9"
+    }
+  ],
+  "standalone_report_identical": true,
+  "scientific_execution": false
+}

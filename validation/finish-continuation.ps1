@@ -6,12 +6,12 @@ $ops = '/workspace/scratch/837e4400dd1d/study07-r1-operations'
 $evidence = Join-Path $PSScriptRoot '2026-10-21/continuation'
 New-Item -ItemType Directory -Force -Path $evidence | Out-Null
 function Docker([string[]]$Arguments) {
-    $result = & docker @Arguments
+    $result = & docker.exe @Arguments
     if ($LASTEXITCODE -ne 0) { throw "Docker failed: $Arguments" }
     return $result
 }
 function Git([string[]]$Arguments) {
-    $result = & git -c "safe.directory=$($repo.Replace('\','/'))" -C $repo @Arguments
+    $result = & git.exe -c "safe.directory=$($repo.Replace('\','/'))" -C $repo @Arguments
     if ($LASTEXITCODE -ne 0) { throw "Git failed: $Arguments" }
     return $result
 }

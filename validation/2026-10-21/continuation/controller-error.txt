@@ -1,0 +1,9 @@
+The script failed due to call depth overflow.
+At C:\Users\John\.codex\.chatgpt-projects\g-p-6aa2cea5f2ac819189bce45f81364460\driftmapR-git\validation\finish-continua
+tion.ps1:9 char:5
++     $result = & docker @Arguments
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (0:Int32) [], RuntimeException
+    + FullyQualifiedErrorId : CallDepthOverflow
+ 
+

@@ -328,3 +328,5 @@ The checkpoint361 incremental passed CRC and SHA256 verification for all 42,659 
 Restart-004 verified: all 9,344 missing files map by path and size to the preserved live002 manifest. Payload still unavailable. Retrieve driftmapR-S07-R1-live-state-20260921-002.zip (214,782,459 bytes; SHA256 82da3464aab96d65f7ec208532a6c922b17a1d9d26a0356bb6ae6a663fbe51ed). All 486 members passed verification; standalone report equals embedded report. See qa/restart004-verification.json and qa/remaining-raw-live002-map.csv. Coverage remains 249,122/258,466. No tests or simulations executed.
 
 Restore chain: full raw-045-047 base, raw-048-080 incremental, checkpoint361 incremental, then Restart004 incremental. Each layer requires all predecessors.
+
+Restart004 incremental verified: 706 manifest files, 118,418,889 bytes, CRC and SHA256 passed. Receipt: provenance/restart004-incremental-receipt.json. Construction-time status inside the immutable ZIP precedes this external completion record.

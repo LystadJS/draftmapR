@@ -41,7 +41,7 @@ def guarded_capacity():
 s=m.ResumeSupervisor(ops,run,[root/'r-runtime/bin/Rscript-local',driver,*args],
     guarded_capacity,code_hashes=hashes,minimum_disk_bytes=3*m.GIB,interval=5,
     disk_free=lambda:min(shutil.disk_usage('/lower').free,shutil.disk_usage(run).free),
-    phase_file=ops/'resumable-collection-state/driver-status.json')
+    phase_file=ops/'resumable-collection-state/driver-status.json' if mode=='collect' else None)
 def pause(number,frame):s.external_pause_requested='Received signal '+str(number)
 signal.signal(signal.SIGTERM,pause);signal.signal(signal.SIGINT,pause)
 sys.exit(s.run_to_terminal())

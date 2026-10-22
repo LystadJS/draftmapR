@@ -35,8 +35,8 @@ try {
     if ($state.status -ne 'exited_successfully') { throw "Validation failed: $($state.status), exit $($state.exit_code)" }
     $receipt = (Docker @('exec',$container,'cat',"$ops/partial-validation-20261021.json")) -join "`n" | ConvertFrom-Json
     if ($receipt.status -ne 'passed' -or $receipt.committed_panels -ne 3916) { throw 'Invalid partial validation receipt' }
-    Docker @('cp',"${container}:$ops/partial-validation-20261021.json",(Join-Path $evidence 'partial-validation.json')) | Out-Host
-    Docker @('cp',"${container}:$($state.log)",(Join-Path $evidence 'partial-validation.log')) | Out-Host
+    Docker @('exec',$container,'cat',"$ops/partial-validation-20261021.json") | Set-Content -Encoding UTF8 (Join-Path $evidence 'partial-validation.json')
+    Docker @('exec',$container,'cat',$state.log) | Set-Content -Encoding UTF8 (Join-Path $evidence 'partial-validation.log')
     $state | ConvertTo-Json -Depth 20 | Set-Content (Join-Path $evidence 'partial-process.json')
     Save-Step 'Validate recovered partial panel 3916 against frozen serialization'
     Docker @('exec','-d',$container,'sh','-c','PYTHONDONTWRITEBYTECODE=1 python3 /validation/guard-continuation.py collect > /upper/collection-supervisor.log 2>&1') | Out-Host

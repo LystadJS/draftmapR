@@ -1,0 +1,47 @@
+{
+  "status": "running",
+  "child_state": "running",
+  "run_kind": "operational_serialization_resume",
+  "command": [
+    "/workspace/scratch/837e4400dd1d/r-runtime/bin/Rscript-local",
+    "/validation/validate-partial.R"
+  ],
+  "supervisor_token": "29ec532e5aa04497826c6b695be89084",
+  "pid": 2071,
+  "supervisor_pid": 2070,
+  "started_at_unix": 1792645688.6136944,
+  "updated_at_unix": 1792679713.8956616,
+  "elapsed_seconds": 34025.281967401505,
+  "log": "/workspace/scratch/837e4400dd1d/study07-r1-operations/serialization-resume-29ec532e5aa04497826c6b695be89084.log",
+  "adapter_phase": {
+    "phase": "serialization_or_audit"
+  },
+  "code_hashes": {
+    "/validation/validate-partial.R": "6e33634ff97b240ab3814efd55410478600581935483ca210a8ea1b6829a9bb3",
+    "/validation/guard-continuation.py": "2009e834bce45997679aa81c87b09ffd5c9fa0414f8a8b7f0813f05f0d5f2fc9",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/execute-resume.py": "1be5d46f99b2e29d35a4a04cb720a93b9b217e9a02e503f6a36836520bf83ed9",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collect-prefix-005.R": "7fc3a7e0bf49e6064e63a5f50f45b0d1b4419d2272a02782b822a653da67c4a9",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collect.R": "a0e0871b2349d2a19d6556d9d8654f4010975a66061d84e4d7ec75fbf3119bf0"
+  },
+  "storage": {
+    "limit_bytes": 12884901888,
+    "anon_bytes": 1281957888,
+    "shmem_bytes": 0,
+    "nonreclaimable_kernel_bytes": 3427896,
+    "pinned_bytes": 1285385784,
+    "proposed_bytes": 0,
+    "audit_headroom_bytes": 3221225472,
+    "available_after_copy_bytes": 11599516104,
+    "host_free_bytes": 4752494592,
+    "output_free_bytes": 1021668278272
+  },
+  "engineering": false,
+  "planned_panels": 6480,
+  "scientific_completion_claimed": false,
+  "meaning": "External serialization/audit adapter; frozen scientific source files are unchanged. Process success alone is not scientific or preservation completion.",
+  "resume_required": false,
+  "paused_reason": null,
+  "resume_request_path": "/workspace/scratch/837e4400dd1d/study07-r1-operations/resume-execution-request.json",
+  "exit_code": null,
+  "last_error": null
+}

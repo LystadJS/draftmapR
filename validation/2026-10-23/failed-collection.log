@@ -1,0 +1,10 @@
+Warning message:
+In normalizePath(args[8]) :
+  path[1]="/workspace/scratch/837e4400dd1d/study07-r1-operations/launch-006/launch-review.json": No such file or directory
+BLOCKED_PRESERVE_EVIDENCE 
+Error in open.connection(con, "rb") : cannot open the connection
+Calls: tryCatch -> tryCatchList -> tryCatchOne -> <Anonymous>
+In addition: Warning message:
+In open.connection(con, "rb") :
+  cannot open file '/workspace/scratch/837e4400dd1d/study07-r1-operations/launch-006/launch-review.json': No such file or directory
+Execution halted

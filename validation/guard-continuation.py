@@ -16,6 +16,10 @@ mode=sys.argv[1]
 if mode=='partial':
     driver=Path('/validation/validate-partial.R');args=[]
 elif mode=='collect':
+    review=ops/'launch-006/launch-review.json'
+    expected_review='015efb8a028c350f35f0e957e2e55d53145d7abe013289f01a61b36ef41b9cc0'
+    if not review.is_file() or m.sha256(review)!=expected_review:
+        raise RuntimeError('Restore exact launch-006/launch-review.json before collection; SHA256 '+expected_review)
     if not (ops/'partial-validation-20261021.json').exists():
         raise RuntimeError('Partial validation receipt required')
     import json

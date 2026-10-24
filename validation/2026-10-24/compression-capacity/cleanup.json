@@ -1,0 +1,15 @@
+{
+  "deleted_disposable_installer_staging": [
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\ugvxacsl",
+      "logical_bytes": 781224173.0
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\positron-system-x64",
+      "logical_bytes": 531096064.0
+    }
+  ],
+  "free_after": 1582018560,
+  "recovery_data_changed": false,
+  "free_before": 269402112
+}

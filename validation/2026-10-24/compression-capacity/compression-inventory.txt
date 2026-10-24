@@ -1,0 +1,52 @@
+routing-intent.json 1461
+linear/units.csv.gz.payload 4226192
+linear/parents.csv.gz.payload 32717122
+draws.csv.gz.payload 176007665
+full/geometry-embedding.csv.gz.payload 1428883334
+full/units.csv.gz.payload 20405375
+routing-complete.json 1500
+{
+  "tables": "/workspace/scratch/837e4400dd1d/study07-results/S07-R1/tables",
+  "root": "/root/.codex/tmp/s07r1-compression-006",
+  "products": [
+    "draws.csv.gz",
+    "linear/units.csv.gz",
+    "linear/parents.csv.gz",
+    "full/units.csv.gz",
+    "full/geometry-embedding.csv.gz",
+    "full/geometry-registration.csv.gz",
+    "full/core/outer.csv.gz",
+    "full/core/estimates.csv.gz",
+    "full/core/regions.csv.gz",
+    "full/core/attempts.csv.gz",
+    "full/core/studentization.csv.gz",
+    "full/deletions.csv.gz",
+    "full/frame/outer.csv.gz",
+    "full/frame/estimates.csv.gz",
+    "full/frame/regions.csv.gz",
+    "full/frame/attempts.csv.gz",
+    "full/frame/studentization.csv.gz",
+    "normal/units.csv.gz",
+    "normal/parents.csv.gz",
+    "compact/outer.csv.gz",
+    "compact/estimates.csv.gz",
+    "compact/regions.csv.gz",
+    "compact/selection_panel.csv.gz",
+    "compact/geometry_panel.csv.gz",
+    "compact/observed_geometry.csv.gz",
+    "compact/frame_variation_panel.csv.gz",
+    "compact/clean_points.csv.gz",
+    "compact/screen.csv.gz",
+    "compact/linear_regions.csv.gz",
+    "compact/analytic_regions.csv.gz",
+    "compact/linear_points.csv.gz",
+    "compact/decomposition_inputs.csv.gz",
+    "compact/covariance_inputs.csv.gz",
+    "compact/derivative_status.csv.gz",
+    "compact/normal_regions.csv.gz"
+  ],
+  "manifest_sha256": "db5748794ef41421e1895862329c29ebb19ad70e01c2ac708696aff25795ef94",
+  "time": 1792871263.5152829,
+  "status": "prepared",
+  "files": 35
+}

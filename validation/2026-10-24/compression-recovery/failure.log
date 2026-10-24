@@ -1,0 +1,30 @@
+Operational collection verified panel 6468 / 6480 s07_normal_mean_m640-1988 through chunk 266124 
+Operational collection verified panel 6469 / 6480 s07_normal_mean_m640-1989 through chunk 266127 
+Operational collection verified panel 6470 / 6480 s07_normal_mean_m640-1990 through chunk 266130 
+Operational collection verified panel 6471 / 6480 s07_normal_mean_m640-1991 through chunk 266133 
+Operational collection verified panel 6472 / 6480 s07_normal_mean_m640-1992 through chunk 266136 
+Operational collection verified panel 6473 / 6480 s07_normal_mean_m640-1993 through chunk 266139 
+Operational collection verified panel 6474 / 6480 s07_normal_mean_m640-1994 through chunk 266142 
+Operational collection verified panel 6475 / 6480 s07_normal_mean_m640-1995 through chunk 266145 
+Operational collection verified panel 6476 / 6480 s07_normal_mean_m640-1996 through chunk 266148 
+Operational collection verified panel 6477 / 6480 s07_normal_mean_m640-1997 through chunk 266151 
+Operational collection verified panel 6478 / 6480 s07_normal_mean_m640-1998 through chunk 266154 
+Operational collection verified panel 6479 / 6480 s07_normal_mean_m640-1999 through chunk 266157 
+Operational collection verified panel 6480 / 6480 s07_normal_mean_m640-2000 through chunk 266160 
+ENTERING_FROZEN_COMPRESSION 
+Traceback (most recent call last):
+  File "/workspace/scratch/837e4400dd1d/study07-r1-operations/launch-005/compression-route.py", line 28, in <module>
+    if __name__=='__main__':print(json.dumps(prepare(*sys.argv[1:])))
+                                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/837e4400dd1d/study07-r1-operations/launch-005/compression-route.py", line 19, in prepare
+    assert shutil.disk_usage(root.parent).free>5*1024**3,'Compression filesystem requires 5 GiB free before routing'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/frozen/python/lib/python3.12/shutil.py", line 1350, in disk_usage
+    st = os.statvfs(path)
+         ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/root/.codex/tmp'
+BLOCKED_PRESERVE_EVIDENCE 
+Error in s07ops_collect(paths, jobs, identity, file.path(out, "tables"),  : 
+  Compression routing failed; preserve and inspect.
+Calls: tryCatch -> tryCatchList -> tryCatchOne -> <Anonymous>
+Execution halted

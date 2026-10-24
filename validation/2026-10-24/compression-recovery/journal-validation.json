@@ -1,0 +1,7 @@
+{
+  "sha256": "EE7F98A1D4D56DCE73968F545996D6B2BF0146B01CFD10AA495EB11350B025FE",
+  "scope": "Journal order, unique keys and chunk boundaries only; compression and scientific audits pending",
+  "new_since_4895": 1585,
+  "panels": 6480,
+  "status": "journal_validated"
+}

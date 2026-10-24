@@ -1,0 +1,15 @@
+{
+  "status": "committed_panel_journal_snapshot_validated",
+  "committed_panels": 4895,
+  "new_since_3916": 979,
+  "planned_panels": 6480,
+  "last": {
+    "panel_index": 4895,
+    "key": "s07_normal_mean_m640-0415",
+    "checkpoint_md5": "bca4c3f0c35fb584e0413a243ed23c2d",
+    "through_chunk": 261405
+  },
+  "snapshot_sha256": "12eab5a1d5f2b2f08d4e21d1b7e3e82fc2e34886852140a85a48a59ce700746c",
+  "scope": "Contiguous unique journal entries and increasing chunk boundaries verified. Live run continues; not an independent scientific audit or a standalone restart checkpoint.",
+  "scientific_completion_claimed": false
+}

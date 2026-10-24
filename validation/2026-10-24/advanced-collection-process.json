@@ -1,0 +1,60 @@
+{
+  "status": "running",
+  "child_state": "running",
+  "run_kind": "operational_serialization_resume",
+  "command": [
+    "/workspace/scratch/837e4400dd1d/r-runtime/bin/Rscript-local",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/resume-collection-prefix-006.R",
+    "reserved",
+    "/workspace/scratch/837e4400dd1d/study07-results/S07-D1",
+    "/workspace/scratch/837e4400dd1d/study07-results/S07-R1",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collection-state",
+    "/workspace/scratch/837e4400dd1d/study07-results/S07-R1/csv-chunks-20260921192657143845-45-1",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/PUBLICATION-INDEX.json",
+    "/workspace/scratch/1e9a01af2c37/final-preservation",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/launch-006/launch-review.json"
+  ],
+  "supervisor_token": "4aa3984a1c2545799e4a31e4f0b5831e",
+  "pid": 95,
+  "supervisor_pid": 94,
+  "started_at_unix": 1792813961.953183,
+  "updated_at_unix": 1792823682.824085,
+  "elapsed_seconds": 9720.870902299881,
+  "log": "/workspace/scratch/837e4400dd1d/study07-r1-operations/serialization-resume-4aa3984a1c2545799e4a31e4f0b5831e.log",
+  "adapter_phase": {
+    "stage": "RESUMING_DETERMINISTIC_COLLECTION",
+    "adapter": "external_operational_serialization_resume",
+    "scientific_completion_claimed": false,
+    "time_utc": "2026-10-24T04:07:57.384941Z",
+    "checkpoints": 6480,
+    "catalogs": 111
+  },
+  "code_hashes": {
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/resume-collection-prefix-006.R": "f5f4731f964b583a36ca4ce9f17c95012d7036a9e33cbfa1577dec1d5325700e",
+    "/validation/guard-continuation.py": "53b7ca1e4f82c88620cdee4d825a07846d8d038e315450500ca8cd52ba8edcaa",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/execute-resume.py": "1be5d46f99b2e29d35a4a04cb720a93b9b217e9a02e503f6a36836520bf83ed9",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collect-prefix-005.R": "7fc3a7e0bf49e6064e63a5f50f45b0d1b4419d2272a02782b822a653da67c4a9",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collect.R": "a0e0871b2349d2a19d6556d9d8654f4010975a66061d84e4d7ec75fbf3119bf0"
+  },
+  "storage": {
+    "limit_bytes": 12884901888,
+    "anon_bytes": 1635303424,
+    "shmem_bytes": 0,
+    "nonreclaimable_kernel_bytes": 4116600,
+    "pinned_bytes": 1639420024,
+    "proposed_bytes": 0,
+    "audit_headroom_bytes": 3221225472,
+    "available_after_copy_bytes": 11245481864,
+    "host_free_bytes": 5426475008,
+    "output_free_bytes": 1020962672640
+  },
+  "engineering": false,
+  "planned_panels": 6480,
+  "scientific_completion_claimed": false,
+  "meaning": "External serialization/audit adapter; frozen scientific source files are unchanged. Process success alone is not scientific or preservation completion.",
+  "resume_required": false,
+  "paused_reason": null,
+  "resume_request_path": "/workspace/scratch/837e4400dd1d/study07-r1-operations/resume-execution-request.json",
+  "exit_code": null,
+  "last_error": null
+}

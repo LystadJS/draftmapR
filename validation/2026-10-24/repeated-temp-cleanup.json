@@ -1,0 +1,16 @@
+{
+  "before_free_bytes": 2610065408,
+  "after_free_bytes": 6758174720,
+  "removed": [
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\DockerDesktopUpdates",
+      "bytes": 3724616131.0
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\DockerDesktop",
+      "bytes": 422723798.0
+    }
+  ],
+  "reason": "Inactive updater temporary files regenerated after prior cleanup",
+  "recovery_data_untouched": true
+}

@@ -1,0 +1,68 @@
+{
+  "free_after": 4031447040,
+  "scope": "Regenerable caches and old diagnostic dumps only; locked files skipped",
+  "targets": [
+    {
+      "deleted_logical_bytes": 357407010,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\npm-cache\\_cacache"
+    },
+    {
+      "deleted_logical_bytes": 181217789,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Positron\\Cache"
+    },
+    {
+      "deleted_logical_bytes": 125061274,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Positron\\WebStorage\\1\\CacheStorage"
+    },
+    {
+      "deleted_logical_bytes": 187244525,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Positron\\WebStorage\\14\\CacheStorage"
+    },
+    {
+      "deleted_logical_bytes": 681229219,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Thunderbird\\Profiles\\4v36aigg.default-release\\cache2"
+    },
+    {
+      "deleted_logical_bytes": 70602606,
+      "skipped_files": 7,
+      "path": "C:\\Users\\John\\AppData\\Local\\Mozilla\\Firefox\\Profiles\\cf3zdxrh.default-release\\cache2"
+    },
+    {
+      "deleted_logical_bytes": 241118516,
+      "skipped_files": 1,
+      "path": "C:\\Users\\John\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cache"
+    },
+    {
+      "deleted_logical_bytes": 194450659,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Code Cache"
+    },
+    {
+      "deleted_logical_bytes": 224299552,
+      "skipped_files": 1,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\com.tinyspeck.slackdesktop_8yrtsj140pw4g\\LocalCache\\Roaming\\Slack\\Cache"
+    },
+    {
+      "deleted_logical_bytes": 144212,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\com.tinyspeck.slackdesktop_8yrtsj140pw4g\\LocalCache\\Roaming\\Slack\\Code Cache"
+    },
+    {
+      "deleted_logical_bytes": 141127578,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\CrashDumps"
+    },
+    {
+      "deleted_logical_bytes": 149880773,
+      "skipped_files": 6,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\Diagnostics"
+    }
+  ],
+  "recovery_data_changed": false,
+  "free_before": 1568079872
+}

@@ -1,0 +1,18 @@
+{
+  "before_free_bytes": 209915904,
+  "after_free_bytes": 4614234112,
+  "freed_bytes": 4404318208,
+  "removed": [
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\DockerDesktopUpdates",
+      "bytes": 3724616131.0,
+      "reason": "Inactive disposable Docker update staging; installed Docker is under Program Files"
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\DockerDesktop",
+      "bytes": 682757961.0,
+      "reason": "Inactive disposable Docker update staging; installed Docker is under Program Files"
+    }
+  ],
+  "recovery_archives_and_checkpoints_untouched": true
+}

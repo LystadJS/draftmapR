@@ -1,0 +1,18 @@
+{
+  "recovery_data_changed": false,
+  "free_before": 4031291392,
+  "targets": [
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 391842823,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\com.tinyspeck.slackdesktop_8yrtsj140pw4g\\LocalCache\\Roaming\\Slack\\Service Worker\\CacheStorage"
+    },
+    {
+      "skipped_files": 7,
+      "deleted_logical_bytes": 154140672,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\DiagOutputDir"
+    }
+  ],
+  "free_after": 4583763968,
+  "scope": "Disposable web cache and diagnostic traces older than one day; locked files skipped"
+}

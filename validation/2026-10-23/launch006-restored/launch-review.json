@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "reserved_launch_authorized": true,
+  "authorization_basis": "User: Rebuild the launch controls, then resume collection and audits",
+  "adapter_sha256": "7fc3a7e0bf49e6064e63a5f50f45b0d1b4419d2272a02782b822a653da67c4a9",
+  "driver_sha256": "f5f4731f964b583a36ca4ce9f17c95012d7036a9e33cbfa1577dec1d5325700e",
+  "code_hashes": {
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collect.R": "a0e0871b2349d2a19d6556d9d8654f4010975a66061d84e4d7ec75fbf3119bf0",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collect-prefix-005.R": "7fc3a7e0bf49e6064e63a5f50f45b0d1b4419d2272a02782b822a653da67c4a9",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/execute-resume.py": "1be5d46f99b2e29d35a4a04cb720a93b9b217e9a02e503f6a36836520bf83ed9",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/spill.py": "146c5d0c4bead0db97cf92c27f7766e30f7770182d79fd31f3eac74f31a7f60f",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/launch-005/compression-route.py": "69cb34a3e5326bea3500e73d7194d3d0ab0e238d4d9a6ea4f8db27ae4d8511a2",
+    "/workspace/scratch/837e4400dd1d/study07-execution/R/runner.R": "5bf2969a35fb3c147ada5dab2b1081aeefac30cd959bc27c1a38cf2b0052bdb4",
+    "/workspace/scratch/837e4400dd1d/study07-execution/R/analysis.R": "8ec012a1c62f4e7708134c5d4422478a3b94dc4b5f8596f7cdd6911cc8384643",
+    "/workspace/scratch/837e4400dd1d/study07-execution/scripts/compress-tables.py": "a71eb329788add65f228843ce3234a7db5ba55fbb3d8b51327f2db4981a1cdfb",
+    "/workspace/scratch/837e4400dd1d/study07-execution/scripts/final-audit.py": "06734098dcaab54c3d48f23cb18c5b01921c7673eeddc5fa7215882a1b7e41d6",
+    "/workspace/scratch/837e4400dd1d/study07-recovery/R/orchestration.R": "61e4de226d5b3f8d61ebd91f016f359fbfe9fc28af327f64d4b577b529eeb4f7",
+    "/workspace/scratch/837e4400dd1d/study07-recovery/audit/final-audit.py": "4d8b88e2f091766b13e3db21aa127c8105c18f75286c32399317798df58ef2be",
+    "/workspace/scratch/837e4400dd1d/study07-recovery/scripts/verify.R": "fdb8743c23468c22aa9d0522f97638039fe7b363ec127d143b0d028afdf5c99e",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/resume-collection-prefix-006.R": "f5f4731f964b583a36ca4ce9f17c95012d7036a9e33cbfa1577dec1d5325700e",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/launch-006/supervise.py": "112adbde61e3e726fc9a3dcb002818f0999205ba0e3156bab7bfc9f913640006",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/launch-006/launch-arguments.json": "591c859a0db9c20e9ef24d56a9e473a5a19b42b45a328f80f1d036d64fe368dc",
+    "/workspace/scratch/837e4400dd1d/study07-r1-operations/launch-006/run-owned.py": "88d7febe513e2acdbf487af276f89ac79744d8f8fe8f3efa56ee9ae10b3f10c1"
+  },
+  "tests": {
+    "prefix-test-result.json": "45da77bcd8a76bb465dc44103126eb36159bf578c57cce1f17a0cd0a79956583",
+    "routing-test-result.json": "4c9c9bef8b40266d889d8b7a5152407bf90a1b5eaf539ecf0623160ba81e6d57",
+    "supervisor-test-result.json": "407bb37c78ef2048b68a7333ebec1ea04df11531d5b4a29400a13e26fd09e559"
+  },
+  "base_supervisor_tests_passed": 4,
+  "review_scope": "Revision 005 equivalence retained. Saved original preflight accepted only after exact binding SHA and complete frozen original catalog verification; all 6480 row mappings checked. Unchanged recovered object/plan/reference comparisons gain byte-bound durable progress. Tampered preflight fixture rejected.",
+  "frozen_sources_modified": false,
+  "new_measurements": 0,
+  "new_draw_vectors": 0,
+  "new_fits": 0,
+  "verified_panel_prefix": 276,
+  "through_chunk": 163092,
+  "global_quiescence_claimed": false,
+  "lock_available": true,
+  "capacity_controls": {
+    "minimum_disk_bytes": 2147483648,
+    "raw_spill_reserved_memory_bytes": 5368709120,
+    "emergency_memory_margin_bytes": 2147483648,
+    "compression_destination": "/root/.codex/tmp/s07r1-compression-005",
+    "compression_filesystem_preflight_free_bytes": 5368709120
+  },
+  "scientific_completion_claimed": false,
+  "time": 1790111311.4752,
+  "preflight_test_sha256": "c45fb8295ed2370f5159d5510cb8f578fad6e4603a8651b74c2862e312a8d2cb",
+  "preflight_reuse_explicit": true
+}

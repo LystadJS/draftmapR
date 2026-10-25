@@ -1,0 +1,293 @@
+{
+  "scope": "Regenerable web and shader caches, PDF previews, temporary diagnostics; locked files skipped",
+  "recovery_data_changed": false,
+  "targets": [
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 4822896,
+      "path": "C:\\Users\\John\\AppData\\Local\\ai.artcraft.app\\EBWebView\\GrShaderCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 6365303,
+      "path": "C:\\Users\\John\\AppData\\Local\\ai.artcraft.app\\EBWebView\\Default\\Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 4624147,
+      "path": "C:\\Users\\John\\AppData\\Local\\ai.artcraft.app\\EBWebView\\Default\\Code Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 1642864,
+      "path": "C:\\Users\\John\\AppData\\Local\\ai.artcraft.app\\EBWebView\\Default\\GPUCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 4616612,
+      "path": "C:\\Users\\John\\AppData\\Local\\Lenovo\\Vantage\\AddinData\\LenovoMachineFixUserAddin\\LenovoMachineFixUserAddin\\EBWebView\\Default\\Code Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 11942988,
+      "path": "C:\\Users\\John\\AppData\\Local\\Microsoft\\Edge\\User Data\\GrShaderCache"
+    },
+    {
+      "skipped_files": 1,
+      "deleted_logical_bytes": 20650618,
+      "path": "C:\\Users\\John\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 2052586,
+      "path": "C:\\Users\\John\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Code Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 5924192,
+      "path": "C:\\Users\\John\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\GPUCache"
+    },
+    {
+      "skipped_files": 24,
+      "deleted_logical_bytes": 14729623,
+      "path": "C:\\Users\\John\\AppData\\Local\\Mozilla\\Firefox\\Profiles\\cf3zdxrh.default-release\\cache2"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 1642864,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\com.tinyspeck.slackdesktop_8yrtsj140pw4g\\LocalCache\\Roaming\\Slack\\GPUCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 5045672,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\com.tinyspeck.slackdesktop_8yrtsj140pw4g\\LocalCache\\Roaming\\Slack\\GrShaderCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 9463556,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\E046963F.LenovoCompanion_k1h2ywk1493x8\\LocalState\\UDF\\EBWebView\\GrShaderCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 7956063,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\E046963F.LenovoCompanion_k1h2ywk1493x8\\LocalState\\UDF\\EBWebView\\Default\\Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 1594666,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\E046963F.LenovoCompanion_k1h2ywk1493x8\\LocalState\\UDF\\EBWebView\\Default\\Code Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 1642864,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\E046963F.LenovoCompanion_k1h2ywk1493x8\\LocalState\\UDF\\EBWebView\\Default\\GPUCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 4805188,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\Microsoft.Windows.Photos_8wekyb3d8bbwe\\LocalState\\EBWebView\\GrShaderCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 1642864,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\Microsoft.Windows.Photos_8wekyb3d8bbwe\\LocalState\\EBWebView\\Default\\GPUCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 10710608,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\\GrShaderCache"
+    },
+    {
+      "skipped_files": 1,
+      "deleted_logical_bytes": 15647607,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\\Default\\Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 80453202,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\\Default\\Code Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 1642864,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\\Default\\GPUCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 16725004,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\\GrShaderCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 59233683,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\\Default\\Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 48464644,
+      "path": "C:\\Users\\John\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\\Default\\Code Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 5400244,
+      "path": "C:\\Users\\John\\AppData\\Local\\Steam\\htmlcache\\GrShaderCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 24398695,
+      "path": "C:\\Users\\John\\AppData\\Local\\Steam\\htmlcache\\Default\\Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 10774567,
+      "path": "C:\\Users\\John\\AppData\\Local\\Steam\\htmlcache\\Default\\Code Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 1642864,
+      "path": "C:\\Users\\John\\AppData\\Local\\Steam\\htmlcache\\Default\\GPUCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 4805172,
+      "path": "C:\\Users\\John\\AppData\\Local\\stirling.pdf.dev\\EBWebView\\GrShaderCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 8243505,
+      "path": "C:\\Users\\John\\AppData\\Local\\stirling.pdf.dev\\EBWebView\\Default\\Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 13325039,
+      "path": "C:\\Users\\John\\AppData\\Local\\stirling.pdf.dev\\EBWebView\\Default\\Code Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 1642864,
+      "path": "C:\\Users\\John\\AppData\\Local\\stirling.pdf.dev\\EBWebView\\Default\\GPUCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 15526472,
+      "path": "C:\\Users\\John\\AppData\\Local\\Zotero\\Zotero\\Profiles\\jo31f95q.default\\cache2"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 6941556,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Code\\Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 1642864,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Code\\GPUCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 10677760,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Codex\\web\\Codex\\GrShaderCache"
+    },
+    {
+      "skipped_files": 1,
+      "deleted_logical_bytes": 6099332,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Codex\\web\\Codex\\codex-browser-app\\Cache"
+    },
+    {
+      "skipped_files": 1,
+      "deleted_logical_bytes": 152951877,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Codex\\web\\Codex\\Default\\Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 5856424,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Codex\\web\\Codex\\Default\\GPUCache"
+    },
+    {
+      "skipped_files": 1,
+      "deleted_logical_bytes": 55376708,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Codex\\web\\Codex\\Default\\Partitions\\codex-browser-app\\Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 95450068,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Codex\\web\\Codex\\Default\\Partitions\\codex-browser-app\\Code Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 5837168,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Codex\\web\\Codex\\Default\\Partitions\\codex-browser-app\\DawnWebGPUCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 1642864,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Codex\\web\\Codex\\Default\\Partitions\\codex-browser-app\\GPUCache"
+    },
+    {
+      "skipped_files": 1,
+      "deleted_logical_bytes": 1642884,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Codex\\web\\Codex\\Default\\Partitions\\codex-mcp-app-sandbox%3Ashared\\Cache"
+    },
+    {
+      "skipped_files": 1,
+      "deleted_logical_bytes": 6265304,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Docker Desktop\\Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 11132273,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Docker Desktop\\Code Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 5837168,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Docker Desktop\\GPUCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 4878244,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Docker Desktop\\GrShaderCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 5050760,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\GitHub Desktop\\Cache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 1642864,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\GitHub Desktop\\GPUCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 5837168,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Positron\\GPUCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 1642864,
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Samsung Magician\\GPUCache"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 68405323,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-n70i5j"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 68405323,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-PEiZI8"
+    },
+    {
+      "skipped_files": 4,
+      "deleted_logical_bytes": 15922606,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\Diagnostics"
+    },
+    {
+      "skipped_files": 0,
+      "deleted_logical_bytes": 43524096,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\DiagOutputDir"
+    }
+  ],
+  "free_after": 3883012096,
+  "free_before": 3181412352
+}

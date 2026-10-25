@@ -1,0 +1,65 @@
+{
+  "failed_process": {
+    "status": "exited_with_error",
+    "child_state": "exited",
+    "run_kind": "operational_serialization_resume",
+    "command": [
+      "/workspace/scratch/837e4400dd1d/r-runtime/bin/Rscript-local",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resume-collection-prefix-006.R",
+      "reserved",
+      "/workspace/scratch/837e4400dd1d/study07-results/S07-D1",
+      "/workspace/scratch/837e4400dd1d/study07-results/S07-R1",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collection-state",
+      "/workspace/scratch/837e4400dd1d/study07-results/S07-R1/csv-chunks-20260921192657143845-45-1",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/PUBLICATION-INDEX.json",
+      "/workspace/scratch/1e9a01af2c37/final-preservation",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/launch-006/launch-review.json"
+    ],
+    "supervisor_token": "REDACTED_LOCAL_CONTROL_TOKEN",
+    "pid": 54,
+    "supervisor_pid": 53,
+    "started_at_unix": 1792896965.9516802,
+    "updated_at_unix": 1792909308.5722184,
+    "elapsed_seconds": 12342.62053847313,
+    "log": "/workspace/scratch/837e4400dd1d/study07-r1-operations/serialization-resume-REDACTED_LOCAL_CONTROL_TOKEN.log",
+    "adapter_phase": {
+      "stage": "BLOCKED_PRESERVE_EVIDENCE",
+      "adapter": "external_operational_serialization_resume",
+      "scientific_completion_claimed": false,
+      "time_utc": "2026-10-25T06:21:40.262010Z",
+      "error": "Independent recovery audit failed: Traceback (most recent call last):\n  File \"/workspace/scratch/837e4400dd1d/study07-recovery/audit/final-audit.py\", line 46, in <module>\n    print(json.dumps(audit(args.out, args.engineering)))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/837e4400dd1d/study07-recovery/audit/final-audit.py\", line 28, in audit\n    report = frozen.audit(out, engineering)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/837e4400dd1d/study07-execution/scripts/final-audit.py\", line 90, in audit\n    for i in range(1,5):A.check((out/'analysis'/f'figure-{i:02d}.png').stat().st_size>1000 and sum(1 for _ in read(out/'analysis'/f'figure-{i:02d}-values.csv'))>0,'Four figures with exact scalar values')\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/frozen/python/lib/python3.12/pathlib.py\", line 840, in stat\n    return os.stat(self, follow_symlinks=follow_symlinks)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/837e4400dd1d/study07-results/S07-R1/analysis/figure-01.png'"
+    },
+    "code_hashes": {
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resume-collection-prefix-006.R": "f5f4731f964b583a36ca4ce9f17c95012d7036a9e33cbfa1577dec1d5325700e",
+      "/validation/guard-compression-restart-20261024.py": "714f5fde07efdfc88d49c94c1e376aa846facc9b85b4513d629747202f518c42",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/execute-resume.py": "1be5d46f99b2e29d35a4a04cb720a93b9b217e9a02e503f6a36836520bf83ed9",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collect-prefix-005.R": "7fc3a7e0bf49e6064e63a5f50f45b0d1b4419d2272a02782b822a653da67c4a9",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collect.R": "a0e0871b2349d2a19d6556d9d8654f4010975a66061d84e4d7ec75fbf3119bf0"
+    },
+    "storage": {
+      "limit_bytes": 12884901888,
+      "anon_bytes": 7884800,
+      "shmem_bytes": 0,
+      "nonreclaimable_kernel_bytes": 559008,
+      "pinned_bytes": 8443808,
+      "proposed_bytes": 0,
+      "audit_headroom_bytes": 3221225472,
+      "available_after_copy_bytes": 12876458080,
+      "host_free_bytes": 3359035392,
+      "output_free_bytes": 1011684708352
+    },
+    "engineering": false,
+    "planned_panels": 6480,
+    "scientific_completion_claimed": false,
+    "meaning": "External serialization/audit adapter; frozen scientific source files are unchanged. Process success alone is not scientific or preservation completion.",
+    "resume_required": false,
+    "paused_reason": null,
+    "resume_request_path": "/workspace/scratch/837e4400dd1d/study07-r1-operations/resume-execution-request.json",
+    "exit_code": 1,
+    "last_error": null
+  },
+  "repair": "Installed missing OS graphics libraries; PNG probe and frozen identity gate passed",
+  "preserved_analysis_receipt": "/workspace/scratch/837e4400dd1d/study07-r1-operations/graphics-failure-20261025/driver-analyzed.rds",
+  "completed_collection_receipt_retained": true,
+  "next": "Frozen driver preserves prior analysis directory and regenerates analysis and figures before all audits"
+}

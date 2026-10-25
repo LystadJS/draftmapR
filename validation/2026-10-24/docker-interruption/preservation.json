@@ -1,0 +1,182 @@
+{
+  "status": "preserved_and_ready_for_fresh_routing",
+  "links": [
+    {
+      "path": "draws.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/draws.csv.gz.payload",
+      "bytes": 176007665
+    },
+    {
+      "path": "linear/units.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/linear/units.csv.gz.payload",
+      "bytes": 4226192
+    },
+    {
+      "path": "linear/parents.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/linear/parents.csv.gz.payload",
+      "bytes": 32717122
+    },
+    {
+      "path": "full/units.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/full/units.csv.gz.payload",
+      "bytes": 20405375
+    },
+    {
+      "path": "full/geometry-embedding.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/full/geometry-embedding.csv.gz.payload",
+      "bytes": 1604915857
+    },
+    {
+      "path": "full/geometry-registration.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/full/geometry-registration.csv.gz.payload",
+      "bytes": 2102581108
+    },
+    {
+      "path": "full/core/outer.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/full/core/outer.csv.gz.payload",
+      "bytes": 6477
+    },
+    {
+      "path": "full/core/estimates.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/full/core/estimates.csv.gz.payload",
+      "bytes": 72863
+    },
+    {
+      "path": "full/core/regions.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/full/core/regions.csv.gz.payload",
+      "bytes": 383633
+    },
+    {
+      "path": "full/core/attempts.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/full/core/attempts.csv.gz.payload",
+      "bytes": 463434
+    },
+    {
+      "path": "full/core/studentization.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/full/core/studentization.csv.gz.payload",
+      "bytes": 21832752
+    },
+    {
+      "path": "full/deletions.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/full/deletions.csv.gz.payload",
+      "bytes": 101071359
+    },
+    {
+      "path": "full/frame/outer.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/full/frame/outer.csv.gz.payload",
+      "bytes": 4090
+    },
+    {
+      "path": "full/frame/estimates.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/full/frame/estimates.csv.gz.payload",
+      "bytes": 72881
+    },
+    {
+      "path": "full/frame/regions.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/full/frame/regions.csv.gz.payload",
+      "bytes": 383458
+    },
+    {
+      "path": "full/frame/attempts.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/full/frame/attempts.csv.gz.payload",
+      "bytes": 2678606
+    },
+    {
+      "path": "full/frame/studentization.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/full/frame/studentization.csv.gz.payload",
+      "bytes": 21832551
+    },
+    {
+      "path": "normal/units.csv.gz",
+      "target": "/root/.codex/tmp/s07r1-compression-006/normal/units.csv.gz.payload",
+      "bytes": 34459437
+    },
+    {
+      "path": "normal/parents.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/normal/parents.csv.gz.payload",
+      "bytes": 60884466
+    },
+    {
+      "path": "compact/outer.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/outer.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/estimates.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/estimates.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/regions.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/regions.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/selection_panel.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/selection_panel.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/geometry_panel.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/geometry_panel.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/observed_geometry.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/observed_geometry.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/frame_variation_panel.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/frame_variation_panel.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/clean_points.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/clean_points.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/screen.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/screen.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/linear_regions.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/linear_regions.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/analytic_regions.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/analytic_regions.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/linear_points.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/linear_points.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/decomposition_inputs.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/decomposition_inputs.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/covariance_inputs.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/covariance_inputs.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/derivative_status.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/derivative_status.csv.gz.payload",
+      "bytes": 0
+    },
+    {
+      "path": "compact/normal_regions.csv.gz.committing",
+      "target": "/root/.codex/tmp/s07r1-compression-006/compact/normal_regions.csv.gz.payload",
+      "bytes": 0
+    }
+  ],
+  "payloads_deleted": false,
+  "frozen_code_changed": false
+}

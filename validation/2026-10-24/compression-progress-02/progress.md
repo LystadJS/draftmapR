@@ -1,0 +1,7 @@
+# Compression progress and preserved capacity pause — 2026-10-24
+
+Five of 35 gzip product paths have been atomically published: draws, linear units, linear parents, full units, and full geometry embedding. The sixth payload, full geometry registration, remains in progress. Total payload size is approximately 3.08 GB, increased from the prior 1.66 GB observation. Inspection of the frozen compressor confirms publication follows chunk checksum/schema checks and gzip row-count validation; this status check did not rerun an independent gzip audit.
+
+The same R and compressor process group remains paused by the unchanged disk guard. No exception or process exit is reported. Live physical free space is approximately 3.22 GB, below the 4 GiB explicit resume threshold by approximately 1.08 GB. The receipt records exact live capacity separately from the supervisor's last successful (stale) storage sample. Temporary directories and download caches were inspected; the larger remaining candidates total less than the shortfall. No deletion, restart, rerouting, or resume request was performed.
+
+All recovery data, six payloads and 6,480 committed panel records remain preserved. Capacity settings and frozen code are unchanged. Full compression, analysis and final audits remain pending. Additional disposable storage or user-provided capacity is required before the same process can safely resume; further output space will also be needed. Live control material is redacted from public evidence.

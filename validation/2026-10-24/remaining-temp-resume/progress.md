@@ -1,0 +1,7 @@
+# Remaining disposable files and guarded resume — 2026-10-24
+
+The expanded scan did not identify 1 GiB of safely disposable material. That requested cleanup target remains unmet. Temporary document preview copies and obsolete rotated Docker diagnostic logs from before September were removed; original documents, current diagnostics, all study logs, recovery archives/checkpoints, installed runtimes and active swap files were preserved. Per-file receipts record the limited deletions and observed physical capacity; preview removal did not produce corresponding physical reclamation, so logical sizes must not be reported as recovered disk space.
+
+Host free space had independently risen to about 4.29 GB before cleanup. Removing old diagnostic logs brought observed free space above the unchanged 4 GiB resume gate. The existing owned-process helper submitted an explicit resume request. The supervisor then reported child_state=running, resume_required=false, same PID 319, with approximately 4.30 GB free. No restart or routing retry occurred; frozen code and all memory/CPU/disk limits remain unchanged. Public receipts redact live control material.
+
+Compression continues with limited headroom; the 3 GiB disk floor remains enforced and another capacity pause is possible. Compression completion, analysis and independent audits are not claimed. Further storage will likely be needed for remaining products.

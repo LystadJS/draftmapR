@@ -1,0 +1,10 @@
+{
+  "status": "running",
+  "child_state": "paused_for_capacity",
+  "pid": 319,
+  "stage": "ENTERING_FROZEN_COMPRESSION",
+  "live_free_bytes": 3882872832,
+  "resume_threshold_bytes": 4294967296,
+  "shortfall_bytes": 412094464,
+  "resume_attempted": false
+}

@@ -1,0 +1,134 @@
+{
+  "free_before": 4290281472,
+  "recovery_data_changed": false,
+  "one_gib_cleanup_achieved": false,
+  "free_after": 4290146304,
+  "targets": [
+    {
+      "deleted_logical_bytes": 7728400,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-3y3exm"
+    },
+    {
+      "deleted_logical_bytes": 254769,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-68wK2n"
+    },
+    {
+      "deleted_logical_bytes": 40177,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-7XdZxE"
+    },
+    {
+      "deleted_logical_bytes": 59064,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-8ir64C"
+    },
+    {
+      "deleted_logical_bytes": 120271,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-9yKsmB"
+    },
+    {
+      "deleted_logical_bytes": 324086,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-CoA29F"
+    },
+    {
+      "deleted_logical_bytes": 333407,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-drC9gM"
+    },
+    {
+      "deleted_logical_bytes": 649909,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-DUBuU7"
+    },
+    {
+      "deleted_logical_bytes": 299974,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-GBeX2t"
+    },
+    {
+      "deleted_logical_bytes": 6669440,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-GcYjxK"
+    },
+    {
+      "deleted_logical_bytes": 823250,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-I3OlvG"
+    },
+    {
+      "deleted_logical_bytes": 120271,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-JOFo1D"
+    },
+    {
+      "deleted_logical_bytes": 54231,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-kdJWzT"
+    },
+    {
+      "deleted_logical_bytes": 324086,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-kZbqe3"
+    },
+    {
+      "deleted_logical_bytes": 0,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-n70i5j"
+    },
+    {
+      "deleted_logical_bytes": 7728400,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-NdRckr"
+    },
+    {
+      "deleted_logical_bytes": 649909,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-nNhUaO"
+    },
+    {
+      "deleted_logical_bytes": 299974,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-oLgWQY"
+    },
+    {
+      "deleted_logical_bytes": 254769,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-PbYY0j"
+    },
+    {
+      "deleted_logical_bytes": 0,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-PEiZI8"
+    },
+    {
+      "deleted_logical_bytes": 823250,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-RezT7m"
+    },
+    {
+      "deleted_logical_bytes": 255629,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-sVNF0G"
+    },
+    {
+      "deleted_logical_bytes": 255629,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-TSnsgy"
+    },
+    {
+      "deleted_logical_bytes": 333407,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-udFCQx"
+    },
+    {
+      "deleted_logical_bytes": 6669440,
+      "skipped_files": 0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\codex-file-preview-yaxFo7"
+    }
+  ],
+  "scope": "Disposable document previews only"
+}

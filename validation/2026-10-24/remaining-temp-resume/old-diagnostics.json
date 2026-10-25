@@ -1,0 +1,63 @@
+{
+  "free_before": 4289826816,
+  "deleted": [
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Docker\\log\\host\\com.docker.backend.exe.log.3",
+      "bytes": 1048669
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Docker\\log\\host\\com.docker.backend.exe.log.4",
+      "bytes": 451687
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Docker\\log\\host\\monitor.log.3",
+      "bytes": 1048516
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Docker\\log\\host\\monitor.log.4",
+      "bytes": 1048543
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Docker\\log\\host\\monitor.log.5",
+      "bytes": 1048499
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Docker\\log\\host\\monitor.log.6",
+      "bytes": 1048572
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Docker\\log\\host\\monitor.log.7",
+      "bytes": 1048397
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Docker\\log\\host\\monitor.log.8",
+      "bytes": 1048524
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Docker\\log\\vm\\init.log.3",
+      "bytes": 1048502
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Docker\\log\\vm\\init.log.4",
+      "bytes": 1048407
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Docker\\log\\vm\\init.log.5",
+      "bytes": 1048497
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Docker\\log\\vm\\init.log.6",
+      "bytes": 1048467
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Docker\\log\\vm\\init.log.7",
+      "bytes": 1048502
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Local\\Docker\\log\\vm\\init.log.8",
+      "bytes": 1048507
+    }
+  ],
+  "free_after": 4303917056,
+  "scope": "Rotated Docker diagnostics predating September; study logs preserved"
+}

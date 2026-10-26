@@ -7,6 +7,7 @@ from pathlib import Path
 
 roots = [Path('/workspace/scratch/837e4400dd1d'), Path('/workspace/scratch/1e9a01af2c37')]
 links = []
+skip = set(json.load(sys.stdin)) if '--skip-stdin' in sys.argv else set()
 with tarfile.open(fileobj=sys.stdout.buffer, mode='w|') as archive:
     for root in roots:
         for directory, dirs, files in os.walk(root, followlinks=False):
@@ -24,6 +25,8 @@ with tarfile.open(fileobj=sys.stdout.buffer, mode='w|') as archive:
                     if not p.exists():
                         assert 'compression-interruption-20261024/table-links/' in str(p), str(p)
                         continue
+                if rel in skip:
+                    continue
                 before = p.stat()
                 assert p.is_file(), str(p)
                 info = tarfile.TarInfo(rel)

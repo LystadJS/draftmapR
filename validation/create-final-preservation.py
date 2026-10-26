@@ -57,6 +57,7 @@ with zipfile.ZipFile(partial,'x',allowZip64=True) as z:
             for member in incoming:
                 assert member.isfile(), member.name
                 write_member(z,member.name,incoming.extractfile(member),member.size,member.mode)
+                incoming.members.clear()  # Streaming tar must not retain hundreds of thousands of headers.
         proc.stdout.close()
         assert proc.wait()==0, 'Source export failed; inspect export-stderr.log'
     finally:

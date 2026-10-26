@@ -1,0 +1,28 @@
+{
+  "status": "running",
+  "child_state": "running",
+  "stage": "RUNNING_ALL_FROZEN_INDEPENDENT_AUDITS",
+  "pid": 655,
+  "resume_required": false,
+  "free_bytes": 4581330944,
+  "receipts": {
+    "final-audit.json": {
+      "exists": false,
+      "sha256": null
+    },
+    "recovery-final-audit.json": {
+      "exists": false,
+      "sha256": null
+    },
+    "recovery-audit.json": {
+      "exists": false,
+      "sha256": null
+    },
+    "execution-complete.json": {
+      "exists": false,
+      "sha256": null
+    }
+  },
+  "audit_io": "rchar: 25373666832\nwchar: 0\nsyscr: 103636\nsyscw: 0\nread_bytes: 1279434752\nwrite_bytes: 0\ncancelled_write_bytes: 0\n",
+  "deleted_files": 0
+}

@@ -6,7 +6,7 @@ dest=Path(sys.argv[1]); container='driftmapr-collection-20261023'
 original=dest/'driftmapR-final-preservation-20261026.partial.zip'
 partial=dest/'driftmapR-final-preservation-20261026.resumed.partial.zip'
 final=dest/'driftmapR-final-preservation-20261026.zip'
-assert not partial.exists() and not final.exists()
+assert not final.exists()
 assert shutil.disk_usage(dest).free>60*1024**3
 git=['git','-c','safe.directory='+repo.as_posix(),'-C',str(repo)]
 revision=subprocess.check_output(git+['rev-parse','HEAD'],text=True).strip()
@@ -14,12 +14,18 @@ assert not subprocess.check_output(git+['status','--porcelain'],text=True).strip
 with zipfile.ZipFile(original) as old: infos=old.infolist()
 assert infos[-1].filename=='scratch/837e4400dd1d/study07-results/S07-R1/tables/full/geometry-registration.csv.gz'
 cut=infos.pop().header_offset
-print('Copying intact prefix',cut,'bytes;',len(infos),'members',flush=True)
-with original.open('rb') as src,partial.open('xb') as out:
-    remaining=cut
-    while remaining:
-        chunk=src.read(min(8*1024**2,remaining));assert chunk
-        out.write(chunk);remaining-=len(chunk)
+if partial.exists():
+    with zipfile.ZipFile(partial) as existing:
+        assert [i.filename for i in existing.filelist]==[i.filename for i in infos], 'Only retry an unchanged copied prefix'
+        assert existing.start_dir==cut
+    print('Reusing intact copied prefix',cut,flush=True)
+else:
+    print('Copying intact prefix',cut,'bytes;',len(infos),'members',flush=True)
+    with original.open('rb') as src,partial.open('xb') as out:
+        remaining=cut
+        while remaining:
+            chunk=src.read(min(8*1024**2,remaining));assert chunk
+            out.write(chunk);remaining-=len(chunk)
 skip=dest/'resume-skip.json';skip.write_text(json.dumps([i.filename for i in infos]))
 def add(z,name,stream,size,mode=0o644):
     assert name not in z.NameToInfo and '..' not in Path(name).parts

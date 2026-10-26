@@ -1,0 +1,17 @@
+{
+  "free_before": 1420472320,
+  "active_R_work_preserved": true,
+  "free_after": 3307167744,
+  "deleted": [
+    {
+      "bytes": 531096064.0,
+      "verified_contents": "Only installer cab/msi/vsix/zip/exe payloads; no R data",
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\positron-system-x64"
+    },
+    {
+      "bytes": 1354922164.0,
+      "verified_contents": "Only installer cab/msi/vsix/zip/exe payloads; no R data",
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\ugvxacsl"
+    }
+  ]
+}

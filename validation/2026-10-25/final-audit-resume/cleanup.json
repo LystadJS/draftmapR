@@ -1,0 +1,15 @@
+{
+  "free_before": 628293632,
+  "recovery_data_changed": false,
+  "free_after": 4776402944,
+  "deleted_disposable_caches": [
+    {
+      "bytes": 3724616131.0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\DockerDesktopUpdates"
+    },
+    {
+      "bytes": 422723798.0,
+      "path": "C:\\Users\\John\\AppData\\Local\\Temp\\DockerDesktop"
+    }
+  ]
+}

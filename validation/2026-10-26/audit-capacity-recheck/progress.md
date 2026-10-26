@@ -1,0 +1,5 @@
+# Expanded capacity recheck — 2026-10-26
+
+No non-R user temporary directory exceeded 100 MB. Additional checks covered Windows Temp, Windows Update downloads, WER, crash dumps, npm/pip, Direct3D and Internet caches. Readable Windows Update downloads totaled about 90 MB; the other reported cache sizes were negligible or unavailable. No sufficient safely disposable capacity was identified. Docker reports only about 12 KiB of private build cache; stopped containers and images were not pruned because retained recovery/runtime state must be preserved.
+
+The same audit remains paused at the unchanged disk guard. Live free space remains about 3.27 GB, approximately 1.03 GB below the 4 GiB resume gate. No files were deleted and no resume or restart was attempted. Active R work and all recovery data remain untouched. Passing reports and execution-complete.json are still absent. Additional capacity must be supplied outside protected work before final audits can continue; this check does not establish audit completion.

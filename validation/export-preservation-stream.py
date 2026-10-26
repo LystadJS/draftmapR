@@ -12,15 +12,17 @@ with tarfile.open(fileobj=sys.stdout.buffer, mode='w|') as archive:
     for root in roots:
         for directory, dirs, files in os.walk(root, followlinks=False):
             dirs.sort(); files.sort()
+            with os.scandir(directory) as entries:
+                symlinks = {entry.name for entry in entries if entry.is_symlink()}
             for name in list(dirs):
                 p = Path(directory) / name
-                if p.is_symlink():
+                if name in symlinks:
                     links.append(dict(path=str(p), target=os.readlink(p), kind='directory'))
                     dirs.remove(name)
             for name in files:
                 p = Path(directory) / name
                 rel = 'scratch/' + str(p.relative_to('/workspace/scratch'))
-                if p.is_symlink():
+                if name in symlinks:
                     links.append(dict(path=str(p), target=os.readlink(p), kind='file', dereferenced=p.exists()))
                     if not p.exists():
                         assert 'compression-interruption-20261024/table-links/' in str(p), str(p)

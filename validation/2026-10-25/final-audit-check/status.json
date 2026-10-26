@@ -1,0 +1,85 @@
+{
+  "process": {
+    "status": "running",
+    "child_state": "running",
+    "run_kind": "operational_serialization_resume",
+    "command": [
+      "/workspace/scratch/837e4400dd1d/r-runtime/bin/Rscript-local",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resume-collection-prefix-006.R",
+      "reserved",
+      "/workspace/scratch/837e4400dd1d/study07-results/S07-D1",
+      "/workspace/scratch/837e4400dd1d/study07-results/S07-R1",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collection-state",
+      "/workspace/scratch/837e4400dd1d/study07-results/S07-R1/csv-chunks-20260921192657143845-45-1",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/PUBLICATION-INDEX.json",
+      "/workspace/scratch/1e9a01af2c37/final-preservation",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/launch-006/launch-review.json"
+    ],
+    "supervisor_token": "REDACTED_LOCAL_CONTROL_TOKEN",
+    "pid": 655,
+    "supervisor_pid": 654,
+    "started_at_unix": 1792941731.9097157,
+    "updated_at_unix": 1792985649.7642174,
+    "elapsed_seconds": 43917.85450196266,
+    "log": "/workspace/scratch/837e4400dd1d/study07-r1-operations/serialization-resume-REDACTED_LOCAL_CONTROL_TOKEN.log",
+    "adapter_phase": {
+      "stage": "RUNNING_ALL_FROZEN_INDEPENDENT_AUDITS",
+      "adapter": "external_operational_serialization_resume",
+      "scientific_completion_claimed": false,
+      "time_utc": "2026-10-25T16:20:54.439358Z"
+    },
+    "code_hashes": {
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resume-collection-prefix-006.R": "f5f4731f964b583a36ca4ce9f17c95012d7036a9e33cbfa1577dec1d5325700e",
+      "/validation/guard-compression-restart-20261024.py": "714f5fde07efdfc88d49c94c1e376aa846facc9b85b4513d629747202f518c42",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/execute-resume.py": "1be5d46f99b2e29d35a4a04cb720a93b9b217e9a02e503f6a36836520bf83ed9",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collect-prefix-005.R": "7fc3a7e0bf49e6064e63a5f50f45b0d1b4419d2272a02782b822a653da67c4a9",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collect.R": "a0e0871b2349d2a19d6556d9d8654f4010975a66061d84e4d7ec75fbf3119bf0"
+    },
+    "storage": {
+      "limit_bytes": 12884901888,
+      "anon_bytes": 638218240,
+      "shmem_bytes": 0,
+      "nonreclaimable_kernel_bytes": 2965528,
+      "pinned_bytes": 641183768,
+      "proposed_bytes": 0,
+      "audit_headroom_bytes": 3221225472,
+      "available_after_copy_bytes": 12243718120,
+      "host_free_bytes": 6331154432,
+      "output_free_bytes": 1011625635840
+    },
+    "engineering": false,
+    "planned_panels": 6480,
+    "scientific_completion_claimed": false,
+    "meaning": "External serialization/audit adapter; frozen scientific source files are unchanged. Process success alone is not scientific or preservation completion.",
+    "resume_required": false,
+    "paused_reason": null,
+    "resume_request_path": "/workspace/scratch/837e4400dd1d/study07-r1-operations/resume-execution-request.json",
+    "exit_code": null,
+    "last_error": null
+  },
+  "live_free_bytes": 6323638272,
+  "receipts": {
+    "final-audit.json": {
+      "exists": false
+    },
+    "recovery-final-audit.json": {
+      "exists": false
+    },
+    "recovery-audit.json": {
+      "exists": false
+    },
+    "execution-complete.json": {
+      "exists": false
+    }
+  },
+  "audit_pid": 713,
+  "audit_io": "rchar: 21086286047\nwchar: 0\nsyscr: 94774\nsyscw: 0\nread_bytes: 1279434752\nwrite_bytes: 0\ncancelled_write_bytes: 0\n",
+  "historical_failure": {
+    "status": "failed",
+    "amendment": "S07-R1",
+    "message": "[Errno 2] No such file or directory: '/workspace/scratch/837e4400dd1d/study07-results/S07-R1/analysis/figure-01.png'"
+  },
+  "historical_failure_mtime": 1792909300.0509646,
+  "current_run_started": 1792941731.9097157,
+  "historical_failure_predates_run": true
+}

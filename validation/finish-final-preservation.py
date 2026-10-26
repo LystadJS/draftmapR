@@ -1,5 +1,5 @@
 """Recheck the completed ZIP and compare its payloads using native base-file access."""
-import hashlib,json,os,sqlite3,subprocess,sys,zipfile
+import gc,hashlib,json,os,sqlite3,subprocess,sys,zipfile
 from pathlib import Path
 base=Path(__file__).resolve().parents[2];repo=base/'driftmapR-git';dest=Path(sys.argv[1])
 partial=dest/'driftmapR-final-preservation-20261026.resumed.partial.zip';final=dest/'driftmapR-final-preservation-20261026.zip'
@@ -7,14 +7,15 @@ assert not final.exists()
 git=['git','-c','safe.directory='+repo.as_posix(),'-C',str(repo)]
 revision=subprocess.check_output(git+['rev-parse','HEAD'],text=True).strip()
 assert not subprocess.check_output(git+['status','--porcelain'],text=True).strip()
-bundle=dest/'final-verification-tooling.bundle'
+bundle=dest/('final-verification-tooling-'+revision[:7]+'.bundle')
 subprocess.run(git+['bundle','create',str(bundle),'--all'],check=True)
 subprocess.run(git+['bundle','verify',str(bundle)],check=True)
 with zipfile.ZipFile(partial,'a',allowZip64=True) as z:
     assert 'preservation/'+bundle.name not in z.NameToInfo
     z.write(bundle,'preservation/'+bundle.name)
-    z.writestr('preservation/VERIFICATION-NOTE.txt','The latest repository history is final-verification-tooling.bundle, revision '+revision+'. Other bundles retain earlier preservation stages. All payloads are checked in SHA256SUMS.jsonl.\n')
-db=sqlite3.connect(dest/'final-verification.sqlite')
+    z.writestr('preservation/VERIFICATION-NOTE-'+revision[:7]+'.txt','The latest repository history is '+bundle.name+', revision '+revision+'. Other bundles retain earlier preservation stages. All payloads are checked in SHA256SUMS.jsonl.\n')
+del z;gc.collect()
+db=sqlite3.connect(dest/('final-verification-'+revision[:7]+'.sqlite'))
 db.execute('CREATE TABLE files(path TEXT PRIMARY KEY, bytes INTEGER, sha256 TEXT, checked INTEGER DEFAULT 0)')
 print('Rechecking archive CRC and SHA-256',flush=True)
 with zipfile.ZipFile(partial) as z:
@@ -23,7 +24,12 @@ with zipfile.ZipFile(partial) as z:
         with z.open(info) as f:h=hashlib.file_digest(f,'sha256').hexdigest()
         db.execute('INSERT INTO files(path,bytes,sha256) VALUES(?,?,?)',(info.filename,info.file_size,h))
         if n%50000==0:db.commit();print('Archive checked',n,flush=True)
-db.commit()
+db.commit();del z;gc.collect()
+container='driftmapr-collection-20261023'
+running=subprocess.check_output(['docker','inspect','--format','{{.State.Running}}',container],text=True).strip()
+if running!='true':
+    subprocess.run(['docker','start',container],check=True)
+    subprocess.run(['docker','exec',container,'sh','/validation/mount-continuation.sh'],check=True)
 print('Matching independent sources through native base access',flush=True)
 with (dest/'hybrid-hash-stderr.log').open('wb') as err:
     p=subprocess.Popen(['docker','exec','driftmapr-collection-20261023','python3','/validation/hash-preservation-hybrid.py'],stdout=subprocess.PIPE,stderr=err,text=True)
@@ -44,8 +50,8 @@ with (dest/'hybrid-hash-stderr.log').open('wb') as err:
         if p.poll() is None:p.terminate();p.wait()
 for name,size,digest in db.execute('SELECT path,bytes,sha256 FROM files WHERE checked=0').fetchall():
     if name.startswith('host/'):path=base/name[5:]
-    elif name.startswith('preservation/') and Path(name).name in ['repository.bundle','repository.tar','runtime-container.tar','recovery-tooling.bundle','final-verification-tooling.bundle']:path=dest/Path(name).name
-    elif name in ['preservation/RESTORE.txt','preservation/VERIFICATION-NOTE.txt','preservation/source-links.json']:path=None
+    elif name.startswith('preservation/') and (name.endswith('.bundle') or Path(name).name in ['repository.tar','runtime-container.tar']):path=dest/Path(name).name
+    elif name in ['preservation/RESTORE.txt','preservation/source-links.json'] or name.startswith('preservation/VERIFICATION-NOTE'):path=None
     else:raise AssertionError('Source absent from visible inventory: '+name)
     if path:
         assert path.stat().st_size==size

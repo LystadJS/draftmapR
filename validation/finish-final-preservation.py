@@ -77,7 +77,7 @@ with zipfile.ZipFile(partial) as z:
     assert len(z.filelist)==len(z.NameToInfo)==count+1
     with z.open('SHA256SUMS.jsonl') as f:assert hashlib.file_digest(f,'sha256').hexdigest()==mh
 print('Computing whole-archive SHA-256',flush=True)
-with partial.open('rb') as f:os.fsync(f.fileno());digest=hashlib.file_digest(f,'sha256').hexdigest()
+with partial.open('r+b') as f:os.fsync(f.fileno());digest=hashlib.file_digest(f,'sha256').hexdigest()
 partial.rename(final)
 result=dict(status='verified',archive=final.name,bytes=final.stat().st_size,sha256=digest,verified_files=count,source_payload_sha256='all matched; generated preservation metadata separately retained',zip_crc='passed complete reads',completion_receipt='matched verified original; all three audit receipts match',panels=6480,draws=1313520,repository_revision=revision,manifest_sha256=mh)
 (dest/'verification.json').write_text(json.dumps(result,indent=2));print(json.dumps(result,indent=2),flush=True)

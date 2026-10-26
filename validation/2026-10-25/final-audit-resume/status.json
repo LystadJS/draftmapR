@@ -1,0 +1,104 @@
+{
+  "process": {
+    "status": "running",
+    "child_state": "running",
+    "run_kind": "operational_serialization_resume",
+    "command": [
+      "/workspace/scratch/837e4400dd1d/r-runtime/bin/Rscript-local",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resume-collection-prefix-006.R",
+      "reserved",
+      "/workspace/scratch/837e4400dd1d/study07-results/S07-D1",
+      "/workspace/scratch/837e4400dd1d/study07-results/S07-R1",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collection-state",
+      "/workspace/scratch/837e4400dd1d/study07-results/S07-R1/csv-chunks-20260921192657143845-45-1",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/PUBLICATION-INDEX.json",
+      "/workspace/scratch/1e9a01af2c37/final-preservation",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/launch-006/launch-review.json"
+    ],
+    "supervisor_token": "REDACTED_LOCAL_CONTROL_TOKEN",
+    "pid": 655,
+    "supervisor_pid": 654,
+    "started_at_unix": 1792941731.9097157,
+    "updated_at_unix": 1792985568.964335,
+    "elapsed_seconds": 43837.054619550705,
+    "log": "/workspace/scratch/837e4400dd1d/study07-r1-operations/serialization-resume-REDACTED_LOCAL_CONTROL_TOKEN.log",
+    "adapter_phase": {
+      "stage": "RUNNING_ALL_FROZEN_INDEPENDENT_AUDITS",
+      "adapter": "external_operational_serialization_resume",
+      "scientific_completion_claimed": false,
+      "time_utc": "2026-10-25T16:20:54.439358Z"
+    },
+    "code_hashes": {
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resume-collection-prefix-006.R": "f5f4731f964b583a36ca4ce9f17c95012d7036a9e33cbfa1577dec1d5325700e",
+      "/validation/guard-compression-restart-20261024.py": "714f5fde07efdfc88d49c94c1e376aa846facc9b85b4513d629747202f518c42",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/execute-resume.py": "1be5d46f99b2e29d35a4a04cb720a93b9b217e9a02e503f6a36836520bf83ed9",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collect-prefix-005.R": "7fc3a7e0bf49e6064e63a5f50f45b0d1b4419d2272a02782b822a653da67c4a9",
+      "/workspace/scratch/837e4400dd1d/study07-r1-operations/resumable-collect.R": "a0e0871b2349d2a19d6556d9d8654f4010975a66061d84e4d7ec75fbf3119bf0"
+    },
+    "storage": {
+      "limit_bytes": 12884901888,
+      "anon_bytes": 635056128,
+      "shmem_bytes": 0,
+      "nonreclaimable_kernel_bytes": 2959064,
+      "pinned_bytes": 638015192,
+      "proposed_bytes": 0,
+      "audit_headroom_bytes": 3221225472,
+      "available_after_copy_bytes": 12246886696,
+      "host_free_bytes": 4775473152,
+      "output_free_bytes": 1011625635840
+    },
+    "engineering": false,
+    "planned_panels": 6480,
+    "scientific_completion_claimed": false,
+    "meaning": "External serialization/audit adapter; frozen scientific source files are unchanged. Process success alone is not scientific or preservation completion.",
+    "resume_required": false,
+    "paused_reason": null,
+    "resume_request_path": "/workspace/scratch/837e4400dd1d/study07-r1-operations/resume-execution-request.json",
+    "exit_code": null,
+    "last_error": null
+  },
+  "figures": [
+    {
+      "name": "figure-01.png",
+      "bytes": 186191,
+      "dimensions": [
+        1960,
+        1344
+      ],
+      "sha256": "2455a0e4d70ba117b4a616df444140d07c5d4435634bbd62cbe09ec85d1649b9",
+      "values_sha256": "f2503f144f4a8f0947200fd470a62c68f3fd2a05b7e1076ba059caba94e0172d"
+    },
+    {
+      "name": "figure-02.png",
+      "bytes": 221659,
+      "dimensions": [
+        1960,
+        1344
+      ],
+      "sha256": "c2123a1b985a6ac5c2a0f81d67c1c026671a4f423dd27b1c5b9f2b9965f311f9",
+      "values_sha256": "d8ae91eec8ab8f069b9e13a51bbb246b146b1a08cf895a6a8574735b9def7adc"
+    },
+    {
+      "name": "figure-03.png",
+      "bytes": 150149,
+      "dimensions": [
+        1960,
+        1652
+      ],
+      "sha256": "e3cd86afc399a086afa297cb11d318ecf1e036c499c166ccd74453ab01fcb081",
+      "values_sha256": "83445c92be453d05cb3324f97fcece3c2f05186eec476585fd799b22f6b52449"
+    },
+    {
+      "name": "figure-04.png",
+      "bytes": 184397,
+      "dimensions": [
+        1960,
+        1960
+      ],
+      "sha256": "93f26a4583b2230a9792389019e6768e2231bfa389bf64a12f72e7f1f27f8e01",
+      "values_sha256": "60eaf226e4cbc8332d8a21dade96e7c7aeb679f8bdb6fea9b42d8a2e1f447d83"
+    }
+  ],
+  "live_free_bytes": 4775014400,
+  "complete": false
+}

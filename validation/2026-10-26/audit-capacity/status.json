@@ -1,0 +1,14 @@
+{
+  "child_state": "paused_for_capacity",
+  "phase": "RUNNING_ALL_FROZEN_INDEPENDENT_AUDITS",
+  "free_bytes": 3270238208,
+  "resume_threshold_bytes": 4294967296,
+  "shortfall_bytes": 1024729088,
+  "receipts": {
+    "final-audit.json": false,
+    "recovery-final-audit.json": false,
+    "recovery-audit.json": false,
+    "execution-complete.json": false
+  },
+  "resume_attempted": false
+}

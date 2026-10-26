@@ -1,0 +1,16 @@
+{
+  "status": "verified",
+  "archive": "driftmapR-final-preservation-20261026.zip",
+  "bytes": 43704671136,
+  "sha256": "a4d22658f4debf82ca0b49fbac3151d28bd729eb96e48ffe7835ceb1bcc300c7",
+  "verified_files": 342417,
+  "source_payload_sha256": "all matched; generated preservation metadata separately retained",
+  "zip_crc": "passed complete reads",
+  "completion_receipt": "matched verified original; all three audit receipts match",
+  "panels": 6480,
+  "draws": 1313520,
+  "repository_revision": "4a02e291749f7c62b937c01962f360682c0643e0",
+  "manifest_sha256": "010b38283d4d17faeb060a1f85a92c8d2223013d82938d72c9116bd5857c83da",
+  "runtime_tar_members": 23751,
+  "full_runtime_restore_rehearsal": false
+}

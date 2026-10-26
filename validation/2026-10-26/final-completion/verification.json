@@ -1,0 +1,32 @@
+{
+  "verification": "passed",
+  "scope": "Cross-check of completed frozen audit reports, completion receipt, code hashes, figure presence and successful driver termination; not a rerun of the full audits.",
+  "audit_status": "passed",
+  "completion_receipt_verified": true,
+  "driver_exit_code": 0,
+  "report_files": {
+    "final-audit.json": {
+      "sha256": "901b02fd5c348448a091dccd0862c7e87e827f3487e7b3c79becd2336cdc2043",
+      "bytes": 1199
+    },
+    "recovery-final-audit.json": {
+      "sha256": "901b02fd5c348448a091dccd0862c7e87e827f3487e7b3c79becd2336cdc2043",
+      "bytes": 1199
+    },
+    "recovery-audit.json": {
+      "sha256": "901b02fd5c348448a091dccd0862c7e87e827f3487e7b3c79becd2336cdc2043",
+      "bytes": 1199
+    },
+    "execution-complete.json": {
+      "sha256": "8aa965e96c411dea3fc1253362c1f7bebc45c32888861a32538140cdf68086bd",
+      "bytes": 699
+    }
+  },
+  "matching_reports": true,
+  "counts_consistent": true,
+  "code_hashes_match": true,
+  "no_resume_measurements_draws_or_fits": true,
+  "figures_present": 4,
+  "capacity_limits_changed": false,
+  "recovery_data_changed": false
+}

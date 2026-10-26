@@ -1,0 +1,17 @@
+{
+  "targets": [
+    {
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Codex\\web\\Codex\\Default\\Partitions\\codex-browser-app\\Cache",
+      "skipped_files": 1,
+      "deleted_logical_bytes": 104167716
+    },
+    {
+      "path": "C:\\Users\\John\\AppData\\Roaming\\Codex\\web\\Codex\\Default\\Partitions\\codex-browser-app\\Code Cache",
+      "skipped_files": 0,
+      "deleted_logical_bytes": 22661149
+    }
+  ],
+  "free_after": 3270901760,
+  "scope": "Disposable browser cache only; profiles and active R work preserved",
+  "free_before": 3153514496
+}

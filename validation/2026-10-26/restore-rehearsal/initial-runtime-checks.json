@@ -1,0 +1,14 @@
+{
+  "system_packages": "exact match to archived inventory",
+  "package_count": 162,
+  "r_version": "4.5.3",
+  "cairo_png_probe": "passed",
+  "png_dimensions": [
+    480,
+    480
+  ],
+  "git_fsck": "passed",
+  "restored_repository_revision": "4a02e291749f7c62b937c01962f360682c0643e0",
+  "full_extraction": "in progress",
+  "frozen_implementation_validation": "pending extraction"
+}

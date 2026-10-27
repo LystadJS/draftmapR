@@ -1,0 +1,7 @@
+{
+  "image": "driftmapr-preservation-rehearsal:20261026",
+  "image_id": "sha256:9bc68a9813ad7164ca71b405f99beb3d12c6691d2b71d18128a49e174d9287a5",
+  "runtime_tar_sha256": "4a6a939214e53a0b2bdb920eb98adba7cbb36d2d9b9004931c658ffeb41d3611",
+  "runtime_tar_bytes": 783243776,
+  "c_free_bytes": 7643652096
+}

@@ -8,6 +8,9 @@ assert int(Path('/sys/fs/cgroup/memory.max').read_text())==12884901888
 quota,period=map(int,Path('/sys/fs/cgroup/cpu.max').read_text().split());assert quota/period==2
 assert int(Path('/sys/fs/cgroup/memory.swap.max').read_text())==0
 assert os.statvfs('/workspace/scratch').f_flag & os.ST_RDONLY
+assert os.path.ismount('/workspace/scratch')
+assert os.stat('/workspace/scratch').st_dev==os.stat(root/'scratch').st_dev
+assert json.loads((support/'persisted-restore-verification.json').read_text())['status']=='passed'
 isolation=json.loads((support/'linux-container-isolation.json').read_text())
 assert isolation['network']=='none' and isolation['shm_size']==6442450944 and not isolation['recovery_volume_attached']
 def execute(label,args,env=None):

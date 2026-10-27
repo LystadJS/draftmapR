@@ -1,0 +1,7 @@
+{
+  "status": "repair-pass-complete; requires unmount and read-only verification",
+  "files": 342417,
+  "repaired_files": 21,
+  "readonly_filesystem": false,
+  "all_sha256_matched": true
+}

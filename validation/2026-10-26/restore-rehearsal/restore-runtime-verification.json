@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "restored_files": 342417,
+  "archive_sha256": "a4d22658f4debf82ca0b49fbac3151d28bd729eb96e48ffe7835ceb1bcc300c7",
+  "filesystem": "ext4 filesystem image on D:; original Unix file modes restored",
+  "restored_runtime": "R 4.5.3; exact frozen implementation and numerical runtime validation passed",
+  "system_packages": "162 packages exactly match archived inventory",
+  "graphics_png": "passed",
+  "completion_receipts": {
+    "final-audit.json": "901b02fd5c348448a091dccd0862c7e87e827f3487e7b3c79becd2336cdc2043",
+    "recovery-final-audit.json": "901b02fd5c348448a091dccd0862c7e87e827f3487e7b3c79becd2336cdc2043",
+    "recovery-audit.json": "901b02fd5c348448a091dccd0862c7e87e827f3487e7b3c79becd2336cdc2043",
+    "execution-complete.json": "8aa965e96c411dea3fc1253362c1f7bebc45c32888861a32538140cdf68086bd"
+  },
+  "panels": 6480,
+  "draws": 1313520,
+  "limits_unchanged": true,
+  "network_disabled": true,
+  "source_mount_readonly": true,
+  "live_recovery_volume_attached": false,
+  "study_resumed": false,
+  "full_scientific_audits_rerun": false
+}

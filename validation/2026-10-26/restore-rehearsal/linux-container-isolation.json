@@ -1,0 +1,11 @@
+{
+  "container": "driftmapr-linux-restore-20261027",
+  "image_id": "sha256:9bc68a9813ad7164ca71b405f99beb3d12c6691d2b71d18128a49e174d9287a5",
+  "memory": 12884901888,
+  "memory_swap": 12884901888,
+  "nano_cpus": 2000000000,
+  "shm_size": 6442450944,
+  "network": "none",
+  "readonly_root": true,
+  "recovery_volume_attached": false
+}

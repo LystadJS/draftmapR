@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "archive_sha256": "a4d22658f4debf82ca0b49fbac3151d28bd729eb96e48ffe7835ceb1bcc300c7",
+  "restored_files": 342417,
+  "restored_payload_bytes": 43536327691,
+  "extracted_readback_sha256": "all passed",
+  "zip_crc": "all passed",
+  "filesystem": "ext4 filesystem image on D:; original Unix file modes restored",
+  "source_archive_modified": false
+}

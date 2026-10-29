@@ -1,0 +1,5 @@
+All 10 exports and all 3 S3 methods exercised successfully.
+Known target movement recovered: 1 unit; stable anchors approximately zero.
+PCA, feature MDS, and distance-list MDS movement magnitudes agreed.
+20 bootstrap attempts executed; summaries are descriptive, not confidence limits.
+100 randomized coordinate-only transformations; max apparent drift: 7.850462293418876e-15

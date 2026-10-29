@@ -5,6 +5,8 @@ data with PCA or classical MDS, align 2-D maps, inspect transformations, measure
 relative entity movement, and match supplied cluster identities through time. The API is a
 prototype contract, not yet a stable v0.1 release.
 
+See the [complete command guide](../documentation/PACKAGE_GUIDE.md), [runnable tour](../documentation/package-tour.R), and [2026-10-28 verification evidence](../validation/2026-10-28/package-api/README.md) for current API usage and executed QA.
+
 ## Why align repeated maps?
 
 Independently computed low-dimensional coordinates can rotate, reflect, or
@@ -268,7 +270,7 @@ Rscript driftmapR/data-raw/simulate-bootstrap.R bootstrap-simulation-output
 HTML vignette building requires Pandoc. The packaged manual pages do not.
 The `.github/workflows` check configuration targets Linux, Windows, and macOS
 using [r-lib's standard actions](https://github.com/r-lib/actions/tree/v2/examples).
-Remote CI has not run; no remote repository has been created or published.
+The public repository and CI are available at https://github.com/LystadJS/draftmapR. Consult the current Actions results for remote platform status.
 `DESCRIPTION` deliberately uses a marked prototype maintainer placeholder;
 replace it with verified author/maintainer details before public release.
 
